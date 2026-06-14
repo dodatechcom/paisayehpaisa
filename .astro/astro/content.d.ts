@@ -227,6 +227,13 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"crypto-for-beginners-complete-guide.md": {
+	id: "crypto-for-beginners-complete-guide.md";
+  slug: "crypto-for-beginners-complete-guide";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "crypto-vs-stocks-which-is-better.md": {
 	id: "crypto-vs-stocks-which-is-better.md";
   slug: "crypto-vs-stocks-which-is-better";
@@ -341,6 +348,13 @@ declare module 'astro:content' {
   collection: "crypto-scam";
   data: InferEntrySchema<"crypto-scam">
 } & { render(): Render[".md"] };
+"how-to-spot-crypto-scam-complete-guide.md": {
+	id: "how-to-spot-crypto-scam-complete-guide.md";
+  slug: "how-to-spot-crypto-scam-complete-guide";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
 "how-to-spot-crypto-scam.md": {
 	id: "how-to-spot-crypto-scam.md";
   slug: "how-to-spot-crypto-scam";
@@ -367,6 +381,13 @@ declare module 'astro:content' {
 "crypto-tax-guide-beginners.md": {
 	id: "crypto-tax-guide-beginners.md";
   slug: "crypto-tax-guide-beginners";
+  body: string;
+  collection: "crypto-tax";
+  data: InferEntrySchema<"crypto-tax">
+} & { render(): Render[".md"] };
+"crypto-tax-guide-by-country.md": {
+	id: "crypto-tax-guide-by-country.md";
+  slug: "crypto-tax-guide-by-country";
   body: string;
   collection: "crypto-tax";
   data: InferEntrySchema<"crypto-tax">
@@ -456,6 +477,13 @@ declare module 'astro:content' {
 "how-to-create-strong-security-plan.md": {
 	id: "how-to-create-strong-security-plan.md";
   slug: "how-to-create-strong-security-plan";
+  body: string;
+  collection: "safe-crypto";
+  data: InferEntrySchema<"safe-crypto">
+} & { render(): Render[".md"] };
+"how-to-keep-crypto-safe-complete-guide.md": {
+	id: "how-to-keep-crypto-safe-complete-guide.md";
+  slug: "how-to-keep-crypto-safe-complete-guide";
   body: string;
   collection: "safe-crypto";
   data: InferEntrySchema<"safe-crypto">
