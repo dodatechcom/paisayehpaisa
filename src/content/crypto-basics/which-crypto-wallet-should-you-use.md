@@ -62,7 +62,7 @@ Wallets provided by exchanges like Binance, Coinbase, WazirX.
 **Cons:** The exchange controls your keys — not you
 
 <aside class="callout warning">
-⚠️ **"Not your keys, not your coins."** — If you don't control the private keys, the exchange controls your crypto.
+⚠️ <strong>"Not your keys, not your coins."</strong> — If you don't control the private keys, the exchange controls your crypto.
 </aside>
 
 ## Decision Flowchart
@@ -90,7 +90,7 @@ This is the master key to your wallet. Anyone with these words can access your c
 - Never share it with anyone — not even "support"
 
 <aside class="callout danger">
-🚨 **If someone asks for your seed phrase, they are trying to steal your crypto. Period.**
+🚨 <strong>If someone asks for your seed phrase, they are trying to steal your crypto. Period.</strong>
 </aside>
 
 ## Wallet Comparison
