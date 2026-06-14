@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const basics = await getCollection('crypto-basics');
+const safe = await getCollection('safe-crypto');
+const scam = await getCollection('crypto-scam');
+const answers = await getCollection('crypto-answers');
+const tax = await getCollection('crypto-tax');
+const tools = await getCollection('crypto-tools');
+
+const recent = [...basics, ...safe, ...scam, ...answers, ...tax, ...tools]
+  .filter(a => !a.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5);
+---
+
+<BaseLayout title="PaisayehPaisa" description="Crypto in plain language. Learn about Bitcoin, wallets, security, scams, and taxes.">
+  <section style="text-align:center; padding: 3rem 0;">
+    <h1 style="font-size:2.5rem; margin-bottom:0.5rem;">Crypto in plain language.</h1>
+    <p style="font-size:1.2rem; color:var(--muted); max-width:600px; margin:0 auto 2rem;">
+      Answers to the questions BitcoinTalk users ask every day — in one place, simple and clear.
+    </p>
+  </section>
+
+  <section style="display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1rem; margin-bottom:3rem;">
+    <a href="/crypto-basics/" style="display:block; padding:1.5rem; border:1px solid var(--border); border-radius:var(--radius); text-decoration:none; color:var(--text);">
+      <h3 style="margin:0;">📘 Crypto Basics</h3>
+      <p style="font-size:0.9rem; color:var(--muted); margin:0.5rem 0 0;">Buying, wallets, exchanges, DCA</p>
+    </a>
+    <a href="/safe-crypto/" style="display:block; padding:1.5rem; border:1px solid var(--border); border-radius:var(--radius); text-decoration:none; color:var(--text);">
+      <h3 style="margin:0;">🔒 Safe Crypto</h3>
+      <p style="font-size:0.9rem; color:var(--muted); margin:0.5rem 0 0;">Seed phrases, 2FA, hardware wallets</p>
+    </a>
+    <a href="/crypto-scam/" style="display:block; padding:1.5rem; border:1px solid var(--border); border-radius:var(--radius); text-decoration:none; color:var(--text);">
+      <h3 style="margin:0;">⚠️ Crypto Scam</h3>
+      <p style="font-size:0.9rem; color:var(--muted); margin:0.5rem 0 0;">Spot scams, phishing, fake wallets</p>
+    </a>
+    <a href="/crypto-answers/" style="display:block; padding:1.5rem; border:1px solid var(--border); border-radius:var(--radius); text-decoration:none; color:var(--text);">
+      <h3 style="margin:0;">💬 Crypto Answers</h3>
+      <p style="font-size:0.9rem; color:var(--muted); margin:0.5rem 0 0;">Daily Q&A from BitcoinTalk</p>
+    </a>
+    <a href="/crypto-tax/" style="display:block; padding:1.5rem; border:1px solid var(--border); border-radius:var(--radius); text-decoration:none; color:var(--text);">
+      <h3 style="margin:0;">💰 Crypto Tax</h3>
+      <p style="font-size:0.9rem; color:var(--muted); margin:0.5rem 0 0;">Country guides, reporting gains</p>
+    </a>
+    <a href="/crypto-tools/" style="display:block; padding:1.5rem; border:1px solid var(--border); border-radius:var(--radius); text-decoration:none; color:var(--text);">
+      <h3 style="margin:0;">🛠️ Crypto Tools</h3>
+      <p style="font-size:0.9rem; color:var(--muted); margin:0.5rem 0 0;">Calculators, checkers, wizards</p>
+    </a>
+  </section>
+
+  <section>
+    <h2>Recent Articles</h2>
+    <ul class="article-list">
+      {recent.map(a => (
+        <li>
+          <a href={`/${a.data.categories[0]}/${a.slug}/`}>{a.data.title}</a>
+          <div class="desc">{a.data.description}</div>
+          <div class="meta" style="margin-top:0.25rem;">
+            {a.data.date.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' })}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

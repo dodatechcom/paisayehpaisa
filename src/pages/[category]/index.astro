@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const categories = ['crypto-basics', 'safe-crypto', 'crypto-scam', 'crypto-answers', 'crypto-tax', 'crypto-tools'];
+  return categories.map(cat => ({
+    params: { category: cat },
+    props: { category: cat },
+  }));
+}
+
+const { category } = Astro.props;
+const collection = await getCollection(category as any);
+const articles = collection.filter(a => !a.data.draft).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const categoryNames: Record<string, string> = {
+  'crypto-basics': 'Crypto Basics',
+  'safe-crypto': 'Safe Crypto',
+  'crypto-scam': 'Crypto Scam',
+  'crypto-answers': 'Crypto Answers',
+  'crypto-tax': 'Crypto Tax',
+  'crypto-tools': 'Crypto Tools',
+};
+---
+
+<BaseLayout title={categoryNames[category]} description={`${categoryNames[category]} — Crypto guides and articles.`}>
+  <Breadcrumbs category={category} />
+  <h1>{categoryNames[category]}</h1>
+  <ul class="article-list">
+    {articles.map(a => (
+      <li>
+        <a href={`/${category}/${a.slug}/`}>{a.data.title}</a>
+        <div class="desc">{a.data.description}</div>
+        <div class="meta" style="margin-top:0.25rem;">
+          {a.data.date.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' })}
+          {a.data.tags?.map(t => <span class="tag">{t}</span>)}
+        </div>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

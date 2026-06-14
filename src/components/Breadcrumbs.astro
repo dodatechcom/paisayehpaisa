@@ -1,0 +1,33 @@
+---
+export interface Props {
+  category: string;
+  slug?: string;
+}
+
+const { category, slug } = Astro.props;
+const categoryNames: Record<string, string> = {
+  'crypto-basics': 'Crypto Basics',
+  'safe-crypto': 'Safe Crypto',
+  'crypto-scam': 'Crypto Scam',
+  'crypto-answers': 'Crypto Answers',
+  'crypto-tax': 'Crypto Tax',
+  'crypto-tools': 'Crypto Tools',
+};
+---
+
+<nav class="breadcrumbs">
+  <a href="/">Home</a>
+  {slug ? (
+    <>
+      <span> / </span>
+      <a href={`/${category}/`}>{categoryNames[category] || category}</a>
+      <span> / </span>
+      <span>{slug}</span>
+    </>
+  ) : (
+    <>
+      <span> / </span>
+      <span>{categoryNames[category] || category}</span>
+    </>
+  )}
+</nav>

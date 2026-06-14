@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const categories = ['crypto-basics', 'safe-crypto', 'crypto-scam', 'crypto-answers', 'crypto-tax', 'crypto-tools'];
+  const paths: { params: { category: string; slug: string }; props: { entry: CollectionEntry<any> } }[] = [];
+  for (const cat of categories) {
+    const entries = await getCollection(cat as any);
+    for (const entry of entries) {
+      if (!entry.data.draft) {
+        paths.push({ params: { category: cat, slug: entry.slug }, props: { entry } });
+      }
+    }
+  }
+  return paths;
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const data = entry.data;
+---
+
+<BaseLayout title={data.title} description={data.description} date={data.date} lastUpdated={data.lastUpdated} category={data.categories[0]}>
+  <Breadcrumbs category={data.categories[0]} slug={entry.slug} />
+  <h1>{data.title}</h1>
+  <div class="meta">
+    {data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+    {data.lastUpdated && data.lastUpdated > data.date && (
+      <span> · Updated {data.lastUpdated.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+    )}
+  </div>
+  {data.tags?.map(tag => <span class="tag">{tag}</span>)}
+
+  <article style="margin-top: 2rem;">
+    <Content />
+  </article>
+
+  <div class="disclaimer">
+    This content is for educational purposes only. Not financial advice. Do your own research before investing.
+  </div>
+</BaseLayout>

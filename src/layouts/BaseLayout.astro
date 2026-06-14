@@ -1,0 +1,108 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  date?: Date;
+  lastUpdated?: Date;
+  category?: string;
+}
+
+const { title, description, date, lastUpdated, category } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} | PaisayehPaisa</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" hreflang="en" href={Astro.url.href} />
+    <link rel="alternate" hreflang="x-default" href={Astro.url.href} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": title,
+      "description": description,
+      "datePublished": date?.toISOString(),
+      "dateModified": lastUpdated?.toISOString() || date?.toISOString(),
+      "author": { "@type": "Organization", "name": "PaisayehPaisa" },
+      "publisher": { "@type": "Organization", "name": "PaisayehPaisa" }
+    })}></script>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      :root {
+        --bg: #ffffff; --text: #1a1a2e; --muted: #6b7280;
+        --accent: #2563eb; --border: #e5e7eb; --radius: 8px;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        color: var(--text); background: var(--bg); line-height: 1.7;
+      }
+      .container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
+      a { color: var(--accent); }
+      nav a { text-decoration: none; color: var(--text); font-weight: 500; }
+      nav a:hover { color: var(--accent); }
+      .flex { display: flex; align-items: center; gap: 1.5rem; }
+      header { padding: 1.5rem 0; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
+      header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+      .logo { font-size: 1.25rem; font-weight: 700; text-decoration: none; color: var(--text); }
+      footer { border-top: 1px solid var(--border); padding: 2rem 0; margin-top: 3rem; font-size: 0.875rem; color: var(--muted); }
+      footer p { margin-bottom: 0.5rem; }
+      .disclaimer { font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 2rem; }
+      .breadcrumbs { font-size: 0.875rem; color: var(--muted); margin-bottom: 1rem; }
+      .breadcrumbs a { color: var(--muted); text-decoration: none; }
+      .breadcrumbs a:hover { color: var(--accent); }
+      .meta { font-size: 0.875rem; color: var(--muted); margin-bottom: 1.5rem; }
+      h1 { font-size: 2rem; line-height: 1.3; margin-bottom: 0.5rem; }
+      h2 { font-size: 1.5rem; margin: 2rem 0 0.75rem; }
+      h3 { font-size: 1.2rem; margin: 1.5rem 0 0.5rem; }
+      p, li { margin-bottom: 1rem; }
+      ul, ol { padding-left: 1.5rem; }
+      img { max-width: 100%; height: auto; border-radius: var(--radius); }
+      .tag { display: inline-block; background: #f3f4f6; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.8rem; margin: 0.25rem; }
+      .article-list { list-style: none; padding: 0; }
+      .article-list li { padding: 1rem 0; border-bottom: 1px solid var(--border); }
+      .article-list a { font-size: 1.1rem; font-weight: 500; text-decoration: none; }
+      .article-list .desc { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+      @media (max-width: 640px) {
+        h1 { font-size: 1.5rem; }
+        header .container { flex-direction: column; align-items: flex-start; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="/" class="logo">PaisayehPaisa</a>
+        <nav class="flex">
+          <a href="/crypto-basics/">Basics</a>
+          <a href="/safe-crypto/">Safe</a>
+          <a href="/crypto-scam/">Scam</a>
+          <a href="/crypto-answers/">Answers</a>
+          <a href="/crypto-tax/">Tax</a>
+          <a href="/crypto-tools/">Tools</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <slot />
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>PaisayehPaisa — Crypto in plain language.</p>
+        <p>Questions sourced from BitcoinTalk community discussions.</p>
+        <div class="disclaimer">
+          This content is for educational purposes only. Not financial advice. Do your own research before investing.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
