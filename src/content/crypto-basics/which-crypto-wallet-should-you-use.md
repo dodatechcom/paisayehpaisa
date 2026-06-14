@@ -61,7 +61,9 @@ Wallets provided by exchanges like Binance, Coinbase, WazirX.
 **Pros:** Easiest to set up
 **Cons:** The exchange controls your keys — not you
 
-**Famous quote:** "Not your keys, not your coins."
+<aside class="callout warning">
+⚠️ **"Not your keys, not your coins."** — If you don't control the private keys, the exchange controls your crypto.
+</aside>
 
 ## Decision Flowchart
 
@@ -87,7 +89,9 @@ This is the master key to your wallet. Anyone with these words can access your c
 - Never enter it into any website or app (scammers ask for this)
 - Never share it with anyone — not even "support"
 
-> If someone asks for your seed phrase, they are trying to steal your crypto. Period.
+<aside class="callout danger">
+🚨 **If someone asks for your seed phrase, they are trying to steal your crypto. Period.**
+</aside>
 
 ## Wallet Comparison
 
