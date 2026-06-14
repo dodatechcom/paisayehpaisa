@@ -140,14 +140,15 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"crypto-answers": Record<string, {
-  id: string;
-  slug: string;
+		"crypto-answers": {
+"best-crypto-exchange-beginners.md": {
+	id: "best-crypto-exchange-beginners.md";
+  slug: "best-crypto-exchange-beginners";
   body: string;
   collection: "crypto-answers";
-  data: InferEntrySchema<"crypto-answers">;
-  render(): Render[".md"];
-}>;
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+};
 "crypto-basics": {
 "what-is-dca-crypto-beginners.md": {
 	id: "what-is-dca-crypto-beginners.md";
@@ -173,14 +174,15 @@ declare module 'astro:content' {
   data: InferEntrySchema<"crypto-scam">
 } & { render(): Render[".md"] };
 };
-"crypto-tax": Record<string, {
-  id: string;
-  slug: string;
+"crypto-tax": {
+"crypto-tax-guide-beginners.md": {
+	id: "crypto-tax-guide-beginners.md";
+  slug: "crypto-tax-guide-beginners";
   body: string;
   collection: "crypto-tax";
-  data: InferEntrySchema<"crypto-tax">;
-  render(): Render[".md"];
-}>;
+  data: InferEntrySchema<"crypto-tax">
+} & { render(): Render[".md"] };
+};
 "crypto-tools": Record<string, {
   id: string;
   slug: string;
