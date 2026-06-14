@@ -155,9 +155,37 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"can-you-really-get-rich-from-crypto.md": {
+	id: "can-you-really-get-rich-from-crypto.md";
+  slug: "can-you-really-get-rich-from-crypto";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 "centralized-vs-decentralized-exchanges.md": {
 	id: "centralized-vs-decentralized-exchanges.md";
   slug: "centralized-vs-decentralized-exchanges";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"how-to-withdraw-crypto-to-bank-account.md": {
+	id: "how-to-withdraw-crypto-to-bank-account.md";
+  slug: "how-to-withdraw-crypto-to-bank-account";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"is-crypto-good-investment-2026.md": {
+	id: "is-crypto-good-investment-2026.md";
+  slug: "is-crypto-good-investment-2026";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"what-happens-if-exchange-collapses.md": {
+	id: "what-happens-if-exchange-collapses.md";
+  slug: "what-happens-if-exchange-collapses";
   body: string;
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
@@ -213,6 +241,13 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"how-to-read-crypto-chart.md": {
+	id: "how-to-read-crypto-chart.md";
+  slug: "how-to-read-crypto-chart";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "top-mistakes-beginners-make-crypto.md": {
 	id: "top-mistakes-beginners-make-crypto.md";
   slug: "top-mistakes-beginners-make-crypto";
@@ -248,6 +283,20 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"what-is-defi-decentralized-finance-explained.md": {
+	id: "what-is-defi-decentralized-finance-explained.md";
+  slug: "what-is-defi-decentralized-finance-explained";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"what-is-meme-coin-should-you-invest.md": {
+	id: "what-is-meme-coin-should-you-invest.md";
+  slug: "what-is-meme-coin-should-you-invest";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "which-crypto-wallet-should-you-use.md": {
 	id: "which-crypto-wallet-should-you-use.md";
   slug: "which-crypto-wallet-should-you-use";
@@ -257,6 +306,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "crypto-scam": {
+"how-to-avoid-pump-and-dump-schemes.md": {
+	id: "how-to-avoid-pump-and-dump-schemes.md";
+  slug: "how-to-avoid-pump-and-dump-schemes";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
 "how-to-spot-crypto-scam.md": {
 	id: "how-to-spot-crypto-scam.md";
   slug: "how-to-spot-crypto-scam";
@@ -269,6 +325,13 @@ declare module 'astro:content' {
 "crypto-tax-guide-beginners.md": {
 	id: "crypto-tax-guide-beginners.md";
   slug: "crypto-tax-guide-beginners";
+  body: string;
+  collection: "crypto-tax";
+  data: InferEntrySchema<"crypto-tax">
+} & { render(): Render[".md"] };
+"how-to-report-crypto-losses-taxes.md": {
+	id: "how-to-report-crypto-losses-taxes.md";
+  slug: "how-to-report-crypto-losses-taxes";
   body: string;
   collection: "crypto-tax";
   data: InferEntrySchema<"crypto-tax">
@@ -327,6 +390,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "safe-crypto": {
+"hot-wallets-vs-cold-wallets.md": {
+	id: "hot-wallets-vs-cold-wallets.md";
+  slug: "hot-wallets-vs-cold-wallets";
+  body: string;
+  collection: "safe-crypto";
+  data: InferEntrySchema<"safe-crypto">
+} & { render(): Render[".md"] };
 "what-is-a-seed-phrase.md": {
 	id: "what-is-a-seed-phrase.md";
   slug: "what-is-a-seed-phrase";
