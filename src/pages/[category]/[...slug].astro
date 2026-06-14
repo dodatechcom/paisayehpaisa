@@ -47,7 +47,7 @@ const categoryNames: Record<string, string> = {
   </div>
 
   <div style="margin-bottom: 1.5rem;">
-    {data.tags?.map(tag => <span class="tag">{tag}</span>)}
+    {data.tags?.map((tag, i) => <>{i > 0 && ' '}<span class="tag">{tag}</span></>)}
   </div>
 
   <article>

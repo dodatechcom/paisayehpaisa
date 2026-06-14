@@ -44,7 +44,7 @@ const cfg = categoryConfig[category];
         <div class="desc">{a.data.description}</div>
         <div class="article-meta" style="margin-top:0.5rem;">
           <span>{a.data.date.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' })}</span>
-          {a.data.tags?.map(t => <span class="tag">{t}</span>)}
+          {a.data.tags?.map((t, i) => <>{i > 0 && ' '}<span class="tag">{t}</span></>)}
         </div>
       </li>
     ))}
