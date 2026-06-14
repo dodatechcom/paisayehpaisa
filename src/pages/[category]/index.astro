@@ -2,7 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
-import type { CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
   const categories = ['crypto-basics', 'safe-crypto', 'crypto-scam', 'crypto-answers', 'crypto-tax', 'crypto-tools'];
@@ -16,26 +15,35 @@ const { category } = Astro.props;
 const collection = await getCollection(category as any);
 const articles = collection.filter(a => !a.data.draft).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-const categoryNames: Record<string, string> = {
-  'crypto-basics': 'Crypto Basics',
-  'safe-crypto': 'Safe Crypto',
-  'crypto-scam': 'Crypto Scam',
-  'crypto-answers': 'Crypto Answers',
-  'crypto-tax': 'Crypto Tax',
-  'crypto-tools': 'Crypto Tools',
+const categoryConfig: Record<string, { name: string; icon: string; desc: string }> = {
+  'crypto-basics': { name: 'Crypto Basics', icon: '📘', desc: 'Buying, wallets, exchanges, DCA' },
+  'safe-crypto': { name: 'Safe Crypto', icon: '🔒', desc: 'Seed phrases, 2FA, hardware wallets' },
+  'crypto-scam': { name: 'Crypto Scam', icon: '⚠️', desc: 'Spot scams, phishing, fake wallets' },
+  'crypto-answers': { name: 'Crypto Answers', icon: '💬', desc: 'Daily Q&A from BitcoinTalk' },
+  'crypto-tax': { name: 'Crypto Tax', icon: '💰', desc: 'Country guides, reporting gains' },
+  'crypto-tools': { name: 'Crypto Tools', icon: '🛠️', desc: 'Calculators, checkers, wizards' },
 };
+
+const cfg = categoryConfig[category];
 ---
 
-<BaseLayout title={categoryNames[category]} description={`${categoryNames[category]} — Crypto guides and articles.`}>
-  <Breadcrumbs category={category} />
-  <h1>{categoryNames[category]}</h1>
+<BaseLayout title={cfg.name} description={cfg.desc}>
+  <Breadcrumbs category={category} categoryNames={Object.fromEntries(Object.entries(categoryConfig).map(([k,v]) => [k, v.name]))} />
+
+  <div class="cat-header">
+    <span class="icon">{cfg.icon}</span>
+    <h1>{cfg.name}</h1>
+    <span class="badge">{articles.length} articles</span>
+  </div>
+  <p style="color:var(--muted); margin-bottom:2rem;">{cfg.desc}</p>
+
   <ul class="article-list">
     {articles.map(a => (
       <li>
-        <a href={`/${category}/${a.slug}/`}>{a.data.title}</a>
+        <a href={`/paisayehpaisa/${category}/${a.slug}/`}>{a.data.title}</a>
         <div class="desc">{a.data.description}</div>
-        <div class="meta" style="margin-top:0.25rem;">
-          {a.data.date.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' })}
+        <div class="article-meta" style="margin-top:0.5rem;">
+          <span>{a.data.date.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' })}</span>
           {a.data.tags?.map(t => <span class="tag">{t}</span>)}
         </div>
       </li>

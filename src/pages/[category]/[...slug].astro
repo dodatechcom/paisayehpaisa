@@ -21,22 +21,43 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 const data = entry.data;
+const categoryNames: Record<string, string> = {
+  'crypto-basics': 'Crypto Basics',
+  'safe-crypto': 'Safe Crypto',
+  'crypto-scam': 'Crypto Scam',
+  'crypto-answers': 'Crypto Answers',
+  'crypto-tax': 'Crypto Tax',
+  'crypto-tools': 'Crypto Tools',
+};
 ---
 
 <BaseLayout title={data.title} description={data.description} date={data.date} lastUpdated={data.lastUpdated} category={data.categories[0]}>
-  <Breadcrumbs category={data.categories[0]} slug={entry.slug} />
+  <Breadcrumbs category={data.categories[0]} slug={entry.slug} categoryNames={categoryNames} />
+
   <h1>{data.title}</h1>
-  <div class="meta">
-    {data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+
+  <div class="article-meta">
+    <span>{data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
     {data.lastUpdated && data.lastUpdated > data.date && (
-      <span> · Updated {data.lastUpdated.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+      <>
+        <span class="dot"></span>
+        <span>Updated {data.lastUpdated.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+      </>
     )}
   </div>
-  {data.tags?.map(tag => <span class="tag">{tag}</span>)}
 
-  <article style="margin-top: 2rem;">
+  <div style="margin-bottom: 1.5rem;">
+    {data.tags?.map(tag => <span class="tag">{tag}</span>)}
+  </div>
+
+  <article>
     <Content />
   </article>
+
+  <div style="background:#f1f5f9; border-radius:12px; padding:1.25rem 1.5rem; font-size:0.85rem; color:var(--muted); margin-bottom:2rem;">
+    <strong style="color:var(--text);">📚 Found this helpful?</strong> Share it with someone who's new to crypto.
+    This question was sourced from BitcoinTalk community discussions.
+  </div>
 
   <div class="disclaimer">
     This content is for educational purposes only. Not financial advice. Do your own research before investing.
