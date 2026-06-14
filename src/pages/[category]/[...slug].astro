@@ -21,6 +21,8 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 const data = entry.data;
+import { getTagStyle } from '../../utils/tagStyles';
+
 const categoryNames: Record<string, string> = {
   'crypto-basics': 'Crypto Basics',
   'safe-crypto': 'Safe Crypto',
@@ -47,7 +49,10 @@ const categoryNames: Record<string, string> = {
   </div>
 
   <div style="margin-bottom: 1.5rem;">
-    {data.tags?.map((tag, i) => <>{i > 0 && ' '}<span class="tag">{tag}</span></>)}
+    {data.tags?.map((tag, i) => {
+      const s = getTagStyle(tag);
+      return <>{i > 0 && ' '}<span style={`background:${s.bg};color:${s.color};font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;`}>{s.icon} {tag}</span></>
+    })}
   </div>
 
   <article>
