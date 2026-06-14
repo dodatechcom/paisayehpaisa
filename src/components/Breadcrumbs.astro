@@ -9,11 +9,11 @@ const { category, slug, categoryNames } = Astro.props;
 ---
 
 <nav class="breadcrumbs">
-  <a href="/paisayehpaisa/">Home</a>
+  <a href="/">Home</a>
   {slug ? (
     <>
       <span> / </span>
-      <a href={`/paisayehpaisa/${category}/`}>{categoryNames[category] || category}</a>
+      <a href={`/${category}/`}>{categoryNames[category] || category}</a>
       <span> / </span>
       <span>{slug}</span>
     </>

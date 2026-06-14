@@ -1,8 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://dodatechcom.github.io',
-  base: '/paisayehpaisa',
+  site: 'https://paisayehpaisa.com',
   trailingSlash: 'always',
   build: {
     format: 'directory',

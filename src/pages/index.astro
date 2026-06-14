@@ -33,7 +33,7 @@ const categories = [
 
   <div class="cat-grid">
     {categories.map(cat => (
-      <a href={`/paisayehpaisa/${cat.slug}/`} class="cat-card">
+      <a href={`/${cat.slug}/`} class="cat-card">
         <div class="icon">{cat.icon}</div>
         <h3>{cat.name}</h3>
         <p>{cat.desc}</p>
@@ -45,7 +45,7 @@ const categories = [
   <ul class="article-list">
     {recent.map(a => (
       <li>
-        <a href={`/paisayehpaisa/${a.data.categories[0]}/${a.slug}/`}>{a.data.title}</a>
+        <a href={`/${a.data.categories[0]}/${a.slug}/`}>{a.data.title}</a>
         <div class="desc">{a.data.description}</div>
         <div class="article-meta" style="margin-top:0.25rem;">
           {a.data.date.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' })}

@@ -41,7 +41,7 @@ const cfg = categoryConfig[category];
   <ul class="article-list">
     {articles.map(a => (
       <li>
-        <a href={`/paisayehpaisa/${category}/${a.slug}/`}>{a.data.title}</a>
+        <a href={`/${category}/${a.slug}/`}>{a.data.title}</a>
         <div class="desc">{a.data.description}</div>
         <div class="article-meta" style="margin-top:0.5rem;">
           <span>{a.data.date.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' })}</span>
