@@ -150,6 +150,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "crypto-basics": {
+"what-is-cryptocurrency-beginners-guide.md": {
+	id: "what-is-cryptocurrency-beginners-guide.md";
+  slug: "what-is-cryptocurrency-beginners-guide";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "what-is-dca-crypto-beginners.md": {
 	id: "what-is-dca-crypto-beginners.md";
   slug: "what-is-dca-crypto-beginners";
