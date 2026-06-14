@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="en" style="--accent: #7c3aed" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Gas fees pay for transactions on blockchain networks. Here's how gas works on Ethereum, Solana, and Bitcoin, and why fees vary so much."><title>What Is Gas? Understanding Crypto Transaction Fees | PaisayehPaisa</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="alternate" hreflang="en" href="https://paisayehpaisa.com/crypto-answers/what-is-gas-crypto-transaction-fees/"><link rel="alternate" hreflang="x-default" href="https://paisayehpaisa.com/crypto-answers/what-is-gas-crypto-transaction-fees/"><meta property="og:title" content="What Is Gas? Understanding Crypto Transaction Fees"><meta property="og:description" content="Gas fees pay for transactions on blockchain networks. Here's how gas works on Ethereum, Solana, and Bitcoin, and why fees vary so much."><meta property="og:type" content="article"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Is Gas? Understanding Crypto Transaction Fees","description":"Gas fees pay for transactions on blockchain networks. Here's how gas works on Ethereum, Solana, and Bitcoin, and why fees vary so much.","datePublished":"2026-06-14T00:00:00.000Z","dateModified":"2026-06-14T00:00:00.000Z","author":{"@type":"Organization","name":"PaisayehPaisa"},"publisher":{"@type":"Organization","name":"PaisayehPaisa"}}</script><link rel="stylesheet" href="/_astro/_slug_.DKMAq3X7.css"></head> <body data-astro-cid-37fxchfa> <header data-astro-cid-37fxchfa> <div class="container-wide" data-astro-cid-37fxchfa> <a href="/" class="logo" data-astro-cid-37fxchfa>paisayeh<span data-astro-cid-37fxchfa>paisa</span></a> <nav data-astro-cid-37fxchfa> <a href="/crypto-basics/" data-astro-cid-37fxchfa>Basics</a> <a href="/safe-crypto/" data-astro-cid-37fxchfa>Safe</a> <a href="/crypto-scam/" data-astro-cid-37fxchfa>Scam</a> <a href="/crypto-answers/" data-astro-cid-37fxchfa>Answers</a> <a href="/crypto-tax/" data-astro-cid-37fxchfa>Tax</a> <a href="/crypto-tools/" data-astro-cid-37fxchfa>Tools</a> </nav> </div> </header> <main class="container" data-astro-cid-37fxchfa>  <nav class="breadcrumbs"> <a href="/">Home</a>  <span> / </span> <a href="/crypto-answers/">Crypto Answers</a> <span> / </span> <span>what-is-gas-crypto-transaction-fees</span>  </nav> <h1>What Is Gas? Understanding Crypto Transaction Fees</h1> <div class="article-meta"> <span>June 14, 2026</span>  </div> <div style="margin-bottom: 1.5rem;"> <span style="background:#eef2ff;color:#4338ca;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🏷️ gas</span> <span style="background:#eef2ff;color:#4338ca;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🏷️ fees</span> <span style="background:#eef2ff;color:#4338ca;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🏷️ ethereum</span> <span style="background:#eef2ff;color:#4338ca;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🏷️ transactions</span> </div> <article> <p><strong>Question from BitcoinTalk:</strong> “Why did I pay $50 in gas fees for a simple transfer? What is gas and how is it calculated?”</p>
+<p><strong>Short answer:</strong> Gas is the fee you pay to process a transaction on a blockchain. It pays miners or validators for including your transaction in a block. Higher demand = higher fees.</p>
+<h2 id="what-gas-actually-is">What Gas Actually Is</h2>
+<p>On Ethereum and similar blockchains, every operation requires computational work. Sending ETH, swapping tokens, minting NFTs — all require processing power.</p>
+<p><strong>Gas</strong> measures the amount of computational effort required. You pay a fee proportional to the gas your transaction uses.</p>
+<p>Think of it like gasoline for a car:</p>
+<ul>
+<li>You pay for the amount of “fuel” your transaction needs</li>
+<li>When traffic is heavy (network congestion), prices go up</li>
+<li>You can choose to pay more for a faster trip, or wait for lighter traffic</li>
+</ul>
+<h2 id="how-gas-fees-are-calculated">How Gas Fees Are Calculated</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Total Fee = Gas Units × (Base Fee + Priority Fee)</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="gas-units">Gas Units</h3>
+<p>The amount of computational work your transaction needs.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Transaction Type</th><th>Gas Units</th></tr></thead><tbody><tr><td>Simple ETH transfer</td><td>21,000</td></tr><tr><td>ERC-20 token transfer</td><td>40,000 - 65,000</td></tr><tr><td>Uniswap swap</td><td>120,000 - 250,000</td></tr><tr><td>NFT mint</td><td>60,000 - 150,000</td></tr><tr><td>Complex DeFi interaction</td><td>200,000 - 500,000</td></tr></tbody></table>
+<h3 id="base-fee">Base Fee</h3>
+<p>The minimum fee required to get your transaction into a block. Set by the protocol based on network congestion. This fee is burned (destroyed), reducing ETH supply.</p>
+<h3 id="priority-fee-tip">Priority Fee (Tip)</h3>
+<p>An optional extra fee you add to incentivize validators to prioritize your transaction. Higher tip = faster confirmation.</p>
+<h2 id="gas-fee-examples">Gas Fee Examples</h2>
+<h3 id="when-ethereum-is-calm-gas-price-20-gwei">When Ethereum is calm (gas price ~20 gwei)</h3>
+<ul>
+<li>Simple ETH transfer: 21,000 gas × 20 gwei = 420,000 gwei = $0.60</li>
+<li>Token swap: 150,000 gas × 20 gwei = 3,000,000 gwei = $4.20</li>
+</ul>
+<h3 id="when-ethereum-is-congested-gas-price-100-gwei">When Ethereum is congested (gas price ~100 gwei)</h3>
+<ul>
+<li>Simple ETH transfer: 21,000 × 100 = 2,100,000 gwei = $42</li>
+<li>Token swap: 150,000 × 100 = 15,000,000 gwei = $300</li>
+</ul>
+<aside class="callout tip">
+💡 <strong>Gas fees fluctuate constantly.</strong> Check the current gas price before making a transaction. If fees are high, wait a few hours — they often drop during off-peak hours (weekends, late night US time).
+</aside>
+<h2 id="gas-on-different-blockchains">Gas on Different Blockchains</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Blockchain</th><th>Fee Model</th><th>Typical Fee (Simple Transfer)</th><th>Typical Fee (Swap)</th></tr></thead><tbody><tr><td>Ethereum (L1)</td><td>Gas (gwei)</td><td>$1 - $10</td><td>$5 - $100</td></tr><tr><td>Bitcoin</td><td>Sat/vB</td><td>$0.50 - $5</td><td>N/A</td></tr><tr><td>Solana</td><td>Lamports</td><td>$0.0002 - $0.01</td><td>$0.001 - $0.05</td></tr><tr><td>Arbitrum (L2)</td><td>Gas (cheaper L1)</td><td>$0.05 - $0.50</td><td>$0.10 - $2</td></tr><tr><td>Base (L2)</td><td>Gas (cheaper L1)</td><td>$0.02 - $0.30</td><td>$0.05 - $1</td></tr><tr><td>Polygon</td><td>Gas (MATIC)</td><td>$0.001 - $0.05</td><td>$0.01 - $0.10</td></tr><tr><td>BNB Chain</td><td>Gas (BNB)</td><td>$0.03 - $0.30</td><td>$0.05 - $1</td></tr></tbody></table>
+<h2 id="why-solana-and-l2s-are-cheaper">Why Solana and L2s Are Cheaper</h2>
+<p><strong>Solana</strong> processes thousands of transactions per second with a single global state. Less competition for block space means near-zero fees.</p>
+<p><strong>Layer 2s (Arbitrum, Base, Optimism)</strong> bundle hundreds of transactions together and submit them as one batch to Ethereum. Users share the cost of submitting to Ethereum, making individual fees much lower.</p>
+<p><strong>If you’re paying high fees, you’re probably using Ethereum mainnet directly. Use a Layer 2 instead.</strong></p>
+<h2 id="tips-to-reduce-gas-fees">Tips to Reduce Gas Fees</h2>
+<h3 id="1-use-layer-2s">1. Use Layer 2s</h3>
+<p>Instead of transacting on Ethereum mainnet, use Arbitrum, Base, or Optimism. The experience is identical, but fees are 90-99% lower.</p>
+<h3 id="2-transact-during-off-peak-hours">2. Transact During Off-Peak Hours</h3>
+<p>Gas fees follow predictable patterns:</p>
+<ul>
+<li><strong>Lowest:</strong> Weekends, late night US time (midnight - 6 AM EST)</li>
+<li><strong>Highest:</strong> Weekday afternoons US time (when US traders are active)</li>
+<li><strong>NFT mints</strong> always spike gas (avoid them)</li>
+</ul>
+<h3 id="3-set-gas-price-manually">3. Set Gas Price Manually</h3>
+<p>Instead of “fast” or “instant” settings, choose “slow” or “economy.” Your transaction will take longer but cost less.</p>
+<h3 id="4-use-gas-trackers">4. Use Gas Trackers</h3>
+<ul>
+<li><strong>ETH Gas Station</strong> — Real-time Ethereum gas prices</li>
+<li><strong>CoinGecko Gas Tracker</strong> — Shows gas across multiple chains</li>
+<li><strong>Blocknative Gas Estimator</strong> — Chrome extension with live estimates</li>
+</ul>
+<h3 id="5-batch-transactions">5. Batch Transactions</h3>
+<p>If you need to do multiple operations (e.g., approve + swap), do them in a single transaction using a DEX aggregator (1inch, ParaSwap).</p>
+<aside class="callout warning">
+⚠️ <strong>Don't set gas too low or your transaction may get stuck.</strong> If gas prices spike after you submit, your transaction could remain pending for hours or days. You may need to "cancel" it by sending a replacement transaction with a higher gas price.
+</aside>
+<h2 id="what-happens-if-you-set-gas-too-low">What Happens If You Set Gas Too Low?</h2>
+<p>Your transaction enters the mempool (a waiting area for pending transactions). Validators prioritize transactions with higher fees.</p>
+<p><strong>If fees are too low:</strong></p>
+<ul>
+<li>Your transaction remains pending indefinitely</li>
+<li>You can “replace” it by sending the same transaction with a higher gas fee</li>
+<li>Or you can “cancel” it by sending a zero-value transaction to yourself with a higher gas fee</li>
+</ul>
+<p><strong>On MetaMask:</strong> Click the pending transaction and select “Speed Up” or “Cancel.”</p>
+<h2 id="common-misunderstandings">Common Misunderstandings</h2>
+<p><strong>“Gas fees go to miners/validators”</strong>
+Partly true. The base fee is burned (destroyed). Only the priority fee (tip) goes to validators. This was introduced in Ethereum’s EIP-1559 upgrade.</p>
+<p><strong>“I was charged $100 in gas!”</strong>
+You weren’t charged $100 — you paid $100 worth of ETH as gas. The gas price is set in gwei (1 gwei = 0.000000001 ETH). Always check the estimated $ value before confirming.</p>
+<p><strong>“Gas fees on exchanges are too high”</strong>
+Exchange withdrawal fees are NOT gas fees. Exchanges charge a flat withdrawal fee that includes gas plus their own markup. Example: withdrawing ETH from an exchange may show a $5 fee when actual gas is $1 — the exchange keeps the difference.</p>
+<h2 id="gas-fees-by-chain-when-to-use-what">Gas Fees by Chain: When to Use What</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Task</th><th>Best Chain</th><th>Approx Fee</th></tr></thead><tbody><tr><td>Send $1,000 in ETH</td><td>Base or Arbitrum</td><td>$0.05 - $0.50</td></tr><tr><td>Swap tokens</td><td>Solana or Base</td><td>$0.001 - $0.10</td></tr><tr><td>Buy an NFT</td><td>Polygon or Base</td><td>$0.01 - $0.05</td></tr><tr><td>Use a DeFi protocol</td><td>Arbitrum or Optimism</td><td>$0.10 - $2</td></tr><tr><td>Large transfer ($100K+)</td><td>Ethereum L1</td><td>$2 - $10</td></tr><tr><td>Send $5 in crypto</td><td>Solana or BNB Chain</td><td>$0.001 - $0.05</td></tr></tbody></table>
+<h2 id="verdict">Verdict</h2>
+<p>Gas fees pay for blockchain computation. They vary based on network congestion and transaction complexity.</p>
+<p><strong>To avoid high fees:</strong></p>
+<ul>
+<li>Use Layer 2s (Arbitrum, Base, Optimism) instead of Ethereum mainnet</li>
+<li>Transact during off-peak hours</li>
+<li>Check gas trackers before submitting</li>
+<li>Don’t use Ethereum mainnet for small transactions</li>
+</ul>
+<p>The good news: L2s and Solana make crypto usable again. If you’re paying more than $1 in fees, you’re likely using the wrong chain for your transaction size.</p>
+<p><em>Gas fee complaints are the #1 topic on BitcoinTalk’s “Altcoin” board. The solution is almost always: use a Layer 2.</em></p> </article> <div style="background:#f1f5f9; border-radius:12px; padding:1.25rem 1.5rem; font-size:0.85rem; color:var(--muted); margin-bottom:2rem;"> <strong style="color:var(--text);">📚 Found this helpful?</strong> Share it with someone who's new to crypto.
+    This question was sourced from BitcoinTalk community discussions.
+</div> <div class="disclaimer">
+This content is for educational purposes only. Not financial advice. Do your own research before investing.
+</div>  </main> <footer data-astro-cid-37fxchfa> <div class="container-wide" data-astro-cid-37fxchfa> <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:2rem; margin-bottom:2rem;" data-astro-cid-37fxchfa> <div data-astro-cid-37fxchfa> <p style="font-weight:700; color:var(--text); margin-bottom:0.5rem;" data-astro-cid-37fxchfa>PaisayehPaisa</p> <p data-astro-cid-37fxchfa>Crypto in plain language.</p> </div> <div data-astro-cid-37fxchfa> <p style="font-weight:600; color:var(--text); margin-bottom:0.5rem;" data-astro-cid-37fxchfa>Categories</p> <p data-astro-cid-37fxchfa><a href="/crypto-basics/" data-astro-cid-37fxchfa>Crypto Basics</a></p> <p data-astro-cid-37fxchfa><a href="/safe-crypto/" data-astro-cid-37fxchfa>Safe Crypto</a></p> <p data-astro-cid-37fxchfa><a href="/crypto-scam/" data-astro-cid-37fxchfa>Crypto Scam</a></p> <p data-astro-cid-37fxchfa><a href="/crypto-answers/" data-astro-cid-37fxchfa>Crypto Answers</a></p> </div> <div data-astro-cid-37fxchfa> <p style="font-weight:600; color:var(--text); margin-bottom:0.5rem;" data-astro-cid-37fxchfa>More</p> <p data-astro-cid-37fxchfa><a href="/crypto-tax/" data-astro-cid-37fxchfa>Crypto Tax</a></p> <p data-astro-cid-37fxchfa><a href="/crypto-tools/" data-astro-cid-37fxchfa>Crypto Tools</a></p> </div> </div> <div class="disclaimer" data-astro-cid-37fxchfa>
+Educational purposes only. Not financial advice. Do your own research.
+</div> </div> </footer> </body></html>
