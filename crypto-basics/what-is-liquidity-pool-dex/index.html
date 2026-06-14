@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="en" style="--accent: #2563eb" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Liquidity pools power decentralized exchanges. Users deposit tokens into pools, earn trading fees, and enable instant swaps. Here's how they work."><title>What Is a Liquidity Pool? How Decentralized Exchanges Work | PaisayehPaisa</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="alternate" hreflang="en" href="https://paisayehpaisa.com/crypto-basics/what-is-liquidity-pool-dex/"><link rel="alternate" hreflang="x-default" href="https://paisayehpaisa.com/crypto-basics/what-is-liquidity-pool-dex/"><meta property="og:title" content="What Is a Liquidity Pool? How Decentralized Exchanges Work"><meta property="og:description" content="Liquidity pools power decentralized exchanges. Users deposit tokens into pools, earn trading fees, and enable instant swaps. Here's how they work."><meta property="og:type" content="article"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Is a Liquidity Pool? How Decentralized Exchanges Work","description":"Liquidity pools power decentralized exchanges. Users deposit tokens into pools, earn trading fees, and enable instant swaps. Here's how they work.","datePublished":"2026-06-14T00:00:00.000Z","dateModified":"2026-06-14T00:00:00.000Z","author":{"@type":"Organization","name":"PaisayehPaisa"},"publisher":{"@type":"Organization","name":"PaisayehPaisa"}}</script><link rel="stylesheet" href="/_astro/_slug_.DKMAq3X7.css"></head> <body data-astro-cid-37fxchfa> <header data-astro-cid-37fxchfa> <div class="container-wide" data-astro-cid-37fxchfa> <a href="/" class="logo" data-astro-cid-37fxchfa>paisayeh<span data-astro-cid-37fxchfa>paisa</span></a> <nav data-astro-cid-37fxchfa> <a href="/crypto-basics/" data-astro-cid-37fxchfa>Basics</a> <a href="/safe-crypto/" data-astro-cid-37fxchfa>Safe</a> <a href="/crypto-scam/" data-astro-cid-37fxchfa>Scam</a> <a href="/crypto-answers/" data-astro-cid-37fxchfa>Answers</a> <a href="/crypto-tax/" data-astro-cid-37fxchfa>Tax</a> <a href="/crypto-tools/" data-astro-cid-37fxchfa>Tools</a> </nav> </div> </header> <main class="container" data-astro-cid-37fxchfa>  <nav class="breadcrumbs"> <a href="/">Home</a>  <span> / </span> <a href="/crypto-basics/">Crypto Basics</a> <span> / </span> <span>what-is-liquidity-pool-dex</span>  </nav> <h1>What Is a Liquidity Pool? How Decentralized Exchanges Work</h1> <div class="article-meta"> <span>June 14, 2026</span>  </div> <div style="margin-bottom: 1.5rem;"> <span style="background:#e9d5ff;color:#6b21a8;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🏗️ defi</span> <span style="background:#eef2ff;color:#4338ca;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🏷️ liquidity</span> <span style="background:#eef2ff;color:#4338ca;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🏷️ uniswap</span> <span style="background:#eef2ff;color:#4338ca;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🏷️ dex</span> </div> <article> <p>A liquidity pool is a collection of crypto tokens locked in a smart contract. It provides the liquidity needed for decentralized exchanges (DEXs) like Uniswap to function.</p>
+<p>Instead of matching buyers with sellers (like a traditional exchange), DEXs use these pools to let you trade instantly. Your swap goes against the pool, not against another person.</p>
+<h2 id="how-traditional-exchanges-work">How Traditional Exchanges Work</h2>
+<p>On Coinbase or Binance, there’s an <strong>order book</strong>. Buyers place bids (I’ll buy at $X). Sellers place asks (I’ll sell at $Y). When a bid and ask match, a trade happens.</p>
+<p><strong>Problem:</strong> If there aren’t enough orders, you can’t trade at a good price (or at all).</p>
+<h2 id="how-liquidity-pools-work">How Liquidity Pools Work</h2>
+<p>Instead of matching orders, DEXs use automated market makers (AMMs).</p>
+<p><strong>A simple example:</strong>
+A USDC/ETH liquidity pool contains:</p>
+<ul>
+<li>1,000,000 USDC</li>
+<li>500 ETH</li>
+</ul>
+<p>When you swap 10,000 USDC for ETH:</p>
+<ol>
+<li>The pool adds your 10,000 USDC</li>
+<li>The pool removes ~4.98 ETH and sends it to you</li>
+<li>The price adjusts based on the new ratio</li>
+</ol>
+<p>The formula (for Uniswap-style pools):</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>x × y = k</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>Where x = amount of token A, y = amount of token B, and k is constant.</p>
+<p>When you buy ETH (removing y), the product x×y must stay constant. So more USDC (x) must be added. The price is determined by this ratio.</p>
+<aside class="callout tip">
+💡 <strong>The bigger the pool, the better the price.</strong> A pool with $100M has much less slippage (price impact) than a pool with $1M. Large trades on small pools move the price significantly.
+</aside>
+<h2 id="how-liquidity-providers-earn">How Liquidity Providers Earn</h2>
+<p>Anyone can deposit tokens into a liquidity pool and become a <strong>liquidity provider (LP)</strong>.</p>
+<p><strong>The deal:</strong></p>
+<ul>
+<li>You deposit equal value of two tokens (e.g., $5K USDC + $5K ETH)</li>
+<li>You receive LP tokens representing your share of the pool</li>
+<li>Every trade in the pool pays a fee (0.01-1%)</li>
+<li>Fees are distributed to all LPs proportionally</li>
+</ul>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Uniswap ETH/USDC pool has 0.3% fee per trade</li>
+<li>If $10M trades through the pool in a day, that’s $30K in fees</li>
+<li>If you own 1% of the pool, you earn $300 that day</li>
+</ul>
+<h2 id="impermanent-loss">Impermanent Loss</h2>
+<p>This is the risk every LP must understand.</p>
+<p><strong>What it is:</strong> When the price ratio of your two deposited tokens changes, you end up with less value than if you had simply held both tokens.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>You deposit $5K ETH + $5K USDC (50/50, total $10K)</li>
+<li>ETH price doubles</li>
+<li>If you held: ETH = $10K, USDC = $5K, total = $15K</li>
+<li>In the pool: You have less ETH and more USDC due to arbitrage traders</li>
+<li>Your pool position may be worth $14K instead of $15K</li>
+<li>The $1K difference is <strong>impermanent loss</strong></li>
+</ul>
+<p><strong>When it becomes permanent:</strong> If you withdraw from the pool while the ratio is different from when you deposited.</p>
+<p><strong>When it’s less of a concern:</strong></p>
+<ul>
+<li>Stablecoin pairs (USDC/DAI) — both are ~$1, almost no IL</li>
+<li>High fee pools — fees may compensate for IL</li>
+<li>Short holding periods — less time for price divergence</li>
+</ul>
+<aside class="callout warning">
+⚠️ <strong>Impermanent loss is NOT a bug — it's a feature of how AMMs work.</strong> Before providing liquidity, use an IL calculator to estimate potential losses. In volatile markets, IL can easily exceed fee earnings.
+</aside>
+<h2 id="major-dexs-and-their-pools">Major DEXs and Their Pools</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>DEX</th><th>Chain</th><th>Fee Tiers</th><th>TVL</th></tr></thead><tbody><tr><td><strong>Uniswap</strong></td><td>Ethereum, Arbitrum, Base</td><td>0.01%, 0.05%, 0.30%, 1%</td><td>$5B+</td></tr><tr><td><strong>Curve</strong></td><td>Ethereum, many L2s</td><td>0.01-0.04%</td><td>$3B+</td></tr><tr><td><strong>Balancer</strong></td><td>Ethereum, Polygon, Arbitrum</td><td>Custom (up to 8 tokens per pool)</td><td>$1B+</td></tr><tr><td><strong>PancakeSwap</strong></td><td>BNB Chain</td><td>0.01%, 0.25%</td><td>$2B+</td></tr><tr><td><strong>Orca</strong></td><td>Solana</td><td>0.01-0.30%</td><td>$0.5B+</td></tr></tbody></table>
+<p><strong>Uniswap v3</strong> introduced <strong>concentrated liquidity</strong> — you can choose a specific price range to provide liquidity within. This earns higher fees but carries more risk of IL if the price moves outside your range.</p>
+<h2 id="is-providing-liquidity-worth-it">Is Providing Liquidity Worth It?</h2>
+<h3 id="good-for">Good for:</h3>
+<ul>
+<li>Stablecoin pairs (USDC/DAI) — low risk, steady 2-8% APY</li>
+<li>Large, deep pools (less IL risk per trade)</li>
+<li>Long-term holders who understand the risks</li>
+</ul>
+<h3 id="bad-for">Bad for:</h3>
+<ul>
+<li>Volatile pairs (ETH/SOL, BTC/SHIB) — high IL risk</li>
+<li>Small, illiquid pools — fees don’t compensate for IL</li>
+<li>Beginners who don’t understand IL</li>
+</ul>
+<p><strong>Realistic returns:</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Pool Type</th><th>Typical APY</th><th>IL Risk</th></tr></thead><tbody><tr><td>Stablecoin pair</td><td>2-8%</td><td>Very low</td></tr><tr><td>Blue chip pair (ETH/USDC)</td><td>5-20%</td><td>Medium</td></tr><tr><td>Volatile pair (altcoin/ETH)</td><td>20-100%</td><td>Very high</td></tr><tr><td>Concentrated liquidity (tight range)</td><td>50-500%</td><td>Extreme</td></tr></tbody></table>
+<aside class="callout tip">
+💡 <strong>Start with stablecoin pools.</strong> Deposit USDC and DAI into a Curve or Uniswap pool. The IL is near zero, and you earn 2-8% APY. This is the safest way to learn about liquidity provision.
+</aside>
+<h2 id="how-to-provide-liquidity-step-by-step">How to Provide Liquidity (Step-by-Step)</h2>
+<ol>
+<li><strong>Choose a DEX</strong> — Uniswap (Arbitrum/Base for low fees)</li>
+<li><strong>Get both tokens</strong> — Buy equal value of each (e.g., $500 USDC + $500 DAI)</li>
+<li><strong>Go to the “Pool” section</strong> — Click “New Position” or “Add Liquidity”</li>
+<li><strong>Select the pair</strong> — Choose the two tokens</li>
+<li><strong>Enter amounts</strong> — The interface shows the ratio required</li>
+<li><strong>Confirm</strong> — Approve both tokens, then confirm the deposit</li>
+<li><strong>Receive LP tokens</strong> — These represent your pool share</li>
+</ol>
+<p><strong>Tools to track:</strong></p>
+<ul>
+<li><strong>APY.vision</strong> — Track your LP positions and fees</li>
+<li><strong>Dune Analytics</strong> — DeFi dashboards for pool performance</li>
+<li><strong>Zapper / Zerion</strong> — Portfolio tracking across chains</li>
+</ul>
+<h2 id="verdict">Verdict</h2>
+<p>Liquidity pools are the engine of DeFi. They enable instant, permissionless trading without order books. As a user, they let you earn fees on your crypto.</p>
+<p>But liquidity provision carries real risk — impermanent loss can wipe out fee earnings. Understand IL before depositing. Start with stablecoin pairs. Never provide liquidity to a pool you don’t fully understand.</p>
+<p><em>Related: <a href="/crypto-basics/what-is-defi-decentralized-finance-explained/">What Is DeFi?</a> | <a href="/crypto-basics/how-to-earn-interest-crypto-defi-cefi/">How to Earn Interest on Crypto</a> | <a href="/crypto-basics/what-is-stablecoin-usdc-usdt-dai/">What Is a Stablecoin?</a> | <a href="/crypto-answers/what-is-gas-crypto-transaction-fees/">What Is Gas?</a></em></p> </article> <div style="background:#f1f5f9; border-radius:12px; padding:1.25rem 1.5rem; font-size:0.85rem; color:var(--muted); margin-bottom:2rem;"> <strong style="color:var(--text);">📚 Found this helpful?</strong> Share it with someone who's new to crypto.
+    This question was sourced from BitcoinTalk community discussions.
+</div> <div class="disclaimer">
+This content is for educational purposes only. Not financial advice. Do your own research before investing.
+</div>  </main> <footer data-astro-cid-37fxchfa> <div class="container-wide" data-astro-cid-37fxchfa> <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:2rem; margin-bottom:2rem;" data-astro-cid-37fxchfa> <div data-astro-cid-37fxchfa> <p style="font-weight:700; color:var(--text); margin-bottom:0.5rem;" data-astro-cid-37fxchfa>PaisayehPaisa</p> <p data-astro-cid-37fxchfa>Crypto in plain language.</p> </div> <div data-astro-cid-37fxchfa> <p style="font-weight:600; color:var(--text); margin-bottom:0.5rem;" data-astro-cid-37fxchfa>Categories</p> <p data-astro-cid-37fxchfa><a href="/crypto-basics/" data-astro-cid-37fxchfa>Crypto Basics</a></p> <p data-astro-cid-37fxchfa><a href="/safe-crypto/" data-astro-cid-37fxchfa>Safe Crypto</a></p> <p data-astro-cid-37fxchfa><a href="/crypto-scam/" data-astro-cid-37fxchfa>Crypto Scam</a></p> <p data-astro-cid-37fxchfa><a href="/crypto-answers/" data-astro-cid-37fxchfa>Crypto Answers</a></p> </div> <div data-astro-cid-37fxchfa> <p style="font-weight:600; color:var(--text); margin-bottom:0.5rem;" data-astro-cid-37fxchfa>More</p> <p data-astro-cid-37fxchfa><a href="/crypto-tax/" data-astro-cid-37fxchfa>Crypto Tax</a></p> <p data-astro-cid-37fxchfa><a href="/crypto-tools/" data-astro-cid-37fxchfa>Crypto Tools</a></p> </div> </div> <div class="disclaimer" data-astro-cid-37fxchfa>
+Educational purposes only. Not financial advice. Do your own research.
+</div> </div> </footer> </body></html>
