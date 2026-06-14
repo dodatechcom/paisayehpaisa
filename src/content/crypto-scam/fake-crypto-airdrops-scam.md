@@ -147,4 +147,6 @@ The rule is simple: **if you need to pay to claim "free" tokens, it's a scam.** 
 
 Never connect your main wallet to unknown sites. Use a burner wallet for claims. And always, always read what you're signing.
 
+*Related: [What Is a Crypto Airdrop? (Real)](/crypto-basics/what-is-crypto-airdrop-free-tokens/) | [Common Phishing Attacks](/safe-crypto/common-phishing-attacks-crypto/) | [How to Spot a Scam](/crypto-scam/how-to-spot-crypto-scam/) | [Public Key vs Private Key](/crypto-answers/public-key-vs-private-key/)*
+
 *Fake airdrop scams appear in BitcoinTalk's "Scam" section daily. The community's advice: if you didn't actively do something to earn an airdrop, you probably don't have one coming.*

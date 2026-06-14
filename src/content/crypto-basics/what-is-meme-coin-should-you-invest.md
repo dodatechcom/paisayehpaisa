@@ -116,4 +116,6 @@ Meme coins are gambling, not investing. A tiny allocation can be entertaining, b
 
 The people who made life-changing money on Dogecoin bought it years before it went mainstream — not when Elon Musk started tweeting about it.
 
+*Related: [How to Spot a Crypto Scam](/crypto-scam/how-to-spot-crypto-scam/) | [How to Read a Crypto Chart](/crypto-basics/how-to-read-crypto-chart/) | [Can You Really Get Rich from Crypto?](/crypto-answers/can-you-really-get-rich-from-crypto/)*
+
 *Meme coins are discussed constantly on BitcoinTalk. The consensus: they're fun but risky. Never invest more than you can afford to lose.*

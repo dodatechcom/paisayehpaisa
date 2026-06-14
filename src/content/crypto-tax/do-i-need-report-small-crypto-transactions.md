@@ -145,4 +145,6 @@ Technically, all crypto transactions are taxable and must be reported. In practi
 
 The safest approach: report everything accurately. The practical approach: report significant transactions and use a tax tool to handle the rest.
 
+*Related: [Crypto Tax Guide for Beginners](/crypto-tax/crypto-tax-guide-beginners/) | [Crypto Tax Calculator Guide](/crypto-tax/crypto-tax-calculator-guide/) | [How to Report Crypto Losses](/crypto-tax/how-to-report-crypto-losses-taxes/)*
+
 *This question appears constantly on BitcoinTalk. The community consensus: report what's easy to report, track everything, and consult a professional when gains are significant.*

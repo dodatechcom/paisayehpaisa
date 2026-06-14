@@ -155,4 +155,6 @@ Gas fees pay for blockchain computation. They vary based on network congestion a
 
 The good news: L2s and Solana make crypto usable again. If you're paying more than $1 in fees, you're likely using the wrong chain for your transaction size.
 
+*Related: [What Is DeFi?](/crypto-basics/what-is-defi-decentralized-finance-explained/) | [Which Crypto Wallet Should You Use?](/crypto-basics/which-crypto-wallet-should-you-use/) | [How to Earn Interest on Crypto](/crypto-basics/how-to-earn-interest-crypto-defi-cefi/)*
+
 *Gas fee complaints are the #1 topic on BitcoinTalk's "Altcoin" board. The solution is almost always: use a Layer 2.*

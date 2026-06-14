@@ -195,4 +195,6 @@ The most important thing: **keep records of every single transaction.** If you d
 
 Set up a crypto tax tracking system early (even if you have no gains yet). It's much harder to reconstruct trades months later.
 
+*Related: [Crypto Tax Guide for Beginners](/crypto-tax/crypto-tax-guide-beginners/) | [How to Report Crypto Losses](/crypto-tax/how-to-report-crypto-losses-taxes/) | [Do I Need to Report Small Transactions?](/crypto-tax/do-i-need-report-small-crypto-transactions/)*
+
 *Crypto tax questions dominate BitcoinTalk's "Legal" board. The universal advice: use a tax tool, keep records, and pay what you owe.*

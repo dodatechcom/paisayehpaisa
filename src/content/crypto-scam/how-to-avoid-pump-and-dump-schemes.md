@@ -119,4 +119,6 @@ Pump and dump schemes are not "opportunities" — they're traps. The only people
 
 Stick with established coins on major exchanges. The slow, boring approach wins in crypto.
 
+*Related: [How to Spot a Fake Exchange](/crypto-scam/how-to-spot-fake-crypto-exchange/) | [How to Spot a Crypto Scam](/crypto-scam/how-to-spot-crypto-scam/) | [Top Mistakes Beginners Make](/crypto-basics/top-mistakes-beginners-make-crypto/)*
+
 *Pump and dump schemes are regularly exposed on BitcoinTalk. The community's advice: never join "signal" groups, never chase sudden pumps, and always check liquidity before buying any coin.*

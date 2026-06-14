@@ -148,4 +148,6 @@ Understanding this distinction is the most fundamental concept in crypto securit
 
 If you take one thing from this article: your seed phrase is your crypto. Keep it offline, keep it safe, and never type it into any website.
 
+*Related: [Which Crypto Wallet Should You Use?](/crypto-basics/which-crypto-wallet-should-you-use/) | [What Is a Seed Phrase?](/safe-crypto/what-is-a-seed-phrase/) | [Hot Wallets vs Cold Wallets](/safe-crypto/hot-wallets-vs-cold-wallets/) | [Common Phishing Attacks](/safe-crypto/common-phishing-attacks-crypto/)*
+
 *Public vs private key confusion causes countless losses. BitcoinTalk veterans repeat the mantra constantly: "Not your keys, not your coins."*

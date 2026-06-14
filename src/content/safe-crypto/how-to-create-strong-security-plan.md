@@ -137,4 +137,6 @@ Crypto security is simple but requires discipline:
 
 Follow this checklist, and you'll be safer than 99% of crypto users. Most losses come from skipping these basics.
 
+*Related: [What Is Two-Factor Authentication?](/safe-crypto/what-is-two-factor-authentication/) | [Hot Wallets vs Cold Wallets](/safe-crypto/hot-wallets-vs-cold-wallets/) | [Common Phishing Attacks](/safe-crypto/common-phishing-attacks-crypto/) | [What Is a Seed Phrase?](/safe-crypto/what-is-a-seed-phrase/)*
+
 *Security is the most discussed topic on BitcoinTalk. The veterans all follow some version of this checklist. Newbies who skip these steps are the ones posting "I've been hacked" threads.*

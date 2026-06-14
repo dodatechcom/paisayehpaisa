@@ -133,4 +133,6 @@ Use a **hot wallet** for small amounts you spend regularly (up to $500). Use a *
 
 If you have more than $1,000 in crypto, buy a hardware wallet. A $100 Ledger protects thousands or tens of thousands. It's the best investment you'll make in crypto security.
 
+*Related: [What Is a Seed Phrase?](/safe-crypto/what-is-a-seed-phrase/) | [How to Create a Strong Security Plan](/safe-crypto/how-to-create-strong-security-plan/) | [What Happens If an Exchange Collapses?](/crypto-answers/what-happens-if-exchange-collapses/)*
+
 *This question appears multiple times daily on BitcoinTalk. The universal answer: cold storage for long-term holdings, hot wallets for spending money.*

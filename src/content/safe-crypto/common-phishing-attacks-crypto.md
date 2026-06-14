@@ -159,4 +159,6 @@ Phishing is the #1 threat to your crypto. The blockchain is secure. You are the 
 
 The solution is simple: never click links, never enter your seed phrase online, use authenticator apps not SMS, and verify everything.
 
+*Related: [Fake Crypto Airdrops Scam](/crypto-scam/fake-crypto-airdrops-scam/) | [How to Spot a Fake Exchange](/crypto-scam/how-to-spot-fake-crypto-exchange/) | [What Is Two-Factor Authentication?](/safe-crypto/what-is-two-factor-authentication/) | [How to Create a Strong Security Plan](/safe-crypto/how-to-create-strong-security-plan/)*
+
 *Phishing threads are the most common type of "I lost my crypto" post on BitcoinTalk. In every case, the person clicked a link they shouldn't have. Don't be that person.*

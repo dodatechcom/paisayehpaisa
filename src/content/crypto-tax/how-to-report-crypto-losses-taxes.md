@@ -151,4 +151,6 @@ For US holders: the lack of a wash sale rule creates a unique opportunity to har
 
 For everyone: keep detailed records of every trade. You can't claim a loss if you can't prove your cost basis.
 
+*Related: [Crypto Tax Guide for Beginners](/crypto-tax/crypto-tax-guide-beginners/) | [Crypto Tax Calculator Guide](/crypto-tax/crypto-tax-calculator-guide/) | [Do I Need to Report Small Transactions?](/crypto-tax/do-i-need-report-small-crypto-transactions/)*
+
 *Crypto tax questions dominate BitcoinTalk's "Legal" board. The community's advice: harvest losses annually, use a tax tracking tool, and always consult a professional for large amounts.*

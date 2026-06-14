@@ -132,4 +132,6 @@ Best: hardware key for primary, authenticator app as backup.
 
 If you have crypto worth more than $1,000 and don't have 2FA enabled, stop reading and enable it now.
 
+*Related: [How to Create a Strong Security Plan](/safe-crypto/how-to-create-strong-security-plan/) | [Common Phishing Attacks](/safe-crypto/common-phishing-attacks-crypto/) | [Public Key vs Private Key](/crypto-answers/public-key-vs-private-key/)*
+
 *2FA discussions are constant on BitcoinTalk. The community consensus: authenticator app > SMS, hardware key > authenticator app. Never rely on SMS alone.*

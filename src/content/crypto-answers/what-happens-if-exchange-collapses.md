@@ -133,4 +133,6 @@ Can you lose everything if an exchange collapses? Yes. It has happened repeatedl
 
 The solution is simple: self-custody. Buy on exchanges, withdraw to your wallet. Your keys, your coins. Not your keys, not your coins.
 
+*Related: [How to Withdraw Crypto to Bank](/crypto-answers/how-to-withdraw-crypto-to-bank-account/) | [Hot Wallets vs Cold Wallets](/safe-crypto/hot-wallets-vs-cold-wallets/) | [Best Crypto Exchange for Beginners](/crypto-answers/best-crypto-exchange-beginners/) | [How to Spot a Fake Exchange](/crypto-scam/how-to-spot-fake-crypto-exchange/)*
+
 *This topic produces the longest threads on BitcoinTalk. Every exchange collapse brings a flood of "I told you so" from long-time members who have been preaching self-custody for a decade.*

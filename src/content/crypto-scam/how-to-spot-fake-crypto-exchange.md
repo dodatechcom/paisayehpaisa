@@ -160,4 +160,6 @@ Fake exchanges are everywhere. They look real. They feel real. They steal your m
 
 If in doubt, stick with Coinbase, Kraken, or Binance. If you haven't heard of an exchange, you have no reason to trust it with your money.
 
+*Related: [Best Crypto Exchange for Beginners](/crypto-answers/best-crypto-exchange-beginners/) | [What Happens If an Exchange Collapses?](/crypto-answers/what-happens-if-exchange-collapses/) | [Centralized vs Decentralized Exchanges](/crypto-answers/centralized-vs-decentralized-exchanges/) | [Common Phishing Attacks](/safe-crypto/common-phishing-attacks-crypto/)*
+
 *Fake exchange reports are a weekly occurrence on BitcoinTalk. The community rule: "If you found it on Google Ads, it's probably a scam."*
