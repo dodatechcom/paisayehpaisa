@@ -148,6 +148,13 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"best-crypto-staking-platforms-2026.md": {
+	id: "best-crypto-staking-platforms-2026.md";
+  slug: "best-crypto-staking-platforms-2026";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 "centralized-vs-decentralized-exchanges.md": {
 	id: "centralized-vs-decentralized-exchanges.md";
   slug: "centralized-vs-decentralized-exchanges";
@@ -157,6 +164,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "crypto-basics": {
+"10-legit-ways-earn-passive-income-crypto.md": {
+	id: "10-legit-ways-earn-passive-income-crypto.md";
+  slug: "10-legit-ways-earn-passive-income-crypto";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "best-cryptocurrencies-beginners-low-risk.md": {
 	id: "best-cryptocurrencies-beginners-low-risk.md";
   slug: "best-cryptocurrencies-beginners-low-risk";
@@ -178,9 +192,23 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"how-much-earn-crypto-staking.md": {
+	id: "how-much-earn-crypto-staking.md";
+  slug: "how-much-earn-crypto-staking";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "how-to-buy-crypto-safely.md": {
 	id: "how-to-buy-crypto-safely.md";
   slug: "how-to-buy-crypto-safely";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"how-to-earn-interest-crypto-defi-cefi.md": {
+	id: "how-to-earn-interest-crypto-defi-cefi.md";
+  slug: "how-to-earn-interest-crypto-defi-cefi";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
