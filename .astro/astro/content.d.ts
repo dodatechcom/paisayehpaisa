@@ -149,6 +149,13 @@ declare module 'astro:content' {
   render(): Render[".md"];
 }>;
 "crypto-basics": {
+"what-is-dca-crypto-beginners.md": {
+	id: "what-is-dca-crypto-beginners.md";
+  slug: "what-is-dca-crypto-beginners";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "which-crypto-wallet-should-you-use.md": {
 	id: "which-crypto-wallet-should-you-use.md";
   slug: "which-crypto-wallet-should-you-use";
@@ -157,14 +164,15 @@ declare module 'astro:content' {
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
 };
-"crypto-scam": Record<string, {
-  id: string;
-  slug: string;
+"crypto-scam": {
+"how-to-spot-crypto-scam.md": {
+	id: "how-to-spot-crypto-scam.md";
+  slug: "how-to-spot-crypto-scam";
   body: string;
   collection: "crypto-scam";
-  data: InferEntrySchema<"crypto-scam">;
-  render(): Render[".md"];
-}>;
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+};
 "crypto-tax": Record<string, {
   id: string;
   slug: string;
@@ -225,14 +233,15 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".md"] };
 };
-"safe-crypto": Record<string, {
-  id: string;
-  slug: string;
+"safe-crypto": {
+"what-is-a-seed-phrase.md": {
+	id: "what-is-a-seed-phrase.md";
+  slug: "what-is-a-seed-phrase";
   body: string;
   collection: "safe-crypto";
-  data: InferEntrySchema<"safe-crypto">;
-  render(): Render[".md"];
-}>;
+  data: InferEntrySchema<"safe-crypto">
+} & { render(): Render[".md"] };
+};
 
 	};
 
