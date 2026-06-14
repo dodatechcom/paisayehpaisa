@@ -148,8 +148,64 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"centralized-vs-decentralized-exchanges.md": {
+	id: "centralized-vs-decentralized-exchanges.md";
+  slug: "centralized-vs-decentralized-exchanges";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 };
 "crypto-basics": {
+"best-cryptocurrencies-beginners-low-risk.md": {
+	id: "best-cryptocurrencies-beginners-low-risk.md";
+  slug: "best-cryptocurrencies-beginners-low-risk";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"crypto-vs-stocks-which-is-better.md": {
+	id: "crypto-vs-stocks-which-is-better.md";
+  slug: "crypto-vs-stocks-which-is-better";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"how-blockchain-works-simple-explanation.md": {
+	id: "how-blockchain-works-simple-explanation.md";
+  slug: "how-blockchain-works-simple-explanation";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"how-to-buy-crypto-safely.md": {
+	id: "how-to-buy-crypto-safely.md";
+  slug: "how-to-buy-crypto-safely";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"top-mistakes-beginners-make-crypto.md": {
+	id: "top-mistakes-beginners-make-crypto.md";
+  slug: "top-mistakes-beginners-make-crypto";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"what-is-bitcoin-mining-profitable.md": {
+	id: "what-is-bitcoin-mining-profitable.md";
+  slug: "what-is-bitcoin-mining-profitable";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"what-is-crypto-airdrop-free-tokens.md": {
+	id: "what-is-crypto-airdrop-free-tokens.md";
+  slug: "what-is-crypto-airdrop-free-tokens";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "what-is-cryptocurrency-beginners-guide.md": {
 	id: "what-is-cryptocurrency-beginners-guide.md";
   slug: "what-is-cryptocurrency-beginners-guide";
