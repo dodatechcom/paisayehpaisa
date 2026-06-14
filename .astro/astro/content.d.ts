@@ -197,6 +197,13 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"should-you-use-crypto-debit-card.md": {
+	id: "should-you-use-crypto-debit-card.md";
+  slug: "should-you-use-crypto-debit-card";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 "what-happens-if-exchange-collapses.md": {
 	id: "what-happens-if-exchange-collapses.md";
   slug: "what-happens-if-exchange-collapses";
@@ -204,9 +211,23 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"what-is-bitcoin-halving.md": {
+	id: "what-is-bitcoin-halving.md";
+  slug: "what-is-bitcoin-halving";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 "what-is-gas-crypto-transaction-fees.md": {
 	id: "what-is-gas-crypto-transaction-fees.md";
   slug: "what-is-gas-crypto-transaction-fees";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"what-is-layer-2-ethereum-scaling.md": {
+	id: "what-is-layer-2-ethereum-scaling.md";
+  slug: "what-is-layer-2-ethereum-scaling";
   body: string;
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
@@ -230,6 +251,13 @@ declare module 'astro:content' {
 "crypto-for-beginners-complete-guide.md": {
 	id: "crypto-for-beginners-complete-guide.md";
   slug: "crypto-for-beginners-complete-guide";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"crypto-lending-borrowing-beginners.md": {
+	id: "crypto-lending-borrowing-beginners.md";
+  slug: "crypto-lending-borrowing-beginners";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -276,6 +304,13 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"how-to-set-up-crypto-wallet.md": {
+	id: "how-to-set-up-crypto-wallet.md";
+  slug: "how-to-set-up-crypto-wallet";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "top-mistakes-beginners-make-crypto.md": {
 	id: "top-mistakes-beginners-make-crypto.md";
   slug: "top-mistakes-beginners-make-crypto";
@@ -318,9 +353,30 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"what-is-liquidity-pool-dex.md": {
+	id: "what-is-liquidity-pool-dex.md";
+  slug: "what-is-liquidity-pool-dex";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "what-is-meme-coin-should-you-invest.md": {
 	id: "what-is-meme-coin-should-you-invest.md";
   slug: "what-is-meme-coin-should-you-invest";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"what-is-nft-still-relevant.md": {
+	id: "what-is-nft-still-relevant.md";
+  slug: "what-is-nft-still-relevant";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"what-is-stablecoin-usdc-usdt-dai.md": {
+	id: "what-is-stablecoin-usdc-usdt-dai.md";
+  slug: "what-is-stablecoin-usdc-usdt-dai";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -365,6 +421,20 @@ declare module 'astro:content' {
 "how-to-spot-fake-crypto-exchange.md": {
 	id: "how-to-spot-fake-crypto-exchange.md";
   slug: "how-to-spot-fake-crypto-exchange";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"how-to-spot-fake-wallet-app.md": {
+	id: "how-to-spot-fake-wallet-app.md";
+  slug: "how-to-spot-fake-wallet-app";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"recovery-scams-how-scammers-target-victims-again.md": {
+	id: "recovery-scams-how-scammers-target-victims-again.md";
+  slug: "recovery-scams-how-scammers-target-victims-again";
   body: string;
   collection: "crypto-scam";
   data: InferEntrySchema<"crypto-scam">
