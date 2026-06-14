@@ -19,6 +19,25 @@ const categoryColors: Record<string, string> = {
 };
 
 const accent = category ? (categoryColors[category] || '#2563eb') : '#2563eb';
+
+const schema = category === 'crypto-answers' ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": title,
+    "acceptedAnswer": { "@type": "Answer", "text": description }
+  }]
+} : {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "datePublished": date?.toISOString(),
+  "dateModified": lastUpdated?.toISOString() || date?.toISOString(),
+  "author": { "@type": "Organization", "name": "PaisayehPaisa" },
+  "publisher": { "@type": "Organization", "name": "PaisayehPaisa" }
+};
 ---
 
 <!doctype html>
@@ -35,16 +54,7 @@ const accent = category ? (categoryColors[category] || '#2563eb') : '#2563eb';
     <meta property="og:description" content={description} />
     <meta property="og:type" content="article" />
     <meta name="twitter:card" content="summary_large_image" />
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": title,
-      "description": description,
-      "datePublished": date?.toISOString(),
-      "dateModified": lastUpdated?.toISOString() || date?.toISOString(),
-      "author": { "@type": "Organization", "name": "PaisayehPaisa" },
-      "publisher": { "@type": "Organization", "name": "PaisayehPaisa" }
-    })}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       :root {
