@@ -148,6 +148,20 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"best-crypto-news-sources-research.md": {
+	id: "best-crypto-news-sources-research.md";
+  slug: "best-crypto-news-sources-research";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"best-crypto-portfolio-tracker-apps.md": {
+	id: "best-crypto-portfolio-tracker-apps.md";
+  slug: "best-crypto-portfolio-tracker-apps";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 "best-crypto-staking-platforms-2026.md": {
 	id: "best-crypto-staking-platforms-2026.md";
   slug: "best-crypto-staking-platforms-2026";
@@ -232,6 +246,13 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"what-is-slippage-crypto-trading.md": {
+	id: "what-is-slippage-crypto-trading.md";
+  slug: "what-is-slippage-crypto-trading";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 };
 "crypto-basics": {
 "10-legit-ways-earn-passive-income-crypto.md": {
@@ -265,6 +286,13 @@ declare module 'astro:content' {
 "crypto-vs-stocks-which-is-better.md": {
 	id: "crypto-vs-stocks-which-is-better.md";
   slug: "crypto-vs-stocks-which-is-better";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"crypto-yield-farming-beginners-guide.md": {
+	id: "crypto-yield-farming-beginners-guide.md";
+  slug: "crypto-yield-farming-beginners-guide";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -304,9 +332,23 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"how-to-research-crypto-project-before-investing.md": {
+	id: "how-to-research-crypto-project-before-investing.md";
+  slug: "how-to-research-crypto-project-before-investing";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "how-to-set-up-crypto-wallet.md": {
 	id: "how-to-set-up-crypto-wallet.md";
   slug: "how-to-set-up-crypto-wallet";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"how-to-start-crypto-trading-100-dollars.md": {
+	id: "how-to-start-crypto-trading-100-dollars.md";
+  slug: "how-to-start-crypto-trading-100-dollars";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -367,9 +409,23 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"what-is-mev-crypto.md": {
+	id: "what-is-mev-crypto.md";
+  slug: "what-is-mev-crypto";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "what-is-nft-still-relevant.md": {
 	id: "what-is-nft-still-relevant.md";
   slug: "what-is-nft-still-relevant";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"what-is-smart-contract.md": {
+	id: "what-is-smart-contract.md";
+  slug: "what-is-smart-contract";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -469,6 +525,13 @@ declare module 'astro:content' {
   collection: "crypto-tax";
   data: InferEntrySchema<"crypto-tax">
 } & { render(): Render[".md"] };
+"how-to-read-crypto-tax-report.md": {
+	id: "how-to-read-crypto-tax-report.md";
+  slug: "how-to-read-crypto-tax-report";
+  body: string;
+  collection: "crypto-tax";
+  data: InferEntrySchema<"crypto-tax">
+} & { render(): Render[".md"] };
 "how-to-report-crypto-losses-taxes.md": {
 	id: "how-to-report-crypto-losses-taxes.md";
   slug: "how-to-report-crypto-losses-taxes";
@@ -554,6 +617,13 @@ declare module 'astro:content' {
 "how-to-keep-crypto-safe-complete-guide.md": {
 	id: "how-to-keep-crypto-safe-complete-guide.md";
   slug: "how-to-keep-crypto-safe-complete-guide";
+  body: string;
+  collection: "safe-crypto";
+  data: InferEntrySchema<"safe-crypto">
+} & { render(): Render[".md"] };
+"how-to-use-hardware-wallet-ledger-trezor.md": {
+	id: "how-to-use-hardware-wallet-ledger-trezor.md";
+  slug: "how-to-use-hardware-wallet-ledger-trezor";
   body: string;
   collection: "safe-crypto";
   data: InferEntrySchema<"safe-crypto">
