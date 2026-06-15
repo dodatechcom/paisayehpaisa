@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="en" style="--accent: #7c3aed" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="A block explorer shows every detail of a crypto transaction. Here's how to read what each field means and verify any transaction."><title>How to Read a Crypto Transaction on a Block Explorer | PaisayehPaisa</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="alternate" hreflang="en" href="https://paisayehpaisa.com/crypto-answers/how-to-read-crypto-transaction-explorer/"><link rel="alternate" hreflang="x-default" href="https://paisayehpaisa.com/crypto-answers/how-to-read-crypto-transaction-explorer/"><meta property="og:title" content="How to Read a Crypto Transaction on a Block Explorer"><meta property="og:description" content="A block explorer shows every detail of a crypto transaction. Here's how to read what each field means and verify any transaction."><meta property="og:type" content="article"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to Read a Crypto Transaction on a Block Explorer","acceptedAnswer":{"@type":"Answer","text":"A block explorer shows every detail of a crypto transaction. Here's how to read what each field means and verify any transaction."}}]}</script><link rel="stylesheet" href="/_astro/_slug_.DKMAq3X7.css"></head> <body data-astro-cid-37fxchfa> <header data-astro-cid-37fxchfa> <div class="container-wide" data-astro-cid-37fxchfa> <a href="/" class="logo" data-astro-cid-37fxchfa>paisayeh<span data-astro-cid-37fxchfa>paisa</span></a> <nav data-astro-cid-37fxchfa> <a href="/crypto-basics/" data-astro-cid-37fxchfa>Basics</a> <a href="/safe-crypto/" data-astro-cid-37fxchfa>Safe</a> <a href="/crypto-scam/" data-astro-cid-37fxchfa>Scam</a> <a href="/crypto-answers/" data-astro-cid-37fxchfa>Answers</a> <a href="/crypto-tax/" data-astro-cid-37fxchfa>Tax</a> <a href="/crypto-tools/" data-astro-cid-37fxchfa>Tools</a> </nav> </div> </header> <main class="container" data-astro-cid-37fxchfa>  <nav class="breadcrumbs"> <a href="/">Home</a>  <span> / </span> <a href="/crypto-answers/">Crypto Answers</a> <span> / </span> <span>how-to-read-crypto-transaction-explorer</span>  </nav> <h1>How to Read a Crypto Transaction on a Block Explorer</h1> <div class="article-meta"> <span>June 15, 2026</span>  </div> <div style="margin-bottom: 1.5rem;"> <span style="background:#eef2ff;color:#4338ca;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🏷️ blockchain</span> <span style="background:#eef2ff;color:#4338ca;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🏷️ explorers</span> <span style="background:#d1fae5;color:#065f46;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🌱 beginners</span> <span style="background:#eef2ff;color:#4338ca;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🏷️ transactions</span> </div> <article> <p><strong>Question from BitcoinTalk:</strong> “Someone sent me BTC but I can’t see it. How do I use a block explorer to check?”</p>
+<p><strong>Short answer:</strong> A block explorer shows the full life of a transaction. Enter the TXID (transaction hash) on the correct explorer (Mempool.space for Bitcoin, Etherscan for Ethereum). Check “Status” = Confirmed, “To” = your address, “Value” = correct amount. If it’s confirmed and shows your address, the crypto is in your wallet.</p>
+<h2 id="anatomy-of-a-transaction">Anatomy of a Transaction</h2>
+<p>Every blockchain transaction has the same structure:</p>
+<ul>
+<li><strong>Transaction Hash (TXID)</strong> — Unique identifier (like a receipt number)</li>
+<li><strong>Status</strong> — Pending, Confirmed, or Failed</li>
+<li><strong>Block</strong> — Which block included the transaction</li>
+<li><strong>Timestamp</strong> — When it was processed</li>
+<li><strong>From</strong> — The sender’s address</li>
+<li><strong>To</strong> — The receiver’s address</li>
+<li><strong>Value</strong> — Amount transferred</li>
+<li><strong>Fee</strong> — Network fee paid by the sender</li>
+</ul>
+<h2 id="reading-a-bitcoin-transaction">Reading a Bitcoin Transaction</h2>
+<p>On Mempool.space, a Bitcoin transaction shows:</p>
+<ul>
+<li><strong>Inputs</strong> — Which UTXOs (unspent outputs) are being spent</li>
+<li><strong>Outputs</strong> — Where the BTC is going (receiver + change back to sender)</li>
+<li><strong>Fee rate</strong> — Satoshis per vbyte (higher = faster confirmation)</li>
+<li><strong>Size</strong> — Transaction size in virtual bytes (larger = higher fee)</li>
+<li><strong>Confirmations</strong> — How many blocks have been mined since</li>
+</ul>
+<p><strong>What to verify:</strong></p>
+<ul>
+<li>Your address appears in one of the outputs</li>
+<li>The value going to your address matches the expected amount</li>
+<li>Status shows at least 1 confirmation</li>
+</ul>
+<h2 id="reading-an-ethereum-transaction">Reading an Ethereum Transaction</h2>
+<p>On Etherscan, an Ethereum transaction shows:</p>
+<ul>
+<li><strong>Transaction Hash</strong> — Unique ID</li>
+<li><strong>Status</strong> — Success or Failed</li>
+<li><strong>Block</strong> — Block number (e.g., 20,123,456)</li>
+<li><strong>From/To</strong> — Sender and receiver</li>
+<li><strong>Value</strong> — ETH amount (in ETH or Wei)</li>
+<li><strong>Gas Used</strong> — Actual gas consumed (usually 21,000 for simple transfers)</li>
+<li><strong>Gas Price</strong> — Price paid per unit of gas (in Gwei)</li>
+<li><strong>Transaction Fee</strong> — Gas Used × Gas Price</li>
+</ul>
+<p><strong>For ERC-20 token transfers:</strong> Check the “Token Transfer” tab — ERC-20 transfers don’t show in the main ETH value field.</p>
+<h2 id="common-fields-on-any-explorer">Common Fields on Any Explorer</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>What It Means</th><th>Why Check It</th></tr></thead><tbody><tr><td>TXID / Hash</td><td>Transaction ID</td><td>Bookmark for tracking</td></tr><tr><td>Status / Result</td><td>Success / Pending / Failed</td><td>Did the transaction go through?</td></tr><tr><td>Block</td><td>Block number that included this tx</td><td>How many confirmations?</td></tr><tr><td>From</td><td>Sender’s address</td><td>Is this the expected sender?</td></tr><tr><td>To</td><td>Receiver’s address</td><td>Is this your address?</td></tr><tr><td>Value</td><td>Amount transferred</td><td>Is the amount correct?</td></tr><tr><td>Fee</td><td>Network fee</td><td>Did the sender pay enough?</td></tr><tr><td>Token Transfer</td><td>Token details</td><td>For USDC, USDT, other tokens</td></tr></tbody></table>
+<h2 id="using-explorers-for-each-blockchain">Using Explorers for Each Blockchain</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Blockchain</th><th>Best Explorer</th><th>What to Check</th></tr></thead><tbody><tr><td>Bitcoin</td><td>Mempool.space</td><td>Fee rate, confirmation count</td></tr><tr><td>Ethereum</td><td>Etherscan.io</td><td>Gas used, token transfers</td></tr><tr><td>Solana</td><td>Solscan.io</td><td>Transaction status, account changes</td></tr><tr><td>Polygon</td><td>Polygonscan.com</td><td>Similar to Etherscan</td></tr><tr><td>BNB Chain</td><td>Bscscan.com</td><td>Similar to Etherscan</td></tr><tr><td>Arbitrum</td><td>Arbiscan.io</td><td>L1 and L2 fees</td></tr><tr><td>Optimism</td><td>Optimistic.etherscan.io</td><td>L1 and L2 fees</td></tr></tbody></table>
+<h2 id="how-to-verify-a-payment">How to Verify a Payment</h2>
+<ol>
+<li>Get the TXID from the sender</li>
+<li>Go to the correct explorer for that blockchain</li>
+<li>Paste the TXID in the search bar</li>
+<li>Check: STATUS = Confirmed</li>
+<li>Check: TO = your address (exact match)</li>
+<li>Check: VALUE = correct amount</li>
+<li>Check: CONFIRMATIONS = at least 1 (wait for 6 for high-value)</li>
+</ol>
+<h2 id="red-flags">Red Flags</h2>
+<ul>
+<li><strong>Unconfirmed for hours</strong> — Check mempool congestion</li>
+<li><strong>Status = Failed</strong> — Internal error, transaction didn’t process</li>
+<li><strong>Wrong TO address</strong> — Confirm the address character by character</li>
+<li><strong>Token transfer tab is empty</strong> — For ERC-20 tokens, check the tab specifically</li>
+</ul>
+<h2 id="verdict">Verdict</h2>
+<p>A block explorer is the most important verification tool in crypto. If you can read a transaction on the explorer, you never need to trust someone’s word that they sent payment. Always verify the TO address, the value, and the confirmation status.</p>
+<p><em>Related: <a href="/crypto-answers/how-to-check-crypto-transaction-status/">How to Check Transaction Status</a> | <a href="/crypto-basics/how-to-use-blockchain-explorer/">How to Use a Blockchain Explorer</a> | <a href="/crypto-answers/what-to-do-send-crypto-wrong-address/">What to Do if Sent to Wrong Address</a></em></p> </article> <div style="background:#f1f5f9; border-radius:12px; padding:1.25rem 1.5rem; font-size:0.85rem; color:var(--muted); margin-bottom:2rem;"> <strong style="color:var(--text);">📚 Found this helpful?</strong> Share it with someone who's new to crypto.
+    This question was sourced from BitcoinTalk community discussions.
+</div> <div class="disclaimer">
+This content is for educational purposes only. Not financial advice. Do your own research before investing.
+</div>  </main> <footer data-astro-cid-37fxchfa> <div class="container-wide" data-astro-cid-37fxchfa> <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:2rem; margin-bottom:2rem;" data-astro-cid-37fxchfa> <div data-astro-cid-37fxchfa> <p style="font-weight:700; color:var(--text); margin-bottom:0.5rem;" data-astro-cid-37fxchfa>PaisayehPaisa</p> <p data-astro-cid-37fxchfa>Crypto in plain language.</p> </div> <div data-astro-cid-37fxchfa> <p style="font-weight:600; color:var(--text); margin-bottom:0.5rem;" data-astro-cid-37fxchfa>Categories</p> <p data-astro-cid-37fxchfa><a href="/crypto-basics/" data-astro-cid-37fxchfa>Crypto Basics</a></p> <p data-astro-cid-37fxchfa><a href="/safe-crypto/" data-astro-cid-37fxchfa>Safe Crypto</a></p> <p data-astro-cid-37fxchfa><a href="/crypto-scam/" data-astro-cid-37fxchfa>Crypto Scam</a></p> <p data-astro-cid-37fxchfa><a href="/crypto-answers/" data-astro-cid-37fxchfa>Crypto Answers</a></p> </div> <div data-astro-cid-37fxchfa> <p style="font-weight:600; color:var(--text); margin-bottom:0.5rem;" data-astro-cid-37fxchfa>More</p> <p data-astro-cid-37fxchfa><a href="/crypto-tax/" data-astro-cid-37fxchfa>Crypto Tax</a></p> <p data-astro-cid-37fxchfa><a href="/crypto-tools/" data-astro-cid-37fxchfa>Crypto Tools</a></p> </div> </div> <div class="disclaimer" data-astro-cid-37fxchfa>
+Educational purposes only. Not financial advice. Do your own research.
+</div> </div> </footer> </body></html>

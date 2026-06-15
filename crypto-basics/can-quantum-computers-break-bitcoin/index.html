@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en" style="--accent: #2563eb" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Will quantum computers crack Bitcoin's cryptography? Here's the real timeline, what's at risk, and why Bitcoin can upgrade before it matters."><title>Can Quantum Computers Break Bitcoin? Separating FUD from Reality | PaisayehPaisa</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="alternate" hreflang="en" href="https://paisayehpaisa.com/crypto-basics/can-quantum-computers-break-bitcoin/"><link rel="alternate" hreflang="x-default" href="https://paisayehpaisa.com/crypto-basics/can-quantum-computers-break-bitcoin/"><meta property="og:title" content="Can Quantum Computers Break Bitcoin? Separating FUD from Reality"><meta property="og:description" content="Will quantum computers crack Bitcoin's cryptography? Here's the real timeline, what's at risk, and why Bitcoin can upgrade before it matters."><meta property="og:type" content="article"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Can Quantum Computers Break Bitcoin? Separating FUD from Reality","description":"Will quantum computers crack Bitcoin's cryptography? Here's the real timeline, what's at risk, and why Bitcoin can upgrade before it matters.","datePublished":"2026-06-15T00:00:00.000Z","dateModified":"2026-06-15T00:00:00.000Z","author":{"@type":"Organization","name":"PaisayehPaisa"},"publisher":{"@type":"Organization","name":"PaisayehPaisa"}}</script><link rel="stylesheet" href="/_astro/_slug_.DKMAq3X7.css"></head> <body data-astro-cid-37fxchfa> <header data-astro-cid-37fxchfa> <div class="container-wide" data-astro-cid-37fxchfa> <a href="/" class="logo" data-astro-cid-37fxchfa>paisayeh<span data-astro-cid-37fxchfa>paisa</span></a> <nav data-astro-cid-37fxchfa> <a href="/crypto-basics/" data-astro-cid-37fxchfa>Basics</a> <a href="/safe-crypto/" data-astro-cid-37fxchfa>Safe</a> <a href="/crypto-scam/" data-astro-cid-37fxchfa>Scam</a> <a href="/crypto-answers/" data-astro-cid-37fxchfa>Answers</a> <a href="/crypto-tax/" data-astro-cid-37fxchfa>Tax</a> <a href="/crypto-tools/" data-astro-cid-37fxchfa>Tools</a> </nav> </div> </header> <main class="container" data-astro-cid-37fxchfa>  <nav class="breadcrumbs"> <a href="/">Home</a>  <span> / </span> <a href="/crypto-basics/">Crypto Basics</a> <span> / </span> <span>can-quantum-computers-break-bitcoin</span>  </nav> <h1>Can Quantum Computers Break Bitcoin? Separating FUD from Reality</h1> <div class="article-meta"> <span>June 15, 2026</span>  </div> <div style="margin-bottom: 1.5rem;"> <span style="background:#d1fae5;color:#065f46;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🌱 beginners</span> <span style="background:#fef3c7;color:#92400e;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">₿ bitcoin</span> <span style="background:#ede9fe;color:#7c3aed;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🔒 security</span> <span style="background:#eef2ff;color:#4338ca;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🏷️ technology</span> </div> <article> <p>“Bitcoin and quantum computer FUD” — 28 replies, active today</p>
+<p>This thread on Bitcoin Discussion captures a fear that resurfaces every few years. Google announces a quantum computing milestone. Headlines scream “Bitcoin is doomed.” Beginners panic.</p>
+<p>The short answer: <strong>Quantum computers are not a threat to Bitcoin in the foreseeable future.</strong> Not in 5 years. Not in 10 years. Probably not in 20+ years.</p>
+<p>Here’s the real story on quantum computing and Bitcoin.</p>
+<h2 id="what-quantum-computers-actually-do">What Quantum Computers Actually Do</h2>
+<p>Normal computers use bits — 0 or 1. Quantum computers use qubits, which can exist in multiple states simultaneously (superposition). This lets them solve certain types of problems exponentially faster.</p>
+<p><strong>Problems quantum computers are good at:</strong></p>
+<ul>
+<li>Factoring large numbers (Shor’s algorithm)</li>
+<li>Searching unsorted databases (Grover’s algorithm)</li>
+<li>Simulating quantum systems</li>
+</ul>
+<p><strong>Problems quantum computers are NOT good at:</strong></p>
+<ul>
+<li>Everything else a normal computer does</li>
+</ul>
+<p>This specialization matters. A quantum computer can’t browse the web, run a spreadsheet, or play Minecraft any faster than your laptop. It’s a specialized tool, not a general-purpose supercomputer.</p>
+<h2 id="what-quantum-computers-threaten">What Quantum Computers Threaten</h2>
+<p>Bitcoin’s security depends on two cryptographic functions:</p>
+<p><strong>1. SHA-256 (hashing) — Mining</strong>
+This is used for mining (proof of work). Grover’s algorithm could theoretically speed up hash searching by a square root factor.</p>
+<p><strong>Impact:</strong> Minimal. SHA-256 would go from 128-bit security to 64-bit security against quantum attacks. Still secure enough for the near future. And mining can be easily upgraded.</p>
+<p><strong>2. ECDSA (elliptic curve digital signature algorithm) — Private keys</strong>
+This is what protects your Bitcoin. Your private key is mathematically linked to your public key. Given your public key, a classical computer cannot derive your private key.</p>
+<p><strong>Impact:</strong> This is the real concern. Shor’s algorithm could theoretically derive a private key from a public key. If that becomes practical, someone who knows your public key could steal your funds.</p>
+<aside class="callout warning">
+⚠️ <strong>The key distinction: your public key is only exposed when you spend from an address.</strong> Unspent addresses only reveal their public key when a transaction is made. Addresses that have never sent funds reveal only their hash (address), not the public key itself. This provides an additional layer of protection.
+</aside>
+<h2 id="how-many-qubits-would-it-take">How Many Qubits Would It Take?</h2>
+<p>This is where the reality check comes in.</p>
+<p>The number of stable, error-corrected qubits needed to break Bitcoin’s ECDSA:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Goal</th><th>Qubits needed</th><th>Current status (2026)</th></tr></thead><tbody><tr><td>Break RSA-2048 encryption</td><td>~4,000 logical qubits</td><td>Not achieved</td></tr><tr><td>Break Bitcoin ECDSA</td><td>~2,000-3,000 logical qubits</td><td>Not achieved</td></tr><tr><td>Break Bitcoin SHA-256 mining</td><td>~1,500 logical qubits</td><td>Not achieved</td></tr></tbody></table>
+<p><strong>Current quantum computers (2026):</strong></p>
+<ul>
+<li>IBM: 1,121 physical qubits (Osprey), ~1,121 physical with Condor</li>
+<li>Google: 105 qubits (Willow)</li>
+<li>These are physical qubits, not logical qubits</li>
+</ul>
+<p><strong>The gap:</strong> To break Bitcoin, you need thousands of <em>logical</em> (error-corrected) qubits. Current machines have ~1,000 <em>physical</em> qubits. Due to error correction overhead, you need roughly 1,000 physical qubits to create ONE logical qubit. That means we’re millions of physical qubits away from breaking Bitcoin.</p>
+<p>Estimates from credible researchers suggest quantum computers capable of breaking Bitcoin are <strong>15-30 years away at current progress rates</strong>.</p>
+<h2 id="the-real-timeline">The Real Timeline</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Timeframe</th><th>Likely capability</th></tr></thead><tbody><tr><td><strong>Now (2026)</strong></td><td>1,000 physical qubits, noisy, limited applications</td></tr><tr><td><strong>5 years (2031)</strong></td><td>Maybe 5,000-10,000 physical qubits, still far from breaking ECDSA</td></tr><tr><td><strong>10 years (2036)</strong></td><td>Possibly first error-corrected logical qubits at scale</td></tr><tr><td><strong>15-20 years (2041-2046)</strong></td><td>Possibly approaching capability to break ECDSA</td></tr><tr><td><strong>20+ years</strong></td><td>Likely the first real threat window</td></tr></tbody></table>
+<aside class="callout tip">
+💡 <strong>Bitcoin has time to upgrade.</strong> The Bitcoin community is already researching quantum-resistant signature schemes (Lamport signatures, SPHINCS+, CRYSTALS-Dilithium). A soft fork could transition Bitcoin to quantum-resistant cryptography long before quantum computers become a real threat.
+</aside>
+<h2 id="what-would-actually-happen-if-quantum-broke-bitcoin">What Would Actually Happen If Quantum Broke Bitcoin</h2>
+<p>Even if someone built a practical quantum computer tomorrow, the impact would not be instantaneous.</p>
+<p><strong>Phase 1: The first attack</strong>
+An attacker with a quantum computer could derive private keys from public keys. They would target high-value addresses with exposed public keys (addresses that have made transactions). They could drain these addresses.</p>
+<p><strong>Phase 2: Emergency response</strong>
+The Bitcoin community would activate contingency plans:</p>
+<ul>
+<li>Exchanges would freeze withdrawals</li>
+<li>Developers would push emergency soft forks</li>
+<li>The community would coordinate on a quantum-resistant signature upgrade</li>
+<li>Nodes would reject transactions from compromised addresses</li>
+</ul>
+<p><strong>Phase 3: Network upgrade</strong>
+Bitcoin would undergo a soft fork to implement quantum-resistant signatures (like Lamport signatures or SPHINCS+). All users would need to move funds to new quantum-resistant addresses.</p>
+<p><strong>Phase 4: Recovery</strong>
+Funds in addresses with unexposed public keys (never spent from) would be safe. Funds that were stolen in Phase 1 would be lost. The network would continue with upgraded cryptography.</p>
+<h2 id="why-you-shouldnt-worry">Why You Shouldn’t Worry</h2>
+<p><strong>1. Bitcoin can upgrade</strong>
+The Bitcoin protocol has been upgraded many times (SegWit, Taproot). Quantum resistance would be another upgrade. The network can transition gradually through a soft fork.</p>
+<p><strong>2. The timeline is long</strong>
+Even optimistic estimates put quantum threats 15+ years away. By then, Bitcoin will have quantum-resistant addresses available.</p>
+<p><strong>3. Your coins are safe if you don’t reuse addresses</strong>
+If you use a new address for each transaction (modern wallets do this automatically), your public key is only exposed when you spend. Old addresses with unspent funds that never sent a transaction have their public keys hidden.</p>
+<p><strong>4. The whole financial system is in the same boat</strong>
+Quantum computers threaten all cryptography, not just Bitcoin. Your bank, credit cards, WhatsApp messages, and HTTPS connections all use similar cryptography. The world will solve this problem together.</p>
+<aside class="callout warning">
+⚠️ <strong>Beware of "quantum-resistant" coin scams.</strong> Some altcoins claim to be "quantum-proof" and urge you to "swap your Bitcoin for safety." This is a marketing gimmick. Bitcoin's development community is actively working on quantum resistance. No switch is needed now.
+</aside>
+<h2 id="what-bitcoin-is-doing-about-it">What Bitcoin Is Doing About It</h2>
+<p>Bitcoin developers are not ignoring quantum computing.</p>
+<p><strong>Recent progress:</strong></p>
+<ul>
+<li><strong>BIP-340 (Schnorr signatures)</strong> — Taproot upgrade (2021) laid groundwork for future signature scheme changes</li>
+<li><strong>BIP-118 (SIGHASH_ANYPREVOUT)</strong> — Enables more flexible signing, relevant for future upgrades</li>
+<li><strong>Research into quantum-resistant signature schemes</strong> — Lamport signatures, SPHINCS+, and CRYSTALS-Dilithium are being evaluated</li>
+<li><strong>NIST standardization (2024)</strong> — NIST selected CRYSTALS-Dilithium, FALCON, and SPHINCS+ as post-quantum cryptography standards</li>
+</ul>
+<p>The Bitcoin improvement process already has proposals for quantum-resistant signatures. When the time comes, the transition will be orderly and well-tested.</p>
+<h2 id="verdict">Verdict</h2>
+<p>Quantum computers will not break Bitcoin anytime soon. The threat is real in theory but decades away in practice. Bitcoin’s cryptography can be upgraded, and developers are already preparing.</p>
+<p>The quantum FUD that resurfaces every few years is driven by misunderstanding. Headlines about “quantum supremacy” refer to specialized problems (like random circuit sampling) that have nothing to do with breaking cryptography.</p>
+<p>Keep stacking sats. Ignore the quantum noise. By the time quantum computers are a real threat, Bitcoin will have upgraded to quantum-resistant signatures, and the whole world will be moving to post-quantum cryptography anyway.</p>
+<p><em>Related: <a href="/crypto-basics/what-is-cryptocurrency-beginners-guide/">What Is Cryptocurrency? A Beginner’s Guide</a> | <a href="/crypto-basics/how-blockchain-works-simple-explanation/">How Blockchain Works</a> | <a href="/crypto-basics/what-is-on-chain-analysis/">What Is On-Chain Analysis?</a></em></p>
+<p><em>Bitcoin Discussion threads on quantum computing have been running since 2017. The consensus among technically knowledgeable members: quantum is a long-term consideration, not an immediate threat. The protocol will adapt long before the danger arrives.</em></p> </article> <div style="background:#f1f5f9; border-radius:12px; padding:1.25rem 1.5rem; font-size:0.85rem; color:var(--muted); margin-bottom:2rem;"> <strong style="color:var(--text);">📚 Found this helpful?</strong> Share it with someone who's new to crypto.
+    This question was sourced from BitcoinTalk community discussions.
+</div> <div class="disclaimer">
+This content is for educational purposes only. Not financial advice. Do your own research before investing.
+</div>  </main> <footer data-astro-cid-37fxchfa> <div class="container-wide" data-astro-cid-37fxchfa> <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:2rem; margin-bottom:2rem;" data-astro-cid-37fxchfa> <div data-astro-cid-37fxchfa> <p style="font-weight:700; color:var(--text); margin-bottom:0.5rem;" data-astro-cid-37fxchfa>PaisayehPaisa</p> <p data-astro-cid-37fxchfa>Crypto in plain language.</p> </div> <div data-astro-cid-37fxchfa> <p style="font-weight:600; color:var(--text); margin-bottom:0.5rem;" data-astro-cid-37fxchfa>Categories</p> <p data-astro-cid-37fxchfa><a href="/crypto-basics/" data-astro-cid-37fxchfa>Crypto Basics</a></p> <p data-astro-cid-37fxchfa><a href="/safe-crypto/" data-astro-cid-37fxchfa>Safe Crypto</a></p> <p data-astro-cid-37fxchfa><a href="/crypto-scam/" data-astro-cid-37fxchfa>Crypto Scam</a></p> <p data-astro-cid-37fxchfa><a href="/crypto-answers/" data-astro-cid-37fxchfa>Crypto Answers</a></p> </div> <div data-astro-cid-37fxchfa> <p style="font-weight:600; color:var(--text); margin-bottom:0.5rem;" data-astro-cid-37fxchfa>More</p> <p data-astro-cid-37fxchfa><a href="/crypto-tax/" data-astro-cid-37fxchfa>Crypto Tax</a></p> <p data-astro-cid-37fxchfa><a href="/crypto-tools/" data-astro-cid-37fxchfa>Crypto Tools</a></p> </div> </div> <div class="disclaimer" data-astro-cid-37fxchfa>
+Educational purposes only. Not financial advice. Do your own research.
+</div> </div> </footer> </body></html>
