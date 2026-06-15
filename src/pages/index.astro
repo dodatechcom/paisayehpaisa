@@ -15,42 +15,276 @@ const all = [...basics, ...safe, ...scam, ...answers, ...tax, ...tools]
 
 const recent = all.slice(0, 5);
 
+const featured = all.slice(0, 3);
+
+const categoryColors: Record<string, { bg: string; light: string; border: string }> = {
+  'crypto-basics': { bg: '#2563eb', light: '#eff6ff', border: '#bfdbfe' },
+  'safe-crypto': { bg: '#059669', light: '#f0fdf4', border: '#a7f3d0' },
+  'crypto-scam': { bg: '#dc2626', light: '#fef2f2', border: '#fecaca' },
+  'crypto-answers': { bg: '#7c3aed', light: '#f5f3ff', border: '#ddd6fe' },
+  'crypto-tax': { bg: '#d97706', light: '#fffbeb', border: '#fde68a' },
+  'crypto-tools': { bg: '#0891b2', light: '#ecfeff', border: '#a5f3fc' },
+};
+
 const categories = [
-  { slug: 'crypto-basics', name: 'Crypto Basics', icon: '📘', desc: 'Buying, wallets, exchanges, DCA' },
-  { slug: 'safe-crypto', name: 'Safe Crypto', icon: '🔒', desc: 'Seed phrases, 2FA, hardware wallets' },
-  { slug: 'crypto-scam', name: 'Crypto Scam', icon: '⚠️', desc: 'Spot scams, phishing, fake wallets' },
-  { slug: 'crypto-answers', name: 'Crypto Answers', icon: '💬', desc: 'Daily Q&A from BitcoinTalk' },
-  { slug: 'crypto-tax', name: 'Crypto Tax', icon: '💰', desc: 'Country guides, reporting gains' },
-  { slug: 'crypto-tools', name: 'Crypto Tools', icon: '🛠️', desc: 'Calculators, checkers, wizards' },
+  { slug: 'crypto-basics', name: 'Crypto Basics', desc: 'Buying, wallets, exchanges, DCA' },
+  { slug: 'safe-crypto', name: 'Safe Crypto', desc: 'Seed phrases, 2FA, hardware wallets' },
+  { slug: 'crypto-scam', name: 'Crypto Scam', desc: 'Spot scams, phishing, fake wallets' },
+  { slug: 'crypto-answers', name: 'Crypto Answers', desc: 'Daily Q&A from BitcoinTalk' },
+  { slug: 'crypto-tax', name: 'Crypto Tax', desc: 'Country guides, reporting gains' },
+  { slug: 'crypto-tools', name: 'Crypto Tools', desc: 'Calculators, checkers, wizards' },
 ];
+
+const categoryCounts: Record<string, number> = {
+  'crypto-basics': basics.length,
+  'safe-crypto': safe.length,
+  'crypto-scam': scam.length,
+  'crypto-answers': answers.length,
+  'crypto-tax': tax.length,
+  'crypto-tools': tools.length,
+};
+
+const totalArticles = all.length;
+
+function plural(n: number, word: string) {
+  return n === 1 ? `1 ${word}` : `${n} ${word}s`;
+}
 ---
 
 <BaseLayout title="PaisayehPaisa" description="Crypto in plain language. Learn about Bitcoin, wallets, security, scams, and taxes — sourced from BitcoinTalk.">
   <div class="hero">
-    <h1>Crypto in plain language.</h1>
-    <p>Answers to the questions BitcoinTalk users ask every day — in one place, simple and clear.</p>
+    <div class="hero-bg"></div>
+    <p class="hero-label">From BitcoinTalk to plain English</p>
+    <h1>Crypto answers you can<br />actually understand.</h1>
+    <p class="hero-sub">{plural(totalArticles, 'article')} covering Bitcoin, security, scams, taxes — sourced from questions real beginners ask on BitcoinTalk.</p>
+    <div class="hero-actions">
+      <a href="/crypto-basics/" class="btn btn-primary">Start Learning →</a>
+      <a href="#categories" class="btn btn-secondary">Browse Topics</a>
+    </div>
   </div>
 
-  <div class="cat-grid">
-    {categories.map(cat => (
-      <a href={`/${cat.slug}/`} class="cat-card">
-        <div class="icon">{cat.icon}</div>
-        <h3>{cat.name}</h3>
-        <p>{cat.desc}</p>
-      </a>
-    ))}
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-number">{totalArticles}</span>
+      <span class="stat-label">Articles</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">6</span>
+      <span class="stat-label">Categories</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">{all[0]?.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
+      <span class="stat-label">Latest Update</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">BitcoinTalk</span>
+      <span class="stat-label">Source Community</span>
+    </div>
   </div>
 
-  <h2 style="margin-bottom:1rem;">Recent Articles</h2>
-  <ul class="article-list">
-    {recent.map(a => (
-      <li>
-        <a href={`/${a.data.categories[0]}/${a.slug}/`}>{a.data.title}</a>
-        <div class="desc">{a.data.description}</div>
-        <div class="article-meta" style="margin-top:0.25rem;">
-          {a.data.date.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' })}
-        </div>
-      </li>
-    ))}
-  </ul>
+  <div class="section" id="categories">
+    <h2 class="section-title">Explore by Topic</h2>
+    <p class="section-desc">Every category covers questions asked on BitcoinTalk — answered clearly for beginners.</p>
+    <div class="cat-grid">
+      {categories.map(cat => {
+        const colors = categoryColors[cat.slug];
+        const count = categoryCounts[cat.slug];
+        return (
+          <a href={`/${cat.slug}/`} class="cat-card" style={`--cat-color: ${colors.bg}; --cat-light: ${colors.light}; --cat-border: ${colors.border};`}>
+            <div class="cat-count">{count}</div>
+            <h3>{cat.name}</h3>
+            <p>{cat.desc}</p>
+            <span class="cat-link">Browse {count} articles →</span>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Featured Articles</h2>
+    <p class="section-desc">Start here if you're new to crypto.</p>
+    <div class="featured-grid">
+      {featured.map(a => {
+        const cat = a.data.categories[0];
+        const colors = categoryColors[cat] || categoryColors['crypto-basics'];
+        return (
+          <a href={`/${cat}/${a.slug}/`} class="featured-card" style={`--cat-color: ${colors.bg}; --cat-light: ${colors.light};`}>
+            <div class="featured-cat">{categories.find(c => c.slug === cat)?.name || cat}</div>
+            <h3>{a.data.title}</h3>
+            <p>{a.data.description}</p>
+            <div class="featured-meta">
+              <span>{a.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Latest Articles</h2>
+    <p class="section-desc">Recently published answers to real BitcoinTalk questions.</p>
+    <ul class="article-list">
+      {recent.map(a => (
+        <li>
+          <a href={`/${a.data.categories[0]}/${a.slug}/`}>{a.data.title}</a>
+          <div class="desc">{a.data.description}</div>
+          <div class="meta" style="margin-top:0.5rem;">
+            <span class="date">{a.data.date.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' })}</span>
+            {a.data.tags?.slice(0, 3).map(tag => <span class="tag">{tag}</span>)}
+          </div>
+        </li>
+      ))}
+    </ul>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="/crypto-basics/" class="btn btn-primary" style="display:inline-flex;">View All Articles →</a>
+    </div>
+  </div>
+
+  <div class="section about-section">
+    <h2 class="section-title">Why This Exists</h2>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cat-color, #2563eb)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h3>Real Questions</h3>
+        <p>Every article starts with a question from BitcoinTalk — not assumptions about what beginners should know.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cat-color, #059669)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <h3>Plain Language</h3>
+        <p>No jargon, no fluff. Answers are written for someone who just heard about Bitcoin yesterday.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cat-color, #7c3aed)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></div>
+        <h3>No Financial Advice</h3>
+        <p>We explain how things work, not what to buy. Education, not promotion.</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .hero {
+      position: relative; text-align: center; padding: 5rem 0 4rem; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 600px 400px at 50% 0%, color-mix(in srgb, var(--accent) 12%, transparent), transparent),
+        radial-gradient(ellipse 300px 300px at 20% 100%, color-mix(in srgb, var(--accent) 6%, transparent), transparent);
+      pointer-events: none;
+    }
+    .hero-label {
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1rem; position: relative;
+    }
+    .hero h1 {
+      font-size: 3rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.04em;
+      margin-bottom: 1.25rem; position: relative;
+    }
+    .hero-sub {
+      font-size: 1.1rem; color: var(--muted); max-width: 520px; margin: 0 auto 2rem; position: relative;
+    }
+    .hero-actions { display: flex; gap: 0.75rem; justify-content: center; position: relative; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem;
+      text-decoration: none; transition: all 0.2s; cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--accent); color: white !important;
+    }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-secondary {
+      background: var(--surface); color: var(--text) !important; border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { border-color: var(--accent); transform: translateY(-1px); }
+
+    .stats {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+      background: var(--border); border-radius: var(--radius); overflow: hidden;
+      margin-bottom: 4rem; border: 1px solid var(--border);
+    }
+    .stat {
+      background: var(--surface); padding: 1.5rem; text-align: center;
+      display: flex; flex-direction: column; gap: 0.25rem;
+    }
+    .stat-number { font-size: 1.4rem; font-weight: 800; color: var(--text); }
+    .stat-label { font-size: 0.82rem; color: var(--muted); font-weight: 500; }
+
+    .section { margin-bottom: 4rem; }
+    .section-title {
+      font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em;
+      margin-bottom: 0.5rem; border: none; padding: 0;
+    }
+    .section-desc { color: var(--muted); margin-bottom: 1.5rem; }
+
+    .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .cat-card {
+      position: relative; display: flex; flex-direction: column;
+      padding: 1.5rem; background: var(--cat-light);
+      border: 1px solid var(--cat-border); border-radius: var(--radius);
+      text-decoration: none; color: var(--text); overflow: hidden;
+      transition: all 0.25s;
+    }
+    .cat-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+    .cat-count {
+      position: absolute; top: 1rem; right: 1rem;
+      font-size: 0.75rem; font-weight: 700; color: var(--cat-color);
+      background: white; padding: 0.2rem 0.6rem; border-radius: 999px;
+    }
+    .cat-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .cat-card p { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.75rem; flex: 1; }
+    .cat-link { font-size: 0.82rem; font-weight: 600; color: var(--cat-color); }
+
+    .featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .featured-card {
+      display: flex; flex-direction: column;
+      padding: 1.5rem; background: var(--surface);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      text-decoration: none; color: var(--text);
+      transition: all 0.25s;
+    }
+    .featured-card:hover { border-color: var(--cat-color); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+    .featured-cat {
+      display: inline-flex; align-self: flex-start;
+      font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;
+      padding: 0.2rem 0.6rem; border-radius: 4px;
+      background: var(--cat-light); color: var(--cat-color); margin-bottom: 0.75rem;
+    }
+    .featured-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.35; }
+    .featured-card p { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; flex: 1; }
+    .featured-meta { font-size: 0.8rem; color: var(--muted); }
+
+    .article-list { list-style: none; padding: 0; }
+    .article-list li {
+      background: var(--surface); padding: 1.25rem; margin-bottom: 0.75rem;
+      border-radius: var(--radius); border: 1px solid var(--border); transition: all 0.2s;
+    }
+    .article-list li:hover { border-color: var(--accent); }
+    .article-list a { font-size: 1.05rem; font-weight: 600; text-decoration: none; }
+    .article-list .desc { font-size: 0.88rem; color: var(--muted); margin-top: 0.25rem; }
+    .article-list .meta { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+    .article-list .date { font-size: 0.8rem; color: var(--muted); }
+
+    .about-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .about-card {
+      padding: 1.5rem; background: var(--surface);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      transition: all 0.2s;
+    }
+    .about-card:hover { box-shadow: var(--shadow); }
+    .about-icon { margin-bottom: 0.75rem; }
+    .about-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .about-card p { font-size: 0.85rem; color: var(--muted); margin: 0; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .cat-grid { grid-template-columns: 1fr; }
+      .featured-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </BaseLayout>

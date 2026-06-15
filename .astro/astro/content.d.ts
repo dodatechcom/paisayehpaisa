@@ -162,6 +162,13 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"best-crypto-long-term-holding-2026-2030.md": {
+	id: "best-crypto-long-term-holding-2026-2030.md";
+  slug: "best-crypto-long-term-holding-2026-2030";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 "best-crypto-news-sources-research.md": {
 	id: "best-crypto-news-sources-research.md";
   slug: "best-crypto-news-sources-research";
@@ -176,9 +183,30 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"best-crypto-remittances-send-money-home.md": {
+	id: "best-crypto-remittances-send-money-home.md";
+  slug: "best-crypto-remittances-send-money-home";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 "best-crypto-staking-platforms-2026.md": {
 	id: "best-crypto-staking-platforms-2026.md";
   slug: "best-crypto-staking-platforms-2026";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"best-way-send-crypto-internationally.md": {
+	id: "best-way-send-crypto-internationally.md";
+  slug: "best-way-send-crypto-internationally";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"can-you-insure-crypto-holdings.md": {
+	id: "can-you-insure-crypto-holdings.md";
+  slug: "can-you-insure-crypto-holdings";
   body: string;
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
@@ -190,9 +218,30 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"can-you-use-crypto-everyday-shopping-2026.md": {
+	id: "can-you-use-crypto-everyday-shopping-2026.md";
+  slug: "can-you-use-crypto-everyday-shopping-2026";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 "centralized-vs-decentralized-exchanges.md": {
 	id: "centralized-vs-decentralized-exchanges.md";
   slug: "centralized-vs-decentralized-exchanges";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"cex-vs-dex-vs-hybrid-exchange-differences.md": {
+	id: "cex-vs-dex-vs-hybrid-exchange-differences.md";
+  slug: "cex-vs-dex-vs-hybrid-exchange-differences";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"crypto-contrarian-investing-buy-when-others-panic.md": {
+	id: "crypto-contrarian-investing-buy-when-others-panic.md";
+  slug: "crypto-contrarian-investing-buy-when-others-panic";
   body: string;
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
@@ -204,9 +253,107 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"crypto-money-transmitter-licenses-explained.md": {
+	id: "crypto-money-transmitter-licenses-explained.md";
+  slug: "crypto-money-transmitter-licenses-explained";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"crypto-news-fatigue-how-to-filter-noise.md": {
+	id: "crypto-news-fatigue-how-to-filter-noise.md";
+  slug: "crypto-news-fatigue-how-to-filter-noise";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"crypto-regulation-india-2026.md": {
+	id: "crypto-regulation-india-2026.md";
+  slug: "crypto-regulation-india-2026";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"crypto-travel-rule-privacy.md": {
+	id: "crypto-travel-rule-privacy.md";
+  slug: "crypto-travel-rule-privacy";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"dubai-uae-crypto-regulation-global-hub.md": {
+	id: "dubai-uae-crypto-regulation-global-hub.md";
+  slug: "dubai-uae-crypto-regulation-global-hub";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"fit21-crypto-regulation-us.md": {
+	id: "fit21-crypto-regulation-us.md";
+  slug: "fit21-crypto-regulation-us";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"how-do-crypto-credit-cards-work.md": {
+	id: "how-do-crypto-credit-cards-work.md";
+  slug: "how-do-crypto-credit-cards-work";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"how-does-mica-affect-defi.md": {
+	id: "how-does-mica-affect-defi.md";
+  slug: "how-does-mica-affect-defi";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"how-to-avoid-exchange-withdrawal-limits-freezes.md": {
+	id: "how-to-avoid-exchange-withdrawal-limits-freezes.md";
+  slug: "how-to-avoid-exchange-withdrawal-limits-freezes";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"how-to-check-crypto-transaction-status.md": {
+	id: "how-to-check-crypto-transaction-status.md";
+  slug: "how-to-check-crypto-transaction-status";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"how-to-choose-crypto-exchange-2026.md": {
+	id: "how-to-choose-crypto-exchange-2026.md";
+  slug: "how-to-choose-crypto-exchange-2026";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"how-to-read-coinmarketcap-coingecko-like-pro.md": {
+	id: "how-to-read-coinmarketcap-coingecko-like-pro.md";
+  slug: "how-to-read-coinmarketcap-coingecko-like-pro";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"how-to-read-crypto-transaction-explorer.md": {
+	id: "how-to-read-crypto-transaction-explorer.md";
+  slug: "how-to-read-crypto-transaction-explorer";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 "how-to-read-crypto-whitepaper.md": {
 	id: "how-to-read-crypto-whitepaper.md";
   slug: "how-to-read-crypto-whitepaper";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"how-to-recover-hacked-crypto-account.md": {
+	id: "how-to-recover-hacked-crypto-account.md";
+  slug: "how-to-recover-hacked-crypto-account";
   body: string;
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
@@ -232,9 +379,37 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"is-crypto-mining-profitable-2026.md": {
+	id: "is-crypto-mining-profitable-2026.md";
+  slug: "is-crypto-mining-profitable-2026";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 "public-key-vs-private-key.md": {
 	id: "public-key-vs-private-key.md";
   slug: "public-key-vs-private-key";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"sec-vs-crypto-enforcement-history.md": {
+	id: "sec-vs-crypto-enforcement-history.md";
+  slug: "sec-vs-crypto-enforcement-history";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"self-custodial-vs-custodial-wallet.md": {
+	id: "self-custodial-vs-custodial-wallet.md";
+  slug: "self-custodial-vs-custodial-wallet";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"sent-crypto-wrong-network-how-to-fix.md": {
+	id: "sent-crypto-wrong-network-how-to-fix.md";
+  slug: "sent-crypto-wrong-network-how-to-fix";
   body: string;
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
@@ -246,9 +421,51 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"singapore-crypto-regulation-safe-haven.md": {
+	id: "singapore-crypto-regulation-safe-haven.md";
+  slug: "singapore-crypto-regulation-safe-haven";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"ultimate-beginners-crypto-checklist.md": {
+	id: "ultimate-beginners-crypto-checklist.md";
+  slug: "ultimate-beginners-crypto-checklist";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 "what-happens-if-exchange-collapses.md": {
 	id: "what-happens-if-exchange-collapses.md";
   slug: "what-happens-if-exchange-collapses";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"what-happens-to-crypto-in-divorce.md": {
+	id: "what-happens-to-crypto-in-divorce.md";
+  slug: "what-happens-to-crypto-in-divorce";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"what-happens-to-crypto-when-i-die.md": {
+	id: "what-happens-to-crypto-when-i-die.md";
+  slug: "what-happens-to-crypto-when-i-die";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"what-is-bear-market-how-to-survive.md": {
+	id: "what-is-bear-market-how-to-survive.md";
+  slug: "what-is-bear-market-how-to-survive";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"what-is-bitcoin-etf.md": {
+	id: "what-is-bitcoin-etf.md";
+  slug: "what-is-bitcoin-etf";
   body: string;
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
@@ -267,9 +484,37 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"what-is-blockchain-reorg-reorganization.md": {
+	id: "what-is-blockchain-reorg-reorganization.md";
+  slug: "what-is-blockchain-reorg-reorganization";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"what-is-crypto-audit-why-matters.md": {
+	id: "what-is-crypto-audit-why-matters.md";
+  slug: "what-is-crypto-audit-why-matters";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"what-is-fiat-on-ramp-buy-crypto.md": {
+	id: "what-is-fiat-on-ramp-buy-crypto.md";
+  slug: "what-is-fiat-on-ramp-buy-crypto";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 "what-is-gas-crypto-transaction-fees.md": {
 	id: "what-is-gas-crypto-transaction-fees.md";
   slug: "what-is-gas-crypto-transaction-fees";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"what-is-kyc-why-exchanges-require.md": {
+	id: "what-is-kyc-why-exchanges-require.md";
+  slug: "what-is-kyc-why-exchanges-require";
   body: string;
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
@@ -281,6 +526,13 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"what-is-mica-eu-crypto-regulation.md": {
+	id: "what-is-mica-eu-crypto-regulation.md";
+  slug: "what-is-mica-eu-crypto-regulation";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 "what-is-slippage-crypto-trading.md": {
 	id: "what-is-slippage-crypto-trading.md";
   slug: "what-is-slippage-crypto-trading";
@@ -288,9 +540,23 @@ declare module 'astro:content' {
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
 } & { render(): Render[".md"] };
+"what-is-vasp-virtual-asset-service-provider.md": {
+	id: "what-is-vasp-virtual-asset-service-provider.md";
+  slug: "what-is-vasp-virtual-asset-service-provider";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
 "what-to-do-send-crypto-wrong-address.md": {
 	id: "what-to-do-send-crypto-wrong-address.md";
   slug: "what-to-do-send-crypto-wrong-address";
+  body: string;
+  collection: "crypto-answers";
+  data: InferEntrySchema<"crypto-answers">
+} & { render(): Render[".md"] };
+"where-is-crypto-banned-countries-illegal.md": {
+	id: "where-is-crypto-banned-countries-illegal.md";
+  slug: "where-is-crypto-banned-countries-illegal";
   body: string;
   collection: "crypto-answers";
   data: InferEntrySchema<"crypto-answers">
@@ -332,6 +598,13 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"best-crypto-research-tools-2026.md": {
+	id: "best-crypto-research-tools-2026.md";
+  slug: "best-crypto-research-tools-2026";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "best-crypto-side-hustles-2026.md": {
 	id: "best-crypto-side-hustles-2026.md";
   slug: "best-crypto-side-hustles-2026";
@@ -360,6 +633,34 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"bitcoin-address-reuse-privacy.md": {
+	id: "bitcoin-address-reuse-privacy.md";
+  slug: "bitcoin-address-reuse-privacy";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"bitcoin-dust-explained.md": {
+	id: "bitcoin-dust-explained.md";
+  slug: "bitcoin-dust-explained";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"can-crypto-transactions-be-reversed.md": {
+	id: "can-crypto-transactions-be-reversed.md";
+  slug: "can-crypto-transactions-be-reversed";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"can-quantum-computers-break-bitcoin.md": {
+	id: "can-quantum-computers-break-bitcoin.md";
+  slug: "can-quantum-computers-break-bitcoin";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "cheapest-crypto-exchanges-low-fees-guide.md": {
 	id: "cheapest-crypto-exchanges-low-fees-guide.md";
   slug: "cheapest-crypto-exchanges-low-fees-guide";
@@ -374,9 +675,23 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"crypto-banking-best-neobanks-2026.md": {
+	id: "crypto-banking-best-neobanks-2026.md";
+  slug: "crypto-banking-best-neobanks-2026";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "crypto-for-beginners-complete-guide.md": {
 	id: "crypto-for-beginners-complete-guide.md";
   slug: "crypto-for-beginners-complete-guide";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"crypto-for-teens-under-18.md": {
+	id: "crypto-for-teens-under-18.md";
+  slug: "crypto-for-teens-under-18";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -391,6 +706,13 @@ declare module 'astro:content' {
 "crypto-narratives-2026.md": {
 	id: "crypto-narratives-2026.md";
   slug: "crypto-narratives-2026";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"crypto-portfolio-rebalancing-when-how.md": {
+	id: "crypto-portfolio-rebalancing-when-how.md";
+  slug: "crypto-portfolio-rebalancing-when-how";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -423,6 +745,20 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"future-crypto-regulation-trends-2027.md": {
+	id: "future-crypto-regulation-trends-2027.md";
+  slug: "future-crypto-regulation-trends-2027";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"how-bitcoin-etfs-changed-crypto-investing.md": {
+	id: "how-bitcoin-etfs-changed-crypto-investing.md";
+  slug: "how-bitcoin-etfs-changed-crypto-investing";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "how-blockchain-works-simple-explanation.md": {
 	id: "how-blockchain-works-simple-explanation.md";
   slug: "how-blockchain-works-simple-explanation";
@@ -451,9 +787,37 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"how-to-build-diversified-crypto-portfolio.md": {
+	id: "how-to-build-diversified-crypto-portfolio.md";
+  slug: "how-to-build-diversified-crypto-portfolio";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "how-to-buy-crypto-safely.md": {
 	id: "how-to-buy-crypto-safely.md";
   slug: "how-to-buy-crypto-safely";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"how-to-convert-crypto-to-cash-without-exchange.md": {
+	id: "how-to-convert-crypto-to-cash-without-exchange.md";
+  slug: "how-to-convert-crypto-to-cash-without-exchange";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"how-to-create-crypto-emergency-plan.md": {
+	id: "how-to-create-crypto-emergency-plan.md";
+  slug: "how-to-create-crypto-emergency-plan";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"how-to-earn-crypto-on-bitcointalk-bounties-signatures.md": {
+	id: "how-to-earn-crypto-on-bitcointalk-bounties-signatures.md";
+  slug: "how-to-earn-crypto-on-bitcointalk-bounties-signatures";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -465,9 +829,37 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"how-to-explain-crypto-to-family.md": {
+	id: "how-to-explain-crypto-to-family.md";
+  slug: "how-to-explain-crypto-to-family";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"how-to-get-early-access-promising-crypto-projects.md": {
+	id: "how-to-get-early-access-promising-crypto-projects.md";
+  slug: "how-to-get-early-access-promising-crypto-projects";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "how-to-make-daily-income-crypto.md": {
 	id: "how-to-make-daily-income-crypto.md";
   slug: "how-to-make-daily-income-crypto";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"how-to-mentor-friend-new-to-crypto.md": {
+	id: "how-to-mentor-friend-new-to-crypto.md";
+  slug: "how-to-mentor-friend-new-to-crypto";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"how-to-read-candlestick-charts-beginners.md": {
+	id: "how-to-read-candlestick-charts-beginners.md";
+  slug: "how-to-read-candlestick-charts-beginners";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -507,6 +899,20 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"how-to-stay-compliant-p2p-trading.md": {
+	id: "how-to-stay-compliant-p2p-trading.md";
+  slug: "how-to-stay-compliant-p2p-trading";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"how-to-track-whales-smart-money-onchain.md": {
+	id: "how-to-track-whales-smart-money-onchain.md";
+  slug: "how-to-track-whales-smart-money-onchain";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "how-to-use-blockchain-explorer.md": {
 	id: "how-to-use-blockchain-explorer.md";
   slug: "how-to-use-blockchain-explorer";
@@ -514,9 +920,23 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"how-to-use-defi-lending-platforms-safely.md": {
+	id: "how-to-use-defi-lending-platforms-safely.md";
+  slug: "how-to-use-defi-lending-platforms-safely";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "how-whales-manipulate-crypto-markets.md": {
 	id: "how-whales-manipulate-crypto-markets.md";
   slug: "how-whales-manipulate-crypto-markets";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"investing-vs-trading-crypto-which-is-right-for-you.md": {
+	id: "investing-vs-trading-crypto-which-is-right-for-you.md";
+  slug: "investing-vs-trading-crypto-which-is-right-for-you";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -535,6 +955,13 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"is-self-custody-too-complicated-for-beginners.md": {
+	id: "is-self-custody-too-complicated-for-beginners.md";
+  slug: "is-self-custody-too-complicated-for-beginners";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "layer-1-vs-layer-2-blockchains.md": {
 	id: "layer-1-vs-layer-2-blockchains.md";
   slug: "layer-1-vs-layer-2-blockchains";
@@ -545,6 +972,20 @@ declare module 'astro:content' {
 "lost-private-key-what-to-do.md": {
 	id: "lost-private-key-what-to-do.md";
   slug: "lost-private-key-what-to-do";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"market-orders-vs-limit-orders-vs-stop-loss.md": {
+	id: "market-orders-vs-limit-orders-vs-stop-loss.md";
+  slug: "market-orders-vs-limit-orders-vs-stop-loss";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"mobile-vs-desktop-hot-wallets.md": {
+	id: "mobile-vs-desktop-hot-wallets.md";
+  slug: "mobile-vs-desktop-hot-wallets";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -598,6 +1039,34 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"should-beginners-try-crypto-arbitrage.md": {
+	id: "should-beginners-try-crypto-arbitrage.md";
+  slug: "should-beginners-try-crypto-arbitrage";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"should-you-buy-the-dip-strategy.md": {
+	id: "should-you-buy-the-dip-strategy.md";
+  slug: "should-you-buy-the-dip-strategy";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"should-you-learn-crypto-first-or-buy-first.md": {
+	id: "should-you-learn-crypto-first-or-buy-first.md";
+  slug: "should-you-learn-crypto-first-or-buy-first";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"should-you-quit-job-to-trade-crypto.md": {
+	id: "should-you-quit-job-to-trade-crypto.md";
+  slug: "should-you-quit-job-to-trade-crypto";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "taking-profits-how-to-pull-out-capital-safely.md": {
 	id: "taking-profits-how-to-pull-out-capital-safely.md";
   slug: "taking-profits-how-to-pull-out-capital-safely";
@@ -633,9 +1102,30 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"trading-addiction-how-to-recognize-and-stop.md": {
+	id: "trading-addiction-how-to-recognize-and-stop.md";
+  slug: "trading-addiction-how-to-recognize-and-stop";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "upcoming-crypto-airdrops-2026.md": {
 	id: "upcoming-crypto-airdrops-2026.md";
   slug: "upcoming-crypto-airdrops-2026";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"what-drives-crypto-prices.md": {
+	id: "what-drives-crypto-prices.md";
+  slug: "what-drives-crypto-prices";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"what-if-satoshi-nakamoto-returns.md": {
+	id: "what-if-satoshi-nakamoto-returns.md";
+  slug: "what-if-satoshi-nakamoto-returns";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -650,6 +1140,13 @@ declare module 'astro:content' {
 "what-is-crypto-airdrop-free-tokens.md": {
 	id: "what-is-crypto-airdrop-free-tokens.md";
   slug: "what-is-crypto-airdrop-free-tokens";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"what-is-crypto-escrow-and-how-does-it-work.md": {
+	id: "what-is-crypto-escrow-and-how-does-it-work.md";
+  slug: "what-is-crypto-escrow-and-how-does-it-work";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -759,6 +1256,13 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"where-to-learn-crypto-best-resources.md": {
+	id: "where-to-learn-crypto-best-resources.md";
+  slug: "where-to-learn-crypto-best-resources";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "which-crypto-wallet-should-you-use.md": {
 	id: "which-crypto-wallet-should-you-use.md";
   slug: "which-crypto-wallet-should-you-use";
@@ -766,9 +1270,23 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"why-beginners-should-not-trade-futures-leverage.md": {
+	id: "why-beginners-should-not-trade-futures-leverage.md";
+  slug: "why-beginners-should-not-trade-futures-leverage";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "why-not-fomo-next-big-coin.md": {
 	id: "why-not-fomo-next-big-coin.md";
   slug: "why-not-fomo-next-big-coin";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"why-people-understand-bitcoin-but-dont-buy.md": {
+	id: "why-people-understand-bitcoin-but-dont-buy.md";
+  slug: "why-people-understand-bitcoin-but-dont-buy";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -782,9 +1300,93 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "crypto-scam": {
+"ai-voice-deepfake-scams.md": {
+	id: "ai-voice-deepfake-scams.md";
+  slug: "ai-voice-deepfake-scams";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"crypto-job-offer-scams-remote-work.md": {
+	id: "crypto-job-offer-scams-remote-work.md";
+  slug: "crypto-job-offer-scams-remote-work";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"crypto-malware-hackers-steal-from-device.md": {
+	id: "crypto-malware-hackers-steal-from-device.md";
+  slug: "crypto-malware-hackers-steal-from-device";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"crypto-wallet-drainers-fake-dapps.md": {
+	id: "crypto-wallet-drainers-fake-dapps.md";
+  slug: "crypto-wallet-drainers-fake-dapps";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"defi-bridge-scams-fake-bridges.md": {
+	id: "defi-bridge-scams-fake-bridges.md";
+  slug: "defi-bridge-scams-fake-bridges";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"fake-airdrop-scams-advanced-tactics.md": {
+	id: "fake-airdrop-scams-advanced-tactics.md";
+  slug: "fake-airdrop-scams-advanced-tactics";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"fake-celebrity-endorsement-scams.md": {
+	id: "fake-celebrity-endorsement-scams.md";
+  slug: "fake-celebrity-endorsement-scams";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
 "fake-crypto-airdrops-scam.md": {
 	id: "fake-crypto-airdrops-scam.md";
   slug: "fake-crypto-airdrops-scam";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"fake-crypto-trading-bots.md": {
+	id: "fake-crypto-trading-bots.md";
+  slug: "fake-crypto-trading-bots";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"fake-customer-support-scams-social-media.md": {
+	id: "fake-customer-support-scams-social-media.md";
+  slug: "fake-customer-support-scams-social-media";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"fake-ico-presale-scams.md": {
+	id: "fake-ico-presale-scams.md";
+  slug: "fake-ico-presale-scams";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"fake-mining-pool-scams.md": {
+	id: "fake-mining-pool-scams.md";
+  slug: "fake-mining-pool-scams";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"fake-staking-pool-scams.md": {
+	id: "fake-staking-pool-scams.md";
+  slug: "fake-staking-pool-scams";
   body: string;
   collection: "crypto-scam";
   data: InferEntrySchema<"crypto-scam">
@@ -817,9 +1419,37 @@ declare module 'astro:content' {
   collection: "crypto-scam";
   data: InferEntrySchema<"crypto-scam">
 } & { render(): Render[".md"] };
+"how-to-spot-fake-crypto-wallet.md": {
+	id: "how-to-spot-fake-crypto-wallet.md";
+  slug: "how-to-spot-fake-crypto-wallet";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
 "how-to-spot-fake-wallet-app.md": {
 	id: "how-to-spot-fake-wallet-app.md";
   slug: "how-to-spot-fake-wallet-app";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"how-to-verify-legitimate-crypto-project.md": {
+	id: "how-to-verify-legitimate-crypto-project.md";
+  slug: "how-to-verify-legitimate-crypto-project";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"nft-scams-fake-mints-phishing-copycats.md": {
+	id: "nft-scams-fake-mints-phishing-copycats.md";
+  slug: "nft-scams-fake-mints-phishing-copycats";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"pig-butchering-crypto-scam.md": {
+	id: "pig-butchering-crypto-scam.md";
+  slug: "pig-butchering-crypto-scam";
   body: string;
   collection: "crypto-scam";
   data: InferEntrySchema<"crypto-scam">
@@ -838,11 +1468,67 @@ declare module 'astro:content' {
   collection: "crypto-scam";
   data: InferEntrySchema<"crypto-scam">
 } & { render(): Render[".md"] };
+"social-media-crypto-theft-tactics.md": {
+	id: "social-media-crypto-theft-tactics.md";
+  slug: "social-media-crypto-theft-tactics";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"spear-phishing-targeted-attacks.md": {
+	id: "spear-phishing-targeted-attacks.md";
+  slug: "spear-phishing-targeted-attacks";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"telegram-signal-group-scams.md": {
+	id: "telegram-signal-group-scams.md";
+  slug: "telegram-signal-group-scams";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"ultimate-crypto-scam-prevention-checklist.md": {
+	id: "ultimate-crypto-scam-prevention-checklist.md";
+  slug: "ultimate-crypto-scam-prevention-checklist";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
+"why-do-crypto-scams-still-work.md": {
+	id: "why-do-crypto-scams-still-work.md";
+  slug: "why-do-crypto-scams-still-work";
+  body: string;
+  collection: "crypto-scam";
+  data: InferEntrySchema<"crypto-scam">
+} & { render(): Render[".md"] };
 };
 "crypto-tax": {
+"crypto-regulation-australia-what-you-need.md": {
+	id: "crypto-regulation-australia-what-you-need.md";
+  slug: "crypto-regulation-australia-what-you-need";
+  body: string;
+  collection: "crypto-tax";
+  data: InferEntrySchema<"crypto-tax">
+} & { render(): Render[".md"] };
+"crypto-regulation-brazil-latin-america.md": {
+	id: "crypto-regulation-brazil-latin-america.md";
+  slug: "crypto-regulation-brazil-latin-america";
+  body: string;
+  collection: "crypto-tax";
+  data: InferEntrySchema<"crypto-tax">
+} & { render(): Render[".md"] };
 "crypto-tax-calculator-guide.md": {
 	id: "crypto-tax-calculator-guide.md";
   slug: "crypto-tax-calculator-guide";
+  body: string;
+  collection: "crypto-tax";
+  data: InferEntrySchema<"crypto-tax">
+} & { render(): Render[".md"] };
+"crypto-tax-canada-2026.md": {
+	id: "crypto-tax-canada-2026.md";
+  slug: "crypto-tax-canada-2026";
   body: string;
   collection: "crypto-tax";
   data: InferEntrySchema<"crypto-tax">
@@ -861,9 +1547,23 @@ declare module 'astro:content' {
   collection: "crypto-tax";
   data: InferEntrySchema<"crypto-tax">
 } & { render(): Render[".md"] };
+"crypto-tax-uk-2026.md": {
+	id: "crypto-tax-uk-2026.md";
+  slug: "crypto-tax-uk-2026";
+  body: string;
+  collection: "crypto-tax";
+  data: InferEntrySchema<"crypto-tax">
+} & { render(): Render[".md"] };
 "do-i-need-report-small-crypto-transactions.md": {
 	id: "do-i-need-report-small-crypto-transactions.md";
   slug: "do-i-need-report-small-crypto-transactions";
+  body: string;
+  collection: "crypto-tax";
+  data: InferEntrySchema<"crypto-tax">
+} & { render(): Render[".md"] };
+"does-government-track-your-crypto.md": {
+	id: "does-government-track-your-crypto.md";
+  slug: "does-government-track-your-crypto";
   body: string;
   collection: "crypto-tax";
   data: InferEntrySchema<"crypto-tax">
@@ -899,6 +1599,13 @@ declare module 'astro:content' {
 "how-to-report-crypto-losses-taxes.md": {
 	id: "how-to-report-crypto-losses-taxes.md";
   slug: "how-to-report-crypto-losses-taxes";
+  body: string;
+  collection: "crypto-tax";
+  data: InferEntrySchema<"crypto-tax">
+} & { render(): Render[".md"] };
+"japan-crypto-tax-regulation-history.md": {
+	id: "japan-crypto-tax-regulation-history.md";
+  slug: "japan-crypto-tax-regulation-history";
   body: string;
   collection: "crypto-tax";
   data: InferEntrySchema<"crypto-tax">
@@ -971,6 +1678,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "safe-crypto": {
+"android-crypto-security-guide.md": {
+	id: "android-crypto-security-guide.md";
+  slug: "android-crypto-security-guide";
+  body: string;
+  collection: "safe-crypto";
+  data: InferEntrySchema<"safe-crypto">
+} & { render(): Render[".md"] };
 "best-hardware-wallets-compared-2026.md": {
 	id: "best-hardware-wallets-compared-2026.md";
   slug: "best-hardware-wallets-compared-2026";
@@ -985,6 +1699,13 @@ declare module 'astro:content' {
   collection: "safe-crypto";
   data: InferEntrySchema<"safe-crypto">
 } & { render(): Render[".md"] };
+"can-someone-steal-crypto-with-wallet-address.md": {
+	id: "can-someone-steal-crypto-with-wallet-address.md";
+  slug: "can-someone-steal-crypto-with-wallet-address";
+  body: string;
+  collection: "safe-crypto";
+  data: InferEntrySchema<"safe-crypto">
+} & { render(): Render[".md"] };
 "common-phishing-attacks-crypto.md": {
 	id: "common-phishing-attacks-crypto.md";
   slug: "common-phishing-attacks-crypto";
@@ -992,9 +1713,23 @@ declare module 'astro:content' {
   collection: "safe-crypto";
   data: InferEntrySchema<"safe-crypto">
 } & { render(): Render[".md"] };
+"counterfeit-hardware-wallets-how-to-spot-fakes.md": {
+	id: "counterfeit-hardware-wallets-how-to-spot-fakes.md";
+  slug: "counterfeit-hardware-wallets-how-to-spot-fakes";
+  body: string;
+  collection: "safe-crypto";
+  data: InferEntrySchema<"safe-crypto">
+} & { render(): Render[".md"] };
 "hot-wallets-vs-cold-wallets.md": {
 	id: "hot-wallets-vs-cold-wallets.md";
   slug: "hot-wallets-vs-cold-wallets";
+  body: string;
+  collection: "safe-crypto";
+  data: InferEntrySchema<"safe-crypto">
+} & { render(): Render[".md"] };
+"how-to-buy-crypto-anonymously-kyc-vs-no-kyc.md": {
+	id: "how-to-buy-crypto-anonymously-kyc-vs-no-kyc.md";
+  slug: "how-to-buy-crypto-anonymously-kyc-vs-no-kyc";
   body: string;
   collection: "safe-crypto";
   data: InferEntrySchema<"safe-crypto">
@@ -1016,6 +1751,13 @@ declare module 'astro:content' {
 "how-to-move-crypto-exchange-to-cold-wallet.md": {
 	id: "how-to-move-crypto-exchange-to-cold-wallet.md";
   slug: "how-to-move-crypto-exchange-to-cold-wallet";
+  body: string;
+  collection: "safe-crypto";
+  data: InferEntrySchema<"safe-crypto">
+} & { render(): Render[".md"] };
+"how-to-safely-connect-wallet-to-dapp.md": {
+	id: "how-to-safely-connect-wallet-to-dapp.md";
+  slug: "how-to-safely-connect-wallet-to-dapp";
   body: string;
   collection: "safe-crypto";
   data: InferEntrySchema<"safe-crypto">
@@ -1048,6 +1790,13 @@ declare module 'astro:content' {
   collection: "safe-crypto";
   data: InferEntrySchema<"safe-crypto">
 } & { render(): Render[".md"] };
+"paper-wallets-why-this-method-is-dangerous.md": {
+	id: "paper-wallets-why-this-method-is-dangerous.md";
+  slug: "paper-wallets-why-this-method-is-dangerous";
+  body: string;
+  collection: "safe-crypto";
+  data: InferEntrySchema<"safe-crypto">
+} & { render(): Render[".md"] };
 "what-is-a-seed-phrase.md": {
 	id: "what-is-a-seed-phrase.md";
   slug: "what-is-a-seed-phrase";
@@ -1058,6 +1807,20 @@ declare module 'astro:content' {
 "what-is-two-factor-authentication.md": {
 	id: "what-is-two-factor-authentication.md";
   slug: "what-is-two-factor-authentication";
+  body: string;
+  collection: "safe-crypto";
+  data: InferEntrySchema<"safe-crypto">
+} & { render(): Render[".md"] };
+"where-to-store-seed-phrase-paper-metal-backup.md": {
+	id: "where-to-store-seed-phrase-paper-metal-backup.md";
+  slug: "where-to-store-seed-phrase-paper-metal-backup";
+  body: string;
+  collection: "safe-crypto";
+  data: InferEntrySchema<"safe-crypto">
+} & { render(): Render[".md"] };
+"why-move-crypto-off-exchanges.md": {
+	id: "why-move-crypto-off-exchanges.md";
+  slug: "why-move-crypto-off-exchanges";
   body: string;
   collection: "safe-crypto";
   data: InferEntrySchema<"safe-crypto">
