@@ -28,7 +28,7 @@ Two candles form this pattern:
 
 The green candle's body "engulfs" the red candle's body completely.
 
-<img src="/images/bullish-engulfing-btc.svg" alt="BTC/USD 4H chart showing bullish engulfing pattern with downtrend, volume spike, and MACD buy signal" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img src="/images/bullish-engulfing-btc.svg" alt="Bullish engulfing pattern visual guide showing three phases: downtrend, the pattern forming (small red candle followed by large green candle), and confirmed reversal" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## How to Identify It
 
@@ -74,7 +74,7 @@ Volume must be higher on the engulfing candle than the previous candles. The vol
 
 A MACD crossover or RSI divergence at the same time significantly increases the probability.
 
-<img src="/images/bullish-engulfing-confluence.svg" alt="EUR/USD daily chart showing bullish engulfing with support, 50 EMA, and confluence checkmarks" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img src="/images/bullish-engulfing-confluence.svg" alt="Bullish engulfing pattern forming at a key support level with confluence confirmation factors" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ### 4. Entry & Stop Strategy
 
