@@ -2102,6 +2102,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"free-cheap-wills.md": {
+	id: "free-cheap-wills.md";
+  slug: "free-cheap-wills";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "how-to-save-on-energy-bills.md": {
 	id: "how-to-save-on-energy-bills.md";
   slug: "how-to-save-on-energy-bills";
@@ -2123,6 +2130,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"inheritance-tax-planning.md": {
+	id: "inheritance-tax-planning.md";
+  slug: "inheritance-tax-planning";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "isas-explained.md": {
 	id: "isas-explained.md";
   slug: "isas-explained";
@@ -2130,9 +2144,30 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"lasting-power-of-attorney.md": {
+	id: "lasting-power-of-attorney.md";
+  slug: "lasting-power-of-attorney";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "mortgage-overpayment-calculator.md": {
 	id: "mortgage-overpayment-calculator.md";
   slug: "mortgage-overpayment-calculator";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"pension-auto-enrolment-guide.md": {
+	id: "pension-auto-enrolment-guide.md";
+  slug: "pension-auto-enrolment-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"pension-credit-guide.md": {
+	id: "pension-credit-guide.md";
+  slug: "pension-credit-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2147,6 +2182,34 @@ declare module 'astro:content' {
 "remortgaging-guide.md": {
 	id: "remortgaging-guide.md";
   slug: "remortgaging-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"state-pension-explained.md": {
+	id: "state-pension-explained.md";
+  slug: "state-pension-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"student-bank-accounts.md": {
+	id: "student-bank-accounts.md";
+  slug: "student-bank-accounts";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"student-budgeting-guide.md": {
+	id: "student-budgeting-guide.md";
+  slug: "student-budgeting-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"student-loans-explained.md": {
+	id: "student-loans-explained.md";
+  slug: "student-loans-explained";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">

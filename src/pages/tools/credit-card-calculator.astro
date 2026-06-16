@@ -1,0 +1,903 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Credit Card Interest Calculator" description="Calculate how long it will take to pay off your credit card and how much interest you'll pay. Compare minimum payments vs fixed payments to see the true cost of credit card debt." type="tool" category="personal-finance">
+  <div class="tool-container">
+    <div class="tool-header">
+      <h1>Credit Card Interest Calculator</h1>
+      <p class="subtitle">See the true cost of credit card debt — and how to crush it faster</p>
+    </div>
+
+    <div class="calculator-grid">
+      <div class="input-section">
+        <h2>Your Numbers</h2>
+
+        <div class="input-group">
+          <label for="balance">Credit Card Balance</label>
+          <div class="input-wrapper">
+            <span class="currency">$</span>
+            <input type="number" id="balance" value="3000" min="0" step="100">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="apr">Annual Interest Rate (APR)</label>
+          <div class="input-wrapper">
+            <input type="number" id="apr" value="21.9" min="0" max="50" step="0.1">
+            <span class="currency">%</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="payment">Monthly Payment</label>
+          <div class="input-wrapper">
+            <span class="currency">$</span>
+            <input type="number" id="payment" value="100" min="0" step="10">
+          </div>
+        </div>
+
+        <button id="calculate" class="btn-primary">Calculate Payoff</button>
+
+        <div class="min-payment-note">
+          <p>UK minimum payment = 2% of balance or £25, whichever is higher</p>
+        </div>
+      </div>
+
+      <div class="results-section">
+        <h2>Your Results</h2>
+
+        <div class="results-grid">
+          <div class="result-card blue">
+            <div class="result-label">Months to Pay Off</div>
+            <div class="result-value" id="monthsToPayoff">38</div>
+            <div class="result-detail" id="monthsDetail">~3 years 2 months</div>
+          </div>
+
+          <div class="result-card red">
+            <div class="result-label">Total Interest Paid</div>
+            <div class="result-value" id="totalInterest">$779</div>
+            <div class="result-detail" id="interestDetail">26% of your balance</div>
+          </div>
+
+          <div class="result-card yellow">
+            <div class="result-label">Total Amount Paid</div>
+            <div class="result-value" id="totalPaid">$3,779</div>
+            <div class="result-detail" id="paidDetail">Balance + interest</div>
+          </div>
+
+          <div class="result-card green">
+            <div class="result-label">Monthly Payment</div>
+            <div class="result-value" id="monthlyPayment">$100</div>
+            <div class="result-detail" id="paymentDetail">Fixed payment</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="comparison-section">
+      <h2>Payment Strategy Comparison</h2>
+      <p class="comparison-subtitle">This is where it gets real — see how different payment strategies change everything</p>
+
+      <div class="comparison-grid" id="comparisonGrid">
+        <div class="comparison-card danger">
+          <div class="card-header">
+            <span class="card-icon">☠️</span>
+            <h3>Minimum Payment Only</h3>
+            <span class="card-badge danger">Danger Zone</span>
+          </div>
+          <div class="card-body">
+            <div class="card-stat">
+              <span class="stat-label">Time to pay off</span>
+              <span class="stat-value danger" id="minTime">—</span>
+            </div>
+            <div class="card-stat">
+              <span class="stat-label">Total interest paid</span>
+              <span class="stat-value danger" id="minInterest">—</span>
+            </div>
+            <div class="card-stat">
+              <span class="stat-label">Total amount paid</span>
+              <span class="stat-value" id="minTotal">—</span>
+            </div>
+            <div class="card-stat">
+              <span class="stat-label">Interest as % of balance</span>
+              <span class="stat-value danger" id="minPercent">—</span>
+            </div>
+            <div class="card-callout danger" id="minCallout"></div>
+          </div>
+        </div>
+
+        <div class="comparison-card warning">
+          <div class="card-header">
+            <span class="card-icon">⚠️</span>
+            <h3>Your Payment</h3>
+            <span class="card-badge warning">Your Choice</span>
+          </div>
+          <div class="card-body">
+            <div class="card-stat">
+              <span class="stat-label">Time to pay off</span>
+              <span class="stat-value warning" id="yourTime">—</span>
+            </div>
+            <div class="card-stat">
+              <span class="stat-label">Total interest paid</span>
+              <span class="stat-value warning" id="yourInterest">—</span>
+            </div>
+            <div class="card-stat">
+              <span class="stat-label">Total amount paid</span>
+              <span class="stat-value" id="yourTotal">—</span>
+            </div>
+            <div class="card-stat">
+              <span class="stat-label">Interest as % of balance</span>
+              <span class="stat-value warning" id="yourPercent">—</span>
+            </div>
+            <div class="card-callout warning" id="yourCallout"></div>
+          </div>
+        </div>
+
+        <div class="comparison-card success">
+          <div class="card-header">
+            <span class="card-icon">🚀</span>
+            <h3>Aggressive Payment</h3>
+            <span class="card-badge success">Best Choice</span>
+          </div>
+          <div class="card-body">
+            <div class="card-stat">
+              <span class="stat-label">Time to pay off</span>
+              <span class="stat-value success" id="aggTime">—</span>
+            </div>
+            <div class="card-stat">
+              <span class="stat-label">Total interest paid</span>
+              <span class="stat-value success" id="aggInterest">—</span>
+            </div>
+            <div class="card-stat">
+              <span class="stat-label">Total amount paid</span>
+              <span class="stat-value" id="aggTotal">—</span>
+            </div>
+            <div class="card-stat">
+              <span class="stat-label">Interest as % of balance</span>
+              <span class="stat-value success" id="aggPercent">—</span>
+            </div>
+            <div class="card-callout success" id="aggCallout"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="savings-banner" id="savingsBanner">
+        <div class="savings-icon">💰</div>
+        <div class="savings-content">
+          <h3 id="savingsTitle">You could save thousands</h3>
+          <p id="savingsText">Switching from minimum to aggressive payments could save you thousands in interest.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="shock-section" id="shockSection">
+      <div class="shock-card">
+        <h2>The Credit Card Trap</h2>
+        <p>Most people don't realize that minimum payments are designed to keep you in debt. Here's the ugly truth:</p>
+        <div class="shock-grid">
+          <div class="shock-item">
+            <div class="shock-number" id="shockYears">—</div>
+            <div class="shock-label">years to pay off with minimums</div>
+          </div>
+          <div class="shock-item">
+            <div class="shock-number" id="shockMultiplier">—</div>
+            <div class="shock-label">x your balance in total payments</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-section">
+      <h2>Balance Over Time</h2>
+      <div class="timeline-bars" id="timelineBars"></div>
+    </div>
+
+    <div class="callout">
+      <p><strong>Tip:</strong> Even an extra $25/month can cut years off your payoff time and save hundreds in interest. Pay more than the minimum whenever you can.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .tool-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .tool-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+  }
+
+  .calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .calculator-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .input-section, .results-section {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .input-section h2, .results-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #e2e8f0;
+  }
+
+  .input-group {
+    margin-bottom: 1rem;
+  }
+
+  .input-group label {
+    display: block;
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+  }
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    background: #1a1d23;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .currency {
+    padding: 0 0.75rem;
+    color: #22c55e;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+
+  input[type="number"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #e2e8f0;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-family: inherit;
+    width: 100%;
+  }
+
+  input[type="number"]:focus {
+    outline: none;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 0.875rem;
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+  }
+
+  .min-payment-note {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 8px;
+  }
+
+  .min-payment-note p {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .result-card {
+    background: #1a1d23;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    border-left: 3px solid;
+  }
+
+  .result-card.blue { border-color: #0ea5e9; }
+  .result-card.red { border-color: #ef4444; }
+  .result-card.yellow { border-color: #f59e0b; }
+  .result-card.green { border-color: #22c55e; }
+
+  .result-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .result-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 0.25rem;
+  }
+
+  .result-card.blue .result-value { color: #0ea5e9; }
+  .result-card.red .result-value { color: #ef4444; }
+  .result-card.yellow .result-value { color: #f59e0b; }
+  .result-card.green .result-value { color: #22c55e; }
+
+  .result-detail {
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+
+  /* Comparison Section */
+  .comparison-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .comparison-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  .comparison-subtitle {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 900px) {
+    .comparison-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .comparison-card {
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+
+  .comparison-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .card-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #334155;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .card-icon {
+    font-size: 1.5rem;
+  }
+
+  .card-header h3 {
+    font-size: 1rem;
+    color: #e2e8f0;
+    margin: 0;
+    flex: 1;
+  }
+
+  .card-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .card-badge.danger {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+  }
+
+  .card-badge.warning {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+  }
+
+  .card-badge.success {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  .card-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+  }
+
+  .card-stat:last-of-type {
+    border-bottom: none;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: #94a3b8;
+  }
+
+  .stat-value {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #e2e8f0;
+  }
+
+  .stat-value.danger { color: #ef4444; }
+  .stat-value.warning { color: #f59e0b; }
+  .stat-value.success { color: #22c55e; }
+
+  .card-callout {
+    margin-top: 0.75rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .card-callout.danger {
+    background: rgba(239, 68, 68, 0.08);
+    color: #fca5a5;
+  }
+
+  .card-callout.warning {
+    background: rgba(245, 158, 11, 0.08);
+    color: #fcd34d;
+  }
+
+  .card-callout.success {
+    background: rgba(34, 197, 94, 0.08);
+    color: #86efac;
+  }
+
+  /* Savings Banner */
+  .savings-banner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(16, 185, 129, 0.08));
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    border-radius: 12px;
+  }
+
+  .savings-icon {
+    font-size: 2.5rem;
+  }
+
+  .savings-content h3 {
+    font-size: 1.1rem;
+    color: #22c55e;
+    margin-bottom: 0.25rem;
+  }
+
+  .savings-content p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  /* Shock Section */
+  .shock-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .shock-card {
+    background: linear-gradient(135deg, #991b1b, #7f1d1d);
+    border-radius: 12px;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+  }
+
+  .shock-card h2 {
+    color: #fecaca;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    padding: 0;
+  }
+
+  .shock-card > p {
+    color: #fca5a5;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .shock-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .shock-item {
+    text-align: center;
+  }
+
+  .shock-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fef2f2;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+  }
+
+  .shock-label {
+    font-size: 0.8rem;
+    color: #fca5a5;
+  }
+
+  /* Timeline */
+  .timeline-section {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-section h2 {
+    font-size: 1.2rem;
+    color: #e2e8f0;
+    margin-bottom: 1rem;
+  }
+
+  .timeline-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .timeline-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .timeline-bar .month {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    width: 50px;
+    text-align: right;
+  }
+
+  .timeline-bar .bar {
+    flex: 1;
+    height: 20px;
+    background: #1a1d23;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .timeline-bar .bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+  }
+
+  .timeline-bar .bar-fill.red { background: linear-gradient(90deg, #ef4444, #dc2626); }
+  .timeline-bar .bar-fill.yellow { background: linear-gradient(90deg, #f59e0b, #d97706); }
+  .timeline-bar .bar-fill.green { background: linear-gradient(90deg, #22c55e, #16a34a); }
+
+  .timeline-bar .value {
+    font-size: 0.75rem;
+    color: #e2e8f0;
+    width: 60px;
+    text-align: right;
+  }
+
+  .callout {
+    padding: 1rem;
+    background: #1e293b;
+    border-radius: 8px;
+    border-left: 3px solid #22c55e;
+  }
+
+  .callout p {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    margin: 0;
+  }
+</style>
+
+<script>
+  function calculatePayoff(balance: number, apr: number, monthlyPayment: number) {
+    let remaining = balance;
+    let totalInterest = 0;
+    let months = 0;
+    const monthlyRate = apr / 100 / 12;
+
+    while (remaining > 0 && months < 600) {
+      const interest = remaining * monthlyRate;
+      totalInterest += interest;
+
+      const payment = Math.min(monthlyPayment, remaining + interest);
+      remaining = remaining + interest - payment;
+
+      if (remaining < 0.5) remaining = 0;
+      months++;
+    }
+
+    return {
+      months,
+      totalInterest: Math.round(totalInterest),
+      totalPaid: Math.round(balance + totalInterest),
+    };
+  }
+
+  function calculateMinPayment(balance: number, apr: number) {
+    let remaining = balance;
+    let totalInterest = 0;
+    let months = 0;
+    const monthlyRate = apr / 100 / 12;
+
+    while (remaining > 0 && months < 600) {
+      const interest = remaining * monthlyRate;
+      totalInterest += interest;
+
+      const minPayment = Math.max(remaining * 0.02, 25);
+      const payment = Math.min(minPayment, remaining + interest);
+      remaining = remaining + interest - payment;
+
+      if (remaining < 0.5) remaining = 0;
+      months++;
+    }
+
+    return {
+      months,
+      totalInterest: Math.round(totalInterest),
+      totalPaid: Math.round(balance + totalInterest),
+    };
+  }
+
+  function formatMoney(num: number): string {
+    if (num >= 1000000) {
+      return '$' + (num / 1000000).toFixed(1) + 'M';
+    }
+    return '$' + num.toLocaleString();
+  }
+
+  function formatMonths(months: number): string {
+    if (months >= 600) return 'Never (50+ years)';
+    const years = Math.floor(months / 12);
+    const rem = months % 12;
+    if (years === 0) return months + ' months';
+    if (rem === 0) return years + ' year' + (years > 1 ? 's' : '');
+    return years + ' year' + (years > 1 ? 's' : '') + ' ' + rem + ' mo';
+  }
+
+  function calculate() {
+    const balance = parseFloat((document.getElementById('balance') as HTMLInputElement).value) || 3000;
+    const apr = parseFloat((document.getElementById('apr') as HTMLInputElement).value) || 21.9;
+    const payment = parseFloat((document.getElementById('payment') as HTMLInputElement).value) || 100;
+
+    if (balance <= 0 || apr <= 0) return;
+
+    // Calculate your payment
+    const yourResult = calculatePayoff(balance, apr, payment);
+    const monthlyInterest = Math.round(balance * (apr / 100 / 12));
+    const interestPct = Math.round((yourResult.totalInterest / balance) * 100);
+
+    document.getElementById('monthsToPayoff')!.textContent = yourResult.months >= 600 ? '50+' : yourResult.months.toString();
+    document.getElementById('monthsDetail')!.textContent = formatMonths(yourResult.months);
+    document.getElementById('totalInterest')!.textContent = formatMoney(yourResult.totalInterest);
+    document.getElementById('interestDetail')!.textContent = interestPct + '% of your balance';
+    document.getElementById('totalPaid')!.textContent = formatMoney(yourResult.totalPaid);
+    document.getElementById('paidDetail')!.textContent = 'Balance + interest';
+    document.getElementById('monthlyPayment')!.textContent = formatMoney(payment);
+    document.getElementById('paymentDetail')!.textContent = 'Fixed payment';
+
+    // Minimum payment comparison
+    const minResult = calculateMinPayment(balance, apr);
+    const minPct = Math.round((minResult.totalInterest / balance) * 100);
+
+    document.getElementById('minTime')!.textContent = minResult.months >= 600 ? '50+ years' : formatMonths(minResult.months);
+    document.getElementById('minInterest')!.textContent = formatMoney(minResult.totalInterest);
+    document.getElementById('minTotal')!.textContent = formatMoney(minResult.totalPaid);
+    document.getElementById('minPercent')!.textContent = minPct + '%';
+
+    const minCallout = document.getElementById('minCallout')!;
+    if (minResult.months >= 600) {
+      minCallout.textContent = 'At minimum payments, you may NEVER pay this off. The interest keeps growing.';
+    } else {
+      minCallout.textContent = 'Minimum payments are designed to keep you paying for years — that\'s how credit card companies make their money.';
+    }
+
+    // Your payment comparison
+    document.getElementById('yourTime')!.textContent = yourResult.months >= 600 ? '50+ years' : formatMonths(yourResult.months);
+    document.getElementById('yourInterest')!.textContent = formatMoney(yourResult.totalInterest);
+    document.getElementById('yourTotal')!.textContent = formatMoney(yourResult.totalPaid);
+    document.getElementById('yourPercent')!.textContent = interestPct + '%';
+
+    const yourCallout = document.getElementById('yourCallout')!;
+    if (yourResult.months <= 12) {
+      yourCallout.textContent = 'Nice! You\'re on track to pay this off within a year.';
+    } else if (yourResult.months <= 36) {
+      yourCallout.textContent = 'Decent pace. You\'ll be debt-free in a few years.';
+    } else {
+      yourCallout.textContent = 'This will take a while. Consider paying more if you can.';
+    }
+
+    // Aggressive payment (double your payment or 10% of balance, whichever higher)
+    const aggressivePayment = Math.max(payment * 2, balance * 0.1);
+    const aggResult = calculatePayoff(balance, apr, aggressivePayment);
+    const aggPct = Math.round((aggResult.totalInterest / balance) * 100);
+
+    document.getElementById('aggTime')!.textContent = aggResult.months >= 600 ? '50+ years' : formatMonths(aggResult.months);
+    document.getElementById('aggInterest')!.textContent = formatMoney(aggResult.totalInterest);
+    document.getElementById('aggTotal')!.textContent = formatMoney(aggResult.totalPaid);
+    document.getElementById('aggPercent')!.textContent = aggPct + '%';
+
+    const aggCallout = document.getElementById('aggCallout')!;
+    const savedMonths = yourResult.months - aggResult.months;
+    const savedInterest = yourResult.totalInterest - aggResult.totalInterest;
+
+    if (savedInterest > 0) {
+      aggCallout.textContent = 'By paying ' + formatMoney(aggressivePayment) + '/month, you save ' + formatMoney(savedInterest) + ' in interest and ' + savedMonths + ' months.';
+    } else {
+      aggCallout.textContent = 'You\'re already paying enough to clear this quickly!';
+    }
+
+    // Savings banner
+    const minVsAgg = minResult.totalInterest - aggResult.totalInterest;
+    const titleEl = document.getElementById('savingsTitle')!;
+    const textEl = document.getElementById('savingsText')!;
+
+    if (minVsAgg > 0) {
+      titleEl.textContent = 'You could save ' + formatMoney(minVsAgg) + ' in interest';
+      textEl.textContent = 'Switching from minimum to aggressive payments (' + formatMoney(aggressivePayment) + '/month) would save you ' + formatMoney(minVsAgg) + ' in interest — that\'s real money.';
+    } else {
+      titleEl.textContent = 'You\'re already smart about this';
+      textEl.textContent = 'Your payment strategy is solid. Keep it up and you\'ll be debt-free soon.';
+    }
+
+    // Shock section
+    document.getElementById('shockYears')!.textContent = minResult.months >= 600 ? '50+' : (minResult.months / 12).toFixed(1);
+    const multiplier = (minResult.totalPaid / balance).toFixed(1);
+    document.getElementById('shockMultiplier')!.textContent = multiplier + 'x';
+
+    // Timeline bars (show balance milestones)
+    const barsContainer = document.getElementById('timelineBars')!;
+    barsContainer.innerHTML = '';
+
+    const milestones = [1, 3, 6, 12, 18, 24, 36, 48, 60, Math.min(minResult.months, 120)];
+    const uniqueMilestones = [...new Set(milestones)].filter(m => m <= minResult.months + 6 && m <= 120);
+
+    // Calculate balance at each milestone for min and your payment
+    let minBal = balance;
+    let yourBal = balance;
+    let aggBal = balance;
+    let monthIndex = 0;
+    const monthlyRate = apr / 100 / 12;
+
+    let m = 0;
+    while (m <= Math.max(...uniqueMilestones) && m <= 120) {
+      if (uniqueMilestones.includes(m) && m > 0) {
+        const maxBal = Math.max(minBal, yourBal, aggBal, balance * 0.1);
+        const minPct = Math.max((minBal / maxBal) * 100, 0);
+        const yourPct = Math.max((yourBal / maxBal) * 100, 0);
+        const aggPctVal = Math.max((aggBal / maxBal) * 100, 0);
+
+        const bar = document.createElement('div');
+        bar.className = 'timeline-bar';
+        bar.innerHTML = `
+          <span class="month">Mo ${m}</span>
+          <div class="bar" style="display:flex;flex-direction:column;gap:2px;padding:2px 0;">
+            <div class="bar-fill red" style="width:${minPct}%;height:8px;border-radius:3px;"></div>
+            <div class="bar-fill yellow" style="width:${yourPct}%;height:8px;border-radius:3px;"></div>
+            <div class="bar-fill green" style="width:${aggPctVal}%;height:8px;border-radius:3px;"></div>
+          </div>
+          <span class="value" style="font-size:0.65rem;line-height:1.2;text-align:right;">
+            <span style="color:#ef4444;">${formatMoney(Math.round(minBal))}</span><br>
+            <span style="color:#f59e0b;">${formatMoney(Math.round(yourBal))}</span><br>
+            <span style="color:#22c55e;">${formatMoney(Math.round(aggBal))}</span>
+          </span>
+        `;
+        barsContainer.appendChild(bar);
+      }
+
+      // Advance balances
+      if (minBal > 0) {
+        const minPay = Math.max(minBal * 0.02, 25);
+        minBal = minBal + minBal * monthlyRate - Math.min(minPay, minBal + minBal * monthlyRate);
+        if (minBal < 0.5) minBal = 0;
+      }
+      if (yourBal > 0) {
+        const yourPay = Math.min(payment, yourBal + yourBal * monthlyRate);
+        yourBal = yourBal + yourBal * monthlyRate - yourPay;
+        if (yourBal < 0.5) yourBal = 0;
+      }
+      if (aggBal > 0) {
+        const aggPay = Math.min(aggressivePayment, aggBal + aggBal * monthlyRate);
+        aggBal = aggBal + aggBal * monthlyRate - aggPay;
+        if (aggBal < 0.5) aggBal = 0;
+      }
+
+      m++;
+    }
+
+    // Add legend
+    const legend = document.createElement('div');
+    legend.style.cssText = 'display:flex;gap:1.5rem;margin-top:0.75rem;justify-content:center;flex-wrap:wrap;';
+    legend.innerHTML = `
+      <span style="display:flex;align-items:center;gap:0.4rem;font-size:0.75rem;color:#94a3b8;">
+        <span style="width:10px;height:10px;border-radius:2px;background:#ef4444;display:inline-block;"></span> Minimum
+      </span>
+      <span style="display:flex;align-items:center;gap:0.4rem;font-size:0.75rem;color:#94a3b8;">
+        <span style="width:10px;height:10px;border-radius:2px;background:#f59e0b;display:inline-block;"></span> Your Payment
+      </span>
+      <span style="display:flex;align-items:center;gap:0.4rem;font-size:0.75rem;color:#94a3b8;">
+        <span style="width:10px;height:10px;border-radius:2px;background:#22c55e;display:inline-block;"></span> Aggressive
+      </span>
+    `;
+    barsContainer.appendChild(legend);
+  }
+
+  document.getElementById('calculate')!.addEventListener('click', calculate);
+
+  // Auto-calculate on input change
+  document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', calculate);
+  });
+
+  calculate();
+</script>

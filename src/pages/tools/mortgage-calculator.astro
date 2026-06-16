@@ -1,0 +1,692 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Mortgage Calculator" description="Calculate your monthly mortgage payments, total interest, and see how overpayments can save you thousands. Interactive amortization schedule with SVG chart." type="tool" category="personal-finance">
+  <div class="tool-container">
+    <div class="tool-header">
+      <h1>Mortgage Calculator</h1>
+      <p class="subtitle">Calculate payments, total interest, and see how overpayments save you money</p>
+    </div>
+
+    <div class="calculator-grid">
+      <div class="input-section">
+        <h2>Loan Details</h2>
+
+        <div class="input-group">
+          <label for="homePrice">Home Price</label>
+          <div class="input-wrapper">
+            <span class="currency">£</span>
+            <input type="number" id="homePrice" value="250000" min="0" step="5000">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="deposit">Deposit Amount</label>
+          <div class="input-wrapper">
+            <span class="currency">£</span>
+            <input type="number" id="deposit" value="25000" min="0" step="1000">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="interestRate">Interest Rate (%)</label>
+          <div class="input-wrapper">
+            <input type="number" id="interestRate" value="4.5" min="0" max="20" step="0.1">
+            <span class="currency">%</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="term">Mortgage Term (years)</label>
+          <input type="number" id="term" value="25" min="15" max="30" step="1">
+        </div>
+
+        <div class="input-group">
+          <label for="overpayment">Monthly Overpayment</label>
+          <div class="input-wrapper">
+            <span class="currency">£</span>
+            <input type="number" id="overpayment" value="0" min="0" step="50">
+          </div>
+        </div>
+
+        <button id="calculate" class="btn-primary">Calculate Mortgage</button>
+      </div>
+
+      <div class="results-section">
+        <h2>Payment Summary</h2>
+
+        <div class="results-grid">
+          <div class="result-card blue">
+            <div class="result-label">Monthly Payment</div>
+            <div class="result-value" id="monthlyPayment">£1,267</div>
+            <div class="result-detail" id="monthlyDetail">Principal + Interest</div>
+          </div>
+
+          <div class="result-card red">
+            <div class="result-label">Total Interest</div>
+            <div class="result-value" id="totalInterest">£130,020</div>
+            <div class="result-detail" id="interestDetail">Over 25 years</div>
+          </div>
+
+          <div class="result-card purple">
+            <div class="result-label">Total Cost</div>
+            <div class="result-value" id="totalCost">£355,020</div>
+            <div class="result-detail" id="costDetail">Loan amount + Interest</div>
+          </div>
+
+          <div class="result-card green">
+            <div class="result-label">Loan Amount</div>
+            <div class="result-value" id="loanAmount">£225,000</div>
+            <div class="result-detail" id="loanDetail">Home price minus deposit</div>
+          </div>
+        </div>
+
+        <div class="overpayment-results" id="overpaymentResults" style="display:none;">
+          <h3>Overpayment Savings</h3>
+          <div class="savings-grid">
+            <div class="savings-card">
+              <div class="savings-label">Months Saved</div>
+              <div class="savings-value green" id="monthsSaved">0</div>
+            </div>
+            <div class="savings-card">
+              <div class="savings-label">Interest Saved</div>
+              <div class="savings-value green" id="interestSaved">£0</div>
+            </div>
+            <div class="savings-card">
+              <div class="savings-label">New Payoff Date</div>
+              <div class="savings-value" id="newPayoff">—</div>
+            </div>
+            <div class="savings-card">
+              <div class="savings-label">Total with Overpayments</div>
+              <div class="savings-value" id="totalWithOverpay">—</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-section">
+          <h3>Balance Over Time</h3>
+          <div class="chart-container" id="chartContainer">
+            <svg id="balanceChart" viewBox="0 0 500 260" preserveAspectRatio="xMidYMid meet"></svg>
+          </div>
+          <div class="chart-legend">
+            <span class="legend-item"><span class="legend-dot blue"></span> Without Overpayments</span>
+            <span class="legend-item" id="legendOverpay" style="display:none;"><span class="legend-dot green"></span> With Overpayments</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="amortization-section" id="amortizationSection">
+      <h2>Year-by-Year Amortization</h2>
+      <div class="table-wrapper">
+        <table id="amortTable">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Start Balance</th>
+              <th>Interest Paid</th>
+              <th>Principal Paid</th>
+              <th>End Balance</th>
+            </tr>
+          </thead>
+          <tbody id="amortBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p><strong>Tip:</strong> Even small overpayments can save you thousands in interest and years off your mortgage. A £100/month overpayment on a £225,000 mortgage at 4.5% can save over £20,000 in interest.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .tool-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .tool-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+  }
+
+  .calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .calculator-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .input-section, .results-section {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .input-section h2, .results-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #e2e8f0;
+  }
+
+  .input-group {
+    margin-bottom: 1rem;
+  }
+
+  .input-group label {
+    display: block;
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+  }
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    background: #1a1d23;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .currency {
+    padding: 0 0.75rem;
+    color: #0ea5e9;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+
+  input[type="number"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #e2e8f0;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-family: inherit;
+    width: 100%;
+  }
+
+  input[type="number"]:focus {
+    outline: none;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 0.875rem;
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .result-card {
+    background: #1a1d23;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    border-left: 3px solid;
+  }
+
+  .result-card.blue { border-color: #0ea5e9; }
+  .result-card.red { border-color: #ef4444; }
+  .result-card.purple { border-color: #8b5cf6; }
+  .result-card.green { border-color: #22c55e; }
+
+  .result-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .result-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 0.25rem;
+  }
+
+  .result-card.blue .result-value { color: #0ea5e9; }
+  .result-card.red .result-value { color: #ef4444; }
+  .result-card.purple .result-value { color: #8b5cf6; }
+  .result-card.green .result-value { color: #22c55e; }
+
+  .result-detail {
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+
+  .overpayment-results {
+    margin-bottom: 1.5rem;
+  }
+
+  .overpayment-results h3 {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    margin-bottom: 1rem;
+  }
+
+  .savings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .savings-card {
+    background: #1a1d23;
+    border-radius: 8px;
+    padding: 0.75rem;
+    text-align: center;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+
+  .savings-label {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .savings-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #e2e8f0;
+  }
+
+  .savings-value.green {
+    color: #22c55e;
+  }
+
+  .chart-section {
+    margin-bottom: 0.5rem;
+  }
+
+  .chart-section h3 {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    margin-bottom: 1rem;
+  }
+
+  .chart-container {
+    background: #1a1d23;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  #balanceChart {
+    width: 100%;
+    height: auto;
+  }
+
+  .chart-legend {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .legend-dot.blue { background: #0ea5e9; }
+  .legend-dot.green { background: #22c55e; }
+
+  .amortization-section {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .amortization-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #e2e8f0;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  th {
+    background: #1a1d23;
+    color: #94a3b8;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.75rem;
+    text-align: right;
+    position: sticky;
+    top: 0;
+  }
+
+  th:first-child {
+    text-align: left;
+  }
+
+  td {
+    padding: 0.6rem 0.75rem;
+    text-align: right;
+    color: #cbd5e1;
+    border-bottom: 1px solid #334155;
+  }
+
+  td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: #e2e8f0;
+  }
+
+  tr:hover td {
+    background: rgba(14, 165, 233, 0.05);
+  }
+
+  .callout {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #1e293b;
+    border-radius: 8px;
+    border-left: 3px solid #0ea5e9;
+  }
+
+  .callout p {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .results-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .savings-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .result-value {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
+<script>
+  function formatMoney(num: number): string {
+    return '£' + Math.round(num).toLocaleString('en-GB');
+  }
+
+  function calculateMortgage() {
+    const homePrice = parseFloat((document.getElementById('homePrice') as HTMLInputElement).value) || 0;
+    const deposit = parseFloat((document.getElementById('deposit') as HTMLInputElement).value) || 0;
+    const annualRate = parseFloat((document.getElementById('interestRate') as HTMLInputElement).value) || 0;
+    const termYears = parseInt((document.getElementById('term') as HTMLInputElement).value) || 25;
+    const overpayment = parseFloat((document.getElementById('overpayment') as HTMLInputElement).value) || 0;
+
+    const loanAmount = homePrice - deposit;
+    if (loanAmount <= 0 || annualRate <= 0 || termYears <= 0) {
+      return;
+    }
+
+    const monthlyRate = annualRate / 100 / 12;
+    const totalMonths = termYears * 12;
+
+    // Monthly payment (principal + interest)
+    const monthlyPayment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) / (Math.pow(1 + monthlyRate, totalMonths) - 1);
+    const totalCost = monthlyPayment * totalMonths;
+    const totalInterest = totalCost - loanAmount;
+
+    document.getElementById('monthlyPayment')!.textContent = formatMoney(monthlyPayment);
+    document.getElementById('monthlyDetail')!.textContent = 'Principal + Interest';
+    document.getElementById('totalInterest')!.textContent = formatMoney(totalInterest);
+    document.getElementById('interestDetail')!.textContent = `Over ${termYears} years`;
+    document.getElementById('totalCost')!.textContent = formatMoney(totalCost);
+    document.getElementById('costDetail')!.textContent = 'Loan amount + Interest';
+    document.getElementById('loanAmount')!.textContent = formatMoney(loanAmount);
+    document.getElementById('loanDetail')!.textContent = 'Home price minus deposit';
+
+    // Calculate with overpayments
+    let balanceNoOverpay = loanAmount;
+    let balanceWithOverpay = loanAmount;
+    let monthsWithOverpay = 0;
+    let totalInterestWithOverpay = 0;
+    const yearlyDataNoOverpay: { year: number; balance: number; interest: number; principal: number }[] = [];
+    const yearlyDataWithOverpay: { year: number; balance: number; interest: number; principal: number }[] = [];
+
+    let currentYearInterest = 0;
+    let currentYearPrincipal = 0;
+    let currentYearInterestOverpay = 0;
+    let currentYearPrincipalOverpay = 0;
+
+    // Calculate without overpayments (year by year)
+    let tempBalance = loanAmount;
+    for (let month = 1; month <= totalMonths; month++) {
+      const interestPayment = tempBalance * monthlyRate;
+      const principalPayment = monthlyPayment - interestPayment;
+      tempBalance -= principalPayment;
+      if (tempBalance < 0) tempBalance = 0;
+
+      currentYearInterest += interestPayment;
+      currentYearPrincipal += principalPayment;
+
+      if (month % 12 === 0 || month === totalMonths) {
+        yearlyDataNoOverpay.push({
+          year: Math.ceil(month / 12),
+          balance: tempBalance,
+          interest: currentYearInterest,
+          principal: currentYearPrincipal,
+        });
+        currentYearInterest = 0;
+        currentYearPrincipal = 0;
+      }
+    }
+
+    // Calculate with overpayments
+    tempBalance = loanAmount;
+    let month = 0;
+    currentYearInterestOverpay = 0;
+    currentYearPrincipalOverpay = 0;
+    let totalPaidOverpay = 0;
+
+    while (tempBalance > 0 && month < totalMonths + 120) {
+      month++;
+      const interestPayment = tempBalance * monthlyRate;
+      const totalPayment = monthlyPayment + overpayment;
+      const principalPayment = Math.min(totalPayment - interestPayment, tempBalance);
+      tempBalance -= principalPayment;
+      if (tempBalance < 0) tempBalance = 0;
+
+      totalInterestWithOverpay += interestPayment;
+      totalPaidOverpay += totalPayment;
+      currentYearInterestOverpay += interestPayment;
+      currentYearPrincipalOverpay += principalPayment;
+
+      if (month % 12 === 0 || tempBalance <= 0) {
+        yearlyDataWithOverpay.push({
+          year: Math.ceil(month / 12),
+          balance: tempBalance,
+          interest: currentYearInterestOverpay,
+          principal: currentYearPrincipalOverpay,
+        });
+        currentYearInterestOverpay = 0;
+        currentYearPrincipalOverpay = 0;
+      }
+    }
+
+    monthsWithOverpay = month;
+    const monthsSaved = totalMonths - monthsWithOverpay;
+    const interestSaved = totalInterest - totalInterestWithOverpay;
+
+    const overpayResults = document.getElementById('overpaymentResults')!;
+    if (overpayment > 0 && monthsSaved > 0) {
+      overpayResults.style.display = 'block';
+      document.getElementById('monthsSaved')!.textContent = monthsSaved.toString();
+      document.getElementById('interestSaved')!.textContent = formatMoney(interestSaved);
+
+      const payoffYear = Math.floor(monthsWithOverpay / 12);
+      const payoffMonth = monthsWithOverpay % 12;
+      const payoffDate = new Date();
+      payoffDate.setMonth(payoffDate.getMonth() + monthsWithOverpay);
+      document.getElementById('newPayoff')!.textContent = payoffDate.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+      document.getElementById('totalWithOverpay')!.textContent = formatMoney(totalPaidOverpay);
+    } else {
+      overpayResults.style.display = 'none';
+    }
+
+    // Draw chart
+    drawChart(yearlyDataNoOverpay, yearlyDataWithOverpay, overpayment > 0 && monthsSaved > 0, loanAmount);
+
+    // Build amortization table
+    buildTable(yearlyDataNoOverpay);
+  }
+
+  function drawChart(noOverpay: { year: number; balance: number }[], withOverpay: { year: number; balance: number }[], showOverpay: boolean, maxBalance: number) {
+    const svg = document.getElementById('balanceChart')!;
+    const legendOverpay = document.getElementById('legendOverpay')!;
+
+    const width = 500;
+    const height = 240;
+    const padLeft = 60;
+    const padRight = 20;
+    const padTop = 10;
+    const padBottom = 30;
+    const chartW = width - padLeft - padRight;
+    const chartH = height - padTop - padBottom;
+
+    const maxYear = Math.max(
+      noOverpay.length > 0 ? noOverpay[noOverpay.length - 1].year : 1,
+      withOverpay.length > 0 ? withOverpay[withOverpay.length - 1].year : 1
+    );
+
+    const xScale = (year: number) => padLeft + (year / maxYear) * chartW;
+    const yScale = (val: number) => padTop + chartH - (val / maxBalance) * chartH;
+
+    let svgContent = '';
+
+    // Grid lines
+    for (let i = 0; i <= 4; i++) {
+      const y = padTop + (chartH / 4) * i;
+      const val = maxBalance - (maxBalance / 4) * i;
+      svgContent += `<line x1="${padLeft}" y1="${y}" x2="${width - padRight}" y2="${y}" stroke="#334155" stroke-width="0.5"/>`;
+      svgContent += `<text x="${padLeft - 8}" y="${y + 4}" fill="#64748b" font-size="9" text-anchor="end">£${Math.round(val / 1000)}k</text>`;
+    }
+
+    // X-axis labels
+    const yearStep = maxYear <= 10 ? 1 : maxYear <= 20 ? 2 : 5;
+    for (let yr = 0; yr <= maxYear; yr += yearStep) {
+      const x = xScale(yr);
+      svgContent += `<text x="${x}" y="${height - 5}" fill="#64748b" font-size="9" text-anchor="middle">${yr}yr</text>`;
+      svgContent += `<line x1="${x}" y1="${padTop}" x2="${x}" y2="${padTop + chartH}" stroke="#334155" stroke-width="0.3"/>`;
+    }
+
+    // Line without overpayments
+    if (noOverpay.length > 1) {
+      let pathD = `M ${xScale(noOverpay[0].year)} ${yScale(noOverpay[0].balance)}`;
+      for (let i = 1; i < noOverpay.length; i++) {
+        pathD += ` L ${xScale(noOverpay[i].year)} ${yScale(noOverpay[i].balance)}`;
+      }
+      svgContent += `<path d="${pathD}" fill="none" stroke="#0ea5e9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+    }
+
+    // Line with overpayments
+    if (showOverpay && withOverpay.length > 1) {
+      let pathD = `M ${xScale(withOverpay[0].year)} ${yScale(withOverpay[0].balance)}`;
+      for (let i = 1; i < withOverpay.length; i++) {
+        pathD += ` L ${xScale(withOverpay[i].year)} ${yScale(withOverpay[i].balance)}`;
+      }
+      svgContent += `<path d="${pathD}" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,3"/>`;
+      legendOverpay.style.display = 'inline-flex';
+    } else {
+      legendOverpay.style.display = 'none';
+    }
+
+    svg.innerHTML = svgContent;
+  }
+
+  function buildTable(data: { year: number; balance: number; interest: number; principal: number }[]) {
+    const tbody = document.getElementById('amortBody')!;
+    tbody.innerHTML = '';
+
+    let runningBalance = 0;
+    data.forEach((row, i) => {
+      const startBalance = i === 0 ? parseFloat((document.getElementById('loanAmount') as HTMLElement).textContent.replace(/[£,]/g, '')) : data[i - 1].balance;
+      runningBalance = row.balance;
+
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>Year ${row.year}</td>
+        <td>${formatMoney(startBalance)}</td>
+        <td>${formatMoney(row.interest)}</td>
+        <td>${formatMoney(row.principal)}</td>
+        <td>${formatMoney(row.balance)}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  document.getElementById('calculate')!.addEventListener('click', calculateMortgage);
+
+  document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', calculateMortgage);
+  });
+
+  calculateMortgage();
+</script>
