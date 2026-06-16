@@ -26,4 +26,5 @@ export const collections = {
   'insurance': defineCollection({ type: 'content', schema: article }),
   'investing': defineCollection({ type: 'content', schema: article }),
   'blog': defineCollection({ type: 'content', schema: article }),
+  'personal-finance': defineCollection({ type: 'content', schema: article }),
 };

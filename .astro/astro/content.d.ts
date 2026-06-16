@@ -1996,6 +1996,176 @@ declare module 'astro:content' {
   data: InferEntrySchema<"investing">
 } & { render(): Render[".md"] };
 };
+"personal-finance": {
+"balance-transfer-credit-cards.md": {
+	id: "balance-transfer-credit-cards.md";
+  slug: "balance-transfer-credit-cards";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"best-bank-accounts-2026.md": {
+	id: "best-bank-accounts-2026.md";
+  slug: "best-bank-accounts-2026";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"best-credit-cards-2026.md": {
+	id: "best-credit-cards-2026.md";
+  slug: "best-credit-cards-2026";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"best-personal-loans-2026.md": {
+	id: "best-personal-loans-2026.md";
+  slug: "best-personal-loans-2026";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"best-savings-accounts.md": {
+	id: "best-savings-accounts.md";
+  slug: "best-savings-accounts";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"broadband-deals-guide.md": {
+	id: "broadband-deals-guide.md";
+  slug: "broadband-deals-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"car-finance-explained.md": {
+	id: "car-finance-explained.md";
+  slug: "car-finance-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"cashback-websites-guide.md": {
+	id: "cashback-websites-guide.md";
+  slug: "cashback-websites-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"cheap-travel-money.md": {
+	id: "cheap-travel-money.md";
+  slug: "cheap-travel-money";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"consumer-rights-guide.md": {
+	id: "consumer-rights-guide.md";
+  slug: "consumer-rights-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"credit-card-rewards-explained.md": {
+	id: "credit-card-rewards-explained.md";
+  slug: "credit-card-rewards-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"debt-consolidation-loans.md": {
+	id: "debt-consolidation-loans.md";
+  slug: "debt-consolidation-loans";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"debt-help-guide.md": {
+	id: "debt-help-guide.md";
+  slug: "debt-help-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"first-time-buyers-guide.md": {
+	id: "first-time-buyers-guide.md";
+  slug: "first-time-buyers-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"fixed-vs-variable-mortgage.md": {
+	id: "fixed-vs-variable-mortgage.md";
+  slug: "fixed-vs-variable-mortgage";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"how-to-save-on-energy-bills.md": {
+	id: "how-to-save-on-energy-bills.md";
+  slug: "how-to-save-on-energy-bills";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"improving-credit-score.md": {
+	id: "improving-credit-score.md";
+  slug: "improving-credit-score";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"income-tax-basics.md": {
+	id: "income-tax-basics.md";
+  slug: "income-tax-basics";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"isas-explained.md": {
+	id: "isas-explained.md";
+  slug: "isas-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"mortgage-overpayment-calculator.md": {
+	id: "mortgage-overpayment-calculator.md";
+  slug: "mortgage-overpayment-calculator";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"premium-bonds-guide.md": {
+	id: "premium-bonds-guide.md";
+  slug: "premium-bonds-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"remortgaging-guide.md": {
+	id: "remortgaging-guide.md";
+  slug: "remortgaging-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"supermarket-saving-tips.md": {
+	id: "supermarket-saving-tips.md";
+  slug: "supermarket-saving-tips";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"travel-credit-cards.md": {
+	id: "travel-credit-cards.md";
+  slug: "travel-credit-cards";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+};
 "plan": {
 "01-project-overview.md": {
 	id: "01-project-overview.md";

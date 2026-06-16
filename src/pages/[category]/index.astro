@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 import { getTagStyle } from '../../utils/tagStyles';
 
 export async function getStaticPaths() {
-  const categories = ['crypto-basics', 'safe-crypto', 'crypto-scam', 'crypto-answers', 'crypto-tax', 'crypto-tools', 'trading', 'insurance'];
+  const categories = ['crypto-basics', 'safe-crypto', 'crypto-scam', 'crypto-answers', 'crypto-tax', 'crypto-tools', 'trading', 'insurance', 'investing', 'blog', 'personal-finance'];
   return categories.map(cat => ({
     params: { category: cat },
     props: { category: cat },
@@ -26,6 +26,8 @@ const categoryConfig: Record<string, { name: string; icon: string; desc: string 
   'trading': { name: 'Trading', icon: '📊', desc: 'Technical analysis, risk management, psychology' },
   'insurance': { name: 'Insurance', icon: '🛡️', desc: 'Life, health, auto, and home insurance explained' },
   'investing': { name: 'Investing', icon: '📈', desc: 'Beginner guides, ETF comparisons, portfolio strategies' },
+  'blog': { name: 'Market Blog', icon: '📰', desc: 'Latest market updates and investment insights' },
+  'personal-finance': { name: 'Personal Finance', icon: '💳', desc: 'Credit cards, loans, banking, mortgages, and budgeting' },
 };
 
 const cfg = categoryConfig[category];

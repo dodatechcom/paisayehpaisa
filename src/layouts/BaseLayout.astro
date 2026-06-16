@@ -21,6 +21,7 @@ const categoryColors: Record<string, string> = {
   'insurance': '#6366f1',
   'investing': '#10b981',
   'blog': '#8b5cf6',
+  'personal-finance': '#0ea5e9',
 };
 
 const categoryNames: Record<string, string> = {
@@ -34,6 +35,7 @@ const categoryNames: Record<string, string> = {
   'insurance': 'Insurance',
   'investing': 'Investing',
   'blog': 'Blog',
+  'personal-finance': 'Personal Finance',
 };
 
 const accent = category ? (categoryColors[category] || '#2563eb') : '#2563eb';
@@ -261,6 +263,7 @@ const schema = type === 'tool' ? {
           <a href="/trading/">Trading</a>
           <a href="/insurance/">Insurance</a>
           <a href="/investing/">Investing</a>
+          <a href="/personal-finance/">Finance</a>
           <a href="/tools/fire-calculator/">FIRE Calc</a>
           <a href="/tools/retirement-quiz/">Quiz</a>
           <a href="/blog/">Blog</a>
@@ -287,6 +290,7 @@ const schema = type === 'tool' ? {
           <p><a href="/crypto-answers/">Crypto Answers</a></p>
           <p><a href="/insurance/">Insurance</a></p>
           <p><a href="/investing/">Investing</a></p>
+          <p><a href="/personal-finance/">Personal Finance</a></p>
           <div>
             <p style="font-weight:600; color:var(--text); margin-bottom:0.5rem;">More</p>
             <p><a href="/crypto-tax/">Crypto Tax</a></p>
