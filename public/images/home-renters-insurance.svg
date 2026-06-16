@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <rect width="760" height="400" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Homeowners &amp; Renters Insurance — What's Covered</text>
+
+  <!-- Homeowners -->
+  <rect x="40" y="50" width="330" height="155" fill="#1e293b" rx="6"/>
+  <rect x="40" y="50" width="330" height="32" fill="#6366f1" rx="6"/>
+  <rect x="40" y="74" width="330" height="6" fill="#6366f1"/>
+  <text x="205" y="71" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">🏠 Homeowners Insurance</text>
+
+  <circle cx="60" cy="100" r="3" fill="#22c55e"/>
+  <text x="70" y="104" fill="#e2e8f0" font-size="11">Dwelling (house structure)</text>
+  <circle cx="60" cy="118" r="3" fill="#22c55e"/>
+  <text x="70" y="122" fill="#e2e8f0" font-size="11">Other structures (garage, shed, fence)</text>
+  <circle cx="60" cy="136" r="3" fill="#22c55e"/>
+  <text x="70" y="140" fill="#e2e8f0" font-size="11">Personal belongings (furniture, electronics)</text>
+  <circle cx="60" cy="154" r="3" fill="#22c55e"/>
+  <text x="70" y="158" fill="#e2e8f0" font-size="11">Liability (someone injured on your property)</text>
+  <circle cx="60" cy="172" r="3" fill="#22c55e"/>
+  <text x="70" y="176" fill="#e2e8f0" font-size="11">Additional living expenses (hotel if home is damaged)</text>
+  <circle cx="60" cy="190" r="3" fill="#22c55e"/>
+  <text x="70" y="194" fill="#e2e8f0" font-size="11">Theft, fire, storm, vandalism, water damage (not flood)</text>
+
+  <!-- Renters -->
+  <rect x="390" y="50" width="330" height="155" fill="#1e293b" rx="6"/>
+  <rect x="390" y="50" width="330" height="32" fill="#2563eb" rx="6"/>
+  <rect x="390" y="74" width="330" height="6" fill="#2563eb"/>
+  <text x="555" y="71" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">🔑 Renters Insurance</text>
+
+  <circle cx="410" cy="100" r="3" fill="#22c55e"/>
+  <text x="420" y="104" fill="#e2e8f0" font-size="11">Personal belongings (your stuff only)</text>
+  <circle cx="410" cy="118" r="3" fill="#22c55e"/>
+  <text x="420" y="122" fill="#e2e8f0" font-size="11">Liability (someone injured in your apartment)</text>
+  <circle cx="410" cy="136" r="3" fill="#22c55e"/>
+  <text x="420" y="140" fill="#e2e8f0" font-size="11">Additional living expenses</text>
+  <circle cx="410" cy="154" r="3" fill="#ef4444"/>
+  <text x="420" y="158" fill="#ef4444" font-size="11">✗ Does NOT cover the building structure</text>
+  <circle cx="410" cy="172" r="3" fill="#ef4444"/>
+  <text x="420" y="176" fill="#ef4444" font-size="11">✗ Does NOT cover roommate's belongings</text>
+  <circle cx="410" cy="190" r="3" fill="#22c55e"/>
+  <text x="420" y="194" fill="#e2e8f0" font-size="11">Often required by landlords (proof needed)</text>
+
+  <!-- Bottom: what you need to know -->
+  <rect x="40" y="222" width="680" height="160" fill="#1e293b" rx="6"/>
+
+  <text x="380" y="248" fill="#e2e8f0" font-size="14" font-weight="700" text-anchor="middle">How Much Coverage Do You Need?</text>
+
+  <rect x="60" y="262" width="195" height="55" fill="#1a1d23" rx="4"/>
+  <text x="157" y="282" fill="#6366f1" font-size="12" font-weight="600" text-anchor="middle">Dwelling coverage</text>
+  <text x="157" y="299" fill="#94a3b8" font-size="10" text-anchor="middle">Enough to rebuild your home</text>
+  <text x="157" y="312" fill="#94a3b8" font-size="10" text-anchor="middle">(not market value, replacement cost)</text>
+
+  <rect x="275" y="262" width="195" height="55" fill="#1a1d23" rx="4"/>
+  <text x="372" y="282" fill="#2563eb" font-size="12" font-weight="600" text-anchor="middle">Personal property</text>
+  <text x="372" y="299" fill="#94a3b8" font-size="10" text-anchor="middle">Take a home inventory</text>
+  <text x="372" y="312" fill="#94a3b8" font-size="10" text-anchor="middle">$30k–$100k typical for renters</text>
+
+  <rect x="490" y="262" width="210" height="55" fill="#1a1d23" rx="4"/>
+  <text x="595" y="282" fill="#059669" font-size="12" font-weight="600" text-anchor="middle">Liability coverage</text>
+  <text x="595" y="299" fill="#94a3b8" font-size="10" text-anchor="middle">$100k–$500k typical</text>
+  <text x="595" y="312" fill="#94a3b8" font-size="10" text-anchor="middle">Umbrella policy for extra protection</text>
+
+  <text x="380" y="340" fill="#94a3b8" font-size="11" text-anchor="middle">Real examples: State Farm (US), Aviva (UK), Intact Insurance (Canada) — $30–60/month for renters, $80–150/month for homeowners</text>
+
+  <!-- Flood disclaimer -->
+  <rect x="60" y="358" width="640" height="20" fill="#f59e0b" fill-opacity="0.1" rx="4"/>
+  <text x="380" y="372" fill="#fbbf24" font-size="10" text-anchor="middle">⚠ Flood and earthquake damage are NOT covered by standard policies — you need separate coverage (FEMA flood insurance in US)</text>
+</svg>

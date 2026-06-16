@@ -17,6 +17,7 @@ const categoryColors: Record<string, string> = {
   'crypto-tax': '#d97706',
   'crypto-tools': '#0891b2',
   'trading': '#f97316',
+  'insurance': '#6366f1',
 };
 
 const accent = category ? (categoryColors[category] || '#2563eb') : '#2563eb';
@@ -191,6 +192,7 @@ const schema = category === 'crypto-answers' ? {
           <a href="/crypto-tax/">Tax</a>
           <a href="/crypto-tools/">Tools</a>
           <a href="/trading/">Trading</a>
+          <a href="/insurance/">Insurance</a>
           <a href="/glossary/">Glossary</a>
         </nav>
       </div>
@@ -213,6 +215,7 @@ const schema = category === 'crypto-answers' ? {
             <p><a href="/safe-crypto/">Safe Crypto</a></p>
             <p><a href="/crypto-scam/">Crypto Scam</a></p>
             <p><a href="/crypto-answers/">Crypto Answers</a></p>
+            <p><a href="/insurance/">Insurance</a></p>
           </div>
           <div>
             <p style="font-weight:600; color:var(--text); margin-bottom:0.5rem;">More</p>

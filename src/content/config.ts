@@ -23,4 +23,5 @@ export const collections = {
   'crypto-tax': defineCollection({ type: 'content', schema: article }),
   'crypto-tools': defineCollection({ type: 'content', schema: article }),
   'trading': defineCollection({ type: 'content', schema: article }),
+  'insurance': defineCollection({ type: 'content', schema: article }),
 };

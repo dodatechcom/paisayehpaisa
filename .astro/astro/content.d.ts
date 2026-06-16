@@ -1710,6 +1710,43 @@ declare module 'astro:content' {
   data: InferEntrySchema<"crypto-tools">;
   render(): Render[".md"];
 }>;
+"insurance": {
+"auto-insurance-explained.md": {
+	id: "auto-insurance-explained.md";
+  slug: "auto-insurance-explained";
+  body: string;
+  collection: "insurance";
+  data: InferEntrySchema<"insurance">
+} & { render(): Render[".md"] };
+"health-insurance-basics.md": {
+	id: "health-insurance-basics.md";
+  slug: "health-insurance-basics";
+  body: string;
+  collection: "insurance";
+  data: InferEntrySchema<"insurance">
+} & { render(): Render[".md"] };
+"home-renters-insurance.md": {
+	id: "home-renters-insurance.md";
+  slug: "home-renters-insurance";
+  body: string;
+  collection: "insurance";
+  data: InferEntrySchema<"insurance">
+} & { render(): Render[".md"] };
+"how-premiums-are-calculated.md": {
+	id: "how-premiums-are-calculated.md";
+  slug: "how-premiums-are-calculated";
+  body: string;
+  collection: "insurance";
+  data: InferEntrySchema<"insurance">
+} & { render(): Render[".md"] };
+"life-insurance-101.md": {
+	id: "life-insurance-101.md";
+  slug: "life-insurance-101";
+  body: string;
+  collection: "insurance";
+  data: InferEntrySchema<"insurance">
+} & { render(): Render[".md"] };
+};
 "plan": {
 "01-project-overview.md": {
 	id: "01-project-overview.md";
