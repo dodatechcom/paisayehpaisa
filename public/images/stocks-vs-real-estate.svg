@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Stocks vs Real Estate: Complete Comparison</text>
+
+  <!-- Stocks side -->
+  <rect x="40" y="45" width="330" height="420" fill="#1e293b" rx="6"/>
+  <rect x="40" y="45" width="330" height="35" fill="#22c55e" rx="6"/>
+  <rect x="40" y="70" width="330" height="10" fill="#22c55e"/>
+  <text x="205" y="68" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">Stock Market Investing</text>
+
+  <text x="60" y="100" fill="#22c55e" font-size="11" font-weight="600">Entry Barrier</text>
+  <text x="60" y="118" fill="#94a3b8" font-size="10">• Start with $1 (fractional shares)</text>
+  <text x="60" y="134" fill="#94a3b8" font-size="10">• No credit check needed</text>
+  <text x="60" y="150" fill="#94a3b8" font-size="10">• Open account in 15 minutes</text>
+
+  <text x="60" y="175" fill="#22c55e" font-size="11" font-weight="600">Liquidity</text>
+  <text x="60" y="193" fill="#94a3b8" font-size="10">• Sell instantly during market hours</text>
+  <text x="60" y="209" fill="#94a3b8" font-size="10">• Cash in account within 2 days</text>
+  <text x="60" y="225" fill="#94a3b8" font-size="10">• No middlemen needed</text>
+
+  <text x="60" y="250" fill="#22c55e" font-size="11" font-weight="600">Returns (Historical)</text>
+  <text x="60" y="268" fill="#94a3b8" font-size="10">• Average: 10% per year</text>
+  <text x="60" y="284" fill="#94a3b8" font-size="10">• Best year: +60%</text>
+  <text x="60" y="300" fill="#94a3b8" font-size="10">• Worst year: -40%</text>
+
+  <text x="60" y="325" fill="#22c55e" font-size="11" font-weight="600">Effort Required</text>
+  <text x="60" y="343" fill="#94a3b8" font-size="10">• Very low (passive investing)</text>
+  <text x="60" y="359" fill="#94a3b8" font-size="10">• No tenants, no maintenance</text>
+  <text x="60" y="375" fill="#94a3b8" font-size="10">• Set up auto-invest and forget</text>
+
+  <text x="60" y="400" fill="#22c55e" font-size="11" font-weight="600">Leverage</text>
+  <text x="60" y="418" fill="#94a3b8" font-size="10">• Margin: 2:1 (regulated)</text>
+  <text x="60" y="434" fill="#94a3b8" font-size="10">• No asset backing for loans</text>
+
+  <!-- Real Estate side -->
+  <rect x="390" y="45" width="330" height="420" fill="#1e293b" rx="6"/>
+  <rect x="390" y="45" width="330" height="35" fill="#d97706" rx="6"/>
+  <rect x="390" y="70" width="330" height="10" fill="#d97706"/>
+  <text x="555" y="68" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">Real Estate Investing</text>
+
+  <text x="410" y="100" fill="#d97706" font-size="11" font-weight="600">Entry Barrier</text>
+  <text x="410" y="118" fill="#94a3b8" font-size="10">• Need $20K-$50K for down payment</text>
+  <text x="410" y="134" fill="#94a3b8" font-size="10">• Credit score 620+ required</text>
+  <text x="410" y="150" fill="#94a3b8" font-size="10">• Months of paperwork</text>
+
+  <text x="410" y="175" fill="#d97706" font-size="11" font-weight="600">Liquidity</text>
+  <text x="410" y="193" fill="#94a3b8" font-size="10">• Takes 30-90 days to sell</text>
+  <text x="410" y="209" fill="#94a3b8" font-size="10">• Agent fees: 5-6%</text>
+  <text x="410" y="225" fill="#94a3b8" font-size="10">• Closing costs: 2-5%</text>
+
+  <text x="410" y="250" fill="#d97706" font-size="11" font-weight="600">Returns (Historical)</text>
+  <text x="410" y="268" fill="#94a3b8" font-size="10">• Average: 8-12% per year</text>
+  <text x="410" y="284" fill="#94a3b8" font-size="10">• Includes rental income + appreciation</text>
+  <text x="410" y="300" fill="#94a3b8" font-size="10">• Highly leveraged returns</text>
+
+  <text x="410" y="325" fill="#d97706" font-size="11" font-weight="600">Effort Required</text>
+  <text x="410" y="343" fill="#94a3b8" font-size="10">• High (active management)</text>
+  <text x="410" y="359" fill="#94a3b8" font-size="10">• Tenants, repairs, vacancies</text>
+  <text x="410" y="375" fill="#94a3b8" font-size="10">• Or pay 8-10% to property manager</text>
+
+  <text x="410" y="400" fill="#d97706" font-size="11" font-weight="600">Leverage</text>
+  <text x="410" y="418" fill="#94a3b8" font-size="10">• Mortgages: 5:1 to 20:1</text>
+  <text x="410" y="434" fill="#94a3b8" font-size="10">• Property secures the loan</text>
+</svg>

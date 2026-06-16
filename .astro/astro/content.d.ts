@@ -1762,9 +1762,23 @@ declare module 'astro:content' {
   collection: "investing";
   data: InferEntrySchema<"investing">
 } & { render(): Render[".md"] };
+"crypto-vs-gold.md": {
+	id: "crypto-vs-gold.md";
+  slug: "crypto-vs-gold";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
 "dividend-investing.md": {
 	id: "dividend-investing.md";
   slug: "dividend-investing";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
+"etf-vs-mutual-fund.md": {
+	id: "etf-vs-mutual-fund.md";
+  slug: "etf-vs-mutual-fund";
   body: string;
   collection: "investing";
   data: InferEntrySchema<"investing">
@@ -1793,6 +1807,20 @@ declare module 'astro:content' {
 "passive-income-portfolio.md": {
 	id: "passive-income-portfolio.md";
   slug: "passive-income-portfolio";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
+"safe-investments-high-returns.md": {
+	id: "safe-investments-high-returns.md";
+  slug: "safe-investments-high-returns";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
+"stocks-vs-real-estate.md": {
+	id: "stocks-vs-real-estate.md";
+  slug: "stocks-vs-real-estate";
   body: string;
   collection: "investing";
   data: InferEntrySchema<"investing">
