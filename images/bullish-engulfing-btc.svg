@@ -1,144 +1,151 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540" width="760" height="540">
   <defs>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M40 0L0 0 0 40" fill="none" stroke="#2a2d35" stroke-width="0.5"/>
     </pattern>
-    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L8,4 L0,8 Z" fill="#22c55e"/>
-    </marker>
-    <marker id="arrow-down" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L8,4 L0,8 Z" fill="#ef4444"/>
-    </marker>
   </defs>
 
-  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <rect width="760" height="540" fill="#1a1d23" rx="8"/>
 
-  <!-- Title -->
   <text x="380" y="26" fill="#e2e8f0" font-size="14" font-weight="700" text-anchor="middle">Bullish Engulfing Pattern — Visual Guide</text>
 
   <!-- Chart area -->
-  <rect x="55" y="36" width="655" height="230" fill="url(#grid)" rx="4"/>
+  <rect x="55" y="36" width="655" height="315" fill="url(#grid)" rx="4"/>
 
   <!-- Price labels -->
-  <text x="48" y="48" fill="#64748b" font-size="10" text-anchor="end">69,000</text>
-  <text x="48" y="110" fill="#64748b" font-size="10" text-anchor="end">65,000</text>
-  <text x="48" y="172" fill="#64748b" font-size="10" text-anchor="end">61,000</text>
-  <text x="48" y="250" fill="#64748b" font-size="10" text-anchor="end">57,000</text>
+  <text x="48" y="50" fill="#64748b" font-size="11" text-anchor="end">69,000</text>
+  <text x="48" y="132" fill="#64748b" font-size="11" text-anchor="end">65,000</text>
+  <text x="48" y="214" fill="#64748b" font-size="11" text-anchor="end">61,000</text>
+  <text x="48" y="335" fill="#64748b" font-size="11" text-anchor="end">57,000</text>
 
-  <!-- Horizontal grid -->
-  <line x1="55" y1="55" x2="710" y2="55" stroke="#2a2d35" stroke-width="0.5"/>
-  <line x1="55" y1="117" x2="710" y2="117" stroke="#2a2d35" stroke-width="0.5"/>
-  <line x1="55" y1="179" x2="710" y2="179" stroke="#2a2d35" stroke-width="0.5"/>
-  <line x1="55" y1="241" x2="710" y2="241" stroke="#2a2d35" stroke-width="0.5"/>
-
-  <!-- ═══════════════════════════════════════ -->
-  <!-- PHASE 1: DOWNTREND (Candles 1-4)      -->
-  <!-- ═══════════════════════════════════════ -->
-
-  <!-- Candle 1 — bearish -->
-  <line x1="100" y1="60" x2="100" y2="110" stroke="#ef4444" stroke-width="1.5"/>
-  <rect x="82" y="68" width="36" height="30" fill="#ef4444" rx="1"/>
-
-  <!-- Candle 2 — bearish -->
-  <line x1="180" y1="85" x2="180" y2="140" stroke="#ef4444" stroke-width="1.5"/>
-  <rect x="162" y="95" width="36" height="33" fill="#ef4444" rx="1"/>
-
-  <!-- Candle 3 — bearish -->
-  <line x1="260" y1="115" x2="260" y2="170" stroke="#ef4444" stroke-width="1.5"/>
-  <rect x="242" y="125" width="36" height="33" fill="#ef4444" rx="1"/>
-
-  <!-- Candle 4 — bearish -->
-  <line x1="340" y1="140" x2="340" y2="195" stroke="#ef4444" stroke-width="1.5"/>
-  <rect x="322" y="150" width="36" height="33" fill="#ef4444" rx="1"/>
+  <!-- Horizontal grid lines -->
+  <line x1="55" y1="57" x2="710" y2="57" stroke="#2a2d35" stroke-width="0.5"/>
+  <line x1="55" y1="139" x2="710" y2="139" stroke="#2a2d35" stroke-width="0.5"/>
+  <line x1="55" y1="221" x2="710" y2="221" stroke="#2a2d35" stroke-width="0.5"/>
+  <line x1="55" y1="335" x2="710" y2="335" stroke="#2a2d35" stroke-width="0.5"/>
 
   <!-- ═══════════════════════════════════════ -->
-  <!-- PHASE 2: THE PATTERN (Candles 5-6)    -->
+  <!-- DOWNTREND (Candles 1-4)               -->
   <!-- ═══════════════════════════════════════ -->
 
-  <!-- Candle 5 — small bearish (being engulfed) -->
-  <line x1="420" y1="170" x2="420" y2="215" stroke="#ef4444" stroke-width="1.5"/>
-  <rect x="402" y="180" width="36" height="18" fill="#ef4444" rx="1"/>
+  <!-- Candle 1 — bearish: high=62, open=74, close=110, low=132 -->
+  <line x1="100" y1="62" x2="100" y2="132" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="82" y="74" width="36" height="36" fill="#ef4444" rx="1"/>
 
-  <!-- Candle 6 — large bullish (engulfing) -->
-  <line x1="500" y1="108" x2="500" y2="248" stroke="#22c55e" stroke-width="2"/>
-  <rect x="478" y="118" width="44" height="100" fill="#22c55e" rx="1"/>
+  <!-- Candle 2 — bearish: high=95, open=108, close=150, low=168 -->
+  <line x1="180" y1="95" x2="180" y2="168" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="162" y="108" width="36" height="42" fill="#ef4444" rx="1"/>
 
-  <!-- ═══════════════════════════════════════ -->
-  <!-- PHASE 3: REVERSAL (Candles 7-8)       -->
-  <!-- ═══════════════════════════════════════ -->
+  <!-- Candle 3 — bearish: high=132, open=145, close=186, low=204 -->
+  <line x1="260" y1="132" x2="260" y2="204" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="242" y="145" width="36" height="41" fill="#ef4444" rx="1"/>
 
-  <!-- Candle 7 — bullish -->
-  <line x1="580" y1="100" x2="580" y2="155" stroke="#22c55e" stroke-width="1.5"/>
-  <rect x="562" y="108" width="36" height="35" fill="#22c55e" rx="1"/>
-
-  <!-- Candle 8 — bullish -->
-  <line x1="660" y1="75" x2="660" y2="130" stroke="#22c55e" stroke-width="1.5"/>
-  <rect x="642" y="82" width="36" height="33" fill="#22c55e" rx="1"/>
+  <!-- Candle 4 — bearish: high=170, open=182, close=220, low=238 -->
+  <line x1="340" y1="170" x2="340" y2="238" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="322" y="182" width="36" height="38" fill="#ef4444" rx="1"/>
 
   <!-- ═══════════════════════════════════════ -->
-  <!-- ANNOTATIONS ON CHART                  -->
+  <!-- THE PATTERN (Candles 5-6)             -->
   <!-- ═══════════════════════════════════════ -->
 
-  <!-- Downtrend arrow (phase 1) -->
-  <line x1="100" y1="75" x2="500" y2="210" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
-  <text x="220" y="160" fill="#ef4444" font-size="10" opacity="0.7" transform="rotate(-20,220,160)">Downtrend</text>
+  <!-- Candle 5 — small bearish being engulfed: high=205, open=216, close=238, low=258 -->
+  <line x1="420" y1="205" x2="420" y2="258" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="402" y="216" width="36" height="22" fill="#ef4444" rx="1"/>
 
-  <!-- Highlight box around pattern candles 5-6 -->
-  <rect x="392" y="100" width="140" height="170" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3" rx="4"/>
-  <text x="462" y="112" fill="#f59e0b" font-size="10" font-weight="600" text-anchor="middle">The Pattern</text>
-
-  <!-- Engulfing bracket annotation -->
-  <line x1="478" y1="118" x2="420" y2="180" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,2"/>
-  <line x1="522" y1="218" x2="420" y2="198" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,2"/>
-
-  <!-- Reversal arrow (phase 3) -->
-  <line x1="580" y1="130" x2="660" y2="95" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5" marker-end="url(#arrow-green)"/>
-  <text x="620" y="150" fill="#22c55e" font-size="10" opacity="0.7">Reversal</text>
+  <!-- Candle 6 — large bullish engulfing: high=118, open=295, close=130, low=320 -->
+  <line x1="500" y1="118" x2="500" y2="320" stroke="#22c55e" stroke-width="2"/>
+  <rect x="478" y="130" width="44" height="165" fill="#22c55e" rx="1"/>
 
   <!-- ═══════════════════════════════════════ -->
-  <!-- BOTTOM SECTION: EDUCATIONAL CALLOUTS  -->
+  <!-- REVERSAL (Candles 7-8)                -->
   <!-- ═══════════════════════════════════════ -->
 
-  <!-- Separator -->
-  <line x1="30" y1="280" x2="730" y2="280" stroke="#334155" stroke-width="1"/>
+  <!-- Candle 7 — bullish: high=108, open=175, close=122, low=195 -->
+  <line x1="580" y1="108" x2="580" y2="195" stroke="#22c55e" stroke-width="1.5"/>
+  <rect x="562" y="122" width="36" height="53" fill="#22c55e" rx="1"/>
 
-  <!-- Phase 1 box: Downtrend -->
-  <rect x="40" y="295" width="210" height="75" fill="#1e293b" rx="6"/>
-  <rect x="40" y="295" width="210" height="22" fill="#ef4444" rx="6"/>
-  <rect x="40" y="311" width="210" height="6" fill="#ef4444"/>
-  <text x="145" y="310" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">① BEFORE: Existing Downtrend</text>
-  <text x="145" y="335" fill="#94a3b8" font-size="9" text-anchor="middle">Price has been falling steadily.</text>
-  <text x="145" y="350" fill="#94a3b8" font-size="9" text-anchor="middle">Sellers are in control — each candle</text>
-  <text x="145" y="362" fill="#94a3b8" font-size="9" text-anchor="middle">closes lower than the previous one.</text>
+  <!-- Candle 8 — bullish: high=82, open=145, close=95, low=162 -->
+  <line x1="660" y1="82" x2="660" y2="162" stroke="#22c55e" stroke-width="1.5"/>
+  <rect x="642" y="95" width="36" height="50" fill="#22c55e" rx="1"/>
 
-  <!-- Phase 2 box: Pattern -->
-  <rect x="275" y="295" width="210" height="75" fill="#1e293b" rx="6"/>
-  <rect x="275" y="295" width="210" height="22" fill="#22c55e" rx="6"/>
-  <rect x="275" y="311" width="210" height="6" fill="#22c55e"/>
-  <text x="380" y="310" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">② THE PATTERN FORMS</text>
-  <text x="380" y="335" fill="#94a3b8" font-size="9" text-anchor="middle">A small red candle forms (sellers</text>
-  <text x="380" y="350" fill="#94a3b8" font-size="9" text-anchor="middle">still pushing). Next day opens</text>
-  <text x="380" y="362" fill="#94a3b8" font-size="9" text-anchor="middle">lower but buyers surge back.</text>
+  <!-- ═══════════════════════════════════════ -->
+  <!-- ANNOTATIONS                           -->
+  <!-- ═══════════════════════════════════════ -->
 
-  <!-- Phase 3 box: Reversal -->
-  <rect x="510" y="295" width="210" height="75" fill="#1e293b" rx="6"/>
-  <rect x="510" y="295" width="210" height="22" fill="#22c55e" rx="6"/>
-  <rect x="510" y="311" width="210" height="6" fill="#22c55e"/>
-  <text x="615" y="310" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">③ CONFIRMED REVERSAL</text>
-  <text x="615" y="335" fill="#94a3b8" font-size="9" text-anchor="middle">More green candles follow.</text>
-  <text x="615" y="350" fill="#94a3b8" font-size="9" text-anchor="middle">Buyers have taken control.</text>
-  <text x="615" y="362" fill="#94a3b8" font-size="9" text-anchor="middle">The downtrend has reversed.</text>
+  <!-- Downtrend annotation -->
+  <line x1="100" y1="85" x2="340" y2="225" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,4" opacity="0.6"/>
+  <rect x="195" y="170" width="75" height="20" fill="#1a1d23" rx="10"/>
+  <text x="232" y="184" fill="#ef4444" font-size="11" font-weight="600" text-anchor="middle">Downtrend</text>
+
+  <!-- Highlight box around pattern -->
+  <rect x="392" y="108" width="140" height="225" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,3" rx="6"/>
+  <rect x="415" y="114" width="94" height="20" fill="#f59e0b" rx="4"/>
+  <text x="462" y="128" fill="#1a1d23" font-size="11" font-weight="700" text-anchor="middle">THE PATTERN</text>
+
+  <!-- Candle 5 label -->
+  <line x1="420" y1="238" x2="350" y2="290" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,2"/>
+  <rect x="300" y="282" width="68" height="20" fill="#1e293b" stroke="#ef4444" stroke-width="0.5" rx="4"/>
+  <text x="334" y="295" fill="#ef4444" font-size="10" text-anchor="middle">Small red</text>
+
+  <!-- Candle 6 label -->
+  <line x1="500" y1="200" x2="435" y2="320" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,2"/>
+  <rect x="370" y="318" width="80" height="20" fill="#1e293b" stroke="#22c55e" stroke-width="0.5" rx="4"/>
+  <text x="410" y="332" fill="#22c55e" font-size="10" text-anchor="middle">Big green</text>
+
+  <!-- Engulfing bracket -->
+  <rect x="530" y="216" width="75" height="22" fill="#1a1d23" rx="4"/>
+  <text x="567" y="230" fill="#fbbf24" font-size="9" text-anchor="middle">Covers red body</text>
+  <line x1="475" y1="227" x2="530" y2="227" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="475" y1="238" x2="530" y2="227" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
+
+  <!-- Reversal annotation -->
+  <line x1="580" y1="160" x2="660" y2="115" stroke="#22c55e" stroke-width="2" stroke-dasharray="5,4" opacity="0.6"/>
+  <rect x="595" y="170" width="70" height="20" fill="#1a1d23" rx="10"/>
+  <text x="630" y="184" fill="#22c55e" font-size="11" font-weight="600" text-anchor="middle">Reversal</text>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- BOTTOM SECTION                        -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <line x1="30" y1="365" x2="730" y2="365" stroke="#334155" stroke-width="1"/>
+
+  <!-- Phase 1 -->
+  <rect x="40" y="380" width="210" height="75" fill="#1e293b" rx="6"/>
+  <rect x="40" y="380" width="210" height="22" fill="#ef4444" rx="6"/>
+  <rect x="40" y="396" width="210" height="6" fill="#ef4444"/>
+  <text x="145" y="395" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">① BEFORE: Existing Downtrend</text>
+  <text x="145" y="420" fill="#94a3b8" font-size="10" text-anchor="middle">Price has been falling steadily.</text>
+  <text x="145" y="435" fill="#94a3b8" font-size="10" text-anchor="middle">Sellers are in control — each candle</text>
+  <text x="145" y="448" fill="#94a3b8" font-size="10" text-anchor="middle">closes lower than the previous one.</text>
+
+  <!-- Phase 2 -->
+  <rect x="275" y="380" width="210" height="75" fill="#1e293b" rx="6"/>
+  <rect x="275" y="380" width="210" height="22" fill="#22c55e" rx="6"/>
+  <rect x="275" y="396" width="210" height="6" fill="#22c55e"/>
+  <text x="380" y="395" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">② THE PATTERN FORMS</text>
+  <text x="380" y="420" fill="#94a3b8" font-size="10" text-anchor="middle">A small red candle forms (sellers</text>
+  <text x="380" y="435" fill="#94a3b8" font-size="10" text-anchor="middle">still pushing). Next day opens</text>
+  <text x="380" y="448" fill="#94a3b8" font-size="10" text-anchor="middle">lower but buyers surge back.</text>
+
+  <!-- Phase 3 -->
+  <rect x="510" y="380" width="210" height="75" fill="#1e293b" rx="6"/>
+  <rect x="510" y="380" width="210" height="22" fill="#22c55e" rx="6"/>
+  <rect x="510" y="396" width="210" height="6" fill="#22c55e"/>
+  <text x="615" y="395" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">③ CONFIRMED REVERSAL</text>
+  <text x="615" y="420" fill="#94a3b8" font-size="10" text-anchor="middle">More green candles follow.</text>
+  <text x="615" y="435" fill="#94a3b8" font-size="10" text-anchor="middle">Buyers have taken control.</text>
+  <text x="615" y="448" fill="#94a3b8" font-size="10" text-anchor="middle">The downtrend has reversed.</text>
 
   <!-- Key insight callout -->
-  <rect x="40" y="385" width="680" height="40" fill="#f59e0b" fill-opacity="0.08" stroke="#f59e0b" stroke-width="1" rx="6"/>
-  <text x="380" y="402" fill="#fbbf24" font-size="11" font-weight="600" text-anchor="middle">💡 Key: The green candle's body fully covers the red candle's body. This means buyers overpowered sellers.</text>
-  <text x="380" y="417" fill="#fbbf24" font-size="10" text-anchor="middle">The larger the green body, the stronger the signal.</text>
+  <rect x="40" y="470" width="680" height="50" fill="#f59e0b" fill-opacity="0.08" stroke="#f59e0b" stroke-width="1" rx="6"/>
+  <text x="380" y="492" fill="#fbbf24" font-size="12" font-weight="600" text-anchor="middle">Key: The green candle's body fully covers the red candle's body.</text>
+  <text x="380" y="510" fill="#fbbf24" font-size="11" text-anchor="middle">This means buyers overpowered sellers. The larger the green body, the stronger the signal.</text>
 
   <!-- Legend -->
-  <rect x="40" y="440" width="12" height="12" fill="#ef4444" rx="2"/>
-  <text x="56" y="450" fill="#94a3b8" font-size="9">Bearish candle (close lower than open)</text>
-  <rect x="280" y="440" width="12" height="12" fill="#22c55e" rx="2"/>
-  <text x="296" y="450" fill="#94a3b8" font-size="9">Bullish candle (close higher than open)</text>
-  <rect x="520" y="440" width="12" height="12" fill="#f59e0b" rx="2"/>
-  <text x="536" y="450" fill="#94a3b8" font-size="9">Engulfing: green body covers red body entirely</text>
+  <rect x="40" y="458" width="10" height="10" fill="#ef4444" rx="2"/>
+  <text x="54" y="467" fill="#94a3b8" font-size="9">Bearish</text>
+  <rect x="110" y="458" width="10" height="10" fill="#22c55e" rx="2"/>
+  <text x="124" y="467" fill="#94a3b8" font-size="9">Bullish</text>
+  <rect x="180" y="458" width="10" height="10" fill="#f59e0b" rx="2"/>
+  <text x="194" y="467" fill="#94a3b8" font-size="9">Engulfing</text>
 </svg>
