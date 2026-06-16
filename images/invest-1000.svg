@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460">
+  <rect width="760" height="460" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">How to Invest 1000 Dollars: 5 Smart Options</text>
+
+  <rect x="40" y="50" width="310" height="105" fill="#1e293b" rx="6"/>
+  <rect x="40" y="50" width="310" height="28" fill="#22c55e" rx="6"/>
+  <rect x="40" y="70" width="310" height="8" fill="#22c55e"/>
+  <text x="195" y="69" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">1. High-Yield Savings Account</text>
+  <text x="55" y="98" fill="#94a3b8" font-size="10">Risk: Very Low | Return: 4-5% APY</text>
+  <text x="55" y="114" fill="#94a3b8" font-size="10">Best for: Emergency fund, short-term goals</text>
+  <text x="55" y="130" fill="#94a3b8" font-size="10">Examples: Marcus, Ally, Wealthfront Cash</text>
+  <text x="55" y="146" fill="#22c55e" font-size="11" font-weight="600">Safe choice for beginners</text>
+
+  <rect x="40" y="165" width="310" height="105" fill="#1e293b" rx="6"/>
+  <rect x="40" y="165" width="310" height="28" fill="#6366f1" rx="6"/>
+  <rect x="40" y="185" width="310" height="8" fill="#6366f1"/>
+  <text x="195" y="184" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">2. Index Fund ETF</text>
+  <text x="55" y="213" fill="#94a3b8" font-size="10">Risk: Medium | Return: 10-12% avg</text>
+  <text x="55" y="229" fill="#94a3b8" font-size="10">Best for: Long-term wealth building</text>
+  <text x="55" y="245" fill="#94a3b8" font-size="10">Examples: VTI, VOO, SPY</text>
+  <text x="55" y="261" fill="#6366f1" font-size="11" font-weight="600">Best all-around investment</text>
+
+  <rect x="40" y="280" width="310" height="105" fill="#1e293b" rx="6"/>
+  <rect x="40" y="280" width="310" height="28" fill="#d97706" rx="6"/>
+  <rect x="40" y="300" width="310" height="8" fill="#d97706"/>
+  <text x="195" y="299" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">3. Roth IRA</text>
+  <text x="55" y="328" fill="#94a3b8" font-size="10">Risk: Medium | Tax-free growth</text>
+  <text x="55" y="344" fill="#94a3b8" font-size="10">Best for: Retirement (tax-free withdrawals)</text>
+  <text x="55" y="360" fill="#94a3b8" font-size="10">2026 limit: $7,000/year</text>
+  <text x="55" y="376" fill="#d97706" font-size="11" font-weight="600">No tax on gains</text>
+
+  <rect x="410" y="50" width="310" height="105" fill="#1e293b" rx="6"/>
+  <rect x="410" y="50" width="310" height="28" fill="#059669" rx="6"/>
+  <rect x="410" y="70" width="310" height="8" fill="#059669"/>
+  <text x="565" y="69" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">4. Fractional Shares</text>
+  <text x="425" y="98" fill="#94a3b8" font-size="10">Risk: Medium-High | Commission-free</text>
+  <text x="425" y="114" fill="#94a3b8" font-size="10">Best for: Investing in individual stocks</text>
+  <text x="425" y="130" fill="#94a3b8" font-size="10">Platforms: Fidelity, Robinhood, Schwab</text>
+  <text x="425" y="146" fill="#059669" font-size="11" font-weight="600">Start small, own big companies</text>
+
+  <rect x="410" y="165" width="310" height="105" fill="#1e293b" rx="6"/>
+  <rect x="410" y="165" width="310" height="28" fill="#ef4444" rx="6"/>
+  <rect x="410" y="185" width="310" height="8" fill="#ef4444"/>
+  <text x="565" y="184" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">5. High-Yield CDs</text>
+  <text x="425" y="213" fill="#94a3b8" font-size="10">Risk: Very Low | Return: 4.5-5.5% APY</text>
+  <text x="425" y="229" fill="#94a3b8" font-size="10">Best for: Money needed in 1-3 years</text>
+  <text x="425" y="245" fill="#94a3b8" font-size="10">Example: Ally Bank 12-month CD: 5.0%</text>
+  <text x="425" y="261" fill="#ef4444" font-size="11" font-weight="600">Guaranteed return, locked period</text>
+
+  <rect x="40" y="398" width="680" height="55" fill="#f59e0b" fill-opacity="0.08" rx="6"/>
+  <text x="380" y="420" fill="#fbbf24" font-size="12" font-weight="600" text-anchor="middle">Start with 1000 in a high-yield savings account</text>
+  <text x="380" y="438" fill="#fbbf24" font-size="11" text-anchor="middle">Then build toward index funds for long-term wealth</text>
+</svg>
