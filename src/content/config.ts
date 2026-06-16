@@ -24,4 +24,5 @@ export const collections = {
   'crypto-tools': defineCollection({ type: 'content', schema: article }),
   'trading': defineCollection({ type: 'content', schema: article }),
   'insurance': defineCollection({ type: 'content', schema: article }),
+  'investing': defineCollection({ type: 'content', schema: article }),
 };

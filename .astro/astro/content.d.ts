@@ -1747,6 +1747,15 @@ declare module 'astro:content' {
   data: InferEntrySchema<"insurance">
 } & { render(): Render[".md"] };
 };
+"investing": {
+"best-etfs-2026.md": {
+	id: "best-etfs-2026.md";
+  slug: "best-etfs-2026";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
+};
 "plan": {
 "01-project-overview.md": {
 	id: "01-project-overview.md";

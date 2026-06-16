@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
-  const categories = ['crypto-basics', 'safe-crypto', 'crypto-scam', 'crypto-answers', 'crypto-tax', 'crypto-tools', 'trading', 'insurance'];
+  const categories = ['crypto-basics', 'safe-crypto', 'crypto-scam', 'crypto-answers', 'crypto-tax', 'crypto-tools', 'trading', 'insurance', 'investing'];
   const paths: { params: { category: string; slug: string }; props: { entry: CollectionEntry<any> } }[] = [];
   for (const cat of categories) {
     const entries = await getCollection(cat as any);
@@ -32,6 +32,7 @@ const categoryNames: Record<string, string> = {
   'crypto-tools': 'Crypto Tools',
   'trading': 'Trading',
   'insurance': 'Insurance',
+  'investing': 'Investing',
 };
 ---
 

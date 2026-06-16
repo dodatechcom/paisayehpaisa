@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1d23"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="520" fill="url(#bg)" rx="8"/>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0L0 0 0 40" fill="none" stroke="#2a2d35" stroke-width="0.5"/>
+  </pattern>
+  <rect x="55" y="48" width="655" height="430" fill="url(#grid)" rx="4"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Best ETFs to Buy in 2026</text>
+  <text x="380" y="45" fill="#64748b" font-size="11" font-weight="600" text-anchor="middle">1-Year Performance</text>
+  <polyline points="100,402 180,380 260,420 340,360 420,395 500,340 580,385 660,320" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"/>
+  <polyline points="100,402 180,410 260,372 340,415 420,362 500,398 580,352 660,385" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="100" cy="402" r="4" fill="#ef4444"/>
+  <circle cx="180" cy="380" r="4" fill="#ef4444"/>
+  <circle cx="260" cy="420" r="4" fill="#ef4444"/>
+  <circle cx="340" cy="360" r="4" fill="#ef4444"/>
+  <circle cx="420" cy="395" r="4" fill="#ef4444"/>
+  <circle cx="500" cy="340" r="4" fill="#22c55e"/>
+  <circle cx="580" cy="385" r="4" fill="#22c55e"/>
+  <circle cx="660" cy="320" r="4" fill="#22c55e"/>
+  <text x="65" y="98" fill="#22c55e" font-size="13" font-weight="700" text-anchor="left">1. SPY (S and P 500)</text>
+  <text x="65" y="118" fill="#94a3b8" font-size="10" text-anchor="left">iShares Core S and P 500 ETF</text>
+  <text x="65" y="134" fill="#94a3b8" font-size="10" text-anchor="left">Fee: 0.03% | Assets: 300B | Return: 12.3% /yr</text>
+  <text x="65" y="150" fill="#94a3b8" font-size="10" text-anchor="left">Market cap weighted blue-chip foundation</text>
+  <text x="65" y="192" fill="#6366f1" font-size="13" font-weight="700" text-anchor="left">2. VTI (Total Market)</text>
+  <text x="65" y="212" fill="#94a3b8" font-size="10" text-anchor="left">Vanguard Total Stock Market ETF</text>
+  <text x="65" y="228" fill="#94a3b8" font-size="10" text-anchor="left">Fee: 0.03% | Assets: 280B | Return: 11.7% /yr</text>
+  <text x="65" y="244" fill="#94a3b8" font-size="10" text-anchor="left">3600+ U.S. stocks from small to large cap</text>
+  <text x="65" y="286" fill="#d97706" font-size="13" font-weight="700" text-anchor="left">3. VOO (S and P 500 Growth)</text>
+  <text x="65" y="306" fill="#94a3b8" font-size="10" text-anchor="left">Vanguard S and P 500 Growth ETF</text>
+  <text x="65" y="322" fill="#94a3b8" font-size="10" text-anchor="left">Fee: 0.04% | Assets: 90B | Focus: High growth tech</text>
+  <text x="65" y="338" fill="#94a3b8" font-size="10" text-anchor="left">Higher potential returns, higher volatility</text>
+  <text x="390" y="98" fill="#059669" font-size="13" font-weight="700" text-anchor="left">4. VUG (Growth Opportunities)</text>
+  <text x="390" y="118" fill="#94a3b8" font-size="10" text-anchor="left">Vanguard Growth Opportunities ETF</text>
+  <text x="390" y="134" fill="#94a3b8" font-size="10" text-anchor="left">Fee: 0.09% | Multi-sector growth leaders</text>
+  <text x="390" y="150" fill="#94a3b8" font-size="10" text-anchor="left">Reduces concentration risk vs single sector</text>
+  <text x="390" y="192" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="left">5. IBB (Core Bond)</text>
+  <text x="390" y="212" fill="#94a3b8" font-size="10" text-anchor="left">iShares Core Bond ETF</text>
+  <text x="390" y="228" fill="#94a3b8" font-size="10" text-anchor="left">Fee: 0.02% | Return: 2-4% /yr | Low volatility</text>
+  <text x="390" y="244" fill="#94a3b8" font-size="10" text-anchor="left">Fixed income diversification for stability</text>
+  <text x="390" y="286" fill="#94a3b8" font-size="13" font-weight="700" text-anchor="left">6. VXUS (Global Stock Market)</text>
+  <text x="390" y="306" fill="#94a3b8" font-size="10" text-anchor="left">Vanguard Total International ETF</text>
+  <text x="390" y="322" fill="#94a3b8" font-size="10" text-anchor="left">Fee: 0.03% | Global + emerging markets</text>
+  <text x="390" y="338" fill="#94a3b8" font-size="10" text-anchor="left">Currency diversification reduces risk</text>
+  <rect x="65" y="385" width="630" height="80" fill="#1e293b" rx="6"/>
+  <text x="380" y="408" fill="#22c55e" font-size="12" font-weight="600" text-anchor="middle">The Strategic 3-Fund Portfolio</text>
+  <text x="175" y="430" fill="#94a3b8" font-size="10" text-anchor="middle">60% VTI (U.S. Market)</text>
+  <text x="380" y="430" fill="#94a3b8" font-size="10" text-anchor="middle">30% VXUS (Global)</text>
+  <text x="585" y="430" fill="#94a3b8" font-size="10" text-anchor="middle">10% IBB (Bonds)</text>
+  <text x="175" y="448" fill="#22c55e" font-size="10" text-anchor="middle">11.7% return</text>
+  <text x="380" y="448" fill="#22c55e" font-size="10" text-anchor="middle">9.5% return</text>
+  <text x="585" y="448" fill="#22c55e" font-size="10" text-anchor="middle">3.0% return</text>
+  <text x="380" y="475" fill="#64748b" font-size="9" text-anchor="middle">Cost under 0.1% total | Rebalance annually | Start with any major broker</text>
+</svg>
