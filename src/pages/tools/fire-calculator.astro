@@ -1,0 +1,446 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="FIRE Calculator — When Can You Retire?" description="Calculate your Financial Independence, Retire Early number. Find out how many years until you can retire based on your savings rate and expenses.">
+  <div class="tool-container">
+    <div class="tool-header">
+      <h1>FIRE Calculator</h1>
+      <p class="subtitle">Financial Independence, Retire Early — calculate your path to freedom</p>
+    </div>
+
+    <div class="calculator-grid">
+      <div class="input-section">
+        <h2>Your Numbers</h2>
+
+        <div class="input-group">
+          <label for="income">Annual Income (after tax)</label>
+          <div class="input-wrapper">
+            <span class="currency">$</span>
+            <input type="number" id="income" value="75000" min="0" step="1000">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="expenses">Annual Expenses</label>
+          <div class="input-wrapper">
+            <span class="currency">$</span>
+            <input type="number" id="expenses" value="45000" min="0" step="1000">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="savings">Current Savings & Investments</label>
+          <div class="input-wrapper">
+            <span class="currency">$</span>
+            <input type="number" id="savings" value="150000" min="0" step="5000">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="return">Expected Annual Return (%)</label>
+          <div class="input-wrapper">
+            <input type="number" id="return" value="7" min="1" max="20" step="0.5">
+            <span class="currency">%</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="age">Your Current Age</label>
+          <input type="number" id="age" value="30" min="18" max="80" step="1">
+        </div>
+
+        <button id="calculate" class="btn-primary">Calculate FIRE Date</button>
+      </div>
+
+      <div class="results-section">
+        <h2>Your FIRE Numbers</h2>
+
+        <div class="results-grid">
+          <div class="result-card green">
+            <div class="result-label">Savings Rate</div>
+            <div class="result-value" id="savingsRate">40%</div>
+            <div class="result-detail" id="savingsDetail">$30,000/year saved</div>
+          </div>
+
+          <div class="result-card yellow">
+            <div class="result-label">FIRE Number</div>
+            <div class="result-value" id="fireNumber">$1.13M</div>
+            <div class="result-detail" id="fireDetail">25x annual expenses</div>
+          </div>
+
+          <div class="result-card red">
+            <div class="result-label">Years to FIRE</div>
+            <div class="result-value" id="yearsToFire">12.4</div>
+            <div class="result-detail" id="yearsDetail">Retire at age 42</div>
+          </div>
+
+          <div class="result-card purple">
+            <div class="result-label">Monthly Investment</div>
+            <div class="result-value" id="monthlyInvest">$2,500</div>
+            <div class="result-detail" id="monthlyDetail">Needed to reach FIRE</div>
+          </div>
+        </div>
+
+        <div class="projection-section">
+          <h3>Portfolio Growth Over Time</h3>
+          <div class="projection-bars" id="projectionBars"></div>
+        </div>
+
+        <div class="fire-types">
+          <h3>FIRE Types</h3>
+          <div class="fire-type">
+            <strong>Lean FIRE ($800K-$1.2M)</strong>
+            <p>Minimalist lifestyle, $32K-$48K/year spending</p>
+          </div>
+          <div class="fire-type">
+            <strong>Regular FIRE ($1.2M-$2.5M)</strong>
+            <p>Comfortable lifestyle, $48K-$100K/year spending</p>
+          </div>
+          <div class="fire-type">
+            <strong>Fat FIRE ($2.5M+)</strong>
+            <p>Luxury lifestyle, $100K+/year spending</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .tool-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .tool-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+  }
+
+  .calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .calculator-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .input-section, .results-section {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .input-section h2, .results-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #e2e8f0;
+  }
+
+  .input-group {
+    margin-bottom: 1rem;
+  }
+
+  .input-group label {
+    display: block;
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+  }
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    background: #1a1d23;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .currency {
+    padding: 0 0.75rem;
+    color: #22c55e;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+
+  input[type="number"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #e2e8f0;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-family: inherit;
+    width: 100%;
+  }
+
+  input[type="number"]:focus {
+    outline: none;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 0.875rem;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .result-card {
+    background: #1a1d23;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    border-left: 3px solid;
+  }
+
+  .result-card.green { border-color: #22c55e; }
+  .result-card.yellow { border-color: #f59e0b; }
+  .result-card.red { border-color: #ef4444; }
+  .result-card.purple { border-color: #6366f1; }
+
+  .result-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .result-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 0.25rem;
+  }
+
+  .result-card.green .result-value { color: #22c55e; }
+  .result-card.yellow .result-value { color: #f59e0b; }
+  .result-card.red .result-value { color: #ef4444; }
+  .result-card.purple .result-value { color: #6366f1; }
+
+  .result-detail {
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+
+  .projection-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .projection-section h3 {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    margin-bottom: 1rem;
+  }
+
+  .projection-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .projection-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .projection-bar .year {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    width: 40px;
+  }
+
+  .projection-bar .bar {
+    flex: 1;
+    height: 24px;
+    background: #1a1d23;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .projection-bar .bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+  }
+
+  .projection-bar .value {
+    font-size: 0.75rem;
+    color: #e2e8f0;
+    width: 70px;
+    text-align: right;
+  }
+
+  .fire-types {
+    background: #1a1d23;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .fire-types h3 {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    margin-bottom: 0.75rem;
+  }
+
+  .fire-type {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #334155;
+  }
+
+  .fire-type:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .fire-type strong {
+    color: #22c55e;
+    font-size: 0.875rem;
+  }
+
+  .fire-type p {
+    color: #94a3b8;
+    font-size: 0.75rem;
+    margin: 0.25rem 0 0;
+  }
+
+  .callout {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #1e293b;
+    border-radius: 8px;
+    border-left: 3px solid #22c55e;
+  }
+
+  .callout p {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    margin: 0;
+  }
+</style>
+
+<script>
+  function formatMoney(num: number): string {
+    if (num >= 1000000) {
+      return '$' + (num / 1000000).toFixed(2) + 'M';
+    }
+    return '$' + num.toLocaleString();
+  }
+
+  function calculateFIRE() {
+    const income = parseFloat((document.getElementById('income') as HTMLInputElement).value) || 0;
+    const expenses = parseFloat((document.getElementById('expenses') as HTMLInputElement).value) || 0;
+    const savings = parseFloat((document.getElementById('savings') as HTMLInputElement).value) || 0;
+    const annualReturn = parseFloat((document.getElementById('return') as HTMLInputElement).value) || 7;
+    const currentAge = parseInt((document.getElementById('age') as HTMLInputElement).value) || 30;
+
+    if (expenses <= 0 || income <= 0) {
+      return;
+    }
+
+    const savingsRate = ((income - expenses) / income) * 100;
+    const annualSavings = income - expenses;
+    const monthlySavings = annualSavings / 12;
+    const fireNumber = expenses * 25;
+    const monthlyReturn = annualReturn / 100 / 12;
+
+    let years = 0;
+    let portfolio = savings;
+    const maxYears = 50;
+
+    while (portfolio < fireNumber && years < maxYears) {
+      portfolio = portfolio * (1 + annualReturn / 100) + annualSavings;
+      years++;
+    }
+
+    const yearsToFire = years;
+    const retireAge = currentAge + yearsToFire;
+
+    document.getElementById('savingsRate')!.textContent = savingsRate.toFixed(0) + '%';
+    document.getElementById('savingsDetail')!.textContent = formatMoney(annualSavings) + '/year saved';
+
+    document.getElementById('fireNumber')!.textContent = formatMoney(fireNumber);
+    document.getElementById('fireDetail')!.textContent = '25x annual expenses';
+
+    document.getElementById('yearsToFire')!.textContent = yearsToFire.toFixed(1);
+    document.getElementById('yearsDetail')!.textContent = 'Retire at age ' + retireAge;
+
+    document.getElementById('monthlyInvest')!.textContent = formatMoney(monthlySavings);
+    document.getElementById('monthlyDetail')!.textContent = 'Needed to reach FIRE';
+
+    // Projection bars
+    const barsContainer = document.getElementById('projectionBars')!;
+    barsContainer.innerHTML = '';
+
+    const milestones = [1, 3, 5, 10, 15, 20, Math.ceil(yearsToFire)];
+    const uniqueMilestones = [...new Set(milestones)].filter(m => m <= Math.ceil(yearsToFire) + 5);
+
+    let p = savings;
+    let yearIndex = 0;
+
+    for (let y = 1; y <= Math.max(...uniqueMilestones) + 1; y++) {
+      p = p * (1 + annualReturn / 100) + annualSavings;
+
+      if (uniqueMilestones.includes(y)) {
+        const pct = Math.min((p / fireNumber) * 100, 100);
+        const bar = document.createElement('div');
+        bar.className = 'projection-bar';
+        bar.innerHTML = `
+          <span class="year">Yr ${y}</span>
+          <div class="bar"><div class="bar-fill" style="width: ${pct}%"></div></div>
+          <span class="value">${formatMoney(p)}</span>
+        `;
+        barsContainer.appendChild(bar);
+      }
+    }
+  }
+
+  document.getElementById('calculate')!.addEventListener('click', calculateFIRE);
+  calculateFIRE();
+
+  // Auto-calculate on input change
+  document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', calculateFIRE);
+  });
+</script>

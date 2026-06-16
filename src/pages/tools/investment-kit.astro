@@ -1,0 +1,478 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Free Investment Starter Kit — Beginner's Guide to Investing" description="Download our free Investment Starter Kit — includes portfolio templates, ETF cheat sheet, and step-by-step investing guide for beginners.">
+  <div class="kit-container">
+    <div class="kit-hero">
+      <div class="kit-badge">FREE KIT</div>
+      <h1>Investment Starter Kit</h1>
+      <p class="kit-subtitle">Everything you need to start investing — portfolio templates, ETF recommendations, and a step-by-step guide</p>
+    </div>
+
+    <div class="kit-contents">
+      <h2>What's Inside the Kit</h2>
+
+      <div class="kit-grid">
+        <div class="kit-item">
+          <div class="kit-icon">&#128202;</div>
+          <h3>3 Portfolio Templates</h3>
+          <p>Ready-to-use portfolios for conservative, moderate, and aggressive investors. Just copy and invest.</p>
+        </div>
+
+        <div class="kit-item">
+          <div class="kit-icon">&#128200;</div>
+          <h3>ETF Cheat Sheet</h3>
+          <p>Top 15 ETFs for every asset class — U.S. stocks, international, bonds, REITs, and crypto.</p>
+        </div>
+
+        <div class="kit-item">
+          <div class="kit-icon">&#128221;</div>
+          <h3>Step-by-Step Guide</h3>
+          <p>How to open your first brokerage account, fund it, and make your first investment in 30 minutes.</p>
+        </div>
+
+        <div class="kit-item">
+          <div class="kit-icon">&#128176;</div>
+          <h3>Budget Template</h3>
+          <p>Track your income, expenses, and savings rate. Know exactly how much you can invest each month.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="kit-form-section">
+      <div class="form-card">
+        <h2>Get Your Free Kit</h2>
+        <p>Enter your email and we'll send the kit instantly. No spam, unsubscribe anytime.</p>
+
+        <form id="kitForm" class="kit-form">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Your email address" required>
+          </div>
+          <button type="submit" class="btn-kit">Download Free Kit</button>
+        </form>
+
+        <p class="form-note">Join 10,000+ investors who started with this kit</p>
+      </div>
+    </div>
+
+    <div class="kit-preview">
+      <h2>Preview: Portfolio Templates</h2>
+
+      <div class="preview-grid">
+        <div class="preview-card conservative">
+          <div class="preview-header">
+            <span class="preview-label">Conservative</span>
+            <span class="preview-risk">Low Risk</span>
+          </div>
+          <div class="preview-alloc">
+            <div class="alloc-row">
+              <span>BND (Bonds)</span>
+              <span class="alloc-pct">40%</span>
+            </div>
+            <div class="alloc-row">
+              <span>VTI (U.S. Stocks)</span>
+              <span class="alloc-pct">30%</span>
+            </div>
+            <div class="alloc-row">
+              <span>VXUS (International)</span>
+              <span class="alloc-pct">15%</span>
+            </div>
+            <div class="alloc-row">
+              <span>SCHP (TIPS)</span>
+              <span class="alloc-pct">10%</span>
+            </div>
+            <div class="alloc-row">
+              <span>Cash</span>
+              <span class="alloc-pct">5%</span>
+            </div>
+          </div>
+          <div class="preview-return">Expected: 5-7%/year</div>
+        </div>
+
+        <div class="preview-card moderate">
+          <div class="preview-header">
+            <span class="preview-label">Moderate</span>
+            <span class="preview-risk">Medium Risk</span>
+          </div>
+          <div class="preview-alloc">
+            <div class="alloc-row">
+              <span>VTI (U.S. Stocks)</span>
+              <span class="alloc-pct">50%</span>
+            </div>
+            <div class="alloc-row">
+              <span>BND (Bonds)</span>
+              <span class="alloc-pct">25%</span>
+            </div>
+            <div class="alloc-row">
+              <span>VXUS (International)</span>
+              <span class="alloc-pct">15%</span>
+            </div>
+            <div class="alloc-row">
+              <span>VNQ (REITs)</span>
+              <span class="alloc-pct">10%</span>
+            </div>
+          </div>
+          <div class="preview-return">Expected: 7-9%/year</div>
+        </div>
+
+        <div class="preview-card aggressive">
+          <div class="preview-header">
+            <span class="preview-label">Aggressive</span>
+            <span class="preview-risk">High Risk</span>
+          </div>
+          <div class="preview-alloc">
+            <div class="alloc-row">
+              <span>VTI (U.S. Stocks)</span>
+              <span class="alloc-pct">60%</span>
+            </div>
+            <div class="alloc-row">
+              <span>VXUS (International)</span>
+              <span class="alloc-pct">20%</span>
+            </div>
+            <div class="alloc-row">
+              <span>VUG (Growth)</span>
+              <span class="alloc-pct">10%</span>
+            </div>
+            <div class="alloc-row">
+              <span>BTC (Bitcoin)</span>
+              <span class="alloc-pct">10%</span>
+            </div>
+          </div>
+          <div class="preview-return">Expected: 9-12%/year</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kit-testimonials">
+      <h2>What Investors Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <p>"I had no idea where to start. This kit made it so simple. Set up my portfolio in 20 minutes."</p>
+          <span class="testimonial-author">— Sarah K., 28</span>
+        </div>
+        <div class="testimonial">
+          <p>"The ETF cheat sheet is gold. I keep it on my phone for reference every time I invest."</p>
+          <span class="testimonial-author">— Mike R., 35</span>
+        </div>
+        <div class="testimonial">
+          <p>"Finally understand investing. The step-by-step guide removed all the confusion."</p>
+          <span class="testimonial-author">— Priya M., 42</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .kit-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .kit-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .kit-badge {
+    display: inline-block;
+    padding: 0.375rem 1rem;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+
+  .kit-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, #e2e8f0, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .kit-subtitle {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .kit-contents {
+    margin-bottom: 3rem;
+  }
+
+  .kit-contents h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #e2e8f0;
+  }
+
+  .kit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .kit-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .kit-item {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #334155;
+    transition: border-color 0.2s;
+  }
+
+  .kit-item:hover {
+    border-color: #22c55e;
+  }
+
+  .kit-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .kit-item h3 {
+    color: #e2e8f0;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .kit-item p {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .kit-form-section {
+    margin-bottom: 3rem;
+  }
+
+  .form-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #334155;
+  }
+
+  .form-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #e2e8f0;
+  }
+
+  .form-card > p {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .kit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    background: #1a1d23;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+
+  .form-group input::placeholder {
+    color: #64748b;
+  }
+
+  .form-group input:focus {
+    outline: none;
+    border-color: #22c55e;
+  }
+
+  .btn-kit {
+    padding: 0.875rem;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-kit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+  }
+
+  .form-note {
+    color: #64748b;
+    font-size: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .kit-preview {
+    margin-bottom: 3rem;
+  }
+
+  .kit-preview h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #e2e8f0;
+  }
+
+  .preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 700px) {
+    .preview-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .preview-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.25rem;
+    border-top: 3px solid;
+  }
+
+  .preview-card.conservative { border-color: #22c55e; }
+  .preview-card.moderate { border-color: #f59e0b; }
+  .preview-card.aggressive { border-color: #ef4444; }
+
+  .preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .preview-label {
+    font-weight: 700;
+    color: #e2e8f0;
+    font-size: 1rem;
+  }
+
+  .preview-risk {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    background: #1a1d23;
+    color: #94a3b8;
+  }
+
+  .preview-alloc {
+    margin-bottom: 1rem;
+  }
+
+  .alloc-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.375rem 0;
+    font-size: 0.8rem;
+    color: #cbd5e1;
+    border-bottom: 1px solid #1a1d23;
+  }
+
+  .alloc-pct {
+    font-weight: 600;
+    color: #94a3b8;
+  }
+
+  .preview-return {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #22c55e;
+    font-weight: 600;
+  }
+
+  .kit-testimonials {
+    margin-bottom: 2rem;
+  }
+
+  .kit-testimonials h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #e2e8f0;
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 700px) {
+    .testimonial-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .testimonial {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+
+  .testimonial p {
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  .testimonial-author {
+    color: #94a3b8;
+    font-size: 0.8rem;
+  }
+</style>
+
+<script>
+  document.getElementById('kitForm')!.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = (document.getElementById('name') as HTMLInputElement).value;
+    const email = (document.getElementById('email') as HTMLInputElement).value;
+
+    // In production, this would send to an email service
+    // For now, show success message
+    const form = document.getElementById('kitForm')!;
+    form.innerHTML = `
+      <div style="padding: 2rem; text-align: center;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">&#10004;</div>
+        <h3 style="color: #22c55e; margin-bottom: 0.5rem;">Kit Sent!</h3>
+        <p style="color: #94a3b8; font-size: 0.9rem;">Check your inbox at <strong>${email}</strong> for the download link.</p>
+      </div>
+    `;
+  });
+</script>
