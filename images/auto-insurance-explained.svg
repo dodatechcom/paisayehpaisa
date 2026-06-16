@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <rect width="760" height="440" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Auto Insurance Coverage Types</text>
+
+  <!-- Coverage type cards in a row -->
+  <rect x="40" y="50" width="155" height="180" fill="#1e293b" rx="6"/>
+  <rect x="40" y="50" width="155" height="32" fill="#6366f1" rx="6"/>
+  <rect x="40" y="74" width="155" height="8" fill="#6366f1"/>
+  <text x="117" y="71" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Liability</text>
+  <text x="117" y="102" fill="#94a3b8" font-size="10" text-anchor="middle">Pays for damage you</text>
+  <text x="117" y="116" fill="#94a3b8" font-size="10" text-anchor="middle">cause to others.</text>
+  <text x="117" y="130" fill="#94a3b8" font-size="10" text-anchor="middle">Required in 48 US</text>
+  <text x="117" y="144" fill="#94a3b8" font-size="10" text-anchor="middle">states, mandatory</text>
+  <text x="117" y="158" fill="#94a3b8" font-size="10" text-anchor="middle">in UK &amp; Canada.</text>
+  <text x="117" y="180" fill="#22c55e" font-size="11" font-weight="600" text-anchor="middle">✓ Required</text>
+
+  <rect x="210" y="50" width="155" height="180" fill="#1e293b" rx="6"/>
+  <rect x="210" y="50" width="155" height="32" fill="#2563eb" rx="6"/>
+  <rect x="210" y="74" width="155" height="8" fill="#2563eb"/>
+  <text x="287" y="71" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Collision</text>
+  <text x="287" y="102" fill="#94a3b8" font-size="10" text-anchor="middle">Pays for damage to</text>
+  <text x="287" y="116" fill="#94a3b8" font-size="10" text-anchor="middle">your car regardless</text>
+  <text x="287" y="130" fill="#94a3b8" font-size="10" text-anchor="middle">of who's at fault.</text>
+  <text x="287" y="144" fill="#94a3b8" font-size="10" text-anchor="middle">Required if you</text>
+  <text x="287" y="158" fill="#94a3b8" font-size="10" text-anchor="middle">have a car loan.</text>
+  <text x="287" y="180" fill="#f59e0b" font-size="11" font-weight="600" text-anchor="middle">⚠ Often Required</text>
+
+  <rect x="380" y="50" width="155" height="180" fill="#1e293b" rx="6"/>
+  <rect x="380" y="50" width="155" height="32" fill="#059669" rx="6"/>
+  <rect x="380" y="74" width="155" height="8" fill="#059669"/>
+  <text x="457" y="71" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Comprehensive</text>
+  <text x="457" y="102" fill="#94a3b8" font-size="10" text-anchor="middle">Covers theft, fire,</text>
+  <text x="457" y="116" fill="#94a3b8" font-size="10" text-anchor="middle">vandalism, hail,</text>
+  <text x="457" y="130" fill="#94a3b8" font-size="10" text-anchor="middle">animal strikes.</text>
+  <text x="457" y="144" fill="#94a3b8" font-size="10" text-anchor="middle">Required if you</text>
+  <text x="457" y="158" fill="#94a3b8" font-size="10" text-anchor="middle">lease or finance.</text>
+  <text x="457" y="180" fill="#f59e0b" font-size="11" font-weight="600" text-anchor="middle">⚠ Often Required</text>
+
+  <rect x="550" y="50" width="170" height="180" fill="#1e293b" rx="6"/>
+  <rect x="550" y="50" width="170" height="32" fill="#d97706" rx="6"/>
+  <rect x="550" y="74" width="170" height="8" fill="#d97706"/>
+  <text x="635" y="71" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Uninsured Motorist</text>
+  <text x="635" y="102" fill="#94a3b8" font-size="10" text-anchor="middle">Covers you if an</text>
+  <text x="635" y="116" fill="#94a3b8" font-size="10" text-anchor="middle">uninsured driver</text>
+  <text x="635" y="130" fill="#94a3b8" font-size="10" text-anchor="middle">hits you.</text>
+  <text x="635" y="144" fill="#94a3b8" font-size="10" text-anchor="middle">Required in some</text>
+  <text x="635" y="158" fill="#94a3b8" font-size="10" text-anchor="middle">US states.</text>
+  <text x="635" y="180" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">Varies</text>
+
+  <!-- Bottom section: what affects your premium -->
+  <text x="380" y="265" fill="#e2e8f0" font-size="14" font-weight="700" text-anchor="middle">What Determines Your Auto Insurance Premium?</text>
+
+  <rect x="40" y="280" width="160" height="65" fill="#1e293b" rx="6"/>
+  <text x="120" y="303" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="middle">Your driving record</text>
+  <text x="120" y="321" fill="#94a3b8" font-size="10" text-anchor="middle">Accidents &amp; tickets</text>
+  <text x="120" y="335" fill="#94a3b8" font-size="10" text-anchor="middle">increase rates</text>
+
+  <rect x="215" y="280" width="160" height="65" fill="#1e293b" rx="6"/>
+  <text x="295" y="303" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="middle">Age &amp; experience</text>
+  <text x="295" y="321" fill="#94a3b8" font-size="10" text-anchor="middle">Under 25 = highest</text>
+  <text x="295" y="335" fill="#94a3b8" font-size="10" text-anchor="middle">rates; drops after 25</text>
+
+  <rect x="390" y="280" width="160" height="65" fill="#1e293b" rx="6"/>
+  <text x="470" y="303" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="middle">Vehicle type</text>
+  <text x="470" y="321" fill="#94a3b8" font-size="10" text-anchor="middle">Expensive cars cost</text>
+  <text x="470" y="335" fill="#94a3b8" font-size="10" text-anchor="middle">more to insure</text>
+
+  <rect x="565" y="280" width="155" height="65" fill="#1e293b" rx="6"/>
+  <text x="642" y="303" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="middle">Location</text>
+  <text x="642" y="321" fill="#94a3b8" font-size="10" text-anchor="middle">Urban areas = higher</text>
+  <text x="642" y="335" fill="#94a3b8" font-size="10" text-anchor="middle">theft &amp; accident risk</text>
+
+  <rect x="40" y="355" width="160" height="65" fill="#1e293b" rx="6"/>
+  <text x="120" y="378" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="middle">Coverage limits</text>
+  <text x="120" y="396" fill="#94a3b8" font-size="10" text-anchor="middle">More coverage =</text>
+  <text x="120" y="410" fill="#94a3b8" font-size="10" text-anchor="middle">higher premium</text>
+
+  <rect x="215" y="355" width="160" height="65" fill="#1e293b" rx="6"/>
+  <text x="295" y="378" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="middle">Deductible</text>
+  <text x="295" y="396" fill="#94a3b8" font-size="10" text-anchor="middle">Higher deductible =</text>
+  <text x="295" y="410" fill="#94a3b8" font-size="10" text-anchor="middle">lower premium</text>
+
+  <rect x="390" y="355" width="160" height="65" fill="#1e293b" rx="6"/>
+  <text x="470" y="378" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="middle">Credit score (US)</text>
+  <text x="470" y="396" fill="#94a3b8" font-size="10" text-anchor="middle">Better score =</text>
+  <text x="470" y="410" fill="#94a3b8" font-size="10" text-anchor="middle">lower rates</text>
+
+  <rect x="565" y="355" width="155" height="65" fill="#1e293b" rx="6"/>
+  <text x="642" y="378" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="middle">Mileage</text>
+  <text x="642" y="396" fill="#94a3b8" font-size="10" text-anchor="middle">More miles =</text>
+  <text x="642" y="410" fill="#94a3b8" font-size="10" text-anchor="middle">higher risk</text>
+
+  <text x="380" y="435" fill="#64748b" font-size="10" text-anchor="middle">Auto insurance is mandatory in nearly all US states, UK, and Canada. Minimum coverage requirements vary.</text>
+</svg>
