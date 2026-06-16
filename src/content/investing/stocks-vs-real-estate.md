@@ -16,7 +16,7 @@ The two most popular investment paths: buy stocks or buy property. Both have cre
 
 But which is actually better for you? The answer depends on your starting capital, time, and risk tolerance.
 
-<img src="/images/stocks-vs-real-estate.svg" alt="Stocks vs real estate comparison — entry barrier, liquidity, returns, and effort" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/stocks-vs-real-estate.svg" alt="Stocks vs real estate comparison — entry barrier, liquidity, returns, and effort" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## The Quick Comparison
 

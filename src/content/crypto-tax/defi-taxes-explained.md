@@ -15,7 +15,7 @@ DeFi creates complex tax situations. Swapping tokens, providing liquidity, yield
 
 Here's the complete breakdown of DeFi taxes.
 
-<img src="/images/defi-taxes.svg" alt="DeFi tax treatment for swaps, liquidity pools, yield farming, and borrowing" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/defi-taxes.svg" alt="DeFi tax treatment for swaps, liquidity pools, yield farming, and borrowing" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## DeFi Activities and Tax Treatment
 

@@ -25,7 +25,7 @@ Both have the same shape (small body, one long wick), but they appear in differe
 
 Both patterns have a small body at one end and a wick at least 2x the body length on the other end.
 
-<img src="/images/hammer-shooting-star.svg" alt="Hammer and shooting star candlestick chart showing hammer forming after downtrend with long lower wick, and shooting star forming after uptrend with long upper wick" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/hammer-shooting-star.svg" alt="Hammer and shooting star candlestick chart showing hammer forming after downtrend with long lower wick, and shooting star forming after uptrend with long upper wick" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## How to Identify a Hammer
 

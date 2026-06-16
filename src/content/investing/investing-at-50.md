@@ -16,7 +16,7 @@ At 50, you have 15 years until retirement. The catch-up contributions are your s
 
 Here's how to build $1M+ before retirement.
 
-<img src="/images/investing-50.svg" alt="Investing at 50 — catch-up contributions, portfolio allocation, and 15-year projections" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/investing-50.svg" alt="Investing at 50 — catch-up contributions, portfolio allocation, and 15-year projections" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## Catch-Up Contributions (Age 50+)
 

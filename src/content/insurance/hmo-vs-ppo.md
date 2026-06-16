@@ -15,7 +15,7 @@ Choosing between HMO and PPO can save you hundreds of dollars per year. The righ
 
 Here's the complete breakdown.
 
-<img src="/images/hmo-vs-ppo.svg" alt="HMO vs PPO health insurance — costs, flexibility, and which plan type is right for you" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/hmo-vs-ppo.svg" alt="HMO vs PPO health insurance — costs, flexibility, and which plan type is right for you" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## HMO vs PPO at a Glance
 

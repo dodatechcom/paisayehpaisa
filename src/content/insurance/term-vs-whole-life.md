@@ -15,7 +15,7 @@ The life insurance industry pushes whole life insurance because agents earn 10x 
 
 Here's the math that proves it.
 
-<img src="/images/term-vs-whole-life.svg" alt="Term life vs whole life insurance comparison — costs, benefits, and who needs each" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/term-vs-whole-life.svg" alt="Term life vs whole life insurance comparison — costs, benefits, and who needs each" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## The Quick Comparison
 

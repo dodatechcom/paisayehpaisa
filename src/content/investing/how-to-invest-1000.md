@@ -16,7 +16,7 @@ Investing 1,000 dollars is one of the smartest financial moves you can make. But
 
 The answer depends on your goals, risk tolerance, and timeline. Here are the 5 best ways to invest 1,000 dollars in 2026, ranked from lowest risk to highest reward.
 
-<img src="/images/invest-1000.svg" alt="5 ways to invest 1000 dollars: savings accounts, index funds, Roth IRA, fractional shares, and CDs" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/invest-1000.svg" alt="5 ways to invest 1000 dollars: savings accounts, index funds, Roth IRA, fractional shares, and CDs" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## Option 1: High-Yield Savings Account (Safest)
 

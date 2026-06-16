@@ -16,7 +16,7 @@ Your 30s are peak earning years. You're making more than your 20s, but life is g
 
 The key: invest the raise, not spend it.
 
-<img src="/images/investing-30s.svg" alt="Investing in your 30s — financial priorities, portfolio allocation, and wealth projection" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/investing-30s.svg" alt="Investing in your 30s — financial priorities, portfolio allocation, and wealth projection" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## Your 30s Financial Priorities
 

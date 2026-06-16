@@ -15,7 +15,7 @@ Your landlord's insurance doesn't cover your stuff. If there's a fire, theft, or
 
 Here's what each policy covers and why you need it.
 
-<img src="/images/renters-vs-homeowners.svg" alt="Renters vs homeowners insurance — what each covers, costs, and who needs each" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/renters-vs-homeowners.svg" alt="Renters vs homeowners insurance — what each covers, costs, and who needs each" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## Quick Comparison
 

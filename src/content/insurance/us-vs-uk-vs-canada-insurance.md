@@ -17,7 +17,7 @@ Insurance works differently in every country. The US relies on private insurance
 
 Here's how they compare across all major insurance types.
 
-<img src="/images/insurance-comparison-us-uk-ca.svg" alt="Insurance comparison between US, UK, and Canada across health, auto, home, and life insurance" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/insurance-comparison-us-uk-ca.svg" alt="Insurance comparison between US, UK, and Canada across health, auto, home, and life insurance" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## Health Insurance
 

@@ -16,7 +16,7 @@ Your 20s are the most powerful decade for investing. Every dollar you invest now
 
 Here's exactly how to invest in your 20s.
 
-<img src="/images/investing-20s.svg" alt="Investing in your 20s — power of time, portfolio allocation, and expected returns" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/investing-20s.svg" alt="Investing in your 20s — power of time, portfolio allocation, and expected returns" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## Why Your 20s Matter Most
 

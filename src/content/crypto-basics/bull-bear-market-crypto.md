@@ -16,7 +16,7 @@ Crypto moves in cycles: bull markets (prices rising) and bear markets (prices fa
 
 Here's how to spot them and what to do.
 
-<img src="/images/bull-bear-crypto.svg" alt="Bull vs bear market in crypto — characteristics, strategies, and 4-year cycle pattern" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/bull-bear-crypto.svg" alt="Bull vs bear market in crypto — characteristics, strategies, and 4-year cycle pattern" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## Bull Market (Uptrend)
 

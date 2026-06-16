@@ -16,7 +16,7 @@ Asset allocation is the single most important decision you'll make as an investo
 
 The right allocation depends on your age, risk tolerance, and time horizon. Here is exactly how to allocate your portfolio at every life stage.
 
-<img src="/images/asset-allocation.svg" alt="Asset allocation by age — stock and bond percentages for each decade of life" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/asset-allocation.svg" alt="Asset allocation by age — stock and bond percentages for each decade of life" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## The Simple Rule of Thumb
 

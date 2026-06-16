@@ -18,7 +18,7 @@ But where do you start? How do you build multiple income streams without overcom
 
 Here is a proven 4-stream passive income portfolio you can build from scratch.
 
-<img src="/images/passive-income-portfolio.svg" alt="Passive income portfolio with 4 streams: dividends, bonds, REITs, and crypto yield" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/passive-income-portfolio.svg" alt="Passive income portfolio with 4 streams: dividends, bonds, REITs, and crypto yield" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## The 4 Passive Income Streams
 

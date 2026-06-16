@@ -16,7 +16,7 @@ Staking is one of the easiest ways to earn passive income on your crypto. Instea
 
 Here's how to start staking today.
 
-<img src="/images/how-to-stake-crypto.svg" alt="How to stake crypto — what staking is, options available, and step-by-step guide" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/how-to-stake-crypto.svg" alt="How to stake crypto — what staking is, options available, and step-by-step guide" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## What Is Staking?
 

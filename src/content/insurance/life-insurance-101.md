@@ -55,7 +55,7 @@ Whole life covers you for your entire lifetime. Premiums are much higher, but th
 - **UK:** LV= Whole Life Plan — £100k coverage, ~£65/month
 - **Canada:** Sun Life Sun Whole Life — $250k coverage, ~$200/month
 
-<img src="/images/life-insurance-101.svg" alt="Side-by-side comparison of term vs whole life insurance showing costs, coverage periods, and features" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/life-insurance-101.svg" alt="Side-by-side comparison of term vs whole life insurance showing costs, coverage periods, and features" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## Which One Should You Choose?
 

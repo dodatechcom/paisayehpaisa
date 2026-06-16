@@ -16,7 +16,7 @@ The ETF vs mutual fund debate has raged for two decades. The truth: both are exc
 
 Here's the complete breakdown so you can choose the right one.
 
-<img src="/images/etf-vs-mutual-fund.svg" alt="ETFs vs mutual funds side-by-side comparison of features, costs, and flexibility" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/etf-vs-mutual-fund.svg" alt="ETFs vs mutual funds side-by-side comparison of features, costs, and flexibility" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## The Core Difference
 

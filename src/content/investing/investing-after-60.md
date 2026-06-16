@@ -16,7 +16,7 @@ Retirement isn't about stopping investing — it's about investing for income. T
 
 Here's how to structure your portfolio for retirement.
 
-<img src="/images/investing-after-60.svg" alt="Investing after 60 — retirement income, withdrawal strategy, and portfolio allocation" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/investing-after-60.svg" alt="Investing after 60 — retirement income, withdrawal strategy, and portfolio allocation" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## Retirement Income Sources
 

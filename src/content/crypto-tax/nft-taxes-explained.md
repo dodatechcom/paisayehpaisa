@@ -15,7 +15,7 @@ NFTs are taxable in most countries. Whether you buy, sell, create, or receive an
 
 Here's exactly how NFT taxes work in the US, UK, and Canada.
 
-<img src="/images/nft-taxes.svg" alt="NFT tax rules by country — US, UK, Canada comparison" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/nft-taxes.svg" alt="NFT tax rules by country — US, UK, Canada comparison" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## When NFTs Are Taxable
 

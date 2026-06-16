@@ -17,7 +17,7 @@ You don't have to take big risks to earn decent returns. In 2026, several safe i
 
 Whether you're building an emergency fund, saving for a down payment, or just want to earn more than a traditional savings account, these safe investments are the best places to park your money.
 
-<img src="/images/safe-investments.svg" alt="Safe investments risk vs return spectrum with top picks for 2026" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/safe-investments.svg" alt="Safe investments risk vs return spectrum with top picks for 2026" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## The Best Safe Investments (Ranked by Yield)
 

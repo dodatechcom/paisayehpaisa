@@ -15,7 +15,7 @@ Market cap is the most important number in crypto. It tells you the true size an
 
 Here's how it works and why it matters.
 
-<img src="/images/crypto-market-cap.svg" alt="Crypto market cap explained — formula, categories, and why it matters" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/crypto-market-cap.svg" alt="Crypto market cap explained — formula, categories, and why it matters" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## The Formula
 

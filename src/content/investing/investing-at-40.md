@@ -16,7 +16,7 @@ At 40, you have 25 years until retirement. That's enough time to build serious w
 
 The average 40-year-old has $45,000 saved. You need $1.2 million. Here's how to close that gap.
 
-<img src="/images/investing-40.svg" alt="Investing at 40 — catch-up strategies, portfolio allocation, and wealth projection" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/investing-40.svg" alt="Investing at 40 — catch-up strategies, portfolio allocation, and wealth projection" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## The Reality at 40
 

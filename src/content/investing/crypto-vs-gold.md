@@ -17,7 +17,7 @@ Gold has been money for 5,000 years. Bitcoin has existed for 17. One is ancient,
 
 Both are seen as stores of value. Both are alternatives to fiat currency. But which is actually better for your portfolio in 2026?
 
-<img src="/images/crypto-vs-gold.svg" alt="Crypto vs gold comparison — store of value, performance, characteristics, and risks" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/crypto-vs-gold.svg" alt="Crypto vs gold comparison — store of value, performance, characteristics, and risks" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## The Quick Comparison
 

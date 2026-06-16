@@ -16,7 +16,7 @@ Exchange-traded funds (ETFs) are some of the simplest, most cost-effective, and 
 
 But with over 10,000 ETFs available, where do you even start? Should you pick a single sector or buy a diverse portfolio? This guide cuts through the noise and identifies the best ETFs to buy in 2026 — based on performance, low costs, and proven long-term strategies.
 
-<img src="/images/best-etfs-2026.svg" alt="Best ETFs 2026 — Chart comparing 6 top ETFs (SPY, VTI, VOO, VUG, IBB, VXUS) with 1-year performance" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/best-etfs-2026.svg" alt="Best ETFs 2026 — Chart comparing 6 top ETFs (SPY, VTI, VOO, VUG, IBB, VXUS) with 1-year performance" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## Our Top 6 ETFs for 2026
 

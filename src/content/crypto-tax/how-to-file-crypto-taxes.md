@@ -15,7 +15,7 @@ Filing crypto taxes doesn't have to be overwhelming. With the right software and
 
 Here's the step-by-step process for US, UK, and Canada.
 
-<img src="/images/how-to-file-crypto-taxes.svg" alt="How to file crypto taxes — step-by-step process with software comparison" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/how-to-file-crypto-taxes.svg" alt="How to file crypto taxes — step-by-step process with software comparison" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## The Filing Process
 

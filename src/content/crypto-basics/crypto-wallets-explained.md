@@ -16,7 +16,7 @@ A crypto wallet is how you store, send, and receive cryptocurrency. Choosing the
 
 Here's everything you need to know.
 
-<img src="/images/crypto-wallets-explained.svg" alt="Crypto wallets explained — hot vs cold, custodial vs non-custodial comparison" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/crypto-wallets-explained.svg" alt="Crypto wallets explained — hot vs cold, custodial vs non-custodial comparison" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## The Golden Rule
 

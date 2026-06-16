@@ -16,7 +16,7 @@ Reading crypto charts is simpler than it looks. Once you understand candlesticks
 
 Here's the beginner-friendly guide.
 
-<img src="/images/read-crypto-charts.svg" alt="How to read crypto charts — candlestick anatomy, trends, and common patterns" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/read-crypto-charts.svg" alt="How to read crypto charts — candlestick anatomy, trends, and common patterns" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## Chart Basics
 

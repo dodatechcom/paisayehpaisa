@@ -22,7 +22,7 @@ Auto insurance is mandatory in nearly every US state, across the UK, and through
 | **Comprehensive** | Theft, fire, vandalism, weather, animal strikes | If you have a loan or lease |
 | **Uninsured Motorist** | You if hit by someone without insurance | Required in some US states |
 
-<img src="/images/auto-insurance-explained.svg" alt="Auto insurance coverage types explained with premium factors" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/auto-insurance-explained.svg" alt="Auto insurance coverage types explained with premium factors" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## Minimum Coverage Requirements by Country
 

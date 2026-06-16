@@ -15,7 +15,7 @@ Tax-loss harvesting is one of the most powerful crypto tax strategies. By sellin
 
 Here's how it works, the rules, and real examples.
 
-<img src="/images/crypto-tax-loss-harvesting.svg" alt="Crypto tax-loss harvesting — how to harvest losses and offset gains" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/crypto-tax-loss-harvesting.svg" alt="Crypto tax-loss harvesting — how to harvest losses and offset gains" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## How Tax-Loss Harvesting Works
 

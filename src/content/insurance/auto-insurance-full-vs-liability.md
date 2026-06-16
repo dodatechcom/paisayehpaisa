@@ -13,7 +13,7 @@ categories:
 
 Most people pay too much for auto insurance because they don't understand what they actually need. Here's how to choose the right coverage and save money.
 
-<img src="/images/auto-insurance-coverage.svg" alt="Auto insurance full coverage vs liability — when to choose each and how to save" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/auto-insurance-coverage.svg" alt="Auto insurance full coverage vs liability — when to choose each and how to save" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## Full Coverage vs Liability
 

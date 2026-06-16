@@ -15,7 +15,7 @@ Staking crypto earns rewards — and those rewards are taxable. The IRS, HMRC, a
 
 Here's how to properly report your staking rewards.
 
-<img src="/images/staking-income-tax.svg" alt="How staking income is taxed — income at receipt, then capital gains when sold" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/staking-income-tax.svg" alt="How staking income is taxed — income at receipt, then capital gains when sold" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## How Staking Is Taxed
 

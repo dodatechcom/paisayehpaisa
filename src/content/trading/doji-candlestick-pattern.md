@@ -22,7 +22,7 @@ The doji is a single-candle pattern. The body is very small or nonexistent becau
 
 The name comes from a Japanese term meaning "same" or "mistake" — a reference to the open and close being at the same level.
 
-<img src="/images/doji-chart.svg" alt="Doji candlestick visual guide showing indecision in a downtrend, the four types of doji, and the psychology behind the pattern" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/doji-chart.svg" alt="Doji candlestick visual guide showing indecision in a downtrend, the four types of doji, and the psychology behind the pattern" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## The Four Types of Doji
 

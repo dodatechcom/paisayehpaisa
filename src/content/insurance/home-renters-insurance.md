@@ -34,7 +34,7 @@ A standard homeowners policy (HO-3 in the US) covers six main things:
 - Sewer backup (can add as an endorsement)
 - High-value items beyond limits (jewelry, art — need a rider)
 
-<img src="/images/home-renters-insurance.svg" alt="Homeowners and renters insurance comparison showing what each covers" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/home-renters-insurance.svg" alt="Homeowners and renters insurance comparison showing what each covers" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## Renters Insurance
 

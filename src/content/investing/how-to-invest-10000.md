@@ -16,7 +16,7 @@ Having 10,000 to invest is a significant step. But most people make the same mis
 
 Here is how to invest 10,000 without losing money — by protecting the downside first, then capturing the upside.
 
-<img src="/images/invest-10000.svg" alt="How to invest 10000 without losing money — diversification, buffer, and dollar-cost averaging" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/invest-10000.svg" alt="How to invest 10000 without losing money — diversification, buffer, and dollar-cost averaging" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## The Conservative 10k Allocation
 

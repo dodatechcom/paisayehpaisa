@@ -18,7 +18,7 @@ But here's the truth: every market crash in history has been followed by a recov
 
 The investors who profit most from crashes aren't the ones who sell at the bottom — they're the ones who stay calm and buy more.
 
-<img src="/images/market-crash-strategy.svg" alt="Market crash strategy — timeline, buy zones, and crash playbook" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/market-crash-strategy.svg" alt="Market crash strategy — timeline, buy zones, and crash playbook" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## The Crash Timeline
 

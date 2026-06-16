@@ -16,7 +16,7 @@ Dividend investing is one of the most reliable ways to build passive income. Whe
 
 The key is building a portfolio that grows your dividend income year after year, eventually replacing your salary.
 
-<img src="/images/dividend-strategy.svg" alt="Dividend investing strategy showing growth over time, top ETFs, and the snowball approach" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
+<img loading="lazy" src="/images/dividend-strategy.svg" alt="Dividend investing strategy showing growth over time, top ETFs, and the snowball approach" style="width:100%; max-width:760px; height:auto; margin:1.5rem 0; border-radius:8px;" />
 
 ## The Dividend Snowball Explained
 
