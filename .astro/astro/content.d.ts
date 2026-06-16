@@ -1755,6 +1755,20 @@ declare module 'astro:content' {
   collection: "investing";
   data: InferEntrySchema<"investing">
 } & { render(): Render[".md"] };
+"how-to-invest-1000.md": {
+	id: "how-to-invest-1000.md";
+  slug: "how-to-invest-1000";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
+"how-to-invest-10000.md": {
+	id: "how-to-invest-10000.md";
+  slug: "how-to-invest-10000";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
 };
 "plan": {
 "01-project-overview.md": {
