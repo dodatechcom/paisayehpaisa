@@ -8,8 +8,9 @@ const scam = await getCollection('crypto-scam');
 const answers = await getCollection('crypto-answers');
 const tax = await getCollection('crypto-tax');
 const tools = await getCollection('crypto-tools');
+const trading = await getCollection('trading');
 
-const all = [...basics, ...safe, ...scam, ...answers, ...tax, ...tools]
+const all = [...basics, ...safe, ...scam, ...answers, ...tax, ...tools, ...trading]
   .filter(a => !a.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
@@ -24,6 +25,7 @@ const categoryColors: Record<string, { bg: string; light: string; border: string
   'crypto-answers': { bg: '#7c3aed', light: '#f5f3ff', border: '#ddd6fe' },
   'crypto-tax': { bg: '#d97706', light: '#fffbeb', border: '#fde68a' },
   'crypto-tools': { bg: '#0891b2', light: '#ecfeff', border: '#a5f3fc' },
+  'trading': { bg: '#f97316', light: '#fff7ed', border: '#fed7aa' },
 };
 
 const categories = [
@@ -33,6 +35,7 @@ const categories = [
   { slug: 'crypto-answers', name: 'Crypto Answers', desc: 'Daily Q&A from BitcoinTalk' },
   { slug: 'crypto-tax', name: 'Crypto Tax', desc: 'Country guides, reporting gains' },
   { slug: 'crypto-tools', name: 'Crypto Tools', desc: 'Calculators, checkers, wizards' },
+  { slug: 'trading', name: 'Trading', desc: 'Technical analysis, risk management, psychology' },
 ];
 
 const categoryCounts: Record<string, number> = {
@@ -42,6 +45,7 @@ const categoryCounts: Record<string, number> = {
   'crypto-answers': answers.length,
   'crypto-tax': tax.length,
   'crypto-tools': tools.length,
+  'trading': trading.length,
 };
 
 const totalArticles = all.length;

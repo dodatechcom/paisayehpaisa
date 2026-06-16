@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Leverage Calculator" description="Calculate liquidation price and margin requirements for leveraged crypto or forex trades. Free leverage calculator.">
+  <meta name="robots" content="noindex" />
+  <div style="max-width: 600px; margin: 0 auto; padding: 2rem 0;">
+    <div class="cat-header" style="margin-bottom: 0.5rem;">
+      <span class="icon">📊</span>
+      <h1 style="margin:0; font-size:1.8rem;">Leverage Calculator</h1>
+    </div>
+    <p style="color:var(--muted); margin-bottom:2rem;">Calculate liquidation price and margin requirements for leveraged trades.</p>
+
+    <div style="background:var(--surface); padding:1.5rem; border-radius:var(--radius); box-shadow:var(--shadow);">
+      <div style="display:grid; gap:1rem; margin-bottom:1.5rem;">
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Position Side</label>
+          <select id="direction" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);">
+            <option value="long">Long</option>
+            <option value="short">Short</option>
+          </select>
+        </div>
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Entry Price ($)</label>
+          <input type="number" id="entry" value="50000" min="0.0001" step="any" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Leverage (e.g. 10x = 10)</label>
+          <input type="number" id="leverage" value="10" min="1" max="125" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Position Size ($)</label>
+          <input type="number" id="position" value="1000" min="1" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);" />
+        </div>
+      </div>
+      <button id="calc-btn" style="width:100%; padding:0.75rem; background:var(--accent); color:white; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer;">Calculate</button>
+
+      <div id="results" style="display:none; margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--border);">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+          <div style="background:var(--bg); padding:1rem; border-radius:8px; text-align:center;">
+            <div style="font-size:0.8rem; color:var(--muted); margin-bottom:0.25rem;">Margin Required</div>
+            <div id="margin" style="font-size:1.3rem; font-weight:700; color:var(--text);">$0</div>
+          </div>
+          <div style="background:var(--bg); padding:1rem; border-radius:8px; text-align:center;">
+            <div style="font-size:0.8rem; color:var(--muted); margin-bottom:0.25rem;">Liquidation Price</div>
+            <div id="liq-price" style="font-size:1.3rem; font-weight:700; color:#dc2626;">$0</div>
+          </div>
+          <div style="background:var(--bg); padding:1rem; border-radius:8px; text-align:center;">
+            <div style="font-size:0.8rem; color:var(--muted); margin-bottom:0.25rem;">Distance to Liquidation</div>
+            <div id="liq-dist" style="font-size:1.1rem; font-weight:700; color:var(--muted);">0%</div>
+          </div>
+          <div style="background:var(--bg); padding:1rem; border-radius:8px; text-align:center;">
+            <div style="font-size:0.8rem; color:var(--muted); margin-bottom:0.25rem;">Leverage Used</div>
+            <div id="leverage-used" style="font-size:1.3rem; font-weight:700; color:var(--text);">0x</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:2rem; background:var(--surface); padding:1.25rem; border-radius:var(--radius); box-shadow:var(--shadow); font-size:0.88rem; color:var(--muted);">
+      <strong style="color:var(--text);">How it works:</strong> Leverage amplifies both gains and losses. At 10x leverage, a 10% price move against your position will liquidate you. This calculator assumes 100% maintenance margin ratio (common on most exchanges). Always use stop losses when trading with leverage.
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('calc-btn').addEventListener('click', function() {
+      const direction = document.getElementById('direction').value;
+      const entry = parseFloat(document.getElementById('entry').value) || 0;
+      const leverage = parseFloat(document.getElementById('leverage').value) || 1;
+      const position = parseFloat(document.getElementById('position').value) || 0;
+
+      const margin = position / leverage;
+      const liqPct = 1 / leverage;
+      let liqPrice;
+      if (direction === 'long') {
+        liqPrice = entry * (1 - liqPct);
+      } else {
+        liqPrice = entry * (1 + liqPct);
+      }
+
+      const liqDist = Math.abs(liqPrice - entry) / entry * 100;
+
+      document.getElementById('margin').textContent = '$' + margin.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('liq-price').textContent = '$' + liqPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('liq-dist').textContent = liqDist.toFixed(2) + '%';
+      document.getElementById('leverage-used').textContent = leverage + 'x';
+      document.getElementById('results').style.display = 'block';
+    });
+    document.getElementById('calc-btn').click();
+  </script>
+</BaseLayout>

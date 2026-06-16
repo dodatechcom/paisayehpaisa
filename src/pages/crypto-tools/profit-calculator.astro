@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Crypto Profit Calculator" description="Calculate profit or loss on your cryptocurrency trades. Enter entry price, exit price, and quantity to see your returns.">
+  <meta name="robots" content="noindex" />
+  <div style="max-width: 600px; margin: 0 auto; padding: 2rem 0;">
+    <div class="cat-header" style="margin-bottom: 0.5rem;">
+      <span class="icon">💰</span>
+      <h1 style="margin:0; font-size:1.8rem;">Profit Calculator</h1>
+    </div>
+    <p style="color:var(--muted); margin-bottom:2rem;">Calculate profit or loss on your crypto trades.</p>
+
+    <div style="background:var(--surface); padding:1.5rem; border-radius:var(--radius); box-shadow:var(--shadow);">
+      <div style="display:grid; gap:1rem; margin-bottom:1.5rem;">
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Entry Price ($)</label>
+          <input type="number" id="entry" value="50000" min="0.0001" step="any" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Exit Price ($)</label>
+          <input type="number" id="exit" value="60000" min="0.0001" step="any" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Quantity (coins)</label>
+          <input type="number" id="qty" value="0.5" min="0.00000001" step="any" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Transaction Fee (%)</label>
+          <input type="number" id="fee" value="0.1" min="0" step="0.01" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);" />
+        </div>
+      </div>
+      <button id="calc-btn" style="width:100%; padding:0.75rem; background:var(--accent); color:white; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer;">Calculate</button>
+
+      <div id="results" style="display:none; margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--border);">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+          <div style="background:var(--bg); padding:1rem; border-radius:8px; text-align:center;">
+            <div style="font-size:0.8rem; color:var(--muted); margin-bottom:0.25rem;">Total Invested</div>
+            <div id="invested" style="font-size:1.3rem; font-weight:700; color:var(--text);">$0</div>
+          </div>
+          <div style="background:var(--bg); padding:1rem; border-radius:8px; text-align:center;">
+            <div style="font-size:0.8rem; color:var(--muted); margin-bottom:0.25rem;">Total Returned</div>
+            <div id="returned" style="font-size:1.3rem; font-weight:700; color:var(--text);">$0</div>
+          </div>
+          <div style="background:var(--bg); padding:1rem; border-radius:8px; text-align:center;">
+            <div style="font-size:0.8rem; color:var(--muted); margin-bottom:0.25rem;">Profit / Loss</div>
+            <div id="profit" style="font-size:1.3rem; font-weight:700;">$0</div>
+          </div>
+          <div style="background:var(--bg); padding:1rem; border-radius:8px; text-align:center;">
+            <div style="font-size:0.8rem; color:var(--muted); margin-bottom:0.25rem;">Return (%)</div>
+            <div id="pct" style="font-size:1.3rem; font-weight:700;">0%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:2rem; background:var(--surface); padding:1.25rem; border-radius:var(--radius); box-shadow:var(--shadow); font-size:0.88rem; color:var(--muted);">
+      <strong style="color:var(--text);">How it works:</strong> Enter your buy price, sell price, and the amount of coins you traded. The calculator subtracts fees from both the buy and sell sides. Results show your net profit or loss in both dollars and percentage terms.
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('calc-btn').addEventListener('click', function() {
+      const entry = parseFloat(document.getElementById('entry').value) || 0;
+      const exit = parseFloat(document.getElementById('exit').value) || 0;
+      const qty = parseFloat(document.getElementById('qty').value) || 0;
+      const feePct = parseFloat(document.getElementById('fee').value) || 0;
+
+      const invested = entry * qty * (1 + feePct / 100);
+      const returned = exit * qty * (1 - feePct / 100);
+      const profit = returned - invested;
+      const pct = invested > 0 ? (profit / invested) * 100 : 0;
+
+      document.getElementById('invested').textContent = '$' + invested.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('returned').textContent = '$' + returned.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      const profitEl = document.getElementById('profit');
+      profitEl.textContent = (profit >= 0 ? '+' : '') + '$' + Math.abs(profit).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      profitEl.style.color = profit >= 0 ? '#16a34a' : '#dc2626';
+      const pctEl = document.getElementById('pct');
+      pctEl.textContent = (pct >= 0 ? '+' : '') + pct.toFixed(2) + '%';
+      pctEl.style.color = pct >= 0 ? '#16a34a' : '#dc2626';
+      document.getElementById('results').style.display = 'block';
+    });
+    document.getElementById('calc-btn').click();
+  </script>
+</BaseLayout>

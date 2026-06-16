@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Crypto Tools" description="Free calculators and tools for crypto and trading investors — position size, DCA, profit, compound interest, and more.">
+  <div style="max-width: 720px; margin: 0 auto; padding: 2rem 0;">
+    <div class="cat-header" style="margin-bottom: 0.5rem;">
+      <span class="icon">🛠️</span>
+      <h1 style="margin:0; font-size:1.8rem;">Crypto Tools</h1>
+    </div>
+    <p style="color:var(--muted); margin-bottom:2rem;">Free calculators and tools for crypto investors and traders. All tools run locally in your browser — nothing is sent to a server.</p>
+
+    <div class="tools-grid">
+      <a href="/crypto-tools/dca-calculator/" class="tool-card">
+        <div class="tool-icon">📈</div>
+        <div class="tool-info">
+          <h3>DCA Calculator</h3>
+          <p>See how dollar-cost averaging grows your investment over time.</p>
+        </div>
+      </a>
+      <a href="/crypto-tools/scam-checker/" class="tool-card">
+        <div class="tool-icon">🔍</div>
+        <div class="tool-info">
+          <h3>Scam URL Checker</h3>
+          <p>Check if a website is a known crypto scam or phishing site.</p>
+        </div>
+      </a>
+      <a href="/crypto-tools/position-size-calculator/" class="tool-card">
+        <div class="tool-icon">🎯</div>
+        <div class="tool-info">
+          <h3>Position Size Calculator</h3>
+          <p>Calculate how much to invest per trade based on your risk tolerance.</p>
+        </div>
+      </a>
+      <a href="/crypto-tools/profit-calculator/" class="tool-card">
+        <div class="tool-icon">💰</div>
+        <div class="tool-info">
+          <h3>Profit Calculator</h3>
+          <p>Calculate profit or loss on your crypto trades.</p>
+        </div>
+      </a>
+      <a href="/crypto-tools/compound-calculator/" class="tool-card">
+        <div class="tool-icon">⚡</div>
+        <div class="tool-info">
+          <h3>Compound Interest Calculator</h3>
+          <p>See how compounding grows your investments exponentially.</p>
+        </div>
+      </a>
+      <a href="/crypto-tools/risk-reward-calculator/" class="tool-card">
+        <div class="tool-icon">⚖️</div>
+        <div class="tool-info">
+          <h3>Risk/Reward Calculator</h3>
+          <p>Calculate the risk/reward ratio for any trade setup.</p>
+        </div>
+      </a>
+      <a href="/crypto-tools/satoshi-converter/" class="tool-card">
+        <div class="tool-icon">🪙</div>
+        <div class="tool-info">
+          <h3>Satoshi Converter</h3>
+          <p>Convert between BTC, satoshis, USD, and INR instantly.</p>
+        </div>
+      </a>
+      <a href="/crypto-tools/leverage-calculator/" class="tool-card">
+        <div class="tool-icon">📊</div>
+        <div class="tool-info">
+          <h3>Leverage Calculator</h3>
+          <p>Calculate liquidation price and margin requirements for leveraged trades.</p>
+        </div>
+      </a>
+      <a href="/crypto-tools/fib-retracement/" class="tool-card">
+        <div class="tool-icon">📐</div>
+        <div class="tool-info">
+          <h3>Fibonacci Retracement</h3>
+          <p>Calculate Fibonacci retracement and extension levels for any price swing.</p>
+        </div>
+      </a>
+      <a href="/crypto-tools/tax-estimator/" class="tool-card">
+        <div class="tool-icon">🧾</div>
+        <div class="tool-info">
+          <h3>Tax Estimator</h3>
+          <p>Estimate your crypto capital gains tax liability.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    .tools-grid { display: grid; gap: 0.75rem; }
+    .tool-card {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1.25rem; background: var(--surface);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      text-decoration: none; color: var(--text);
+      transition: all 0.2s; box-shadow: var(--shadow);
+    }
+    .tool-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-color: var(--accent); }
+    .tool-icon { font-size: 2rem; flex-shrink: 0; }
+    .tool-info h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .tool-info p { font-size: 0.85rem; color: var(--muted); margin: 0; }
+  </style>
+</BaseLayout>

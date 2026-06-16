@@ -1,0 +1,209 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Crypto Tax Estimator" description="Estimate your cryptocurrency capital gains tax. Calculate short-term and long-term gains. Free crypto tax calculator.">
+  <meta name="robots" content="noindex" />
+  <div style="max-width: 600px; margin: 0 auto; padding: 2rem 0;">
+    <div class="cat-header" style="margin-bottom: 0.5rem;">
+      <span class="icon">🧾</span>
+      <h1 style="margin:0; font-size:1.8rem;">Tax Estimator</h1>
+    </div>
+    <p style="color:var(--muted); margin-bottom:2rem;">Estimate your crypto capital gains tax liability.</p>
+
+    <div style="background:var(--surface); padding:1.5rem; border-radius:var(--radius); box-shadow:var(--shadow);">
+      <div style="display:grid; gap:1rem; margin-bottom:1.5rem;">
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Country</label>
+          <select id="country" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);">
+            <option value="us">United States</option>
+            <option value="in">India</option>
+            <option value="uk">United Kingdom</option>
+            <option value="au">Australia</option>
+            <option value="ca">Canada</option>
+            <option value="sg">Singapore</option>
+          </select>
+        </div>
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Short-term Gains ($)</label>
+          <input type="number" id="st-gains" value="5000" min="0" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Long-term Gains ($)</label>
+          <input type="number" id="lt-gains" value="2000" min="0" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Annual Income ($)</label>
+          <input type="number" id="income" value="50000" min="0" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);" />
+        </div>
+      </div>
+      <button id="calc-btn" style="width:100%; padding:0.75rem; background:var(--accent); color:white; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer;">Estimate Tax</button>
+
+      <div id="results" style="display:none; margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--border);">
+        <div id="country-rules" style="font-size:0.82rem; color:var(--muted); margin-bottom:1rem; padding:0.75rem; background:var(--bg); border-radius:8px;"></div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+          <div style="background:var(--bg); padding:1rem; border-radius:8px; text-align:center;">
+            <div style="font-size:0.8rem; color:var(--muted); margin-bottom:0.25rem;">Total Gains</div>
+            <div id="total-gains" style="font-size:1.3rem; font-weight:700; color:var(--text);">$0</div>
+          </div>
+          <div style="background:var(--bg); padding:1rem; border-radius:8px; text-align:center;">
+            <div style="font-size:0.8rem; color:var(--muted); margin-bottom:0.25rem;">Estimated Tax</div>
+            <div id="tax-owed" style="font-size:1.3rem; font-weight:700; color:#dc2626;">$0</div>
+          </div>
+        </div>
+        <div id="tax-breakdown" style="margin-top:1rem; padding:0.75rem; background:var(--bg); border-radius:8px; font-size:0.85rem; color:var(--muted);"></div>
+      </div>
+    </div>
+
+    <div style="margin-top:2rem; background:var(--surface); padding:1.25rem; border-radius:var(--radius); box-shadow:var(--shadow); font-size:0.88rem; color:var(--muted);">
+      <strong style="color:var(--text);">Important:</strong> This is an <strong>estimate only</strong>. Tax laws vary by country and change frequently. Consult a qualified tax professional for your specific situation. The tool uses simplified rate structures — actual calculations may involve deductions, exemptions, and brackets not shown here.
+    </div>
+  </div>
+
+  <script>
+    const countryConfig = {
+      us: {
+        name: 'United States',
+        rules: 'Short-term (&lt;1 year): ordinary income rates (10–37%). Long-term (&gt;1 year): 0%, 15%, or 20% based on income.',
+        stBrackets: [
+          { up: 11000, rate: 0.10 }, { up: 44725, rate: 0.12 }, { up: 95375, rate: 0.22 },
+          { up: 182100, rate: 0.24 }, { up: 231250, rate: 0.32 }, { up: 578125, rate: 0.35 },
+          { up: Infinity, rate: 0.37 },
+        ],
+        ltBrackets: [
+          { up: 44625, rate: 0 }, { up: 492300, rate: 0.15 }, { up: Infinity, rate: 0.20 },
+        ],
+      },
+      in: {
+        name: 'India',
+        rules: 'Flat 30% tax on all crypto gains + 4% cess. 1% TDS applies. No offsetting losses allowed.',
+        stBrackets: [{ up: Infinity, rate: 0.30 }],
+        ltBrackets: [{ up: Infinity, rate: 0.30 }],
+        flatRate: 0.30,
+        cess: 0.04,
+      },
+      uk: {
+        name: 'United Kingdom',
+        rules: 'Capital gains tax: 10% (basic rate) or 20% (higher rate). £6,000 annual allowance (2023/24).',
+        stBrackets: [
+          { up: 37700, rate: 0.10 }, { up: Infinity, rate: 0.20 },
+        ],
+        ltBrackets: [
+          { up: 37700, rate: 0.10 }, { up: Infinity, rate: 0.20 },
+        ],
+        allowance: 6000,
+      },
+      au: {
+        name: 'Australia',
+        rules: 'Short-term (&lt;1 year): marginal income rate. Long-term (&gt;1 year): 50% CGT discount.',
+        stBrackets: [
+          { up: 18200, rate: 0 }, { up: 45000, rate: 0.19 }, { up: 120000, rate: 0.325 },
+          { up: 180000, rate: 0.37 }, { up: Infinity, rate: 0.45 },
+        ],
+        ltBrackets: [
+          { up: 18200, rate: 0 }, { up: 45000, rate: 0.095 }, { up: 120000, rate: 0.1625 },
+          { up: 180000, rate: 0.185 }, { up: Infinity, rate: 0.225 },
+        ],
+        ltDiscount: 0.50,
+      },
+      ca: {
+        name: 'Canada',
+        rules: '50% of capital gains are taxable at marginal income rate. No distinction between ST/LT for crypto.',
+        stBrackets: [
+          { up: 50197, rate: 0.15 }, { up: 100392, rate: 0.205 }, { up: 155625, rate: 0.26 },
+          { up: 221708, rate: 0.29 }, { up: Infinity, rate: 0.33 },
+        ],
+        ltBrackets: null,
+        inclusionRate: 0.50,
+      },
+      sg: {
+        name: 'Singapore',
+        rules: 'No capital gains tax. Crypto trading gains may be taxable if done as a business.',
+        stBrackets: [{ up: Infinity, rate: 0 }],
+        ltBrackets: [{ up: Infinity, rate: 0 }],
+      },
+    };
+
+    function calcTax(gains, brackets, income) {
+      if (!brackets || brackets.length === 0) return 0;
+      let remaining = gains;
+      let totalTax = 0;
+      let prev = 0;
+      for (const b of brackets) {
+        const taxableInBracket = Math.min(remaining, Math.max(0, b.up - prev));
+        if (taxableInBracket <= 0) break;
+        totalTax += taxableInBracket * b.rate;
+        remaining -= taxableInBracket;
+        prev = b.up;
+        if (remaining <= 0) break;
+      }
+      return totalTax;
+    }
+
+    document.getElementById('calc-btn').addEventListener('click', function() {
+      const country = document.getElementById('country').value;
+      const stGains = parseFloat(document.getElementById('st-gains').value) || 0;
+      const ltGains = parseFloat(document.getElementById('lt-gains').value) || 0;
+      const income = parseFloat(document.getElementById('income').value) || 0;
+
+      const cfg = countryConfig[country];
+      const totalGains = stGains + ltGains;
+
+      let taxOwed = 0;
+      let breakdown = '';
+
+      if (country === 'in') {
+        const taxBeforeCess = totalGains * cfg.flatRate;
+        const cess = taxBeforeCess * cfg.cess;
+        taxOwed = taxBeforeCess + cess;
+        breakdown = `Tax: ${(cfg.flatRate * 100).toFixed(0)}% of $${totalGains.toLocaleString()} = $${taxBeforeCess.toLocaleString()}<br>Cess (4%): $${cess.toLocaleString()}<br>1% TDS applies at source.`;
+      } else if (country === 'ca') {
+        const taxableGains = totalGains * cfg.inclusionRate;
+        const effectiveIncome = income + taxableGains;
+        taxOwed = calcTax(taxableGains, cfg.stBrackets, effectiveIncome);
+        breakdown = `Taxable gains (50% inclusion): $${taxableGains.toLocaleString()}<br>Added to income: $${effectiveIncome.toLocaleString()}<br>Tax calculated at marginal rate.`;
+      } else if (country === 'sg') {
+        taxOwed = 0;
+        breakdown = 'Singapore has no capital gains tax. If crypto trading is your primary business, gains may be taxed as income.';
+      } else {
+        const stTax = calcTax(stGains, cfg.stBrackets, income);
+        let effectiveLtGains = ltGains;
+        if (country === 'au') {
+          effectiveLtGains = ltGains * (1 - cfg.ltDiscount);
+        }
+        let ltTax = 0;
+        if (cfg.ltBrackets) {
+          ltTax = calcTax(effectiveLtGains, cfg.ltBrackets, income);
+        } else {
+          ltTax = calcTax(effectiveLtGains, cfg.stBrackets, income);
+        }
+        let allowance = 0;
+        if (country === 'uk') {
+          allowance = cfg.allowance;
+          const taxableTotal = Math.max(0, totalGains - allowance);
+          const stPortion = stGains / totalGains;
+          const ltPortion = ltGains / totalGains;
+          const stTaxable = taxableTotal * (isNaN(stPortion) ? 0 : stPortion);
+          const ltTaxable = taxableTotal * (isNaN(ltPortion) ? 0 : ltPortion);
+          stTax = calcTax(stTaxable, cfg.stBrackets, income);
+          ltTax = calcTax(ltTaxable, cfg.ltBrackets, income);
+        }
+        taxOwed = stTax + ltTax;
+        const parts = [];
+        if (country === 'uk') parts.push(`Annual allowance: $${allowance.toLocaleString()}`);
+        parts.push(`ST gains tax: $${stTax.toLocaleString()}`);
+        if (country === 'au') {
+          parts.push(`LT gains (50% discount applied): $${effectiveLtGains.toLocaleString()}`);
+        }
+        parts.push(`LT gains tax: $${ltTax.toLocaleString()}`);
+        breakdown = parts.join('<br>');
+      }
+
+      document.getElementById('country-rules').innerHTML = '<strong>' + cfg.name + ':</strong> ' + cfg.rules;
+      document.getElementById('total-gains').textContent = '$' + totalGains.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('tax-owed').textContent = '$' + taxOwed.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('tax-breakdown').innerHTML = breakdown;
+      document.getElementById('results').style.display = 'block';
+    });
+    document.getElementById('calc-btn').click();
+  </script>
+</BaseLayout>

@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { glossary } from '../data/glossary';
+
+const sorted = [...glossary].sort((a, b) => a.term.localeCompare(b.term));
+
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+const groups: Record<string, typeof sorted> = {};
+for (const term of sorted) {
+  const letter = term.term[0].toUpperCase();
+  if (!groups[letter]) groups[letter] = [];
+  groups[letter].push(term);
+}
+---
+
+<BaseLayout title="Glossary" description="Crypto and trading glossary. Clear definitions of Bitcoin, forex, and trading terms for beginners.">
+  <div style="max-width: 720px; margin: 0 auto; padding: 2rem 0;">
+    <div class="cat-header" style="margin-bottom: 0.5rem;">
+      <span class="icon">📖</span>
+      <h1 style="margin:0; font-size:1.8rem;">Glossary</h1>
+      <span class="badge">{glossary.length} terms</span>
+    </div>
+    <p style="color:var(--muted); margin-bottom:2rem;">Crypto and trading terms explained in plain language.</p>
+
+    <nav class="a-to-z">
+      {alphabet.map(l => (
+        <a href={`#letter-${l}`} class="a-to-z-link" data-letter={l}>
+          {l}
+        </a>
+      ))}
+    </nav>
+
+    {alphabet.map(l => {
+      const terms = groups[l];
+      if (!terms) return null;
+      return (
+        <div class="letter-group" id={`letter-${l}`}>
+          <h2 class="letter-heading">{l}</h2>
+          {terms.map(t => (
+            <div class="glossary-item">
+              <button class="glossary-term" aria-expanded="false">
+                <span>{t.term}</span>
+                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="glossary-def">
+                <p>{t.definition}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      );
+    })}
+  </div>
+
+  <script>
+    document.querySelectorAll('.glossary-term').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+      });
+    });
+
+    document.querySelectorAll('.a-to-z-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const letter = link.getAttribute('data-letter');
+        const section = document.getElementById(`letter-${letter}`);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+  <style>
+    .a-to-z {
+      display: flex; flex-wrap: wrap; gap: 0.25rem;
+      justify-content: center; margin-bottom: 2.5rem;
+      background: var(--surface); padding: 0.75rem 1rem;
+      border-radius: var(--radius); border: 1px solid var(--border);
+      position: sticky; top: 64px; z-index: 5;
+    }
+    .a-to-z-link {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 2rem; height: 2rem; border-radius: 6px;
+      font-size: 0.85rem; font-weight: 700; text-decoration: none;
+      color: var(--muted); transition: all 0.15s;
+    }
+    .a-to-z-link:hover {
+      background: #f1f5f9; color: var(--accent);
+    }
+
+    .letter-group {
+      margin-bottom: 2rem; scroll-margin-top: 140px;
+    }
+    .letter-heading {
+      font-size: 1.5rem; font-weight: 800; margin-bottom: 0.75rem;
+      padding-bottom: 0.25rem; border-bottom: 3px solid var(--accent);
+      display: inline-block;
+    }
+
+    .glossary-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .glossary-item:last-child { border-bottom: none; }
+
+    .glossary-term {
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%; padding: 0.85rem 0; border: none; background: none;
+      font-size: 0.95rem; font-weight: 600; text-align: left;
+      color: var(--text); cursor: pointer; transition: color 0.15s;
+      gap: 0.75rem;
+    }
+    .glossary-term:hover { color: var(--accent); }
+
+    .chevron {
+      flex-shrink: 0; transition: transform 0.2s;
+      color: var(--muted);
+    }
+    .glossary-term[aria-expanded="true"] .chevron {
+      transform: rotate(180deg);
+    }
+
+    .glossary-def {
+      display: grid; grid-template-rows: 0fr;
+      transition: grid-template-rows 0.25s ease;
+    }
+    .glossary-def > * {
+      overflow: hidden;
+    }
+    .glossary-term[aria-expanded="true"] + .glossary-def {
+      grid-template-rows: 1fr;
+    }
+    .glossary-def p {
+      margin: 0; padding: 0 0 0.85rem;
+      font-size: 0.9rem; color: var(--muted); line-height: 1.65;
+    }
+
+    @media (max-width: 640px) {
+      .a-to-z { gap: 0; }
+      .a-to-z-link { width: 1.75rem; height: 1.75rem; font-size: 0.78rem; }
+    }
+  </style>
+</BaseLayout>

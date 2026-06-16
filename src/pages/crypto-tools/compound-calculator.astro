@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Compound Interest Calculator" description="See how compounding grows your investments exponentially. Free compound interest calculator for crypto and traditional investments.">
+  <meta name="robots" content="noindex" />
+  <div style="max-width: 600px; margin: 0 auto; padding: 2rem 0;">
+    <div class="cat-header" style="margin-bottom: 0.5rem;">
+      <span class="icon">⚡</span>
+      <h1 style="margin:0; font-size:1.8rem;">Compound Interest Calculator</h1>
+    </div>
+    <p style="color:var(--muted); margin-bottom:2rem;">See how compounding grows your investments exponentially.</p>
+
+    <div style="background:var(--surface); padding:1.5rem; border-radius:var(--radius); box-shadow:var(--shadow);">
+      <div style="display:grid; gap:1rem; margin-bottom:1.5rem;">
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Initial Investment ($)</label>
+          <input type="number" id="principal" value="1000" min="0" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Monthly Addition ($)</label>
+          <input type="number" id="monthly" value="100" min="0" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Annual Interest Rate (%)</label>
+          <input type="number" id="rate" value="10" min="0" max="1000" step="0.5" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Time (years)</label>
+          <input type="number" id="years" value="10" min="1" max="100" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.875rem; font-weight:600; margin-bottom:0.3rem; color:var(--text);">Compound Frequency</label>
+          <select id="frequency" style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--border); border-radius:8px; font-size:1rem; background:var(--bg); color:var(--text);">
+            <option value="12">Monthly</option>
+            <option value="4">Quarterly</option>
+            <option value="1">Yearly</option>
+            <option value="365">Daily</option>
+          </select>
+        </div>
+      </div>
+      <button id="calc-btn" style="width:100%; padding:0.75rem; background:var(--accent); color:white; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer;">Calculate</button>
+
+      <div id="results" style="display:none; margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--border);">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+          <div style="background:var(--bg); padding:1rem; border-radius:8px; text-align:center;">
+            <div style="font-size:0.8rem; color:var(--muted); margin-bottom:0.25rem;">Total Contributions</div>
+            <div id="total-contrib" style="font-size:1.3rem; font-weight:700; color:var(--text);">$0</div>
+          </div>
+          <div style="background:var(--bg); padding:1rem; border-radius:8px; text-align:center;">
+            <div style="font-size:0.8rem; color:var(--muted); margin-bottom:0.25rem;">Final Value</div>
+            <div id="final-value" style="font-size:1.3rem; font-weight:700; color:var(--text);">$0</div>
+          </div>
+          <div style="background:var(--bg); padding:1rem; border-radius:8px; text-align:center;">
+            <div style="font-size:0.8rem; color:var(--muted); margin-bottom:0.25rem;">Total Interest</div>
+            <div id="total-interest" style="font-size:1.3rem; font-weight:700; color:#16a34a;">$0</div>
+          </div>
+          <div style="background:var(--bg); padding:1rem; border-radius:8px; text-align:center;">
+            <div style="font-size:0.8rem; color:var(--muted); margin-bottom:0.25rem;">Effective Return</div>
+            <div id="effective-return" style="font-size:1.3rem; font-weight:700; color:#16a34a;">0%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:2rem; background:var(--surface); padding:1.25rem; border-radius:var(--radius); box-shadow:var(--shadow); font-size:0.88rem; color:var(--muted);">
+      <strong style="color:var(--text);">The power of compounding:</strong> Albert Einstein reportedly called compound interest the "eighth wonder of the world." The key is time — even small amounts grow dramatically over decades. For example, $1,000 invested at 10% annual return with $100 monthly additions grows to over $23,000 in 10 years.
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('calc-btn').addEventListener('click', function() {
+      const principal = parseFloat(document.getElementById('principal').value) || 0;
+      const monthly = parseFloat(document.getElementById('monthly').value) || 0;
+      const annualRate = parseFloat(document.getElementById('rate').value) || 0;
+      const years = parseInt(document.getElementById('years').value) || 0;
+      const periodsPerYear = parseInt(document.getElementById('frequency').value) || 12;
+
+      const ratePerPeriod = (annualRate / 100) / periodsPerYear;
+      const totalPeriods = years * periodsPerYear;
+
+      let value = principal;
+      let totalContrib = principal;
+      const monthlyPeriods = 12;
+
+      for (let p = 1; p <= totalPeriods; p++) {
+        value *= (1 + ratePerPeriod);
+        if (p % (periodsPerYear / monthlyPeriods) === 0 && p < totalPeriods) {
+          value += monthly;
+          totalContrib += monthly;
+        }
+      }
+
+      const interest = value - totalContrib;
+      const effectiveReturn = totalContrib > 0 ? (interest / totalContrib) * 100 : 0;
+
+      document.getElementById('total-contrib').textContent = '$' + totalContrib.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('final-value').textContent = '$' + value.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('total-interest').textContent = '$' + interest.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('effective-return').textContent = '+' + effectiveReturn.toFixed(1) + '%';
+      document.getElementById('results').style.display = 'block';
+    });
+    document.getElementById('calc-btn').click();
+  </script>
+</BaseLayout>
