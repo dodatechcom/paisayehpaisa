@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="760" height="320">
+  <rect width="760" height="320" fill="#1a1d23" rx="8"/>
+  <text x="380" y="28" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">FIRE Calculator: When Can You Retire?</text>
+  <text x="380" y="50" fill="#94a3b8" font-size="11" text-anchor="middle">Financial Independence, Retire Early — calculate your path to freedom</text>
+
+  <!-- Input labels -->
+  <text x="80" y="85" fill="#22c55e" font-size="11" font-weight="600">Annual Income</text>
+  <text x="240" y="85" fill="#22c55e" font-size="11" font-weight="600">Annual Expenses</text>
+  <text x="400" y="85" fill="#22c55e" font-size="11" font-weight="600">Current Savings</text>
+  <text x="560" y="85" fill="#22c55e" font-size="11" font-weight="600">Expected Return</text>
+
+  <!-- Input boxes -->
+  <rect x="50" y="95" width="130" height="32" fill="#1e293b" stroke="#334155" rx="4"/>
+  <text x="115" y="116" fill="#e2e8f0" font-size="12" text-anchor="middle">$75,000</text>
+
+  <rect x="210" y="95" width="130" height="32" fill="#1e293b" stroke="#334155" rx="4"/>
+  <text x="275" y="116" fill="#e2e8f0" font-size="12" text-anchor="middle">$45,000</text>
+
+  <rect x="370" y="95" width="130" height="32" fill="#1e293b" stroke="#334155" rx="4"/>
+  <text x="435" y="116" fill="#e2e8f0" font-size="12" text-anchor="middle">$150,000</text>
+
+  <rect x="530" y="95" width="130" height="32" fill="#1e293b" stroke="#334155" rx="4"/>
+  <text x="595" y="116" fill="#e2e8f0" font-size="12" text-anchor="middle">7%</text>
+
+  <!-- Results -->
+  <rect x="40" y="145" width="680" height="160" fill="#1e293b" rx="6"/>
+  <text x="380" y="170" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Your FIRE Numbers</text>
+
+  <!-- Result boxes -->
+  <rect x="60" y="185" width="150" height="100" fill="#1a1d23" rx="4"/>
+  <text x="135" y="210" fill="#94a3b8" font-size="10" text-anchor="middle">Savings Rate</text>
+  <text x="135" y="235" fill="#22c55e" font-size="20" font-weight="700" text-anchor="middle">40%</text>
+  <text x="135" y="255" fill="#94a3b8" font-size="9" text-anchor="middle">$30,000/year saved</text>
+  <text x="135" y="275" fill="#94a3b8" font-size="9" text-anchor="middle">$2,500/month</text>
+
+  <rect x="230" y="185" width="150" height="100" fill="#1a1d23" rx="4"/>
+  <text x="305" y="210" fill="#94a3b8" font-size="10" text-anchor="middle">FIRE Number</text>
+  <text x="305" y="235" fill="#f59e0b" font-size="20" font-weight="700" text-anchor="middle">$1.13M</text>
+  <text x="305" y="255" fill="#94a3b8" font-size="9" text-anchor="middle">25x annual expenses</text>
+  <text x="305" y="275" fill="#94a3b8" font-size="9" text-anchor="middle">4% withdrawal rate</text>
+
+  <rect x="400" y="185" width="150" height="100" fill="#1a1d23" rx="4"/>
+  <text x="475" y="210" fill="#94a3b8" font-size="10" text-anchor="middle">Years to FIRE</text>
+  <text x="475" y="235" fill="#ef4444" font-size="20" font-weight="700" text-anchor="middle">12.4</text>
+  <text x="475" y="255" fill="#94a3b8" font-size="9" text-anchor="middle">Retire at age 42</text>
+  <text x="475" y="275" fill="#94a3b8" font-size="9" text-anchor="middle">If you start at 30</text>
+
+  <rect x="570" y="185" width="130" height="100" fill="#1a1d23" rx="4"/>
+  <text x="635" y="210" fill="#94a3b8" font-size="10" text-anchor="middle">Monthly Invest</text>
+  <text x="635" y="235" fill="#6366f1" font-size="20" font-weight="700" text-anchor="middle">$2,500</text>
+  <text x="635" y="255" fill="#94a3b8" font-size="9" text-anchor="middle">Auto-invest index funds</text>
+  <text x="635" y="275" fill="#94a3b8" font-size="9" text-anchor="middle">VTI + VXUS</text>
+</svg>
