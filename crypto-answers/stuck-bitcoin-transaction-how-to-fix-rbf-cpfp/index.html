@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="en" style="--accent: #7c3aed" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Your Bitcoin transaction has been unconfirmed for hours or days. Here's how to fix a stuck transaction using Replace-by-Fee, Child-Pays-for-Parent, or waiting."><title>Stuck Bitcoin Transaction? How to Fix It With RBF, CPFP, or Patience | PaisayehPaisa</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="alternate" hreflang="en" href="https://paisayehpaisa.com/crypto-answers/stuck-bitcoin-transaction-how-to-fix-rbf-cpfp/"><link rel="alternate" hreflang="x-default" href="https://paisayehpaisa.com/crypto-answers/stuck-bitcoin-transaction-how-to-fix-rbf-cpfp/"><meta property="og:title" content="Stuck Bitcoin Transaction? How to Fix It With RBF, CPFP, or Patience"><meta property="og:description" content="Your Bitcoin transaction has been unconfirmed for hours or days. Here's how to fix a stuck transaction using Replace-by-Fee, Child-Pays-for-Parent, or waiting."><meta property="og:type" content="article"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Stuck Bitcoin Transaction? How to Fix It With RBF, CPFP, or Patience","acceptedAnswer":{"@type":"Answer","text":"Your Bitcoin transaction has been unconfirmed for hours or days. Here's how to fix a stuck transaction using Replace-by-Fee, Child-Pays-for-Parent, or waiting."}}]}</script><link rel="stylesheet" href="/_astro/_slug_.DKMAq3X7.css"></head> <body data-astro-cid-37fxchfa> <header data-astro-cid-37fxchfa> <div class="container-wide" data-astro-cid-37fxchfa> <a href="/" class="logo" data-astro-cid-37fxchfa>paisayeh<span data-astro-cid-37fxchfa>paisa</span></a> <nav data-astro-cid-37fxchfa> <a href="/crypto-basics/" data-astro-cid-37fxchfa>Basics</a> <a href="/safe-crypto/" data-astro-cid-37fxchfa>Safe</a> <a href="/crypto-scam/" data-astro-cid-37fxchfa>Scam</a> <a href="/crypto-answers/" data-astro-cid-37fxchfa>Answers</a> <a href="/crypto-tax/" data-astro-cid-37fxchfa>Tax</a> <a href="/crypto-tools/" data-astro-cid-37fxchfa>Tools</a> <a href="/trading/" data-astro-cid-37fxchfa>Trading</a> <a href="/glossary/" data-astro-cid-37fxchfa>Glossary</a> </nav> </div> </header> <main class="container" data-astro-cid-37fxchfa>  <nav class="breadcrumbs"> <a href="/">Home</a>  <span> / </span> <a href="/crypto-answers/">Crypto Answers</a> <span> / </span> <span>stuck-bitcoin-transaction-how-to-fix-rbf-cpfp</span>  </nav> <h1>Stuck Bitcoin Transaction? How to Fix It With RBF, CPFP, or Patience</h1> <div class="article-meta"> <span>June 16, 2026</span>  </div> <div style="margin-bottom: 1.5rem;"> <span style="background:#fef3c7;color:#92400e;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">₿ bitcoin</span> <span style="background:#eef2ff;color:#4338ca;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🏷️ transactions</span> <span style="background:#eef2ff;color:#4338ca;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🏷️ fees</span> <span style="background:#eef2ff;color:#4338ca;font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">🏷️ mempool</span> </div> <article> <p>“I sent Bitcoin with a low fee and it’s been unconfirmed for 3 days. What do I do?”</p>
+<p>This is one of the most common support questions on BitcoinTalk. You send a transaction, the fee was reasonable yesterday, but today the mempool is congested and miners are ignoring your transaction.</p>
+<p>The good news: <strong>your Bitcoin is not lost.</strong> It’s stuck in limbo, but you have options.</p>
+<h2 id="why-transactions-get-stuck">Why Transactions Get Stuck</h2>
+<p>Every Bitcoin transaction needs a fee paid to miners. When the network is busy, miners prioritize transactions with higher fees. If your fee was too low relative to other pending transactions, miners skip yours.</p>
+<p><strong>The main causes:</strong></p>
+<ul>
+<li>You set a fee during low congestion, then congestion spiked</li>
+<li>You used a wallet with poor fee estimation</li>
+<li>You manually set a fee too low to save money</li>
+<li>A sudden surge in network activity (NFT mints, ordinals, exchange hot wallet movements)</li>
+</ul>
+<p><strong>How to check if your transaction is stuck:</strong></p>
+<ol>
+<li>Get the transaction ID (TXID) from your wallet</li>
+<li>Search it on mempool.space</li>
+<li>If it shows “Unconfirmed” with a red or orange indicator, it’s stuck</li>
+</ol>
+<p><strong>A transaction is “stuck” when:</strong></p>
+<ul>
+<li>It’s been unconfirmed for more than 1 hour during normal network conditions</li>
+<li>Or more than 24 hours during any conditions</li>
+<li>The fee rate (sat/vB) is well below the current market rate</li>
+</ul>
+<h2 id="option-1-replace-by-fee-rbf--best-option">Option 1: Replace-by-Fee (RBF) — Best Option</h2>
+<p>RBF lets you replace your original transaction with a new one that has a higher fee. Not all wallets support it, but most modern ones do.</p>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>Your wallet must have RBF enabled (Electrum, Bitcoin Core, BlueWallet, many others)</li>
+<li>The original transaction must have been created with RBF enabled (or the <code>-rpcservertimeout</code> flag wasn’t set)</li>
+<li>The transaction must not have any confirmations yet</li>
+</ul>
+<p><strong>How to do RBF in Electrum (most common wallet):</strong></p>
+<ol>
+<li>Open Electrum</li>
+<li>Go to History tab</li>
+<li>Right-click the stuck transaction</li>
+<li>Select “Increase fee” or “Bump fee”</li>
+<li>Enter a new fee (check mempool.space for current rates)</li>
+<li>The wallet creates a replacement transaction with a higher fee</li>
+<li>Miners will now see your new transaction and prioritize it</li>
+</ol>
+<p><strong>How to do RBF in Bitcoin Core:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>bumpfee "txid"</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>This replaces the transaction with a higher fee. Use <code>estimatesmartfee</code> first to check the current recommended rate.</p>
+<p><strong>What fee should you use?</strong></p>
+<ul>
+<li>Check mempool.space for “High priority” fee rate</li>
+<li>For a stuck transaction, use the “High priority” rate (not the economy rate)</li>
+<li>Paying 20-50 sat/vB above the current rate ensures fast confirmation</li>
+</ul>
+<p><strong>If RBF doesn’t work:</strong></p>
+<ul>
+<li>Your wallet may not support it</li>
+<li>The transaction may have been created without RBF enabled (check if the transaction has <code>bip125-replaceable: yes</code>)</li>
+<li>Some old wallets don’t support RBF at all — upgrade your wallet</li>
+</ul>
+<aside class="callout tip">
+💡 <strong>Always enable RBF when sending.</strong> Most modern wallets have RBF enabled by default. If your wallet asks, choose "Yes" for RBF. It costs nothing to enable and gives you the option to bump the fee if the transaction gets stuck.
+</aside>
+<h2 id="option-2-child-pays-for-parent-cpfp">Option 2: Child-Pays-for-Parent (CPFP)</h2>
+<p>If RBF is not available, CPFP is your backup. This method works even when the original transaction doesn’t support RBF.</p>
+<p><strong>How CPFP works:</strong></p>
+<p>You create a NEW transaction that spends the unconfirmed output from your stuck transaction. You attach a very high fee to this new transaction. Miners see: “To collect that high fee on the child transaction, I need to confirm the parent transaction first.”</p>
+<p><strong>It’s called “child pays for parent”</strong> — the child transaction pays a high enough fee that miners include both.</p>
+<p><strong>How to do CPFP:</strong></p>
+<ol>
+<li>Find the stuck transaction’s output address (where did you send it?)</li>
+<li>From THAT receiving wallet, create a new transaction sending the output back to yourself (or onward)</li>
+<li>Set an intentionally high fee (80-150 sat/vB)</li>
+<li>Broadcast the new transaction</li>
+<li>Miners will confirm both transactions together</li>
+</ol>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>You must control the receiving wallet (you can’t CPFP if you sent to an exchange or another person’s wallet)</li>
+<li>The receiving wallet must support CPFP (most do: Electrum, BlueWallet, Bitcoin Core)</li>
+</ul>
+<p><strong>In Electrum:</strong></p>
+<ul>
+<li>Right-click the stuck transaction in History</li>
+<li>Select “Child pays for parent”</li>
+<li>Choose a high fee rate</li>
+<li>Broadcast</li>
+</ul>
+<aside class="callout warning">
+⚠️ <strong>CPFP only works if you control the destination address.</strong> If you sent Bitcoin to an exchange or to pay someone, you can't use CPFP because you don't control their wallet. In that case, you must ask the recipient to CPFP from their side.
+</aside>
+<h2 id="option-3-wait-for-the-transaction-to-drop">Option 3: Wait for the Transaction to Drop</h2>
+<p>All unconfirmed transactions eventually expire and return to your wallet. Bitcoin nodes drop transactions from their mempool after 2-14 days.</p>
+<p><strong>What happens when it drops:</strong></p>
+<ul>
+<li>The transaction disappears from the mempool</li>
+<li>The Bitcoin returns to your original wallet</li>
+<li>You can then send it again with a proper fee</li>
+</ul>
+<p><strong>How long it takes:</strong></p>
+<ul>
+<li>Default mempool expiry: ~2 weeks</li>
+<li>Some nodes drop after 72 hours</li>
+<li>If your transaction is “stuck” but still in the mempool, it hasn’t dropped yet</li>
+</ul>
+<p><strong>Risks of waiting:</strong></p>
+<ul>
+<li>If the mempool is highly congested, your transaction may stay stuck for weeks</li>
+<li>You can’t use the Bitcoin while it’s stuck</li>
+<li>In rare cases, a transaction can be pending for months</li>
+</ul>
+<p><strong>The waiting is safe.</strong> Your Bitcoin is not going anywhere. Only the original sender can spend it, and only after the transaction drops.</p>
+<h2 id="option-4-double-spend-risky--not-recommended">Option 4: Double Spend (Risky — Not Recommended)</h2>
+<p>Some wallets let you create a “double spend” — send the same Bitcoin to a different address with a higher fee, hoping miners pick your new transaction instead of the old one.</p>
+<p><strong>This is risky because:</strong></p>
+<ul>
+<li>It looks like a double-spend attempt (which is often associated with fraud)</li>
+<li>Some wallets and nodes reject double-spends</li>
+<li>You could end up with both transactions confirmed (sending Bitcoin twice)</li>
+<li>Exchanges may flag your account</li>
+</ul>
+<p><strong>Only attempt this if:</strong></p>
+<ul>
+<li>RBF and CPFP are both unavailable</li>
+<li>You fully understand the risks</li>
+<li>You’re using a wallet designed for this (not all wallets support it)</li>
+</ul>
+<h2 id="which-option-should-you-use">Which Option Should You Use?</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Situation</th><th>Best option</th></tr></thead><tbody><tr><td>Wallet supports RBF, RBF was enabled</td><td>RBF (bump fee)</td></tr><tr><td>Wallet supports RBF, RBF was NOT enabled</td><td>CPFP or wait</td></tr><tr><td>You control the destination wallet</td><td>CPFP</td></tr><tr><td>You don’t control the destination wallet</td><td>RBF or wait</td></tr><tr><td>No RBF, no CPFP possible</td><td>Wait for drop</td></tr><tr><td>Transaction has been stuck for days</td><td>RBF or CPFP</td></tr><tr><td>Urgent: need to move funds now</td><td>CPFP with very high fee</td></tr></tbody></table>
+<h2 id="how-to-prevent-stuck-transactions">How to Prevent Stuck Transactions</h2>
+<p><strong>1. Use a wallet with good fee estimation</strong></p>
+<p>Modern wallets (Electrum, BlueWallet, Bitcoin Core, Ledger Live) use fee estimation algorithms that track mempool conditions. They rarely set fees too low.</p>
+<p><strong>Other wallets</strong> (especially exchange wallets) may use fixed fees or outdated estimates. If your exchange sends with a low fee, use CPFP or contact support.</p>
+<p><strong>2. Check the mempool before sending</strong></p>
+<p>Before sending a Bitcoin transaction, check:</p>
+<ul>
+<li>mempool.space — shows current recommended fees</li>
+<li>The “High priority” rate ensures confirmation in the next 1-2 blocks</li>
+<li>The “Economy” rate may take hours or a day</li>
+</ul>
+<p><strong>3. Use RBF by default</strong></p>
+<p>Enable RBF on every transaction. It costs nothing and gives you an escape route if the transaction gets stuck.</p>
+<p><strong>4. For large amounts, pay a premium fee</strong></p>
+<p>When moving significant value, pay for the highest fee tier. The difference between “high priority” ($2-5) and “economy” ($0.50-1) is trivial compared to the stress of a stuck transaction.</p>
+<p><strong>5. Consider Lightning Network for small/repeated payments</strong></p>
+<p>Lightning Network transactions are instant and near-zero fee. For small amounts, Lightning is better than on-chain Bitcoin.</p>
+<h2 id="what-not-to-do">What NOT to Do</h2>
+<p><strong>Don’t resend the same Bitcoin from your wallet.</strong> If you try to send the same coins again while the original transaction is pending, your wallet should prevent it — but some wallets don’t. You could accidentally create a double-spend.</p>
+<p><strong>Don’t close your wallet or shut down your computer.</strong> This does not help. Your transaction is on the Bitcoin network, not on your computer. It will eventually resolve regardless.</p>
+<p><strong>Don’t pay a “transaction accelerator” service.</strong> Most are scams that take your money and do nothing. A few legitimate services exist (like ViaBTC’s accelerator), but they have limited slots and no guarantee. Use RBF or CPFP instead — they work better and are free.</p>
+<p><strong>Don’t contact exchange support unless necessary.</strong> If you sent TO an exchange, they may be able to help once the transaction confirms. But they cannot make it confirm faster. Wait for the transaction to process naturally.</p>
+<h2 id="verdict">Verdict</h2>
+<p>A stuck Bitcoin transaction is stressful but fixable.</p>
+<ul>
+<li><strong>If your wallet supports RBF:</strong> Bump the fee. This is the easiest fix.</li>
+<li><strong>If you control the destination:</strong> Use CPFP. It works even without RBF.</li>
+<li><strong>If neither is possible:</strong> Wait 2-14 days. The unspent transaction will drop and funds will return to your wallet.</li>
+</ul>
+<p>In the future, enable RBF on every transaction and check mempool.space’s fee recommendations before sending. The extra $1-2 for a high fee tier is cheap insurance against days of anxiety.</p>
+<p><em>Related: <a href="/crypto-answers/what-is-mempool-and-how-it-works/">What Is Mempool and How Does It Work?</a> | <a href="/crypto-answers/what-is-gas-crypto-transaction-fees/">What Is Gas? Transaction Fees Explained</a> | <a href="/crypto-answers/how-to-read-crypto-transaction-explorer/">How to Read a Crypto Transaction on a Blockchain Explorer</a> | <a href="/crypto-answers/how-to-check-crypto-transaction-status/">How to Check Transaction Status</a></em></p>
+<p><em>BitcoinTalk’s “Bitcoin Technical Support” board has an entire sticky thread “All about stuck transactions” with user-reported solutions. Search for “stuck transaction” to see hundreds of real-world cases.</em></p> </article> <div style="background:#f1f5f9; border-radius:12px; padding:1.25rem 1.5rem; font-size:0.85rem; color:var(--muted); margin-bottom:2rem;"> <strong style="color:var(--text);">📚 Found this helpful?</strong> Share it with someone who's new to crypto.
+    This question was sourced from BitcoinTalk community discussions.
+</div> <div class="disclaimer">
+This content is for educational purposes only. Not financial advice. Do your own research before investing.
+</div>  </main> <footer data-astro-cid-37fxchfa> <div class="container-wide" data-astro-cid-37fxchfa> <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:2rem; margin-bottom:2rem;" data-astro-cid-37fxchfa> <div data-astro-cid-37fxchfa> <p style="font-weight:700; color:var(--text); margin-bottom:0.5rem;" data-astro-cid-37fxchfa>PaisayehPaisa</p> <p data-astro-cid-37fxchfa>Crypto in plain language.</p> </div> <div data-astro-cid-37fxchfa> <p style="font-weight:600; color:var(--text); margin-bottom:0.5rem;" data-astro-cid-37fxchfa>Categories</p> <p data-astro-cid-37fxchfa><a href="/crypto-basics/" data-astro-cid-37fxchfa>Crypto Basics</a></p> <p data-astro-cid-37fxchfa><a href="/safe-crypto/" data-astro-cid-37fxchfa>Safe Crypto</a></p> <p data-astro-cid-37fxchfa><a href="/crypto-scam/" data-astro-cid-37fxchfa>Crypto Scam</a></p> <p data-astro-cid-37fxchfa><a href="/crypto-answers/" data-astro-cid-37fxchfa>Crypto Answers</a></p> </div> <div data-astro-cid-37fxchfa> <p style="font-weight:600; color:var(--text); margin-bottom:0.5rem;" data-astro-cid-37fxchfa>More</p> <p data-astro-cid-37fxchfa><a href="/crypto-tax/" data-astro-cid-37fxchfa>Crypto Tax</a></p> <p data-astro-cid-37fxchfa><a href="/crypto-tools/" data-astro-cid-37fxchfa>Crypto Tools</a></p> <p data-astro-cid-37fxchfa><a href="/trading/" data-astro-cid-37fxchfa>Trading</a></p> <p data-astro-cid-37fxchfa><a href="/glossary/" data-astro-cid-37fxchfa>Glossary</a></p> </div> </div> <div class="disclaimer" data-astro-cid-37fxchfa>
+Educational purposes only. Not financial advice. Do your own research.
+</div> </div> </footer> </body></html>
