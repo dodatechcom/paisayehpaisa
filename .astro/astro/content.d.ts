@@ -1939,9 +1939,23 @@ declare module 'astro:content' {
   collection: "trading";
   data: InferEntrySchema<"trading">
 } & { render(): Render[".md"] };
+"doji-candlestick-pattern.md": {
+	id: "doji-candlestick-pattern.md";
+  slug: "doji-candlestick-pattern";
+  body: string;
+  collection: "trading";
+  data: InferEntrySchema<"trading">
+} & { render(): Render[".md"] };
 "geopolitical-events-financial-markets.md": {
 	id: "geopolitical-events-financial-markets.md";
   slug: "geopolitical-events-financial-markets";
+  body: string;
+  collection: "trading";
+  data: InferEntrySchema<"trading">
+} & { render(): Render[".md"] };
+"hammer-shooting-star.md": {
+	id: "hammer-shooting-star.md";
+  slug: "hammer-shooting-star";
   body: string;
   collection: "trading";
   data: InferEntrySchema<"trading">
