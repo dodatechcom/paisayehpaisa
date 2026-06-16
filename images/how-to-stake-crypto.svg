@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">How to Stake Crypto: Step by Step</text>
+
+  <!-- What is staking -->
+  <rect x="40" y="45" width="340" height="210" fill="#1e293b" rx="6"/>
+  <text x="210" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">What Is Staking?</text>
+
+  <text x="60" y="95" fill="#22c55e" font-size="10" font-weight="600">How It Works</text>
+  <text x="60" y="112" fill="#94a3b8" font-size="9">Lock up crypto to validate</text>
+  <text x="60" y="127" fill="#94a3b8" font-size="9">transactions on a blockchain</text>
+  <text x="60" y="142" fill="#94a3b8" font-size="9">Earn rewards for helping</text>
+  <text x="60" y="157" fill="#94a3b8" font-size="9">secure the network</text>
+
+  <text x="60" y="182" fill="#22c55e" font-size="10" font-weight="600">Why Stake?</text>
+  <text x="60" y="199" fill="#94a3b8" font-size="9">• Earn 3-8% APY on your crypto</text>
+  <text x="60" y="214" fill="#94a3b8" font-size="9">• Passive income while holding</text>
+  <text x="60" y="229" fill="#94a3b8" font-size="9">• Help secure the network</text>
+  <text x="60" y="244" fill="#94a3b8" font-size="9">• Better than leaving idle</text>
+
+  <!-- Staking options -->
+  <rect x="400" y="45" width="320" height="210" fill="#1e293b" rx="6"/>
+  <text x="560" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Staking Options</text>
+
+  <rect x="420" y="85" width="280" height="30" fill="#22c55e" rx="4" opacity="0.15"/>
+  <text x="430" y="104" fill="#22c55e" font-size="9" font-weight="600">Exchange Staking</text>
+  <text x="570" y="104" fill="#94a3b8" font-size="9">Easiest, lowest yield</text>
+
+  <rect x="420" y="120" width="280" height="30" fill="#f59e0b" rx="4" opacity="0.15"/>
+  <text x="430" y="139" fill="#f59e0b" font-size="9" font-weight="600">Liquid Staking</text>
+  <text x="570" y="139" fill="#94a3b8" font-size="9">Keep liquidity, good yield</text>
+
+  <rect x="420" y="155" width="280" height="30" fill="#6366f1" rx="4" opacity="0.15"/>
+  <text x="430" y="174" fill="#6366f1" font-size="9" font-weight="600">Solo Staking</text>
+  <text x="570" y="174" fill="#94a3b8" font-size="9">Highest yield, most work</text>
+
+  <rect x="420" y="190" width="280" height="60" fill="#1a1d23" rx="4"/>
+  <text x="430" y="210" fill="#e2e8f0" font-size="9" font-weight="600">Yields by Method:</text>
+  <text x="430" y="228" fill="#94a3b8" font-size="9">Exchange: 3-5% | Liquid: 4-6%</text>
+  <text x="430" y="243" fill="#94a3b8" font-size="9">Solo: 5-8% | DeFi: 5-12%</text>
+
+  <!-- Step by step -->
+  <rect x="40" y="270" width="680" height="195" fill="#1e293b" rx="6"/>
+  <text x="380" y="295" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Step-by-Step: Staking on Coinbase</text>
+
+  <rect x="60" y="315" width="150" height="135" fill="#1a1d23" rx="4"/>
+  <text x="135" y="338" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">Step 1</text>
+  <text x="70" y="358" fill="#94a3b8" font-size="9">Create account</text>
+  <text x="70" y="375" fill="#94a3b8" font-size="9">Verify identity</text>
+  <text x="70" y="392" fill="#94a3b8" font-size="9">Add payment method</text>
+
+  <rect x="225" y="315" width="150" height="135" fill="#1a1d23" rx="4"/>
+  <text x="300" y="338" fill="#f59e0b" font-size="10" font-weight="700" text-anchor="middle">Step 2</text>
+  <text x="235" y="358" fill="#94a3b8" font-size="9">Buy ETH</text>
+  <text x="235" y="375" fill="#94a3b8" font-size="9">Minimum: 0.001 ETH</text>
+  <text x="235" y="392" fill="#94a3b8" font-size="9">($2-3 at current prices)</text>
+
+  <rect x="390" y="315" width="150" height="135" fill="#1a1d23" rx="4"/>
+  <text x="465" y="338" fill="#6366f1" font-size="10" font-weight="700" text-anchor="middle">Step 3</text>
+  <text x="400" y="358" fill="#94a3b8" font-size="9">Click "Stake"</text>
+  <text x="400" y="375" fill="#94a3b8" font-size="9">Choose ETH</text>
+  <text x="400" y="392" fill="#94a3b8" font-size="9">Select amount</text>
+
+  <rect x="555" y="315" width="145" height="135" fill="#1a1d23" rx="4"/>
+  <text x="627" y="338" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">Step 4</text>
+  <text x="565" y="358" fill="#94a3b8" font-size="9">Confirm stake</text>
+  <text x="565" y="375" fill="#94a3b8" font-size="9">Wait 3-5 days</text>
+  <text x="565" y="392" fill="#94a3b8" font-size="9">Start earning</text>
+</svg>

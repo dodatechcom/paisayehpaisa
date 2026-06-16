@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Term Life vs Whole Life Insurance</text>
+
+  <!-- Term side -->
+  <rect x="40" y="45" width="330" height="420" fill="#1e293b" rx="6"/>
+  <rect x="40" y="45" width="330" height="35" fill="#22c55e" rx="6"/>
+  <rect x="40" y="70" width="330" height="10" fill="#22c55e"/>
+  <text x="205" y="68" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">Term Life Insurance</text>
+
+  <text x="60" y="100" fill="#22c55e" font-size="11" font-weight="600">What It Is</text>
+  <text x="60" y="118" fill="#94a3b8" font-size="10">Covers you for a set period</text>
+  <text x="60" y="134" fill="#94a3b8" font-size="10">(10, 20, or 30 years)</text>
+  <text x="60" y="150" fill="#94a3b8" font-size="10">Pays death benefit only</text>
+
+  <text x="60" y="175" fill="#22c55e" font-size="11" font-weight="600">Cost (30-year-old)</text>
+  <text x="60" y="193" fill="#e2e8f0" font-size="10">$20-30/month for $500K</text>
+
+  <text x="60" y="218" fill="#22c55e" font-size="11" font-weight="600">Pros</text>
+  <text x="60" y="236" fill="#94a3b8" font-size="10">• Very affordable</text>
+  <text x="60" y="252" fill="#94a3b8" font-size="10">• Simple to understand</text>
+  <text x="60" y="268" fill="#94a3b8" font-size="10">• High coverage amounts</text>
+  <text x="60" y="284" fill="#94a3b8" font-size="10">• Lock in low rates young</text>
+
+  <text x="60" y="309" fill="#22c55e" font-size="11" font-weight="600">Cons</text>
+  <text x="60" y="327" fill="#94a3b8" font-size="10">• No cash value</text>
+  <text x="60" y="343" fill="#94a3b8" font-size="10">• Coverage expires</text>
+  <text x="60" y="359" fill="#94a3b8" font-size="10">• No payout if you outlive term</text>
+  <text x="60" y="375" fill="#94a3b8" font-size="10">• Rates increase at renewal</text>
+
+  <text x="60" y="400" fill="#22c55e" font-size="11" font-weight="600">Best For</text>
+  <text x="60" y="418" fill="#e2e8f0" font-size="10">Young families, mortgage holders,</text>
+  <text x="60" y="434" fill="#e2e8f0" font-size="10">people needing temporary coverage</text>
+  <text x="60" y="450" fill="#22c55e" font-size="10">90% of people should choose this</text>
+
+  <!-- Whole side -->
+  <rect x="390" y="45" width="330" height="420" fill="#1e293b" rx="6"/>
+  <rect x="390" y="45" width="330" height="35" fill="#f59e0b" rx="6"/>
+  <rect x="390" y="70" width="330" height="10" fill="#f59e0b"/>
+  <text x="555" y="68" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">Whole Life Insurance</text>
+
+  <text x="410" y="100" fill="#f59e0b" font-size="11" font-weight="600">What It Is</text>
+  <text x="410" y="118" fill="#94a3b8" font-size="10">Covers you for life</text>
+  <text x="410" y="134" fill="#94a3b8" font-size="10">Builds cash value over time</text>
+  <text x="410" y="150" fill="#94a3b8" font-size="10">Guaranteed death benefit</text>
+
+  <text x="410" y="175" fill="#f59e0b" font-size="11" font-weight="600">Cost (30-year-old)</text>
+  <text x="410" y="193" fill="#e2e8f0" font-size="10">$250-400/month for $500K</text>
+
+  <text x="410" y="218" fill="#f59e0b" font-size="11" font-weight="600">Pros</text>
+  <text x="410" y="236" fill="#94a3b8" font-size="10">• Lifetime coverage</text>
+  <text x="410" y="252" fill="#94a3b8" font-size="10">• Builds cash value</text>
+  <text x="410" y="268" fill="#94a3b8" font-size="10">• Guaranteed payout</text>
+  <text x="410" y="284" fill="#94a3b8" font-size="10">• Can borrow against it</text>
+
+  <text x="410" y="309" fill="#f59e0b" font-size="11" font-weight="600">Cons</text>
+  <text x="410" y="327" fill="#94a3b8" font-size="10">• Very expensive</text>
+  <text x="410" y="343" fill="#94a3b8" font-size="10">• Low returns (1-2%)</text>
+  <text x="410" y="359" fill="#94a3b8" font-size="10">• Complex fees</text>
+  <text x="410" y="375" fill="#94a3b8" font-size="10">• Agents push it (high commission)</text>
+
+  <text x="410" y="400" fill="#f59e0b" font-size="11" font-weight="600">Best For</text>
+  <text x="410" y="418" fill="#e2e8f0" font-size="10">High-net-worth individuals,</text>
+  <text x="410" y="434" fill="#e2e8f0" font-size="10">estate planning, business owners</text>
+  <text x="410" y="450" fill="#ef4444" font-size="10">90% of people don't need this</text>
+</svg>

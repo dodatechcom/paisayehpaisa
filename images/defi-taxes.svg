@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">DeFi Taxes: Complete Guide</text>
+
+  <!-- DeFi activities -->
+  <rect x="40" y="45" width="680" height="210" fill="#1e293b" rx="6"/>
+  <text x="380" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">DeFi Activities &amp; Tax Treatment</text>
+
+  <rect x="60" y="82" width="145" height="80" fill="#22c55e" rx="4"/>
+  <text x="132" y="100" fill="#fff" font-size="9" font-weight="700" text-anchor="middle">Swapping Tokens</text>
+  <text x="132" y="115" fill="#e2e8f0" font-size="8" text-anchor="middle">Taxable event</text>
+  <text x="132" y="128" fill="#94a3b8" font-size="8" text-anchor="middle">Capital gains on</text>
+  <text x="132" y="141" fill="#94a3b8" font-size="8" text-anchor="middle">old token</text>
+  <text x="132" y="156" fill="#22c55e" font-size="8" text-anchor="middle">Each swap = sale</text>
+
+  <rect x="220" y="82" width="145" height="80" fill="#f59e0b" rx="4"/>
+  <text x="292" y="100" fill="#fff" font-size="9" font-weight="700" text-anchor="middle">Providing Liquidity</text>
+  <text x="292" y="115" fill="#e2e8f0" font-size="8" text-anchor="middle">NOT taxable</text>
+  <text x="292" y="128" fill="#94a3b8" font-size="8" text-anchor="middle">until you withdraw</text>
+  <text x="292" y="141" fill="#94a3b8" font-size="8" text-anchor="middle">LP tokens = taxable</text>
+  <text x="292" y="156" fill="#f59e0b" font-size="8" text-anchor="middle">Impermanent loss?</text>
+
+  <rect x="380" y="82" width="145" height="80" fill="#6366f1" rx="4"/>
+  <text x="452" y="100" fill="#fff" font-size="9" font-weight="700" text-anchor="middle">Yield Farming</text>
+  <text x="452" y="115" fill="#e2e8f0" font-size="8" text-anchor="middle">Income at receipt</text>
+  <text x="452" y="128" fill="#94a3b8" font-size="8" text-anchor="middle">Fair market value</text>
+  <text x="452" y="141" fill="#94a3b8" font-size="8" text-anchor="middle">when received</text>
+  <text x="452" y="156" fill="#6366f1" font-size="8" text-anchor="middle">Ordinary income</text>
+
+  <rect x="540" y="82" width="160" height="80" fill="#ef4444" rx="4"/>
+  <text x="620" y="100" fill="#fff" font-size="9" font-weight="700" text-anchor="middle">Borrowing Against Crypto</text>
+  <text x="620" y="115" fill="#e2e8f0" font-size="8" text-anchor="middle">NOT taxable</text>
+  <text x="620" y="128" fill="#94a3b8" font-size="8" text-anchor="middle">no taxable event</text>
+  <text x="620" y="141" fill="#94a3b8" font-size="8" text-anchor="middle">unless liquidated</text>
+  <text x="620" y="156" fill="#ef4444" font-size="8" text-anchor="middle">Liquidation = sale</text>
+
+  <rect x="60" y="172" width="145" height="75" fill="#0891b2" rx="4"/>
+  <text x="132" y="190" fill="#fff" font-size="9" font-weight="700" text-anchor="middle">Airdrops</text>
+  <text x="132" y="205" fill="#e2e8f0" font-size="8" text-anchor="middle">Income at receipt</text>
+  <text x="132" y="218" fill="#94a3b8" font-size="8" text-anchor="middle">FMV when received</text>
+  <text x="132" y="231" fill="#0891b2" font-size="8" text-anchor="middle">Report as income</text>
+
+  <rect x="220" y="172" width="145" height="75" fill="#d946ef" rx="4"/>
+  <text x="292" y="190" fill="#fff" font-size="9" font-weight="700" text-anchor="middle">Governance Tokens</text>
+  <text x="292" y="205" fill="#e2e8f0" font-size="8" text-anchor="middle">If earned = income</text>
+  <text x="292" y="218" fill="#94a3b8" font-size="8" text-anchor="middle">If bought = capital</text>
+  <text x="292" y="231" fill="#d946ef" font-size="8" text-anchor="middle">gains when sold</text>
+
+  <!-- Country comparison -->
+  <rect x="40" y="270" width="680" height="195" fill="#1e293b" rx="6"/>
+  <text x="380" y="295" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">DeFi Tax Rates by Country</text>
+
+  <text x="60" y="320" fill="#94a3b8" font-size="10" font-weight="600">Activity</text>
+  <text x="250" y="320" fill="#22c55e" font-size="10" font-weight="600">US Rate</text>
+  <text x="400" y="320" fill="#6366f1" font-size="10" font-weight="600">UK Rate</text>
+  <text x="550" y="320" fill="#f59e0b" font-size="10" font-weight="600">Canada Rate</text>
+
+  <line x1="60" y1="328" x2="660" y2="328" stroke="#334155" stroke-width="1"/>
+
+  <text x="60" y="348" fill="#e2e8f0" font-size="9">Token Swaps</text>
+  <text x="250" y="348" fill="#94a3b8" font-size="9">0-20% LTCG</text>
+  <text x="400" y="348" fill="#94a3b8" font-size="9">18-28% CGT</text>
+  <text x="550" y="348" fill="#94a3b8" font-size="9">50% taxable</text>
+
+  <text x="60" y="368" fill="#e2e8f0" font-size="9">Yield Farming</text>
+  <text x="250" y="368" fill="#94a3b8" font-size="9">10-37% ordinary</text>
+  <text x="400" y="368" fill="#94a3b8" font-size="9">20-45% income</text>
+  <text x="550" y="368" fill="#94a3b8" font-size="9">100% income</text>
+
+  <text x="60" y="388" fill="#e2e8f0" font-size="9">Liquidity Pools</text>
+  <text x="250" y="388" fill="#94a3b8" font-size="9">Varies</text>
+  <text x="400" y="388" fill="#94a3b8" font-size="9">Varies</text>
+  <text x="550" y="388" fill="#94a3b8" font-size="9">Varies</text>
+
+  <text x="60" y="408" fill="#e2e8f0" font-size="9">Airdrops</text>
+  <text x="250" y="408" fill="#94a3b8" font-size="9">Ordinary income</text>
+  <text x="400" y="408" fill="#94a3b8" font-size="9">Income tax</text>
+  <text x="550" y="408" fill="#94a3b8" font-size="9">Income at FMV</text>
+
+  <text x="60" y="428" fill="#e2e8f0" font-size="9">Borrowing</text>
+  <text x="250" y="428" fill="#22c55e" font-size="9">Not taxable</text>
+  <text x="400" y="428" fill="#22c55e" font-size="9">Not taxable</text>
+  <text x="550" y="428" fill="#22c55e" font-size="9">Not taxable</text>
+
+  <text x="60" y="448" fill="#e2e8f0" font-size="9">Liquidation</text>
+  <text x="250" y="448" fill="#ef4444" font-size="9">Taxable sale</text>
+  <text x="400" y="448" fill="#ef4444" font-size="9">Taxable disposal</text>
+  <text x="550" y="448" fill="#ef4444" font-size="9">Taxable disposition</text>
+</svg>

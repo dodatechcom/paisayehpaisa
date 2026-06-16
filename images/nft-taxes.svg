@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">NFT Taxes Explained (US, UK, Canada)</text>
+
+  <!-- Tax events -->
+  <rect x="40" y="45" width="680" height="180" fill="#1e293b" rx="6"/>
+  <text x="380" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">When NFTs Are Taxable</text>
+
+  <rect x="60" y="82" width="155" height="70" fill="#22c55e" rx="4"/>
+  <text x="137" y="100" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">Selling NFT</text>
+  <text x="137" y="115" fill="#e2e8f0" font-size="9" text-anchor="middle">Capital gains tax</text>
+  <text x="137" y="128" fill="#94a3b8" font-size="9" text-anchor="middle">on profit</text>
+  <text x="137" y="145" fill="#22c55e" font-size="9" text-anchor="middle">0-20% (US)</text>
+
+  <rect x="230" y="82" width="155" height="70" fill="#f59e0b" rx="4"/>
+  <text x="307" y="100" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">Buying NFT</text>
+  <text x="307" y="115" fill="#e2e8f0" font-size="9" text-anchor="middle">Usually NOT taxable</text>
+  <text x="307" y="128" fill="#94a3b8" font-size="9" text-anchor="middle">unless paying with crypto</text>
+  <text x="307" y="145" fill="#f59e0b" font-size="9" text-anchor="middle">Crypto swap = taxable</text>
+
+  <rect x="400" y="82" width="155" height="70" fill="#6366f1" rx="4"/>
+  <text x="477" y="100" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">Receiving NFT</text>
+  <text x="477" y="115" fill="#e2e8f0" font-size="9" text-anchor="middle">NOT taxable</text>
+  <text x="477" y="128" fill="#94a3b8" font-size="9" text-anchor="middle">until you sell</text>
+  <text x="477" y="145" fill="#6366f1" font-size="9" text-anchor="middle">Free mint = free</text>
+
+  <rect x="570" y="82" width="135" height="70" fill="#ef4444" rx="4"/>
+  <text x="637" y="100" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">Creating NFT</text>
+  <text x="637" y="115" fill="#e2e8f0" font-size="9" text-anchor="middle">Gas fees NOT</text>
+  <text x="637" y="128" fill="#94a3b8" font-size="9" text-anchor="middle">deductible for</text>
+  <text x="637" y="145" fill="#ef4444" font-size="9" text-anchor="middle">personal NFTs</text>
+
+  <!-- Country comparison -->
+  <rect x="40" y="240" width="680" height="225" fill="#1e293b" rx="6"/>
+  <text x="380" y="265" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">NFT Tax Rules by Country</text>
+
+  <!-- US -->
+  <rect x="60" y="280" width="200" height="175" fill="#1a1d23" rx="4"/>
+  <text x="160" y="300" fill="#22c55e" font-size="12" font-weight="700" text-anchor="middle">United States</text>
+  <text x="70" y="320" fill="#94a3b8" font-size="9">Collectibles rate: 28% max</text>
+  <text x="70" y="336" fill="#94a3b8" font-size="9">Short-term: 10-37%</text>
+  <text x="70" y="352" fill="#94a3b8" font-size="9">Long-term: 0-20%</text>
+  <text x="70" y="368" fill="#94a3b8" font-size="9">Reported on Form 8949</text>
+  <text x="70" y="384" fill="#94a3b8" font-size="9">State tax may apply</text>
+  <text x="70" y="400" fill="#94a3b8" font-size="9">IRS treats as property</text>
+  <text x="70" y="420" fill="#22c55e" font-size="9" font-weight="600">28% collectibles rate</text>
+  <text x="70" y="436" fill="#94a3b8" font-size="8">Higher than stocks (20%)</text>
+
+  <!-- UK -->
+  <rect x="280" y="280" width="200" height="175" fill="#1a1d23" rx="4"/>
+  <text x="380" y="300" fill="#6366f1" font-size="12" font-weight="700" text-anchor="middle">United Kingdom</text>
+  <text x="290" y="320" fill="#94a3b8" font-size="9">Capital Gains Tax: 18-28%</text>
+  <text x="290" y="336" fill="#94a3b8" font-size="9">Annual exempt: 3,000 GBP</text>
+  <text x="290" y="352" fill="#94a3b8" font-size="9">30-day rule applies</text>
+  <text x="290" y="368" fill="#94a3b8" font-size="9">Report via Self Assessment</text>
+  <text x="290" y="384" fill="#94a3b8" font-size="9">HMRC guidance: NFT = asset</text>
+  <text x="290" y="400" fill="#94a3b8" font-size="9">Gaming NFTs may be income</text>
+  <text x="290" y="420" fill="#6366f1" font-size="9" font-weight="600">28% higher rate</text>
+  <text x="290" y="436" fill="#94a3b8" font-size="8">For higher rate taxpayers</text>
+
+  <!-- Canada -->
+  <rect x="500" y="280" width="200" height="175" fill="#1a1d23" rx="4"/>
+  <text x="600" y="300" fill="#f59e0b" font-size="12" font-weight="700" text-anchor="middle">Canada</text>
+  <text x="510" y="320" fill="#94a3b8" font-size="9">50% of gain is taxable</text>
+  <text x="510" y="336" fill="#94a3b8" font-size="9">Taxed at marginal rate</text>
+  <text x="510" y="352" fill="#94a3b8" font-size="9">No specific NFT rules yet</text>
+  <text x="510" y="368" fill="#94a3b8" font-size="9">CRA treats as commodity</text>
+  <text x="510" y="384" fill="#94a3b8" font-size="9">Report on T1 return</text>
+  <text x="510" y="400" fill="#94a3b8" font-size="9">Provincial tax applies</text>
+  <text x="510" y="420" fill="#f59e0b" font-size="9" font-weight="600">~25% effective rate</text>
+  <text x="510" y="436" fill="#94a3b8" font-size="8">Varies by province</text>
+</svg>

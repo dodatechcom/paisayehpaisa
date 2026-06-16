@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Renters vs Homeowners Insurance</text>
+
+  <!-- Renters side -->
+  <rect x="40" y="45" width="330" height="420" fill="#1e293b" rx="6"/>
+  <rect x="40" y="45" width="330" height="35" fill="#6366f1" rx="6"/>
+  <rect x="40" y="70" width="330" height="10" fill="#6366f1"/>
+  <text x="205" y="68" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">Renters Insurance</text>
+
+  <text x="60" y="100" fill="#6366f1" font-size="11" font-weight="600">What It Covers</text>
+  <text x="60" y="118" fill="#94a3b8" font-size="10">• Personal property ($15-30K)</text>
+  <text x="60" y="134" fill="#94a3b8" font-size="10">• Liability ($100K)</text>
+  <text x="60" y="150" fill="#94a3b8" font-size="10">• Additional living expenses</text>
+  <text x="60" y="166" fill="#94a3b8" font-size="10">• Medical payments to others</text>
+
+  <text x="60" y="191" fill="#6366f1" font-size="11" font-weight="600">Cost</text>
+  <text x="60" y="209" fill="#e2e8f0" font-size="10">$15-30/month ($180-360/year)</text>
+
+  <text x="60" y="234" fill="#6366f1" font-size="11" font-weight="600">What's NOT Covered</text>
+  <text x="60" y="252" fill="#94a3b8" font-size="10">• The building itself</text>
+  <text x="60" y="268" fill="#94a3b8" font-size="10">• Flooding</text>
+  <text x="60" y="284" fill="#94a3b8" font-size="10">• Earthquakes</text>
+  <text x="60" y="300" fill="#94a3b8" font-size="10">• Roommate's belongings</text>
+
+  <text x="60" y="325" fill="#6366f1" font-size="11" font-weight="600">Who Needs It</text>
+  <text x="60" y="343" fill="#e2e8f0" font-size="10">Every renter. Period.</text>
+  <text x="60" y="359" fill="#94a3b8" font-size="10">Landlord's insurance doesn't</text>
+  <text x="60" y="375" fill="#94a3b8" font-size="10">cover YOUR stuff.</text>
+
+  <text x="60" y="400" fill="#6366f1" font-size="11" font-weight="600">Pro Tip</text>
+  <text x="60" y="418" fill="#e2e8f0" font-size="10">Bundle with auto insurance</text>
+  <text x="60" y="434" fill="#e2e8f0" font-size="10">for 10-20% discount.</text>
+
+  <!-- Homeowners side -->
+  <rect x="390" y="45" width="330" height="420" fill="#1e293b" rx="6"/>
+  <rect x="390" y="45" width="330" height="35" fill="#22c55e" rx="6"/>
+  <rect x="390" y="70" width="330" height="10" fill="#22c55e"/>
+  <text x="555" y="68" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">Homeowners Insurance</text>
+
+  <text x="410" y="100" fill="#22c55e" font-size="11" font-weight="600">What It Covers</text>
+  <text x="410" y="118" fill="#94a3b8" font-size="10">• Dwelling (building)</text>
+  <text x="410" y="134" fill="#94a3b8" font-size="10">• Personal property ($50-100K)</text>
+  <text x="410" y="150" fill="#94a3b8" font-size="10">• Liability ($300K+)</text>
+  <text x="410" y="166" fill="#94a3b8" font-size="10">• Other structures (garage, shed)</text>
+
+  <text x="410" y="191" fill="#22c55e" font-size="11" font-weight="600">Cost</text>
+  <text x="410" y="209" fill="#e2e8f0" font-size="10">$100-200/month ($1,200-2,400/yr)</text>
+
+  <text x="410" y="234" fill="#22c55e" font-size="11" font-weight="600">What's NOT Covered</text>
+  <text x="410" y="252" fill="#94a3b8" font-size="10">• Flooding (need separate policy)</text>
+  <text x="410" y="268" fill="#94a3b8" font-size="10">• Earthquakes (need separate)</text>
+  <text x="410" y="284" fill="#94a3b8" font-size="10">• Neglect / poor maintenance</text>
+  <text x="410" y="300" fill="#94a3b8" font-size="10">• War / nuclear hazard</text>
+
+  <text x="410" y="325" fill="#22c55e" font-size="11" font-weight="600">Who Needs It</text>
+  <text x="410" y="343" fill="#e2e8f0" font-size="10">Every homeowner. Required</text>
+  <text x="410" y="359" fill="#e2e8f0" font-size="10">by mortgage lenders.</text>
+  <text x="410" y="375" fill="#94a3b8" font-size="10">Don't skip this.</text>
+
+  <text x="410" y="400" fill="#22c55e" font-size="11" font-weight="600">Pro Tip</text>
+  <text x="410" y="418" fill="#e2e8f0" font-size="10">Get replacement cost coverage,</text>
+  <text x="410" y="434" fill="#e2e8f0" font-size="10">not actual cash value.</text>
+</svg>
