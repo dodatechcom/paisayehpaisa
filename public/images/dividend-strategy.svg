@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Dividend Investing: How to Build Monthly Income</text>
+
+  <!-- Dividend growth chart -->
+  <rect x="40" y="50" width="430" height="200" fill="#1e293b" rx="6"/>
+  <text x="255" y="72" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Dividend Growth Over Time</text>
+  <text x="50" y="100" fill="#64748b" font-size="10">Year 1</text>
+  <text x="140" y="100" fill="#64748b" font-size="10">Year 5</text>
+  <text x="250" y="100" fill="#64748b" font-size="10">Year 10</text>
+  <text x="350" y="100" fill="#64748b" font-size="10">Year 15</text>
+  <text x="440" y="100" fill="#64748b" font-size="10">Year 20</text>
+  <!-- Bar chart -->
+  <rect x="50" y="160" width="50" height="40" fill="#22c55e" rx="2"/>
+  <text x="75" y="175" fill="#fff" font-size="9" text-anchor="middle">$600</text>
+  <rect x="140" y="140" width="50" height="60" fill="#22c55e" rx="2"/>
+  <text x="165" y="165" fill="#fff" font-size="9" text-anchor="middle">$1,200</text>
+  <rect x="250" y="110" width="50" height="90" fill="#22c55e" rx="2"/>
+  <text x="275" y="145" fill="#fff" font-size="9" text-anchor="middle">$2,400</text>
+  <rect x="350" y="80" width="50" height="120" fill="#22c55e" rx="2"/>
+  <text x="375" y="135" fill="#fff" font-size="9" text-anchor="middle">$4,800</text>
+  <rect x="440" y="55" width="50" height="145" fill="#22c55e" rx="2"/>
+  <text x="465" y="125" fill="#fff" font-size="9" text-anchor="middle">$9,600</text>
+  <text x="255" y="235" fill="#94a3b8" font-size="10" text-anchor="middle">Starting with 20,000 at 3% dividend yield, reinvesting at 8% growth</text>
+
+  <!-- Top dividend ETFs -->
+  <rect x="490" y="50" width="230" height="200" fill="#1e293b" rx="6"/>
+  <text x="605" y="72" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Top Dividend ETFs</text>
+  <text x="505" y="100" fill="#22c55e" font-size="11" font-weight="600">VYM (Vanguard High Yield)</text>
+  <text x="505" y="116" fill="#94a3b8" font-size="10">Yield: 2.8% | Fee: 0.06%</text>
+  <text x="505" y="136" fill="#6366f1" font-size="11" font-weight="600">SCHD (Schwab Dividend)</text>
+  <text x="505" y="152" fill="#94a3b8" font-size="10">Yield: 3.2% | Fee: 0.06%</text>
+  <text x="505" y="172" fill="#d97706" font-size="11" font-weight="600">VIG (Vanguard Div Growth)</text>
+  <text x="505" y="188" fill="#94a3b8" font-size="10">Yield: 1.8% | Fee: 0.06%</text>
+  <text x="505" y="208" fill="#059669" font-size="11" font-weight="600">JEPI (JPMorgan Equity)</text>
+  <text x="505" y="224" fill="#94a3b8" font-size="10">Yield: 7.2% | Fee: 0.35%</text>
+  <text x="505" y="240" fill="#ef4444" font-size="11" font-weight="600">SCHP (TIPS Inflation)</text>
+  <text x="505" y="256" fill="#94a3b8" font-size="10">Yield: 4.5% | Fee: 0.05%</text>
+
+  <!-- Bottom section: strategy -->
+  <rect x="40" y="270" width="680" height="195" fill="#1e293b" rx="6"/>
+  <text x="380" y="295" fill="#e2e8f0" font-size="14" font-weight="700" text-anchor="middle">The Dividend Snowball Strategy</text>
+
+  <rect x="60" y="310" width="195" height="60" fill="#1a1d23" rx="4"/>
+  <text x="157" y="330" fill="#22c55e" font-size="11" font-weight="600" text-anchor="middle">Step 1: Build</text>
+  <text x="157" y="346" fill="#94a3b8" font-size="10" text-anchor="middle">Invest in 3-5 dividend ETFs</text>
+  <text x="157" y="360" fill="#94a3b8" font-size="10" text-anchor="middle">Target: 20,000 initial</text>
+
+  <rect x="280" y="310" width="195" height="60" fill="#1a1d23" rx="4"/>
+  <text x="377" y="330" fill="#6366f1" font-size="11" font-weight="600" text-anchor="middle">Step 2: Reinvest</text>
+  <text x="377" y="346" fill="#94a3b8" font-size="10" text-anchor="middle">DRIP all dividends</text>
+  <text x="377" y="360" fill="#94a3b8" font-size="10" text-anchor="middle">Compound for 10+ years</text>
+
+  <rect x="500" y="310" width="195" height="60" fill="#1a1d23" rx="4"/>
+  <text x="597" y="330" fill="#d97706" font-size="11" font-weight="600" text-anchor="middle">Step 3: Collect</text>
+  <text x="597" y="346" fill="#94a3b8" font-size="10" text-anchor="middle">Shift to income phase</text>
+  <text x="597" y="360" fill="#94a3b8" font-size="10" text-anchor="middle">Live off dividends</text>
+
+  <text x="380" y="405" fill="#94a3b8" font-size="11" text-anchor="middle">Example: 20,000 invested at 3% yield = $600/year. After 10 years of reinvesting at 8% growth:</text>
+  <text x="380" y="425" fill="#22c55e" font-size="13" font-weight="700" text-anchor="middle">Portfolio: 50,000+ | Annual Dividends: 2,400+ | Monthly Income: 200+</text>
+  <text x="380" y="448" fill="#64748b" font-size="10" text-anchor="middle">This is the power of dividend reinvestment and compound growth</text>
+</svg>

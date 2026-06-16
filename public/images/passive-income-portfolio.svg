@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Passive Income Portfolio: Build From Scratch</text>
+
+  <!-- 4 income streams -->
+  <rect x="40" y="50" width="165" height="170" fill="#1e293b" rx="6"/>
+  <rect x="40" y="50" width="165" height="28" fill="#22c55e" rx="6"/>
+  <rect x="40" y="70" width="165" height="8" fill="#22c55e"/>
+  <text x="122" y="69" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Dividends</text>
+  <text x="55" y="98" fill="#94a3b8" font-size="10">What: ETFs that pay</text>
+  <text x="55" y="114" fill="#94a3b8" font-size="10">quarterly dividends</text>
+  <text x="55" y="134" fill="#94a3b8" font-size="10">Yield: 2-4% /year</text>
+  <text x="55" y="150" fill="#94a3b8" font-size="10">Example: SCHD, VYM</text>
+  <text x="55" y="174" fill="#22c55e" font-size="11" font-weight="600">30% of portfolio</text>
+  <text x="55" y="190" fill="#94a3b8" font-size="10">Reliable quarterly income</text>
+
+  <rect x="215" y="50" width="165" height="170" fill="#1e293b" rx="6"/>
+  <rect x="215" y="50" width="165" height="28" fill="#6366f1" rx="6"/>
+  <rect x="215" y="70" width="165" height="8" fill="#6366f1"/>
+  <text x="297" y="69" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Bond Interest</text>
+  <text x="230" y="98" fill="#94a3b8" font-size="10">What: Bond ETFs</text>
+  <text x="230" y="114" fill="#94a3b8" font-size="10">and Treasury bonds</text>
+  <text x="230" y="134" fill="#94a3b8" font-size="10">Yield: 4-5% /year</text>
+  <text x="230" y="150" fill="#94a3b8" font-size="10">Example: BND, AGG</text>
+  <text x="230" y="174" fill="#6366f1" font-size="11" font-weight="600">25% of portfolio</text>
+  <text x="230" y="190" fill="#94a3b8" font-size="10">Stable, predictable returns</text>
+
+  <rect x="390" y="50" width="165" height="170" fill="#1e293b" rx="6"/>
+  <rect x="390" y="50" width="165" height="28" fill="#d97706" rx="6"/>
+  <rect x="390" y="70" width="165" height="8" fill="#d97706"/>
+  <text x="472" y="69" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">REITs</text>
+  <text x="405" y="98" fill="#94a3b8" font-size="10">What: Real estate funds</text>
+  <text x="405" y="114" fill="#94a3b8" font-size="10">that own properties</text>
+  <text x="405" y="134" fill="#94a3b8" font-size="10">Yield: 3-5% /year</text>
+  <text x="405" y="150" fill="#94a3b8" font-size="10">Example: VNQ, O</text>
+  <text x="405" y="174" fill="#d97706" font-size="11" font-weight="600">20% of portfolio</text>
+  <text x="405" y="190" fill="#94a3b8" font-size="10">Real estate exposure</text>
+
+  <rect x="565" y="50" width="155" height="170" fill="#1e293b" rx="6"/>
+  <rect x="565" y="50" width="155" height="28" fill="#ef4444" rx="6"/>
+  <rect x="565" y="70" width="155" height="8" fill="#ef4444"/>
+  <text x="642" y="69" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Crypto Yield</text>
+  <text x="580" y="98" fill="#94a3b8" font-size="10">What: Staking and</text>
+  <text x="580" y="114" fill="#94a3b8" font-size="10">yield farming</text>
+  <text x="580" y="134" fill="#94a3b8" font-size="10">Yield: 3-8% /year</text>
+  <text x="580" y="150" fill="#94a3b8" font-size="10">Example: ETH staking</text>
+  <text x="580" y="174" fill="#ef4444" font-size="11" font-weight="600">15% of portfolio</text>
+  <text x="580" y="190" fill="#94a3b8" font-size="10">Higher risk, higher yield</text>
+
+  <!-- Bottom section: portfolio breakdown -->
+  <rect x="40" y="240" width="680" height="225" fill="#1e293b" rx="6"/>
+  <text x="380" y="265" fill="#e2e8f0" font-size="14" font-weight="700" text-anchor="middle">The 4-Income Stream Portfolio</text>
+
+  <!-- Pie chart representation -->
+  <circle cx="150" cy="340" r="65" fill="none" stroke="#22c55e" stroke-width="20" stroke-dasharray="122 288" stroke-dashoffset="0"/>
+  <circle cx="150" cy="340" r="65" fill="none" stroke="#6366f1" stroke-width="20" stroke-dasharray="102 288" stroke-dashoffset="-122"/>
+  <circle cx="150" cy="340" r="65" fill="none" stroke="#d97706" stroke-width="20" stroke-dasharray="82 288" stroke-dashoffset="-224"/>
+  <circle cx="150" cy="340" r="65" fill="none" stroke="#ef4444" stroke-width="20" stroke-dasharray="62 288" stroke-dashoffset="-306"/>
+
+  <!-- Legend -->
+  <text x="260" y="305" fill="#22c55e" font-size="11" font-weight="600">30% Dividends (SCHD, VYM)</text>
+  <text x="260" y="325" fill="#6366f1" font-size="11" font-weight="600">25% Bonds (BND, AGG)</text>
+  <text x="260" y="345" fill="#d97706" font-size="11" font-weight="600">20% REITs (VNQ, O)</text>
+  <text x="260" y="365" fill="#ef4444" font-size="11" font-weight="600">15% Crypto Yield (ETH staking)</text>
+  <text x="260" y="385" fill="#94a3b8" font-size="11" font-weight="600">10% High-Yield Savings</text>
+
+  <!-- Expected returns -->
+  <rect x="260" y="400" width="440" height="55" fill="#1a1d23" rx="4"/>
+  <text x="480" y="420" fill="#22c55e" font-size="12" font-weight="600" text-anchor="middle">Expected Annual Return</text>
+  <text x="480" y="440" fill="#94a3b8" font-size="11" text-anchor="middle">Combined yield: 3.5-4.5% | Total return: 8-10% | Risk: Medium</text>
+</svg>

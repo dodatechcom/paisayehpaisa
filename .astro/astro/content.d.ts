@@ -1748,9 +1748,23 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "investing": {
+"asset-allocation-by-age.md": {
+	id: "asset-allocation-by-age.md";
+  slug: "asset-allocation-by-age";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
 "best-etfs-2026.md": {
 	id: "best-etfs-2026.md";
   slug: "best-etfs-2026";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
+"dividend-investing.md": {
+	id: "dividend-investing.md";
+  slug: "dividend-investing";
   body: string;
   collection: "investing";
   data: InferEntrySchema<"investing">
@@ -1765,6 +1779,20 @@ declare module 'astro:content' {
 "how-to-invest-10000.md": {
 	id: "how-to-invest-10000.md";
   slug: "how-to-invest-10000";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
+"market-crash-strategy.md": {
+	id: "market-crash-strategy.md";
+  slug: "market-crash-strategy";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
+"passive-income-portfolio.md": {
+	id: "passive-income-portfolio.md";
+  slug: "passive-income-portfolio";
   body: string;
   collection: "investing";
   data: InferEntrySchema<"investing">
