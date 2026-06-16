@@ -1,0 +1,213 @@
+---
+export interface Props {
+  currentSlug: string;
+  currentCategory: string;
+}
+
+const { currentSlug, currentCategory } = Astro.props;
+
+// Internal linking map - related articles by category and topic
+const relatedMap: Record<string, string[]> = {
+  // Crypto basics
+  'how-to-read-crypto-charts': ['bull-bear-market-crypto', 'how-to-stake-crypto', 'crypto-market-cap-explained'],
+  'crypto-wallets-explained': ['how-to-stake-crypto', 'crypto-market-cap-explained', 'how-to-read-crypto-charts'],
+  'how-to-stake-crypto': ['crypto-wallets-explained', 'staking-income-taxes', 'passive-income-portfolio'],
+  'crypto-market-cap-explained': ['how-to-read-crypto-charts', 'crypto-wallets-explained', 'bull-bear-market-crypto'],
+  'bull-bear-market-crypto': ['how-to-read-crypto-charts', 'market-crash-strategy', 'crypto-market-cap-explained'],
+
+  // Crypto tax
+  'nft-taxes-explained': ['defi-taxes-explained', 'how-to-file-crypto-taxes', 'crypto-tax-loss-harvesting'],
+  'staking-income-taxes': ['how-to-stake-crypto', 'defi-taxes-explained', 'how-to-file-crypto-taxes'],
+  'defi-taxes-explained': ['nft-taxes-explained', 'staking-income-taxes', 'crypto-tax-loss-harvesting'],
+  'crypto-tax-loss-harvesting': ['how-to-file-crypto-taxes', 'nft-taxes-explained', 'defi-taxes-explained'],
+  'how-to-file-crypto-taxes': ['crypto-tax-loss-harvesting', 'nft-taxes-explained', 'staking-income-taxes'],
+
+  // Insurance
+  'term-vs-whole-life': ['renters-vs-homeowners', 'us-vs-uk-vs-canada-insurance', 'hmo-vs-ppo'],
+  'renters-vs-homeowners': ['term-vs-whole-life', 'auto-insurance-full-vs-liability', 'us-vs-uk-vs-canada-insurance'],
+  'us-vs-uk-vs-canada-insurance': ['term-vs-whole-life', 'renters-vs-homeowners', 'auto-insurance-full-vs-liability'],
+  'auto-insurance-full-vs-liability': ['renters-vs-homeowners', 'us-vs-uk-vs-canada-insurance', 'hmo-vs-ppo'],
+  'hmo-vs-ppo': ['us-vs-uk-vs-canada-insurance', 'term-vs-whole-life', 'auto-insurance-full-vs-liability'],
+
+  // Investing
+  'investing-in-your-20s': ['investing-in-your-30s', 'best-etfs-2026', 'how-to-invest-1000'],
+  'investing-in-your-30s': ['investing-in-your-20s', 'investing-at-40', 'asset-allocation-by-age'],
+  'investing-at-40': ['investing-in-your-30s', 'investing-at-50', 'asset-allocation-by-age'],
+  'investing-at-50': ['investing-at-40', 'investing-after-60', 'asset-allocation-by-age'],
+  'investing-after-60': ['investing-at-50', 'passive-income-portfolio', 'safe-investments-high-returns'],
+  'best-etfs-2026': ['etf-vs-mutual-fund', 'how-to-invest-1000', 'how-to-invest-10000'],
+  'how-to-invest-1000': ['best-etfs-2026', 'how-to-invest-10000', 'investing-in-your-20s'],
+  'how-to-invest-10000': ['how-to-invest-1000', 'best-etfs-2026', 'etf-vs-mutual-fund'],
+  'dividend-investing': ['passive-income-portfolio', 'best-etfs-2026', 'safe-investments-high-returns'],
+  'passive-income-portfolio': ['dividend-investing', 'safe-investments-high-returns', 'investing-after-60'],
+  'asset-allocation-by-age': ['investing-in-your-20s', 'investing-in-your-30s', 'investing-at-40'],
+  'market-crash-strategy': ['bull-bear-market-crypto', 'asset-allocation-by-age', 'investing-at-40'],
+  'safe-investments-high-returns': ['passive-income-portfolio', 'dividend-investing', 'best-etfs-2026'],
+  'etf-vs-mutual-fund': ['best-etfs-2026', 'how-to-invest-1000', 'stocks-vs-real-estate'],
+  'stocks-vs-real-estate': ['etf-vs-mutual-fund', 'crypto-vs-gold', 'best-etfs-2026'],
+  'crypto-vs-gold': ['stocks-vs-real-estate', 'bull-bear-market-crypto', 'market-crash-strategy'],
+
+  // Trading
+  'bullish-engulfing-pattern': ['doji-candlestick-pattern', 'hammer-shooting-star', 'how-to-read-crypto-charts'],
+  'doji-candlestick-pattern': ['bullish-engulfing-pattern', 'hammer-shooting-star', 'how-to-read-crypto-charts'],
+  'hammer-shooting-star': ['bullish-engulfing-pattern', 'doji-candlestick-pattern', 'how-to-read-crypto-charts'],
+
+  // Blog
+  'bitcoin-etf-impact-2026': ['crypto-market-update-q2-2026', 'fed-rate-cuts-2026', 'bull-bear-market-crypto'],
+  'fed-rate-cuts-2026': ['bitcoin-etf-impact-2026', 'safe-investments-high-returns', 'asset-allocation-by-age'],
+  'crypto-market-update-q2-2026': ['bitcoin-etf-impact-2026', 'bull-bear-market-crypto', 'market-crash-strategy'],
+  'ai-investing-2026': ['best-etfs-2026', 'etf-vs-mutual-fund', 'how-to-invest-10000'],
+};
+
+const relatedSlugs = relatedMap[currentSlug] || [];
+
+// Static related posts data
+const relatedData: Record<string, { title: string; description: string; category: string }> = {
+  'how-to-read-crypto-charts': { title: 'How to Read Crypto Charts', description: 'Learn candlesticks, trends, and patterns', category: 'crypto-basics' },
+  'crypto-wallets-explained': { title: 'Crypto Wallets Explained', description: 'Hot vs cold, custodial vs self-custody', category: 'crypto-basics' },
+  'how-to-stake-crypto': { title: 'How to Stake Crypto', description: 'Earn 3-20% APY on your crypto holdings', category: 'crypto-basics' },
+  'crypto-market-cap-explained': { title: 'Crypto Market Cap Explained', description: 'The most important metric in crypto', category: 'crypto-basics' },
+  'bull-bear-market-crypto': { title: 'Bull vs Bear Market in Crypto', description: 'How to spot and profit from market cycles', category: 'crypto-basics' },
+  'nft-taxes-explained': { title: 'NFT Taxes Explained', description: 'How NFTs are taxed in US, UK, Canada', category: 'crypto-tax' },
+  'staking-income-taxes': { title: 'Staking Income Taxes', description: 'Tax treatment of crypto staking rewards', category: 'crypto-tax' },
+  'defi-taxes-explained': { title: 'DeFi Taxes Explained', description: 'Swaps, yield farming, and liquidity pools', category: 'crypto-tax' },
+  'crypto-tax-loss-harvesting': { title: 'Crypto Tax-Loss Harvesting', description: 'Reduce your tax bill by harvesting losses', category: 'crypto-tax' },
+  'how-to-file-crypto-taxes': { title: 'How to File Crypto Taxes', description: 'Step-by-step guide to filing crypto taxes', category: 'crypto-tax' },
+  'term-vs-whole-life': { title: 'Term vs Whole Life Insurance', description: 'Why 90% of people should choose term', category: 'insurance' },
+  'renters-vs-homeowners': { title: 'Renters vs Homeowners Insurance', description: 'What each covers and why you need it', category: 'insurance' },
+  'us-vs-uk-vs-canada-insurance': { title: 'US vs UK vs Canada Insurance', description: 'How insurance differs by country', category: 'insurance' },
+  'auto-insurance-full-vs-liability': { title: 'Auto Insurance: Full vs Liability', description: 'When to choose each and how to save', category: 'insurance' },
+  'hmo-vs-ppo': { title: 'HMO vs PPO Health Insurance', description: 'Which plan type is right for you', category: 'insurance' },
+  'investing-in-your-20s': { title: 'Investing in Your 20s', description: 'Start early, retire rich', category: 'investing' },
+  'investing-in-your-30s': { title: 'Investing in Your 30s', description: 'Peak earning years strategy', category: 'investing' },
+  'investing-at-40': { title: 'Investing at 40', description: 'How to build wealth before retirement', category: 'investing' },
+  'investing-at-50': { title: 'Investing at 50', description: 'Catch-up strategy to retire comfortably', category: 'investing' },
+  'investing-after-60': { title: 'Investing After 60', description: 'Retirement income strategy', category: 'investing' },
+  'best-etfs-2026': { title: 'Best ETFs 2026', description: 'Top ETFs for every investor', category: 'investing' },
+  'how-to-invest-1000': { title: 'How to Invest $1,000', description: '5 options ranked by risk', category: 'investing' },
+  'how-to-invest-10000': { title: 'How to Invest $10,000', description: 'Conservative DCA strategy', category: 'investing' },
+  'dividend-investing': { title: 'Dividend Investing Strategy', description: 'Snowball approach to passive income', category: 'investing' },
+  'passive-income-portfolio': { title: 'Passive Income Portfolio', description: '4 income streams to build wealth', category: 'investing' },
+  'asset-allocation-by-age': { title: 'Asset Allocation by Age', description: 'The right portfolio for your age', category: 'investing' },
+  'market-crash-strategy': { title: 'Market Crash Strategy', description: 'What to do when stocks plunge 20%+', category: 'investing' },
+  'safe-investments-high-returns': { title: 'Safe Investments With High Returns', description: '4-5% yields with zero risk', category: 'investing' },
+  'etf-vs-mutual-fund': { title: 'ETFs vs Mutual Funds', description: 'Which is better for you', category: 'investing' },
+  'stocks-vs-real-estate': { title: 'Stocks vs Real Estate', description: 'Which makes more money', category: 'investing' },
+  'crypto-vs-gold': { title: 'Crypto vs Gold', description: 'Which is the better store of value', category: 'investing' },
+  'bullish-engulfing-pattern': { title: 'Bullish Engulfing Pattern', description: 'Powerful reversal signal explained', category: 'trading' },
+  'doji-candlestick-pattern': { title: 'Doji Candlestick Pattern', description: 'Market indecision signal', category: 'trading' },
+  'hammer-shooting-star': { title: 'Hammer & Shooting Star', description: 'Reversal patterns explained', category: 'trading' },
+  'bitcoin-etf-impact-2026': { title: 'Bitcoin ETF Impact 2026', description: 'How ETFs changed the crypto market', category: 'blog' },
+  'fed-rate-cuts-2026': { title: 'Fed Rate Cuts 2026', description: 'How rates affect your investments', category: 'blog' },
+  'crypto-market-update-q2-2026': { title: 'Crypto Market Update Q2', description: 'Quarterly market recap', category: 'blog' },
+  'ai-investing-2026': { title: 'AI and Investing', description: 'How AI is changing finance', category: 'blog' },
+};
+
+const categoryColors: Record<string, string> = {
+  'crypto-basics': '#2563eb',
+  'safe-crypto': '#059669',
+  'crypto-scam': '#dc2626',
+  'crypto-answers': '#7c3aed',
+  'crypto-tax': '#d97706',
+  'trading': '#f97316',
+  'insurance': '#6366f1',
+  'investing': '#10b981',
+  'blog': '#8b5cf6',
+};
+
+const relatedPosts = relatedSlugs
+  .map(slug => {
+    const data = relatedData[slug];
+    if (data) {
+      return { slug, ...data };
+    }
+    return null;
+  })
+  .filter(Boolean)
+  .slice(0, 3);
+---
+
+{relatedPosts.length > 0 && (
+  <div class="related-section">
+    <h2>Related Articles</h2>
+    <div class="related-grid">
+      {relatedPosts.map(post => (
+        <a href={`/${post.category}/${post.slug}/`} class="related-card">
+          <span class="related-badge" style={`background: ${categoryColors[post.category] || '#64748b'}20; color: ${categoryColors[post.category] || '#64748b'}`}>
+            {post.category.replace(/-/g, ' ')}
+          </span>
+          <h3>{post.title}</h3>
+          <p>{post.description}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+)}
+
+<style>
+  .related-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border, #e2e8f0);
+  }
+
+  .related-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border, #e2e8f0);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .related-card {
+    display: block;
+    padding: 1.25rem;
+    background: var(--surface, #f8fafc);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+  }
+
+  .related-card:hover {
+    border-color: var(--accent, #2563eb);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  .related-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+  }
+
+  .related-card h3 {
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+    color: var(--text, #1e293b);
+    line-height: 1.4;
+  }
+
+  .related-card p {
+    font-size: 0.8rem;
+    color: var(--muted, #64748b);
+    margin: 0;
+    line-height: 1.5;
+  }
+</style>

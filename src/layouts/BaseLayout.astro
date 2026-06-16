@@ -5,9 +5,10 @@ export interface Props {
   date?: Date;
   lastUpdated?: Date;
   category?: string;
+  type?: 'article' | 'tool' | 'blog';
 }
 
-const { title, description, date, lastUpdated, category } = Astro.props;
+const { title, description, date, lastUpdated, category, type = 'article' } = Astro.props;
 
 const categoryColors: Record<string, string> = {
   'crypto-basics': '#2563eb',
@@ -19,11 +20,38 @@ const categoryColors: Record<string, string> = {
   'trading': '#f97316',
   'insurance': '#6366f1',
   'investing': '#10b981',
+  'blog': '#8b5cf6',
+};
+
+const categoryNames: Record<string, string> = {
+  'crypto-basics': 'Crypto Basics',
+  'safe-crypto': 'Safe Crypto',
+  'crypto-scam': 'Crypto Scam',
+  'crypto-answers': 'Crypto Answers',
+  'crypto-tax': 'Crypto Tax',
+  'crypto-tools': 'Crypto Tools',
+  'trading': 'Trading',
+  'insurance': 'Insurance',
+  'investing': 'Investing',
+  'blog': 'Blog',
 };
 
 const accent = category ? (categoryColors[category] || '#2563eb') : '#2563eb';
 
-const schema = category === 'crypto-answers' ? {
+const baseUrl = 'https://paisayehpaisa.com';
+const pageUrl = Astro.url.href;
+
+const schema = type === 'tool' ? {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": title,
+  "description": description,
+  "url": pageUrl,
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Organization", "name": "PaisayehPaisa", "url": baseUrl }
+} : category === 'crypto-answers' ? {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [{
@@ -36,10 +64,25 @@ const schema = category === 'crypto-answers' ? {
   "@type": "Article",
   "headline": title,
   "description": description,
+  "url": pageUrl,
   "datePublished": date?.toISOString(),
   "dateModified": lastUpdated?.toISOString() || date?.toISOString(),
-  "author": { "@type": "Organization", "name": "PaisayehPaisa" },
-  "publisher": { "@type": "Organization", "name": "PaisayehPaisa" }
+  "author": { "@type": "Organization", "name": "PaisayehPaisa", "url": baseUrl },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaisayehPaisa",
+    "url": baseUrl,
+    "logo": { "@type": "ImageObject", "url": `${baseUrl}/favicon.svg` }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": baseUrl },
+      ...(category ? [{ "@type": "ListItem", "position": 2, "name": categoryNames[category] || category, "item": `${baseUrl}/${category}/` }] : []),
+      { "@type": "ListItem", "position": category ? 3 : 2, "name": title, "item": pageUrl }
+    ]
+  }
 };
 ---
 
@@ -197,7 +240,7 @@ const schema = category === 'crypto-answers' ? {
           <a href="/investing/">Investing</a>
           <a href="/tools/fire-calculator/">FIRE Calc</a>
           <a href="/tools/retirement-quiz/">Quiz</a>
-          <a href="/tools/investment-kit/">Kit</a>
+          <a href="/blog/">Blog</a>
         </nav>
       </div>
     </header>
@@ -234,6 +277,7 @@ const schema = category === 'crypto-answers' ? {
             <p><a href="/tools/net-worth-tracker/">Net Worth Tracker</a></p>
             <p><a href="/tools/retirement-quiz/">Retirement Quiz</a></p>
             <p><a href="/tools/investment-kit/">Investment Kit</a></p>
+            <p><a href="/blog/">Market Blog</a></p>
           </div>
         </div>
         <div class="disclaimer">

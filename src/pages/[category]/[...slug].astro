@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import RelatedArticles from '../../components/RelatedArticles.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
-  const categories = ['crypto-basics', 'safe-crypto', 'crypto-scam', 'crypto-answers', 'crypto-tax', 'crypto-tools', 'trading', 'insurance', 'investing'];
+  const categories = ['crypto-basics', 'safe-crypto', 'crypto-scam', 'crypto-answers', 'crypto-tax', 'crypto-tools', 'trading', 'insurance', 'investing', 'blog'];
   const paths: { params: { category: string; slug: string }; props: { entry: CollectionEntry<any> } }[] = [];
   for (const cat of categories) {
     const entries = await getCollection(cat as any);
@@ -33,6 +34,7 @@ const categoryNames: Record<string, string> = {
   'trading': 'Trading',
   'insurance': 'Insurance',
   'investing': 'Investing',
+  'blog': 'Blog',
 };
 ---
 
@@ -61,6 +63,8 @@ const categoryNames: Record<string, string> = {
   <article>
     <Content />
   </article>
+
+  <RelatedArticles currentSlug={entry.slug} currentCategory={data.categories[0]} />
 
   <div style="background:#f1f5f9; border-radius:12px; padding:1.25rem 1.5rem; font-size:0.85rem; color:var(--muted); margin-bottom:2rem;">
     <strong style="color:var(--text);">📚 Found this helpful?</strong> Share it with someone who's new to crypto.

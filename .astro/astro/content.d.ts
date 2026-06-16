@@ -140,7 +140,37 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"crypto-answers": {
+		"blog": {
+"ai-investing-2026.md": {
+	id: "ai-investing-2026.md";
+  slug: "ai-investing-2026";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"bitcoin-etf-impact-2026.md": {
+	id: "bitcoin-etf-impact-2026.md";
+  slug: "bitcoin-etf-impact-2026";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"crypto-market-update-q2-2026.md": {
+	id: "crypto-market-update-q2-2026.md";
+  slug: "crypto-market-update-q2-2026";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"fed-rate-cuts-2026.md": {
+	id: "fed-rate-cuts-2026.md";
+  slug: "fed-rate-cuts-2026";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+};
+"crypto-answers": {
 "best-crypto-apps-daily-trading.md": {
 	id: "best-crypto-apps-daily-trading.md";
   slug: "best-crypto-apps-daily-trading";
