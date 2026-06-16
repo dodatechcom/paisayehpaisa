@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Auto Insurance: Full Coverage vs Liability</text>
+
+  <!-- Liability side -->
+  <rect x="40" y="45" width="330" height="210" fill="#1e293b" rx="6"/>
+  <rect x="40" y="45" width="330" height="30" fill="#f59e0b" rx="6"/>
+  <rect x="40" y="65" width="330" height="10" fill="#f59e0b"/>
+  <text x="205" y="65" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">Liability Only</text>
+
+  <text x="60" y="95" fill="#f59e0b" font-size="10" font-weight="600">Covers:</text>
+  <text x="60" y="112" fill="#94a3b8" font-size="9">• Damage you cause to OTHERS</text>
+  <text x="60" y="127" fill="#94a3b8" font-size="9">• Medical bills for others</text>
+  <text x="60" y="142" fill="#94a3b8" font-size="9">• Property damage you cause</text>
+
+  <text x="60" y="165" fill="#ef4444" font-size="10" font-weight="600">Does NOT Cover:</text>
+  <text x="60" y="182" fill="#94a3b8" font-size="9">• Your car repairs</text>
+  <text x="60" y="197" fill="#94a3b8" font-size="9">• Your medical bills</text>
+  <text x="60" y="212" fill="#94a3b8" font-size="9">• Theft, vandalism, weather</text>
+
+  <text x="60" y="235" fill="#f59e0b" font-size="10" font-weight="600">Cost: $50-100/month</text>
+
+  <!-- Full coverage side -->
+  <rect x="390" y="45" width="330" height="210" fill="#1e293b" rx="6"/>
+  <rect x="390" y="45" width="330" height="30" fill="#22c55e" rx="6"/>
+  <rect x="390" y="65" width="330" height="10" fill="#22c55e"/>
+  <text x="555" y="65" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">Full Coverage</text>
+
+  <text x="410" y="95" fill="#22c55e" font-size="10" font-weight="600">Covers:</text>
+  <text x="410" y="112" fill="#94a3b8" font-size="9">• Everything liability covers</text>
+  <text x="410" y="127" fill="#94a3b8" font-size="9">• YOUR car repairs (collision)</text>
+  <text x="410" y="142" fill="#94a3b8" font-size="9">• Theft, vandalism, weather</text>
+  <text x="410" y="157" fill="#94a3b8" font-size="9">• YOUR medical bills</text>
+
+  <text x="410" y="180" fill="#22c55e" font-size="10" font-weight="600">Includes:</text>
+  <text x="410" y="197" fill="#94a3b8" font-size="9">• Collision coverage</text>
+  <text x="410" y="212" fill="#94a3b8" font-size="9">• Comprehensive coverage</text>
+  <text x="410" y="227" fill="#94a3b8" font-size="9">• Uninsured motorist</text>
+
+  <text x="410" y="250" fill="#22c55e" font-size="10" font-weight="600">Cost: $100-300/month</text>
+
+  <!-- When to choose -->
+  <rect x="40" y="270" width="680" height="200" fill="#1e293b" rx="6"/>
+  <text x="380" y="295" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">When to Choose Each</text>
+
+  <rect x="60" y="310" width="310" height="80" fill="#f59e0b" rx="4" opacity="0.15"/>
+  <text x="70" y="330" fill="#f59e0b" font-size="10" font-weight="600">Choose Liability If:</text>
+  <text x="70" y="348" fill="#94a3b8" font-size="9">• Car is worth less than $5K</text>
+  <text x="70" y="363" fill="#94a3b8" font-size="9">• You can afford to replace it</text>
+  <text x="70" y="378" fill="#94a3b8" font-size="9">• Old car with high mileage</text>
+
+  <rect x="390" y="310" width="310" height="80" fill="#22c55e" rx="4" opacity="0.15"/>
+  <text x="400" y="330" fill="#22c55e" font-size="10" font-weight="600">Choose Full Coverage If:</text>
+  <text x="400" y="348" fill="#94a3b8" font-size="9">• Car is worth more than $10K</text>
+  <text x="400" y="363" fill="#94a3b8" font-size="9">• You have a car loan/lease</text>
+  <text x="400" y="378" fill="#94a3b8" font-size="9">• New or recent model car</text>
+
+  <rect x="60" y="405" width="640" height="55" fill="#1a1d23" rx="4"/>
+  <text x="380" y="425" fill="#ef4444" font-size="11" font-weight="600" text-anchor="middle">Rule of Thumb</text>
+  <text x="380" y="445" fill="#94a3b8" font-size="9" text-anchor="middle">If annual full coverage cost is more than 10% of your car's value, switch to liability only.</text>
+</svg>

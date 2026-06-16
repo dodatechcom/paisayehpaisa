@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Investing at 40: It's Not Too Late</text>
+
+  <!-- Reality check -->
+  <rect x="40" y="45" width="340" height="210" fill="#1e293b" rx="6"/>
+  <text x="210" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">The Reality at 40</text>
+
+  <text x="60" y="95" fill="#94a3b8" font-size="10">Average 40-year-old has $45K saved</text>
+  <text x="60" y="112" fill="#94a3b8" font-size="10">Need $1.2M+ for retirement</text>
+  <text x="60" y="129" fill="#ef4444" font-size="10" font-weight="600">Gap: $1.15 million</text>
+
+  <rect x="60" y="145" width="300" height="100" fill="#1a1d23" rx="4"/>
+  <text x="70" y="168" fill="#22c55e" font-size="10" font-weight="600">Can you close the gap? YES</text>
+  <text x="70" y="188" fill="#94a3b8" font-size="9">Invest $1,500/month at 8% return</text>
+  <text x="70" y="205" fill="#94a3b8" font-size="9">For 25 years = $1.38 million</text>
+  <text x="70" y="225" fill="#22c55e" font-size="9" font-weight="600">Total invested: $450K, Growth: $930K</text>
+
+  <!-- 40s portfolio -->
+  <rect x="400" y="45" width="320" height="210" fill="#1e293b" rx="6"/>
+  <text x="560" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Your 40s Portfolio</text>
+
+  <rect x="420" y="85" width="280" height="165" fill="#1a1d23" rx="4"/>
+  <text x="560" y="108" fill="#f59e0b" font-size="11" font-weight="700" text-anchor="middle">Balanced Growth (Age 40-44)</text>
+  <text x="435" y="132" fill="#94a3b8" font-size="10">55% VTI (U.S. stocks)</text>
+  <text x="435" y="150" fill="#94a3b8" font-size="10">15% VXUS (International)</text>
+  <text x="435" y="168" fill="#94a3b8" font-size="10">20% BND (Bonds)</text>
+  <text x="435" y="186" fill="#94a3b8" font-size="10">10% REITs (Real estate)</text>
+  <text x="435" y="210" fill="#f59e0b" font-size="9" font-weight="600">Expected return: 7-9%/year</text>
+  <text x="435" y="228" fill="#94a3b8" font-size="9">Risk: Medium (25 years to retire)</text>
+
+  <!-- Catch-up strategies -->
+  <rect x="40" y="270" width="680" height="195" fill="#1e293b" rx="6"/>
+  <text x="380" y="295" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Catch-Up Strategies for Your 40s</text>
+
+  <rect x="60" y="315" width="150" height="135" fill="#1a1d23" rx="4"/>
+  <text x="135" y="338" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">Max 401(k)</text>
+  <text x="70" y="358" fill="#94a3b8" font-size="9">$23,500/year limit</text>
+  <text x="70" y="375" fill="#94a3b8" font-size="9">+ $7,500 catch-up</text>
+  <text x="70" y="392" fill="#94a3b8" font-size="9">= $31,000 total</text>
+  <text x="70" y="412" fill="#22c55e" font-size="9" font-weight="600">Save $5K-8K in taxes</text>
+
+  <rect x="225" y="315" width="150" height="135" fill="#1a1d23" rx="4"/>
+  <text x="300" y="338" fill="#6366f1" font-size="10" font-weight="700" text-anchor="middle">Max Roth IRA</text>
+  <text x="235" y="358" fill="#94a3b8" font-size="9">$7,000/year limit</text>
+  <text x="235" y="375" fill="#94a3b8" font-size="9">Tax-free growth</text>
+  <text x="235" y="392" fill="#94a3b8" font-size="9">No RMDs</text>
+  <text x="235" y="412" fill="#6366f1" font-size="9" font-weight="600">Best retirement account</text>
+
+  <rect x="390" y="315" width="150" height="135" fill="#1a1d23" rx="4"/>
+  <text x="465" y="338" fill="#f59e0b" font-size="10" font-weight="700" text-anchor="middle">HSA Triple Tax</text>
+  <text x="400" y="358" fill="#94a3b8" font-size="9">$8,300/year (family)</text>
+  <text x="400" y="375" fill="#94a3b8" font-size="9">Tax-free in, grow, out</text>
+  <text x="400" y="392" fill="#94a3b8" font-size="9">Best account available</text>
+  <text x="400" y="412" fill="#f59e0b" font-size="9" font-weight="600">Save $2K-3K/year</text>
+
+  <rect x="555" y="315" width="145" height="135" fill="#1a1d23" rx="4"/>
+  <text x="627" y="338" fill="#ef4444" font-size="10" font-weight="700" text-anchor="middle">Cut Expenses</text>
+  <text x="565" y="358" fill="#94a3b8" font-size="9">Downsize home</text>
+  <text x="565" y="375" fill="#94a3b8" font-size="9">Cut subscriptions</text>
+  <text x="565" y="392" fill="#94a3b8" font-size="9">Reduce dining out</text>
+  <text x="565" y="412" fill="#ef4444" font-size="9" font-weight="600">Invest $500-1K more/mo</text>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">How to File Crypto Taxes (Step by Step)</text>
+
+  <!-- Steps -->
+  <rect x="40" y="45" width="680" height="420" fill="#1e293b" rx="6"/>
+  <text x="380" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Filing Process</text>
+
+  <rect x="60" y="85" width="300" height="55" fill="#22c55e" rx="4"/>
+  <text x="70" y="105" fill="#fff" font-size="10" font-weight="700">Step 1: Gather Records</text>
+  <text x="70" y="120" fill="#e2e8f0" font-size="9">Export CSV from every exchange</text>
+  <text x="70" y="133" fill="#e2e8f0" font-size="9">Coinbase, Binance, Kraken, etc.</text>
+
+  <rect x="380" y="85" width="320" height="55" fill="#f59e0b" rx="4"/>
+  <text x="390" y="105" fill="#fff" font-size="10" font-weight="700">Step 2: Import to Tax Software</text>
+  <text x="390" y="120" fill="#e2e8f0" font-size="9">Use Koinly, CoinTracker, or</text>
+  <text x="390" y="133" fill="#e2e8f0" font-size="9">TaxBit to auto-import transactions</text>
+
+  <rect x="60" y="150" width="300" height="55" fill="#6366f1" rx="4"/>
+  <text x="70" y="170" fill="#fff" font-size="10" font-weight="700">Step 3: Review Transactions</text>
+  <text x="70" y="185" fill="#e2e8f0" font-size="9">Verify all trades, swaps, and</text>
+  <text x="70" y="198" fill="#e2e8f0" font-size="9">income events are captured</text>
+
+  <rect x="380" y="150" width="320" height="55" fill="#0891b2" rx="4"/>
+  <text x="390" y="170" fill="#fff" font-size="10" font-weight="700">Step 4: Generate Tax Forms</text>
+  <text x="390" y="185" fill="#e2e8f0" font-size="9">Software creates Form 8949 and</text>
+  <text x="390" y="198" fill="#e2e8f0" font-size="9">Schedule D automatically</text>
+
+  <rect x="60" y="215" width="300" height="55" fill="#d946ef" rx="4"/>
+  <text x="70" y="235" fill="#fff" font-size="10" font-weight="700">Step 5: File Your Return</text>
+  <text x="70" y="250" fill="#e2e8f0" font-size="9">Attach crypto forms to your</text>
+  <text x="70" y="263" fill="#e2e8f0" font-size="9">regular tax return (1040)</text>
+
+  <rect x="380" y="215" width="320" height="55" fill="#ef4444" rx="4"/>
+  <text x="390" y="235" fill="#fff" font-size="10" font-weight="700">Step 6: Pay Taxes Owed</text>
+  <text x="390" y="250" fill="#e2e8f0" font-size="9">Pay by April 15 or set up</text>
+  <text x="390" y="263" fill="#e2e8f0" font-size="9">payment plan with IRS</text>
+
+  <!-- Tools -->
+  <rect x="60" y="285" width="640" height="165" fill="#1a1d23" rx="4"/>
+  <text x="380" y="308" fill="#e2e8f0" font-size="12" font-weight="700" text-anchor="middle">Crypto Tax Software Comparison</text>
+
+  <text x="80" y="332" fill="#94a3b8" font-size="9" font-weight="600">Software</text>
+  <text x="200" y="332" fill="#94a3b8" font-size="9" font-weight="600">Price</text>
+  <text x="300" y="332" fill="#94a3b8" font-size="9" font-weight="600">Free Tier</text>
+  <text x="400" y="332" fill="#94a3b8" font-size="9" font-weight="600">Integrations</text>
+  <text x="540" y="332" fill="#94a3b8" font-size="9" font-weight="600">Best For</text>
+
+  <line x1="80" y1="340" x2="660" y2="340" stroke="#334155" stroke-width="1"/>
+
+  <text x="80" y="358" fill="#e2e8f0" font-size="9">Koinly</text>
+  <text x="200" y="358" fill="#94a3b8" font-size="9">$49-279</text>
+  <text x="300" y="358" fill="#22c55e" font-size="9">Yes (unlimited)</text>
+  <text x="400" y="358" fill="#94a3b8" font-size="9">300+ exchanges</text>
+  <text x="540" y="358" fill="#94a3b8" font-size="9">All users</text>
+
+  <text x="80" y="378" fill="#e2e8f0" font-size="9">CoinTracker</text>
+  <text x="200" y="378" fill="#94a3b8" font-size="9">$59-599</text>
+  <text x="300" y="378" fill="#22c55e" font-size="9">Yes (25 txns)</text>
+  <text x="400" y="378" fill="#94a3b8" font-size="9">100+ exchanges</text>
+  <text x="540" y="378" fill="#94a3b8" font-size="9">US users</text>
+
+  <text x="80" y="398" fill="#e2e8f0" font-size="9">TaxBit</text>
+  <text x="200" y="398" fill="#94a3b8" font-size="9">Free (consumers)</text>
+  <text x="300" y="398" fill="#22c55e" font-size="9">Yes (all users)</text>
+  <text x="400" y="398" fill="#94a3b8" font-size="9">50+ exchanges</text>
+  <text x="540" y="398" fill="#94a3b8" font-size="9">US users</text>
+
+  <text x="80" y="418" fill="#e2e8f0" font-size="9">CoinLedger</text>
+  <text x="200" y="418" fill="#94a3b8" font-size="9">$49-299</text>
+  <text x="300" y="418" fill="#22c55e" font-size="9">Yes (limited)</text>
+  <text x="400" y="418" fill="#94a3b8" font-size="9">All major exchanges</text>
+  <text x="540" y="418" fill="#94a3b8" font-size="9">International</text>
+
+  <text x="80" y="438" fill="#e2e8f0" font-size="9">CryptoTaxCalculator</text>
+  <text x="200" y="438" fill="#94a3b8" font-size="9">$49-399</text>
+  <text x="300" y="438" fill="#22c55e" font-size="9">Yes (25 txns)</text>
+  <text x="400" y="438" fill="#94a3b8" font-size="9">400+ exchanges</text>
+  <text x="540" y="438" fill="#94a3b8" font-size="9">UK, Australia</text>
+</svg>

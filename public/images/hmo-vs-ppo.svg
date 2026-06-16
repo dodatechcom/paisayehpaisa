@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">HMO vs PPO: Health Insurance Explained</text>
+
+  <!-- HMO side -->
+  <rect x="40" y="45" width="330" height="420" fill="#1e293b" rx="6"/>
+  <rect x="40" y="45" width="330" height="35" fill="#6366f1" rx="6"/>
+  <rect x="40" y="70" width="330" height="10" fill="#6366f1"/>
+  <text x="205" y="68" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">HMO (Health Maintenance Org)</text>
+
+  <text x="60" y="100" fill="#6366f1" font-size="11" font-weight="600">How It Works</text>
+  <text x="60" y="118" fill="#94a3b8" font-size="10">• Must choose a primary care doctor</text>
+  <text x="60" y="134" fill="#94a3b8" font-size="10">• Need referral to see specialist</text>
+  <text x="60" y="150" fill="#94a3b8" font-size="10">• Only covers in-network providers</text>
+  <text x="60" y="166" fill="#94a3b8" font-size="10">• No out-of-network coverage</text>
+
+  <text x="60" y="191" fill="#6366f1" font-size="11" font-weight="600">Cost</text>
+  <text x="60" y="209" fill="#e2e8f0" font-size="10">Lower premiums ($200-400/mo)</text>
+  <text x="60" y="225" fill="#e2e8f0" font-size="10">Lower copays ($20-30)</text>
+
+  <text x="60" y="250" fill="#6366f1" font-size="11" font-weight="600">Pros</text>
+  <text x="60" y="268" fill="#94a3b8" font-size="10">• Cheaper monthly cost</text>
+  <text x="60" y="284" fill="#94a3b8" font-size="10">• Lower out-of-pocket</text>
+  <text x="60" y="300" fill="#94a3b8" font-size="10">• Coordinated care through PCP</text>
+
+  <text x="60" y="325" fill="#6366f1" font-size="11" font-weight="600">Cons</text>
+  <text x="60" y="343" fill="#94a3b8" font-size="10">• Need referral for specialists</text>
+  <text x="60" y="359" fill="#94a3b8" font-size="10">• No out-of-network coverage</text>
+  <text x="60" y="375" fill="#94a3b8" font-size="10">• Less flexibility</text>
+
+  <text x="60" y="400" fill="#6366f1" font-size="11" font-weight="600">Best For</text>
+  <text x="60" y="418" fill="#e2e8f0" font-size="10">Healthy people who don't mind</text>
+  <text x="60" y="434" fill="#e2e8f0" font-size="10">using in-network doctors</text>
+
+  <!-- PPO side -->
+  <rect x="390" y="45" width="330" height="420" fill="#1e293b" rx="6"/>
+  <rect x="390" y="45" width="330" height="35" fill="#22c55e" rx="6"/>
+  <rect x="390" y="70" width="330" height="10" fill="#22c55e"/>
+  <text x="555" y="68" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">PPO (Preferred Provider Org)</text>
+
+  <text x="410" y="100" fill="#22c55e" font-size="11" font-weight="600">How It Works</text>
+  <text x="410" y="118" fill="#94a3b8" font-size="10">• No primary care doctor required</text>
+  <text x="410" y="134" fill="#94a3b8" font-size="10">• No referral needed for specialists</text>
+  <text x="410" y="150" fill="#94a3b8" font-size="10">• Covers in and out-of-network</text>
+  <text x="410" y="166" fill="#94a3b8" font-size="10">• Higher cost for out-of-network</text>
+
+  <text x="410" y="191" fill="#22c55e" font-size="11" font-weight="600">Cost</text>
+  <text x="410" y="209" fill="#e2e8f0" font-size="10">Higher premiums ($300-600/mo)</text>
+  <text x="410" y="225" fill="#e2e8f0" font-size="10">Higher copays ($30-50)</text>
+
+  <text x="410" y="250" fill="#22c55e" font-size="11" font-weight="600">Pros</text>
+  <text x="410" y="268" fill="#94a3b8" font-size="10">• See any doctor, anytime</text>
+  <text x="410" y="284" fill="#94a3b8" font-size="10">• No referral needed</text>
+  <text x="410" y="300" fill="#94a3b8" font-size="10">• More flexibility</text>
+
+  <text x="410" y="325" fill="#22c55e" font-size="11" font-weight="600">Cons</text>
+  <text x="410" y="343" fill="#94a3b8" font-size="10">• Higher monthly premiums</text>
+  <text x="410" y="359" fill="#94a3b8" font-size="10">• Higher deductibles</text>
+  <text x="410" y="375" fill="#94a3b8" font-size="10">• Out-of-network costs more</text>
+
+  <text x="410" y="400" fill="#22c55e" font-size="11" font-weight="600">Best For</text>
+  <text x="410" y="418" fill="#e2e8f0" font-size="10">People who want flexibility</text>
+  <text x="410" y="434" fill="#e2e8f0" font-size="10">and don't mind paying more</text>
+</svg>

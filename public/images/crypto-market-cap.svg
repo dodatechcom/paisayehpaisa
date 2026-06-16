@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Crypto Market Cap Explained</text>
+
+  <!-- Formula -->
+  <rect x="40" y="45" width="340" height="120" fill="#1e293b" rx="6"/>
+  <text x="210" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">The Formula</text>
+  <text x="210" y="95" fill="#22c55e" font-size="14" font-weight="700" text-anchor="middle">Market Cap = Price x Supply</text>
+  <text x="210" y="118" fill="#94a3b8" font-size="10" text-anchor="middle">BTC: $65,000 x 19.5M = $1.27T</text>
+  <text x="210" y="138" fill="#94a3b8" font-size="10" text-anchor="middle">ETH: $3,500 x 120M = $420B</text>
+
+  <!-- Market cap categories -->
+  <rect x="400" y="45" width="320" height="120" fill="#1e293b" rx="6"/>
+  <text x="560" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Categories</text>
+
+  <rect x="420" y="82" width="280" height="22" fill="#22c55e" rx="4"/>
+  <text x="430" y="97" fill="#fff" font-size="9" font-weight="600">Large Cap: $10B+ (BTC, ETH)</text>
+
+  <rect x="420" y="108" width="280" height="22" fill="#f59e0b" rx="4"/>
+  <text x="430" y="123" fill="#fff" font-size="9" font-weight="600">Mid Cap: $1B-$10B (SOL, AVAX)</text>
+
+  <rect x="420" y="134" width="280" height="22" fill="#ef4444" rx="4"/>
+  <text x="430" y="149" fill="#fff" font-size="9" font-weight="600">Small Cap: Under $1B (new projects)</text>
+
+  <!-- Why it matters -->
+  <rect x="40" y="180" width="680" height="140" fill="#1e293b" rx="6"/>
+  <text x="380" y="205" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Why Market Cap Matters</text>
+
+  <rect x="60" y="220" width="200" height="85" fill="#1a1d23" rx="4"/>
+  <text x="160" y="242" fill="#22c55e" font-size="10" font-weight="600" text-anchor="middle">Size = Stability</text>
+  <text x="70" y="262" fill="#94a3b8" font-size="9">Large cap = less volatile</text>
+  <text x="70" y="279" fill="#94a3b8" font-size="9">Small cap = more volatile</text>
+  <text x="70" y="296" fill="#94a3b8" font-size="9">Risk vs reward tradeoff</text>
+
+  <rect x="280" y="220" width="200" height="85" fill="#1a1d23" rx="4"/>
+  <text x="380" y="242" fill="#f59e0b" font-size="10" font-weight="600" text-anchor="middle">Growth Potential</text>
+  <text x="290" y="262" fill="#94a3b8" font-size="9">Small cap = 10-100x potential</text>
+  <text x="290" y="279" fill="#94a3b8" font-size="9">Mid cap = 3-10x potential</text>
+  <text x="290" y="296" fill="#94a3b8" font-size="9">Large cap = 2-5x potential</text>
+
+  <rect x="500" y="220" width="200" height="85" fill="#1a1d23" rx="4"/>
+  <text x="600" y="242" fill="#6366f1" font-size="10" font-weight="600" text-anchor="middle">Risk Level</text>
+  <text x="510" y="262" fill="#94a3b8" font-size="9">Small cap = high risk</text>
+  <text x="510" y="279" fill="#94a3b8" font-size="9">Mid cap = medium risk</text>
+  <text x="510" y="296" fill="#94a3b8" font-size="9">Large cap = lower risk</text>
+
+  <!-- Top cryptos by market cap -->
+  <rect x="40" y="335" width="680" height="130" fill="#1e293b" rx="6"/>
+  <text x="380" y="358" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Top Cryptos by Market Cap (2026)</text>
+
+  <text x="60" y="385" fill="#94a3b8" font-size="10" font-weight="600">Crypto</text>
+  <text x="220" y="385" fill="#94a3b8" font-size="10" font-weight="600">Market Cap</text>
+  <text x="350" y="385" fill="#94a3b8" font-size="10" font-weight="600">Price</text>
+  <text x="470" y="385" fill="#94a3b8" font-size="10" font-weight="600">Supply</text>
+  <text x="590" y="385" fill="#94a3b8" font-size="10" font-weight="600">Category</text>
+
+  <line x1="60" y1="395" x2="660" y2="395" stroke="#334155" stroke-width="1"/>
+
+  <text x="60" y="415" fill="#e2e8f0" font-size="10">Bitcoin (BTC)</text>
+  <text x="220" y="415" fill="#22c55e" font-size="10">$1.27T</text>
+  <text x="350" y="415" fill="#94a3b8" font-size="10">$65,000</text>
+  <text x="470" y="415" fill="#94a3b8" font-size="10">19.5M</text>
+  <text x="590" y="415" fill="#22c55e" font-size="10">Large Cap</text>
+
+  <text x="60" y="435" fill="#e2e8f0" font-size="10">Ethereum (ETH)</text>
+  <text x="220" y="435" fill="#22c55e" font-size="10">$420B</text>
+  <text x="350" y="435" fill="#94a3b8" font-size="10">$3,500</text>
+  <text x="470" y="435" fill="#94a3b8" font-size="10">120M</text>
+  <text x="590" y="435" fill="#22c55e" font-size="10">Large Cap</text>
+
+  <text x="60" y="455" fill="#e2e8f0" font-size="10">Solana (SOL)</text>
+  <text x="220" y="455" fill="#f59e0b" font-size="10">$95B</text>
+  <text x="350" y="455" fill="#94a3b8" font-size="10">$220</text>
+  <text x="470" y="455" fill="#94a3b8" font-size="10">430M</text>
+  <text x="590" y="455" fill="#f59e0b" font-size="10">Large Cap</text>
+</svg>

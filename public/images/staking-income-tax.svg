@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Crypto Staking Income: Tax Treatment</text>
+
+  <!-- How staking is taxed -->
+  <rect x="40" y="45" width="340" height="210" fill="#1e293b" rx="6"/>
+  <text x="210" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">How Staking Is Taxed</text>
+
+  <text x="60" y="95" fill="#22c55e" font-size="10" font-weight="600">When You Receive Rewards</text>
+  <text x="60" y="112" fill="#94a3b8" font-size="9">• Taxed as ordinary income</text>
+  <text x="60" y="127" fill="#94a3b8" font-size="9">• Fair market value at receipt</text>
+  <text x="60" y="142" fill="#94a3b8" font-size="9">• Same rate as your salary</text>
+  <text x="60" y="157" fill="#94a3b8" font-size="9">• 10-37% (US) / 20-45% (UK)</text>
+
+  <text x="60" y="182" fill="#f59e0b" font-size="10" font-weight="600">When You Sell Rewards</text>
+  <text x="60" y="199" fill="#94a3b8" font-size="9">• Capital gains tax on profit</text>
+  <text x="60" y="214" fill="#94a3b8" font-size="9">• Cost basis = value when received</text>
+  <text x="60" y="229" fill="#94a3b8" font-size="9">• Short-term or long-term rate</text>
+  <text x="60" y="244" fill="#94a3b8" font-size="9">• Report each sale separately</text>
+
+  <!-- Staking types -->
+  <rect x="400" y="45" width="320" height="210" fill="#1e293b" rx="6"/>
+  <text x="560" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Staking Types &amp; Tax Treatment</text>
+
+  <rect x="420" y="82" width="280" height="30" fill="#22c55e" rx="4" opacity="0.15"/>
+  <text x="430" y="101" fill="#22c55e" font-size="9" font-weight="600">PoS Staking (ETH, SOL, ADA)</text>
+  <text x="555" y="101" fill="#94a3b8" font-size="9">Income at receipt</text>
+
+  <rect x="420" y="118" width="280" height="30" fill="#f59e0b" rx="4" opacity="0.15"/>
+  <text x="430" y="137" fill="#f59e0b" font-size="9" font-weight="600">Lending (Aave, Compound)</text>
+  <text x="555" y="137" fill="#94a3b8" font-size="9">Interest income</text>
+
+  <rect x="420" y="154" width="280" height="30" fill="#6366f1" rx="4" opacity="0.15"/>
+  <text x="430" y="173" fill="#6366f1" font-size="9" font-weight="600">Liquidity Pools (Uniswap)</text>
+  <text x="555" y="173" fill="#94a3b8" font-size="9">Variable treatment</text>
+
+  <rect x="420" y="190" width="280" height="30" fill="#ef4444" rx="4" opacity="0.15"/>
+  <text x="430" y="209" fill="#ef4444" font-size="9" font-weight="600">Masternodes (Dash, PIVX)</text>
+  <text x="555" y="209" fill="#94a3b8" font-size="9">Business income</text>
+
+  <rect x="420" y="226" width="280" height="20" fill="#0891b2" rx="4" opacity="0.15"/>
+  <text x="430" y="241" fill="#0891b2" font-size="9" font-weight="600">Yield Farming</text>
+  <text x="555" y="241" fill="#94a3b8" font-size="9">Complex — consult CPA</text>
+
+  <!-- Tax example -->
+  <rect x="40" y="270" width="680" height="195" fill="#1e293b" rx="6"/>
+  <text x="380" y="295" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Example: Staking 32 ETH</text>
+
+  <text x="60" y="320" fill="#94a3b8" font-size="10">Scenario: You stake 32 ETH and receive 2 ETH in rewards over the year</text>
+
+  <rect x="60" y="335" width="640" height="115" fill="#1a1d23" rx="4"/>
+  <text x="80" y="358" fill="#94a3b8" font-size="10" font-weight="600">Step 1: Record income when received</text>
+  <text x="80" y="375" fill="#94a3b8" font-size="9">January: 0.17 ETH at $2,500 = $425 income</text>
+  <text x="80" y="390" fill="#94a3b8" font-size="9">February: 0.17 ETH at $2,600 = $442 income</text>
+  <text x="80" y="405" fill="#94a3b8" font-size="9">... (each month recorded separately)</text>
+
+  <text x="80" y="425" fill="#22c55e" font-size="10" font-weight="600">Step 2: Report total income</text>
+  <text x="80" y="442" fill="#e2e8f0" font-size="9">Total staking income: $5,200 (taxed as ordinary income)</text>
+</svg>

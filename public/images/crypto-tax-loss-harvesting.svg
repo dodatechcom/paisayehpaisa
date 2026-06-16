@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Crypto Tax Loss Harvesting</text>
+
+  <!-- How it works -->
+  <rect x="40" y="45" width="340" height="210" fill="#1e293b" rx="6"/>
+  <text x="210" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">How Tax-Loss Harvesting Works</text>
+
+  <rect x="60" y="85" width="300" height="35" fill="#22c55e" rx="4" opacity="0.15"/>
+  <text x="70" y="107" fill="#22c55e" font-size="10" font-weight="600">Step 1: Sell at a Loss</text>
+  <text x="185" y="107" fill="#94a3b8" font-size="9">Bought BTC at $40K, sell at $35K</text>
+
+  <rect x="60" y="128" width="300" height="35" fill="#f59e0b" rx="4" opacity="0.15"/>
+  <text x="70" y="150" fill="#f59e0b" font-size="10" font-weight="600">Step 2: Harvest the Loss</text>
+  <text x="185" y="150" fill="#94a3b8" font-size="9">Record $5K capital loss</text>
+
+  <rect x="60" y="171" width="300" height="35" fill="#6366f1" rx="4" opacity="0.15"/>
+  <text x="70" y="193" fill="#6366f1" font-size="10" font-weight="600">Step 3: Offset Gains</text>
+  <text x="185" y="193" fill="#94a3b8" font-size="9">Use $5K loss against $5K gain</text>
+
+  <rect x="60" y="214" width="300" height="35" fill="#ef4444" rx="4" opacity="0.15"/>
+  <text x="70" y="236" fill="#ef4444" font-size="10" font-weight="600">Step 4: Reinvest</text>
+  <text x="185" y="236" fill="#94a3b8" font-size="9">Buy similar asset (not same)</text>
+
+  <!-- Rules -->
+  <rect x="400" y="45" width="320" height="210" fill="#1e293b" rx="6"/>
+  <text x="560" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Key Rules</text>
+
+  <rect x="420" y="85" width="280" height="35" fill="#22c55e" rx="4"/>
+  <text x="430" y="107" fill="#fff" font-size="9" font-weight="600">Wash Sale Rule</text>
+  <text x="530" y="107" fill="#e2e8f0" font-size="9">30-day window (US only)</text>
+
+  <rect x="420" y="128" width="280" height="35" fill="#f59e0b" rx="4"/>
+  <text x="430" y="150" fill="#fff" font-size="9" font-weight="600">Loss Limit</text>
+  <text x="530" y="150" fill="#e2e8f0" font-size="9">$3K max deduction vs income</text>
+
+  <rect x="420" y="171" width="280" height="35" fill="#6366f1" rx="4"/>
+  <text x="430" y="193" fill="#fff" font-size="9" font-weight="600">Carry Forward</text>
+  <text x="530" y="193" fill="#e2e8f0" font-size="9">Unused losses roll to next year</text>
+
+  <rect x="420" y="214" width="280" height="35" fill="#ef4444" rx="4"/>
+  <text x="430" y="236" fill="#fff" font-size="9" font-weight="600">No Same Coin</text>
+  <text x="530" y="236" fill="#e2e8f0" font-size="9">Can't buy same coin for 30 days</text>
+
+  <!-- Example -->
+  <rect x="40" y="270" width="680" height="195" fill="#1e293b" rx="6"/>
+  <text x="380" y="295" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Example: $10K Portfolio Harvest</text>
+
+  <text x="60" y="320" fill="#94a3b8" font-size="10">Portfolio: BTC bought at $40K (now $35K) = $5K loss</text>
+
+  <rect x="60" y="335" width="310" height="115" fill="#1a1d23" rx="4"/>
+  <text x="70" y="355" fill="#ef4444" font-size="10" font-weight="600">Without Harvesting</text>
+  <text x="70" y="372" fill="#94a3b8" font-size="9">Sell BTC: $5K loss recognized</text>
+  <text x="70" y="387" fill="#94a3b8" font-size="9">Buy ETH at $35K</text>
+  <text x="70" y="402" fill="#94a3b8" font-size="9">ETH rises to $50K</text>
+  <text x="70" y="417" fill="#94a3b8" font-size="9">Sell ETH: $15K gain</text>
+  <text x="70" y="432" fill="#ef4444" font-size="9" font-weight="600">Tax owed: $3K (20% of $15K gain)</text>
+
+  <rect x="400" y="335" width="310" height="115" fill="#1a1d23" rx="4"/>
+  <text x="410" y="355" fill="#22c55e" font-size="10" font-weight="600">With Harvesting</text>
+  <text x="410" y="372" fill="#94a3b8" font-size="9">Sell BTC: $5K loss recognized</text>
+  <text x="410" y="387" fill="#94a3b8" font-size="9">Buy ETH at $35K (different coin)</text>
+  <text x="410" y="402" fill="#94a3b8" font-size="9">ETH rises to $50K</text>
+  <text x="410" y="417" fill="#94a3b8" font-size="9">Sell ETH: $15K gain</text>
+  <text x="410" y="432" fill="#22c55e" font-size="9" font-weight="600">Tax owed: $2K (20% of $10K net gain)</text>
+</svg>

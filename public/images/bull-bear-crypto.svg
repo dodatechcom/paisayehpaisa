@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Bull vs Bear Market in Crypto</text>
+
+  <!-- Bull market -->
+  <rect x="40" y="45" width="330" height="210" fill="#1e293b" rx="6"/>
+  <rect x="40" y="45" width="330" height="35" fill="#22c55e" rx="6"/>
+  <rect x="40" y="70" width="330" height="10" fill="#22c55e"/>
+  <text x="205" y="68" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">Bull Market (Uptrend)</text>
+
+  <text x="60" y="100" fill="#22c55e" font-size="11" font-weight="600">Definition</text>
+  <text x="60" y="118" fill="#94a3b8" font-size="9">Prices rise 20%+ from recent lows</text>
+
+  <text x="60" y="140" fill="#22c55e" font-size="11" font-weight="600">Characteristics</text>
+  <text x="60" y="158" fill="#94a3b8" font-size="9">• Higher highs and higher lows</text>
+  <text x="60" y="173" fill="#94a3b8" font-size="9">• Optimistic sentiment</text>
+  <text x="60" y="188" fill="#94a3b8" font-size="9">• FOMO buying</text>
+  <text x="60" y="203" fill="#94a3b8" font-size="9">• Media hype</text>
+
+  <text x="60" y="225" fill="#22c55e" font-size="11" font-weight="600">Strategy</text>
+  <text x="60" y="243" fill="#e2e8f0" font-size="9">Hold, take partial profits at highs</text>
+
+  <!-- Bear market -->
+  <rect x="390" y="45" width="330" height="210" fill="#1e293b" rx="6"/>
+  <rect x="390" y="45" width="330" height="35" fill="#ef4444" rx="6"/>
+  <rect x="390" y="70" width="330" height="10" fill="#ef4444"/>
+  <text x="555" y="68" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">Bear Market (Downtrend)</text>
+
+  <text x="410" y="100" fill="#ef4444" font-size="11" font-weight="600">Definition</text>
+  <text x="410" y="118" fill="#94a3b8" font-size="9">Prices fall 20%+ from recent highs</text>
+
+  <text x="410" y="140" fill="#ef4444" font-size="11" font-weight="600">Characteristics</text>
+  <text x="410" y="158" fill="#94a3b8" font-size="9">• Lower highs and lower lows</text>
+  <text x="410" y="173" fill="#94a3b8" font-size="9">• Fear and panic selling</text>
+  <text x="410" y="188" fill="#94a3b8" font-size="9">• Negative news cycle</text>
+  <text x="410" y="203" fill="#94a3b8" font-size="9">• "Bitcoin is dead" headlines</text>
+
+  <text x="410" y="225" fill="#ef4444" font-size="11" font-weight="600">Strategy</text>
+  <text x="410" y="243" fill="#e2e8f0" font-size="9">Dollar-cost average, buy fear</text>
+
+  <!-- Crypto cycles -->
+  <rect x="40" y="270" width="680" height="195" fill="#1e293b" rx="6"/>
+  <text x="380" y="295" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Crypto Market Cycles (4-Year Pattern)</text>
+
+  <rect x="60" y="315" width="150" height="135" fill="#1a1d23" rx="4"/>
+  <text x="135" y="338" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">Accumulation</text>
+  <text x="70" y="358" fill="#94a3b8" font-size="9">Year 1 after peak</text>
+  <text x="70" y="375" fill="#94a3b8" font-size="9">Prices bottom out</text>
+  <text x="70" y="392" fill="#94a3b8" font-size="9">Smart money buys</text>
+  <text x="70" y="412" fill="#22c55e" font-size="9" font-weight="600">Best time to buy</text>
+
+  <rect x="225" y="315" width="150" height="135" fill="#1a1d23" rx="4"/>
+  <text x="300" y="338" fill="#6366f1" font-size="10" font-weight="700" text-anchor="middle">Mark-Up</text>
+  <text x="235" y="358" fill="#94a3b8" font-size="9">Year 2-3</text>
+  <text x="235" y="375" fill="#94a3b8" font-size="9">Prices rise steadily</text>
+  <text x="235" y="392" fill="#94a3b8" font-size="9">Media attention grows</text>
+  <text x="235" y="412" fill="#6366f1" font-size="9" font-weight="600">Hold and add</text>
+
+  <rect x="390" y="315" width="150" height="135" fill="#1a1d23" rx="4"/>
+  <text x="465" y="338" fill="#f59e0b" font-size="10" font-weight="700" text-anchor="middle">Distribution</text>
+  <text x="400" y="358" fill="#94a3b8" font-size="9">Peak of the cycle</text>
+  <text x="400" y="375" fill="#94a3b8" font-size="9">Euphoria and greed</text>
+  <text x="400" y="392" fill="#94a3b8" font-size="9">Smart money sells</text>
+  <text x="400" y="412" fill="#f59e0b" font-size="9" font-weight="600">Take profits</text>
+
+  <rect x="555" y="315" width="145" height="135" fill="#1a1d23" rx="4"/>
+  <text x="627" y="338" fill="#ef4444" font-size="10" font-weight="700" text-anchor="middle">Mark-Down</text>
+  <text x="565" y="358" fill="#94a3b8" font-size="9">Year 4</text>
+  <text x="565" y="375" fill="#94a3b8" font-size="9">Bear market returns</text>
+  <text x="565" y="392" fill="#94a3b8" font-size="9">Panic selling</text>
+  <text x="565" y="412" fill="#ef4444" font-size="9" font-weight="600">Prepare to buy</text>
+</svg>

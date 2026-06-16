@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Crypto Wallets Explained</text>
+
+  <!-- Wallet types -->
+  <rect x="40" y="45" width="340" height="210" fill="#1e293b" rx="6"/>
+  <text x="210" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Wallet Types</text>
+
+  <rect x="60" y="85" width="300" height="30" fill="#22c55e" rx="4"/>
+  <text x="70" y="104" fill="#fff" font-size="10" font-weight="600">Hot Wallets (Online)</text>
+
+  <rect x="60" y="120" width="300" height="30" fill="#f59e0b" rx="4"/>
+  <text x="70" y="139" fill="#fff" font-size="10" font-weight="600">Cold Wallets (Offline)</text>
+
+  <rect x="60" y="155" width="300" height="30" fill="#6366f1" rx="4"/>
+  <text x="70" y="174" fill="#fff" font-size="10" font-weight="600">Custodial vs Non-Custodial</text>
+
+  <rect x="60" y="190" width="300" height="55" fill="#1a1d23" rx="4"/>
+  <text x="70" y="210" fill="#ef4444" font-size="10" font-weight="600">Key Rule:</text>
+  <text x="70" y="228" fill="#94a3b8" font-size="9">Not your keys, not your crypto.</text>
+
+  <!-- Hot vs Cold -->
+  <rect x="400" y="45" width="320" height="210" fill="#1e293b" rx="6"/>
+  <text x="560" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Hot vs Cold Wallets</text>
+
+  <rect x="420" y="85" width="280" height="75" fill="#22c55e" rx="4" opacity="0.15"/>
+  <text x="430" y="105" fill="#22c55e" font-size="10" font-weight="600">Hot Wallets (Convenient)</text>
+  <text x="430" y="122" fill="#94a3b8" font-size="9">• Always connected to internet</text>
+  <text x="430" y="137" fill="#94a3b8" font-size="9">• Good for small amounts</text>
+  <text x="430" y="152" fill="#94a3b8" font-size="9">• Examples: MetaMask, Trust Wallet</text>
+
+  <rect x="420" y="165" width="280" height="85" fill="#f59e0b" rx="4" opacity="0.15"/>
+  <text x="430" y="185" fill="#f59e0b" font-size="10" font-weight="600">Cold Wallets (Secure)</text>
+  <text x="430" y="202" fill="#94a3b8" font-size="9">• Offline storage</text>
+  <text x="430" y="217" fill="#94a3b8" font-size="9">• Best for large amounts</text>
+  <text x="430" y="232" fill="#94a3b8" font-size="9">• Examples: Ledger, Trezor</text>
+  <text x="430" y="247" fill="#94a3b8" font-size="9">• $50-200 for hardware</text>
+
+  <!-- Custodial comparison -->
+  <rect x="40" y="270" width="680" height="195" fill="#1e293b" rx="6"/>
+  <text x="380" y="295" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Custodial vs Non-Custodial</text>
+
+  <rect x="60" y="315" width="310" height="135" fill="#1a1d23" rx="4"/>
+  <text x="215" y="338" fill="#ef4444" font-size="10" font-weight="600" text-anchor="middle">Custodial (Exchange)</text>
+  <text x="70" y="360" fill="#94a3b8" font-size="9">• Exchange holds your keys</text>
+  <text x="70" y="377" fill="#94a3b8" font-size="9">• Easy to use</text>
+  <text x="70" y="394" fill="#94a3b8" font-size="9">• Can lose funds if exchange fails</text>
+  <text x="70" y="411" fill="#94a3b8" font-size="9">• Examples: Coinbase, Binance</text>
+  <text x="70" y="431" fill="#ef4444" font-size="9" font-weight="600">Risk: FTX, Mt. Gox, Celsius</text>
+
+  <rect x="390" y="315" width="310" height="135" fill="#1a1d23" rx="4"/>
+  <text x="545" y="338" fill="#22c55e" font-size="10" font-weight="600" text-anchor="middle">Non-Custodial (Self)</text>
+  <text x="400" y="360" fill="#94a3b8" font-size="9">• YOU hold your keys</text>
+  <text x="400" y="377" fill="#94a3b8" font-size="9">• More responsibility</text>
+  <text x="400" y="394" fill="#94a3b8" font-size="9">• Nobody can take your crypto</text>
+  <text x="400" y="411" fill="#94a3b8" font-size="9">• Examples: MetaMask, Ledger</text>
+  <text x="400" y="431" fill="#22c55e" font-size="9" font-weight="600">You control everything</text>
+</svg>

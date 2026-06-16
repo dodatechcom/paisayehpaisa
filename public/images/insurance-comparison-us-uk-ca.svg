@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Insurance Comparison: US vs UK vs Canada</text>
+
+  <!-- Header row -->
+  <rect x="40" y="45" width="680" height="420" fill="#1e293b" rx="6"/>
+
+  <text x="60" y="75" fill="#94a3b8" font-size="10" font-weight="600">Type</text>
+  <text x="220" y="75" fill="#22c55e" font-size="10" font-weight="600">United States</text>
+  <text x="380" y="75" fill="#6366f1" font-size="10" font-weight="600">United Kingdom</text>
+  <text x="540" y="75" fill="#f59e0b" font-size="10" font-weight="600">Canada</text>
+
+  <line x1="60" y1="85" x2="700" y2="85" stroke="#334155" stroke-width="1"/>
+
+  <!-- Health Insurance -->
+  <text x="60" y="110" fill="#e2e8f0" font-size="10" font-weight="700">Health</text>
+  <text x="60" y="125" fill="#94a3b8" font-size="9">System: Employer-based</text>
+  <text x="220" y="110" fill="#e2e8f0" font-size="9">Private insurance (employer)</text>
+  <text x="220" y="125" fill="#94a3b8" font-size="9">Cost: $500-1,500/mo</text>
+  <text x="380" y="110" fill="#e2e8f0" font-size="9">NHS (free at point of use)</text>
+  <text x="380" y="125" fill="#94a3b8" font-size="9">Cost: Free (tax-funded)</text>
+  <text x="540" y="110" fill="#e2e8f0" font-size="9">Provincial plans</text>
+  <text x="540" y="125" fill="#94a3b8" font-size="9">Cost: Free (tax-funded)</text>
+
+  <line x1="60" y1="140" x2="700" y2="140" stroke="#334155" stroke-width="1"/>
+
+  <!-- Auto Insurance -->
+  <text x="60" y="160" fill="#e2e8f0" font-size="10" font-weight="700">Auto</text>
+  <text x="60" y="175" fill="#94a3b8" font-size="9">Required by law</text>
+  <text x="220" y="160" fill="#e2e8f0" font-size="9">Liability + Collision</text>
+  <text x="220" y="175" fill="#94a3b8" font-size="9">Cost: $100-300/mo</text>
+  <text x="380" y="160" fill="#e2e8f0" font-size="9">Required by law</text>
+  <text x="380" y="175" fill="#94a3b8" font-size="9">Cost: 50-150 GBP/yr</text>
+  <text x="540" y="160" fill="#e2e8f0" font-size="9">Required by province</text>
+  <text x="540" y="175" fill="#94a3b8" font-size="9">Cost: $1,500-3,000/yr</text>
+
+  <line x1="60" y1="190" x2="700" y2="190" stroke="#334155" stroke-width="1"/>
+
+  <!-- Life Insurance -->
+  <text x="60" y="210" fill="#e2e8f0" font-size="10" font-weight="700">Life</text>
+  <text x="60" y="225" fill="#94a3b8" font-size="9">Private market</text>
+  <text x="220" y="210" fill="#e2e8f0" font-size="9">Term or Whole Life</text>
+  <text x="220" y="225" fill="#94a3b8" font-size="9">Cost: $20-400/mo</text>
+  <text x="380" y="210" fill="#e2e8f0" font-size="9">Private market</text>
+  <text x="380" y="225" fill="#94a3b8" font-size="9">Cost: 10-50 GBP/mo</text>
+  <text x="540" y="210" fill="#e2e8f0" font-size="9">Private market</text>
+  <text x="540" y="225" fill="#94a3b8" font-size="9">Cost: $20-300/mo</text>
+
+  <line x1="60" y1="240" x2="700" y2="240" stroke="#334155" stroke-width="1"/>
+
+  <!-- Home/Renters -->
+  <text x="60" y="260" fill="#e2e8f0" font-size="10" font-weight="700">Home/Renters</text>
+  <text x="60" y="275" fill="#94a3b8" font-size="9">Required by lenders</text>
+  <text x="220" y="260" fill="#e2e8f0" font-size="9">$100-200/mo (home)</text>
+  <text x="220" y="275" fill="#94a3b8" font-size="9">$15-30/mo (renters)</text>
+  <text x="380" y="260" fill="#e2e8f0" font-size="9">Buildings insurance required</text>
+  <text x="380" y="275" fill="#94a3b8" font-size="9">Contents: 10-30 GBP/mo</text>
+  <text x="540" y="260" fill="#e2e8f0" font-size="9">Required by lenders</text>
+  <text x="540" y="275" fill="#94a3b8" font-size="9">$80-150/mo (home)</text>
+
+  <line x1="60" y1="290" x2="700" y2="290" stroke="#334155" stroke-width="1"/>
+
+  <!-- Disability -->
+  <text x="60" y="310" fill="#e2e8f0" font-size="10" font-weight="700">Disability</text>
+  <text x="60" y="325" fill="#94a3b8" font-size="9">Private (short/long term)</text>
+  <text x="220" y="310" fill="#e2e8f0" font-size="9">Often through employer</text>
+  <text x="220" y="325" fill="#94a3b8" font-size="9">Cost: $25-100/mo</text>
+  <text x="380" y="310" fill="#e2e8f0" font-size="9">Statutory Sick Pay</text>
+  <text x="380" y="325" fill="#94a3b8" font-size="9">+ Universal Credit</text>
+  <text x="540" y="310" fill="#e2e8f0" font-size="9">CPP Disability Benefit</text>
+  <text x="540" y="325" fill="#94a3b8" font-size="9">+ Provincial programs</text>
+
+  <line x1="60" y1="340" x2="700" y2="340" stroke="#334155" stroke-width="1"/>
+
+  <!-- Umbrella -->
+  <text x="60" y="360" fill="#e2e8f0" font-size="10" font-weight="700">Umbrella</text>
+  <text x="60" y="375" fill="#94a3b8" font-size="9">Extra liability coverage</text>
+  <text x="220" y="360" fill="#e2e8f0" font-size="9">$150-300/yr for $1M</text>
+  <text x="220" y="375" fill="#94a3b8" font-size="9">Highly recommended</text>
+  <text x="380" y="360" fill="#e2e8f0" font-size="9">Not common</text>
+  <text x="380" y="375" fill="#94a3b8" font-size="9">Increase home/auto limits</text>
+  <text x="540" y="360" fill="#e2e8f0" font-size="9">Not common</text>
+  <text x="540" y="375" fill="#94a3b8" font-size="9">Increase liability limits</text>
+
+  <line x1="60" y1="390" x2="700" y2="390" stroke="#334155" stroke-width="1"/>
+
+  <!-- Key differences -->
+  <text x="60" y="415" fill="#e2e8f0" font-size="11" font-weight="700">Key Differences</text>
+  <text x="60" y="435" fill="#22c55e" font-size="9" font-weight="600">US:</text>
+  <text x="85" y="435" fill="#94a3b8" font-size="9">Most expensive, employer-based health, private market</text>
+  <text x="60" y="452" fill="#6366f1" font-size="9" font-weight="600">UK:</text>
+  <text x="85" y="452" fill="#94a3b8" font-size="9">NHS covers health, cheaper auto, less insurance needed</text>
+</svg>

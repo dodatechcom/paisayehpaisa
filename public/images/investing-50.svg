@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <rect width="760" height="480" fill="#1a1d23" rx="8"/>
+  <text x="380" y="26" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Investing at 50: Catch-Up Strategy</text>
+
+  <!-- Catch-up contributions -->
+  <rect x="40" y="45" width="340" height="210" fill="#1e293b" rx="6"/>
+  <text x="210" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Catch-Up Contributions (50+)</text>
+
+  <rect x="60" y="85" width="300" height="30" fill="#22c55e" rx="4"/>
+  <text x="70" y="104" fill="#fff" font-size="10" font-weight="600">401(k): $23,500 + $7,500 = $31,000</text>
+
+  <rect x="60" y="120" width="300" height="30" fill="#6366f1" rx="4"/>
+  <text x="70" y="139" fill="#fff" font-size="10" font-weight="600">Roth IRA: $7,000 + $1,000 = $8,000</text>
+
+  <rect x="60" y="155" width="300" height="30" fill="#f59e0b" rx="4"/>
+  <text x="70" y="174" fill="#fff" font-size="10" font-weight="600">HSA: $8,300 (family) + $1,000</text>
+
+  <rect x="60" y="190" width="300" height="55" fill="#1a1d23" rx="4"/>
+  <text x="70" y="210" fill="#22c55e" font-size="10" font-weight="600">Total: $40,300/year tax-advantaged</text>
+  <text x="70" y="228" fill="#94a3b8" font-size="9">That's $3,358/month in tax-advantaged accounts</text>
+
+  <!-- 50s portfolio -->
+  <rect x="400" y="45" width="320" height="210" fill="#1e293b" rx="6"/>
+  <text x="560" y="68" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">Your 50s Portfolio</text>
+
+  <rect x="420" y="85" width="280" height="165" fill="#1a1d23" rx="4"/>
+  <text x="560" y="108" fill="#ef4444" font-size="11" font-weight="700" text-anchor="middle">Balanced Income (Age 50-55)</text>
+  <text x="435" y="132" fill="#94a3b8" font-size="10">50% VTI (U.S. stocks)</text>
+  <text x="435" y="150" fill="#94a3b8" font-size="10">10% VXUS (International)</text>
+  <text x="435" y="168" fill="#94a3b8" font-size="10">25% BND (Bonds)</text>
+  <text x="435" y="186" fill="#94a3b8" font-size="10">10% SCHP (TIPS)</text>
+  <text x="435" y="204" fill="#94a3b8" font-size="10">5% REITs</text>
+  <text x="435" y="225" fill="#ef4444" font-size="9" font-weight="600">Expected return: 6-8%/year</text>
+
+  <!-- 15-year projection -->
+  <rect x="40" y="270" width="680" height="195" fill="#1e293b" rx="6"/>
+  <text x="380" y="295" fill="#e2e8f0" font-size="13" font-weight="700" text-anchor="middle">15-Year Projection (Age 50-65)</text>
+
+  <rect x="60" y="315" width="200" height="135" fill="#1a1d23" rx="4"/>
+  <text x="160" y="338" fill="#94a3b8" font-size="10" font-weight="600" text-anchor="middle">Starting with $200K</text>
+  <text x="70" y="360" fill="#94a3b8" font-size="9">Invest $2,000/month</text>
+  <text x="70" y="377" fill="#94a3b8" font-size="9">At 7% return</text>
+  <text x="70" y="394" fill="#94a3b8" font-size="9">After 15 years:</text>
+  <text x="70" y="418" fill="#22c55e" font-size="11" font-weight="700">$1,200,000+</text>
+
+  <rect x="280" y="315" width="200" height="135" fill="#1a1d23" rx="4"/>
+  <text x="380" y="338" fill="#94a3b8" font-size="10" font-weight="600" text-anchor="middle">Starting with $100K</text>
+  <text x="290" y="360" fill="#94a3b8" font-size="9">Invest $3,000/month</text>
+  <text x="290" y="377" fill="#94a3b8" font-size="9">At 7% return</text>
+  <text x="290" y="394" fill="#94a3b8" font-size="9">After 15 years:</text>
+  <text x="290" y="418" fill="#22c55e" font-size="11" font-weight="700">$1,100,000+</text>
+
+  <rect x="500" y="315" width="200" height="135" fill="#1a1d23" rx="4"/>
+  <text x="600" y="338" fill="#94a3b8" font-size="10" font-weight="600" text-anchor="middle">Starting with $50K</text>
+  <text x="510" y="360" fill="#94a3b8" font-size="9">Invest $3,500/month</text>
+  <text x="510" y="377" fill="#94a3b8" font-size="9">At 7% return</text>
+  <text x="510" y="394" fill="#94a3b8" font-size="9">After 15 years:</text>
+  <text x="510" y="418" fill="#22c55e" font-size="11" font-weight="700">$1,000,000+</text>
+</svg>

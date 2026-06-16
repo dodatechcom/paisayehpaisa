@@ -689,6 +689,13 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"bull-bear-market-crypto.md": {
+	id: "bull-bear-market-crypto.md";
+  slug: "bull-bear-market-crypto";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "can-crypto-transactions-be-reversed.md": {
 	id: "can-crypto-transactions-be-reversed.md";
   slug: "can-crypto-transactions-be-reversed";
@@ -745,6 +752,13 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"crypto-market-cap-explained.md": {
+	id: "crypto-market-cap-explained.md";
+  slug: "crypto-market-cap-explained";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "crypto-narratives-2026.md": {
 	id: "crypto-narratives-2026.md";
   slug: "crypto-narratives-2026";
@@ -769,6 +783,13 @@ declare module 'astro:content' {
 "crypto-vs-stocks-which-is-better.md": {
 	id: "crypto-vs-stocks-which-is-better.md";
   slug: "crypto-vs-stocks-which-is-better";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"crypto-wallets-explained.md": {
+	id: "crypto-wallets-explained.md";
+  slug: "crypto-wallets-explained";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -920,6 +941,13 @@ declare module 'astro:content' {
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
 } & { render(): Render[".md"] };
+"how-to-read-crypto-charts.md": {
+	id: "how-to-read-crypto-charts.md";
+  slug: "how-to-read-crypto-charts";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
 "how-to-research-crypto-project-before-investing.md": {
 	id: "how-to-research-crypto-project-before-investing.md";
   slug: "how-to-research-crypto-project-before-investing";
@@ -937,6 +965,13 @@ declare module 'astro:content' {
 "how-to-spot-early-gems-100x-crypto.md": {
 	id: "how-to-spot-early-gems-100x-crypto.md";
   slug: "how-to-spot-early-gems-100x-crypto";
+  body: string;
+  collection: "crypto-basics";
+  data: InferEntrySchema<"crypto-basics">
+} & { render(): Render[".md"] };
+"how-to-stake-crypto.md": {
+	id: "how-to-stake-crypto.md";
+  slug: "how-to-stake-crypto";
   body: string;
   collection: "crypto-basics";
   data: InferEntrySchema<"crypto-basics">
@@ -1624,9 +1659,23 @@ declare module 'astro:content' {
   collection: "crypto-tax";
   data: InferEntrySchema<"crypto-tax">
 } & { render(): Render[".md"] };
+"crypto-tax-loss-harvesting.md": {
+	id: "crypto-tax-loss-harvesting.md";
+  slug: "crypto-tax-loss-harvesting";
+  body: string;
+  collection: "crypto-tax";
+  data: InferEntrySchema<"crypto-tax">
+} & { render(): Render[".md"] };
 "crypto-tax-uk-2026.md": {
 	id: "crypto-tax-uk-2026.md";
   slug: "crypto-tax-uk-2026";
+  body: string;
+  collection: "crypto-tax";
+  data: InferEntrySchema<"crypto-tax">
+} & { render(): Render[".md"] };
+"defi-taxes-explained.md": {
+	id: "defi-taxes-explained.md";
+  slug: "defi-taxes-explained";
   body: string;
   collection: "crypto-tax";
   data: InferEntrySchema<"crypto-tax">
@@ -1666,6 +1715,13 @@ declare module 'astro:content' {
   collection: "crypto-tax";
   data: InferEntrySchema<"crypto-tax">
 } & { render(): Render[".md"] };
+"how-to-file-crypto-taxes.md": {
+	id: "how-to-file-crypto-taxes.md";
+  slug: "how-to-file-crypto-taxes";
+  body: string;
+  collection: "crypto-tax";
+  data: InferEntrySchema<"crypto-tax">
+} & { render(): Render[".md"] };
 "how-to-read-crypto-tax-report.md": {
 	id: "how-to-read-crypto-tax-report.md";
   slug: "how-to-read-crypto-tax-report";
@@ -1687,9 +1743,23 @@ declare module 'astro:content' {
   collection: "crypto-tax";
   data: InferEntrySchema<"crypto-tax">
 } & { render(): Render[".md"] };
+"nft-taxes-explained.md": {
+	id: "nft-taxes-explained.md";
+  slug: "nft-taxes-explained";
+  body: string;
+  collection: "crypto-tax";
+  data: InferEntrySchema<"crypto-tax">
+} & { render(): Render[".md"] };
 "staking-airdrops-defi-how-free-cryptos-taxed.md": {
 	id: "staking-airdrops-defi-how-free-cryptos-taxed.md";
   slug: "staking-airdrops-defi-how-free-cryptos-taxed";
+  body: string;
+  collection: "crypto-tax";
+  data: InferEntrySchema<"crypto-tax">
+} & { render(): Render[".md"] };
+"staking-income-taxes.md": {
+	id: "staking-income-taxes.md";
+  slug: "staking-income-taxes";
   body: string;
   collection: "crypto-tax";
   data: InferEntrySchema<"crypto-tax">
@@ -1718,9 +1788,23 @@ declare module 'astro:content' {
   collection: "insurance";
   data: InferEntrySchema<"insurance">
 } & { render(): Render[".md"] };
+"auto-insurance-full-vs-liability.md": {
+	id: "auto-insurance-full-vs-liability.md";
+  slug: "auto-insurance-full-vs-liability";
+  body: string;
+  collection: "insurance";
+  data: InferEntrySchema<"insurance">
+} & { render(): Render[".md"] };
 "health-insurance-basics.md": {
 	id: "health-insurance-basics.md";
   slug: "health-insurance-basics";
+  body: string;
+  collection: "insurance";
+  data: InferEntrySchema<"insurance">
+} & { render(): Render[".md"] };
+"hmo-vs-ppo.md": {
+	id: "hmo-vs-ppo.md";
+  slug: "hmo-vs-ppo";
   body: string;
   collection: "insurance";
   data: InferEntrySchema<"insurance">
@@ -1742,6 +1826,27 @@ declare module 'astro:content' {
 "life-insurance-101.md": {
 	id: "life-insurance-101.md";
   slug: "life-insurance-101";
+  body: string;
+  collection: "insurance";
+  data: InferEntrySchema<"insurance">
+} & { render(): Render[".md"] };
+"renters-vs-homeowners.md": {
+	id: "renters-vs-homeowners.md";
+  slug: "renters-vs-homeowners";
+  body: string;
+  collection: "insurance";
+  data: InferEntrySchema<"insurance">
+} & { render(): Render[".md"] };
+"term-vs-whole-life.md": {
+	id: "term-vs-whole-life.md";
+  slug: "term-vs-whole-life";
+  body: string;
+  collection: "insurance";
+  data: InferEntrySchema<"insurance">
+} & { render(): Render[".md"] };
+"us-vs-uk-vs-canada-insurance.md": {
+	id: "us-vs-uk-vs-canada-insurance.md";
+  slug: "us-vs-uk-vs-canada-insurance";
   body: string;
   collection: "insurance";
   data: InferEntrySchema<"insurance">
@@ -1793,6 +1898,41 @@ declare module 'astro:content' {
 "how-to-invest-10000.md": {
 	id: "how-to-invest-10000.md";
   slug: "how-to-invest-10000";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
+"investing-after-60.md": {
+	id: "investing-after-60.md";
+  slug: "investing-after-60";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
+"investing-at-40.md": {
+	id: "investing-at-40.md";
+  slug: "investing-at-40";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
+"investing-at-50.md": {
+	id: "investing-at-50.md";
+  slug: "investing-at-50";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
+"investing-in-your-20s.md": {
+	id: "investing-in-your-20s.md";
+  slug: "investing-in-your-20s";
+  body: string;
+  collection: "investing";
+  data: InferEntrySchema<"investing">
+} & { render(): Render[".md"] };
+"investing-in-your-30s.md": {
+	id: "investing-in-your-30s.md";
+  slug: "investing-in-your-30s";
   body: string;
   collection: "investing";
   data: InferEntrySchema<"investing">
