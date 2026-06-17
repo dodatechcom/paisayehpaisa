@@ -1997,6 +1997,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "personal-finance": {
+"annuities-explained.md": {
+	id: "annuities-explained.md";
+  slug: "annuities-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "bailiffs-your-rights.md": {
 	id: "bailiffs-your-rights.md";
   slug: "bailiffs-your-rights";
@@ -2042,6 +2049,13 @@ declare module 'astro:content' {
 "broadband-deals-guide.md": {
 	id: "broadband-deals-guide.md";
   slug: "broadband-deals-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"budgeting-basics.md": {
+	id: "budgeting-basics.md";
+  slug: "budgeting-basics";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2102,6 +2116,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"credit-unions-explained.md": {
+	id: "credit-unions-explained.md";
+  slug: "credit-unions-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "debt-consolidation-loans.md": {
 	id: "debt-consolidation-loans.md";
   slug: "debt-consolidation-loans";
@@ -2119,6 +2140,13 @@ declare module 'astro:content' {
 "debt-solutions-explained.md": {
 	id: "debt-solutions-explained.md";
   slug: "debt-solutions-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"emergency-fund-guide.md": {
+	id: "emergency-fund-guide.md";
+  slug: "emergency-fund-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2154,6 +2182,13 @@ declare module 'astro:content' {
 "free-cheap-wills.md": {
 	id: "free-cheap-wills.md";
   slug: "free-cheap-wills";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"having-a-baby-costs-guide.md": {
+	id: "having-a-baby-costs-guide.md";
+  slug: "having-a-baby-costs-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2256,6 +2291,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"pension-drawdown-explained.md": {
+	id: "pension-drawdown-explained.md";
+  slug: "pension-drawdown-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "premium-bonds-guide.md": {
 	id: "premium-bonds-guide.md";
   slug: "premium-bonds-guide";
@@ -2266,6 +2308,13 @@ declare module 'astro:content' {
 "private-parking-tickets-guide.md": {
 	id: "private-parking-tickets-guide.md";
   slug: "private-parking-tickets-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"regular-savings-accounts.md": {
+	id: "regular-savings-accounts.md";
+  slug: "regular-savings-accounts";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
