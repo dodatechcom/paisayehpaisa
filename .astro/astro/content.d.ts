@@ -2067,6 +2067,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"capital-gains-tax-explained.md": {
+	id: "capital-gains-tax-explained.md";
+  slug: "capital-gains-tax-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "car-finance-explained.md": {
 	id: "car-finance-explained.md";
   slug: "car-finance-explained";
@@ -2154,6 +2161,13 @@ declare module 'astro:content' {
 "debt-solutions-explained.md": {
 	id: "debt-solutions-explained.md";
   slug: "debt-solutions-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"dividend-tax-explained.md": {
+	id: "dividend-tax-explained.md";
+  slug: "dividend-tax-explained";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2305,6 +2319,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"marriage-allowance-guide.md": {
+	id: "marriage-allowance-guide.md";
+  slug: "marriage-allowance-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "mortgage-arrears-guide.md": {
 	id: "mortgage-arrears-guide.md";
   slug: "mortgage-arrears-guide";
@@ -2315,6 +2336,13 @@ declare module 'astro:content' {
 "mortgage-overpayment-calculator.md": {
 	id: "mortgage-overpayment-calculator.md";
   slug: "mortgage-overpayment-calculator";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"national-insurance-explained.md": {
+	id: "national-insurance-explained.md";
+  slug: "national-insurance-explained";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2375,6 +2403,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"property-tax-guide.md": {
+	id: "property-tax-guide.md";
+  slug: "property-tax-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "regular-savings-accounts.md": {
 	id: "regular-savings-accounts.md";
   slug: "regular-savings-accounts";
@@ -2399,6 +2434,20 @@ declare module 'astro:content' {
 "savings-goal-calculator.md": {
 	id: "savings-goal-calculator.md";
   slug: "savings-goal-calculator";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"savings-tax-explained.md": {
+	id: "savings-tax-explained.md";
+  slug: "savings-tax-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"self-assessment-tax-return-guide.md": {
+	id: "self-assessment-tax-return-guide.md";
+  slug: "self-assessment-tax-return-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2455,6 +2504,13 @@ declare module 'astro:content' {
 "supermarket-saving-tips.md": {
 	id: "supermarket-saving-tips.md";
   slug: "supermarket-saving-tips";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"tax-codes-explained.md": {
+	id: "tax-codes-explained.md";
+  slug: "tax-codes-explained";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
