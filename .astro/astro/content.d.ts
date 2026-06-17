@@ -2109,6 +2109,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"comparison-websites-tips.md": {
+	id: "comparison-websites-tips.md";
+  slug: "comparison-websites-tips";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "consumer-rights-guide.md": {
 	id: "consumer-rights-guide.md";
   slug: "consumer-rights-guide";
@@ -2221,6 +2228,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"gift-cards-and-vouchers-guide.md": {
+	id: "gift-cards-and-vouchers-guide.md";
+  slug: "gift-cards-and-vouchers-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "having-a-baby-costs-guide.md": {
 	id: "having-a-baby-costs-guide.md";
   slug: "having-a-baby-costs-guide";
@@ -2252,6 +2266,13 @@ declare module 'astro:content' {
 "how-to-complain-financial-ombudsman.md": {
 	id: "how-to-complain-financial-ombudsman.md";
   slug: "how-to-complain-financial-ombudsman";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"how-to-haggle-bills.md": {
+	id: "how-to-haggle-bills.md";
+  slug: "how-to-haggle-bills";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2494,6 +2515,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"student-discounts-complete-guide.md": {
+	id: "student-discounts-complete-guide.md";
+  slug: "student-discounts-complete-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "student-loans-explained.md": {
 	id: "student-loans-explained.md";
   slug: "student-loans-explained";
@@ -2515,6 +2543,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"tax-when-someone-dies.md": {
+	id: "tax-when-someone-dies.md";
+  slug: "tax-when-someone-dies";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "train-delay-compensation.md": {
 	id: "train-delay-compensation.md";
   slug: "train-delay-compensation";
@@ -2529,6 +2564,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"types-of-borrowing-explained.md": {
+	id: "types-of-borrowing-explained.md";
+  slug: "types-of-borrowing-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "universal-credit-explained.md": {
 	id: "universal-credit-explained.md";
   slug: "universal-credit-explained";
@@ -2539,6 +2581,13 @@ declare module 'astro:content' {
 "used-car-buying-rights.md": {
 	id: "used-car-buying-rights.md";
   slug: "used-car-buying-rights";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"vat-explained-for-consumers.md": {
+	id: "vat-explained-for-consumers.md";
+  slug: "vat-explained-for-consumers";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
