@@ -1997,6 +1997,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "personal-finance": {
+"bailiffs-your-rights.md": {
+	id: "bailiffs-your-rights.md";
+  slug: "bailiffs-your-rights";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "balance-transfer-credit-cards.md": {
 	id: "balance-transfer-credit-cards.md";
   slug: "balance-transfer-credit-cards";
@@ -2060,9 +2067,30 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"common-scams-how-to-spot-them.md": {
+	id: "common-scams-how-to-spot-them.md";
+  slug: "common-scams-how-to-spot-them";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "consumer-rights-guide.md": {
 	id: "consumer-rights-guide.md";
   slug: "consumer-rights-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"council-tax-discounts-explained.md": {
+	id: "council-tax-discounts-explained.md";
+  slug: "council-tax-discounts-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"council-tax-rebanding-guide.md": {
+	id: "council-tax-rebanding-guide.md";
+  slug: "council-tax-rebanding-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2088,6 +2116,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"debt-solutions-explained.md": {
+	id: "debt-solutions-explained.md";
+  slug: "debt-solutions-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "first-time-buyers-guide.md": {
 	id: "first-time-buyers-guide.md";
   slug: "first-time-buyers-guide";
@@ -2102,9 +2137,44 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"flight-cancellation-rights.md": {
+	id: "flight-cancellation-rights.md";
+  slug: "flight-cancellation-rights";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"flight-delay-compensation-guide.md": {
+	id: "flight-delay-compensation-guide.md";
+  slug: "flight-delay-compensation-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "free-cheap-wills.md": {
 	id: "free-cheap-wills.md";
   slug: "free-cheap-wills";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"how-to-appeal-parking-ticket.md": {
+	id: "how-to-appeal-parking-ticket.md";
+  slug: "how-to-appeal-parking-ticket";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"how-to-claim-flight-compensation.md": {
+	id: "how-to-claim-flight-compensation.md";
+  slug: "how-to-claim-flight-compensation";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"how-to-complain-financial-ombudsman.md": {
+	id: "how-to-complain-financial-ombudsman.md";
+  slug: "how-to-complain-financial-ombudsman";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2158,6 +2228,20 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"package-holiday-cancellation-rights.md": {
+	id: "package-holiday-cancellation-rights.md";
+  slug: "package-holiday-cancellation-rights";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"parking-tickets-and-debt-collectors.md": {
+	id: "parking-tickets-and-debt-collectors.md";
+  slug: "parking-tickets-and-debt-collectors";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "pension-auto-enrolment-guide.md": {
 	id: "pension-auto-enrolment-guide.md";
   slug: "pension-auto-enrolment-guide";
@@ -2179,9 +2263,23 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"private-parking-tickets-guide.md": {
+	id: "private-parking-tickets-guide.md";
+  slug: "private-parking-tickets-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "remortgaging-guide.md": {
 	id: "remortgaging-guide.md";
   slug: "remortgaging-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"severe-mental-impairment-council-tax.md": {
+	id: "severe-mental-impairment-council-tax.md";
+  slug: "severe-mental-impairment-council-tax";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2217,6 +2315,13 @@ declare module 'astro:content' {
 "supermarket-saving-tips.md": {
 	id: "supermarket-saving-tips.md";
   slug: "supermarket-saving-tips";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"train-delay-compensation.md": {
+	id: "train-delay-compensation.md";
+  slug: "train-delay-compensation";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
