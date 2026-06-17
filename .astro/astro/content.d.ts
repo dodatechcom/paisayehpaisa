@@ -2004,6 +2004,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"attendance-allowance-guide.md": {
+	id: "attendance-allowance-guide.md";
+  slug: "attendance-allowance-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "bailiffs-your-rights.md": {
 	id: "bailiffs-your-rights.md";
   slug: "bailiffs-your-rights";
@@ -2014,6 +2021,13 @@ declare module 'astro:content' {
 "balance-transfer-credit-cards.md": {
 	id: "balance-transfer-credit-cards.md";
   slug: "balance-transfer-credit-cards";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"bankruptcy-and-debt-solutions-comprehensive.md": {
+	id: "bankruptcy-and-debt-solutions-comprehensive.md";
+  slug: "bankruptcy-and-debt-solutions-comprehensive";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2056,6 +2070,13 @@ declare module 'astro:content' {
 "budgeting-basics.md": {
 	id: "budgeting-basics.md";
   slug: "budgeting-basics";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"buy-to-let-guide.md": {
+	id: "buy-to-let-guide.md";
+  slug: "buy-to-let-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2144,9 +2165,583 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"credit-ratings-explained.md": {
+	id: "credit-ratings-explained.md";
+  slug: "credit-ratings-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "credit-unions-explained.md": {
 	id: "credit-unions-explained.md";
   slug: "credit-unions-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-a-kasse-for-expats.md": {
+	id: "danish-a-kasse-for-expats.md";
+  slug: "danish-a-kasse-for-expats";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-aktiesparekonto-deep-dive.md": {
+	id: "danish-aktiesparekonto-deep-dive.md";
+  slug: "danish-aktiesparekonto-deep-dive";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-aps-formation-guide.md": {
+	id: "danish-aps-formation-guide.md";
+  slug: "danish-aps-formation-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-banking-fees-comparison.md": {
+	id: "danish-banking-fees-comparison.md";
+  slug: "danish-banking-fees-comparison";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-banking-for-expats.md": {
+	id: "danish-banking-for-expats.md";
+  slug: "danish-banking-for-expats";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-bookkeeping-requirements.md": {
+	id: "danish-bookkeeping-requirements.md";
+  slug: "danish-bookkeeping-requirements";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-budgeting-and-saving-guide.md": {
+	id: "danish-budgeting-and-saving-guide.md";
+  slug: "danish-budgeting-and-saving-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-business-deductions-guide.md": {
+	id: "danish-business-deductions-guide.md";
+  slug: "danish-business-deductions-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-business-insurance-guide.md": {
+	id: "danish-business-insurance-guide.md";
+  slug: "danish-business-insurance-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-buying-and-selling-shares.md": {
+	id: "danish-buying-and-selling-shares.md";
+  slug: "danish-buying-and-selling-shares";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-car-buying-tax-guide.md": {
+	id: "danish-car-buying-tax-guide.md";
+  slug: "danish-car-buying-tax-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-closing-a-business.md": {
+	id: "danish-closing-a-business.md";
+  slug: "danish-closing-a-business";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-corporate-tax-guide.md": {
+	id: "danish-corporate-tax-guide.md";
+  slug: "danish-corporate-tax-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-cost-of-living-breakdown.md": {
+	id: "danish-cost-of-living-breakdown.md";
+  slug: "danish-cost-of-living-breakdown";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-credit-score-system.md": {
+	id: "danish-credit-score-system.md";
+  slug: "danish-credit-score-system";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-cross-border-business.md": {
+	id: "danish-cross-border-business.md";
+  slug: "danish-cross-border-business";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-cryptocurrency-tax-guide.md": {
+	id: "danish-cryptocurrency-tax-guide.md";
+  slug: "danish-cryptocurrency-tax-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-debt-consolidation-guide.md": {
+	id: "danish-debt-consolidation-guide.md";
+  slug: "danish-debt-consolidation-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-dividend-investing-guide.md": {
+	id: "danish-dividend-investing-guide.md";
+  slug: "danish-dividend-investing-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-dividend-reinvestment-guide.md": {
+	id: "danish-dividend-reinvestment-guide.md";
+  slug: "danish-dividend-reinvestment-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-dividend-stocks-deep-dive.md": {
+	id: "danish-dividend-stocks-deep-dive.md";
+  slug: "danish-dividend-stocks-deep-dive";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-emigration-share-tax.md": {
+	id: "danish-emigration-share-tax.md";
+  slug: "danish-emigration-share-tax";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-employment-tax-guide.md": {
+	id: "danish-employment-tax-guide.md";
+  slug: "danish-employment-tax-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-estate-planning-guide.md": {
+	id: "danish-estate-planning-guide.md";
+  slug: "danish-estate-planning-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-etfs-vs-investment-funds.md": {
+	id: "danish-etfs-vs-investment-funds.md";
+  slug: "danish-etfs-vs-investment-funds";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-expat-tax-checklist.md": {
+	id: "danish-expat-tax-checklist.md";
+  slug: "danish-expat-tax-checklist";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-financial-independence-calculator.md": {
+	id: "danish-financial-independence-calculator.md";
+  slug: "danish-financial-independence-calculator";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-financial-literacy-guide.md": {
+	id: "danish-financial-literacy-guide.md";
+  slug: "danish-financial-literacy-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-financial-planning-for-couples.md": {
+	id: "danish-financial-planning-for-couples.md";
+  slug: "danish-financial-planning-for-couples";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-financial-planning-for-families.md": {
+	id: "danish-financial-planning-for-families.md";
+  slug: "danish-financial-planning-for-families";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-financial-planning-for-women.md": {
+	id: "danish-financial-planning-for-women.md";
+  slug: "danish-financial-planning-for-women";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-fire-movement.md": {
+	id: "danish-fire-movement.md";
+  slug: "danish-fire-movement";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-first-30-days-financial-checklist.md": {
+	id: "danish-first-30-days-financial-checklist.md";
+  slug: "danish-first-30-days-financial-checklist";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-foreign-custody-account-tax.md": {
+	id: "danish-foreign-custody-account-tax.md";
+  slug: "danish-foreign-custody-account-tax";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-green-investing-guide.md": {
+	id: "danish-green-investing-guide.md";
+  slug: "danish-green-investing-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-health-insurance-for-expats.md": {
+	id: "danish-health-insurance-for-expats.md";
+  slug: "danish-health-insurance-for-expats";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-high-earner-tax-optimization.md": {
+	id: "danish-high-earner-tax-optimization.md";
+  slug: "danish-high-earner-tax-optimization";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-home-buying-guide.md": {
+	id: "danish-home-buying-guide.md";
+  slug: "danish-home-buying-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-insurance-comparison.md": {
+	id: "danish-insurance-comparison.md";
+  slug: "danish-insurance-comparison";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-investing-for-beginners.md": {
+	id: "danish-investing-for-beginners.md";
+  slug: "danish-investing-for-beginners";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-investment-account-types.md": {
+	id: "danish-investment-account-types.md";
+  slug: "danish-investment-account-types";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-investment-for-children.md": {
+	id: "danish-investment-for-children.md";
+  slug: "danish-investment-for-children";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-investment-for-seniors.md": {
+	id: "danish-investment-for-seniors.md";
+  slug: "danish-investment-for-seniors";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-investment-for-young-adults.md": {
+	id: "danish-investment-for-young-adults.md";
+  slug: "danish-investment-for-young-adults";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-investment-fraud-protection.md": {
+	id: "danish-investment-fraud-protection.md";
+  slug: "danish-investment-fraud-protection";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-investment-glossary.md": {
+	id: "danish-investment-glossary.md";
+  slug: "danish-investment-glossary";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-investment-mistakes-to-avoid.md": {
+	id: "danish-investment-mistakes-to-avoid.md";
+  slug: "danish-investment-mistakes-to-avoid";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-investment-platform-comparison.md": {
+	id: "danish-investment-platform-comparison.md";
+  slug: "danish-investment-platform-comparison";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-investment-portfolio-examples.md": {
+	id: "danish-investment-portfolio-examples.md";
+  slug: "danish-investment-portfolio-examples";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-investment-psychology-guide.md": {
+	id: "danish-investment-psychology-guide.md";
+  slug: "danish-investment-psychology-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-investment-returns-calculator.md": {
+	id: "danish-investment-returns-calculator.md";
+  slug: "danish-investment-returns-calculator";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-mortgage-tax-deduction.md": {
+	id: "danish-mortgage-tax-deduction.md";
+  slug: "danish-mortgage-tax-deduction";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-mortgage-types-explained.md": {
+	id: "danish-mortgage-types-explained.md";
+  slug: "danish-mortgage-types-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-passive-income-guide.md": {
+	id: "danish-passive-income-guide.md";
+  slug: "danish-passive-income-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-payslip-explained-for-expats.md": {
+	id: "danish-payslip-explained-for-expats.md";
+  slug: "danish-payslip-explained-for-expats";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-pension-consolidation-guide.md": {
+	id: "danish-pension-consolidation-guide.md";
+  slug: "danish-pension-consolidation-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-pension-drawdown-guide.md": {
+	id: "danish-pension-drawdown-guide.md";
+  slug: "danish-pension-drawdown-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-pension-investing-guide.md": {
+	id: "danish-pension-investing-guide.md";
+  slug: "danish-pension-investing-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-portfolio-construction-guide.md": {
+	id: "danish-portfolio-construction-guide.md";
+  slug: "danish-portfolio-construction-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-portfolio-rebalancing-guide.md": {
+	id: "danish-portfolio-rebalancing-guide.md";
+  slug: "danish-portfolio-rebalancing-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-property-investment-tax.md": {
+	id: "danish-property-investment-tax.md";
+  slug: "danish-property-investment-tax";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-property-management-guide.md": {
+	id: "danish-property-management-guide.md";
+  slug: "danish-property-management-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-reits-and-property-funds.md": {
+	id: "danish-reits-and-property-funds.md";
+  slug: "danish-reits-and-property-funds";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-rental-market-guide-for-expats.md": {
+	id: "danish-rental-market-guide-for-expats.md";
+  slug: "danish-rental-market-guide-for-expats";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-researcher-tax-scheme.md": {
+	id: "danish-researcher-tax-scheme.md";
+  slug: "danish-researcher-tax-scheme";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-retirement-planning-timeline.md": {
+	id: "danish-retirement-planning-timeline.md";
+  slug: "danish-retirement-planning-timeline";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-robo-advisors-guide.md": {
+	id: "danish-robo-advisors-guide.md";
+  slug: "danish-robo-advisors-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-salary-negotiation-guide.md": {
+	id: "danish-salary-negotiation-guide.md";
+  slug: "danish-salary-negotiation-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-share-tax-overview.md": {
+	id: "danish-share-tax-overview.md";
+  slug: "danish-share-tax-overview";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-side-hustle-ideas.md": {
+	id: "danish-side-hustle-ideas.md";
+  slug: "danish-side-hustle-ideas";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-side-hustle-tax-guide.md": {
+	id: "danish-side-hustle-tax-guide.md";
+  slug: "danish-side-hustle-tax-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-starting-a-business.md": {
+	id: "danish-starting-a-business.md";
+  slug: "danish-starting-a-business";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-stock-market-overview.md": {
+	id: "danish-stock-market-overview.md";
+  slug: "danish-stock-market-overview";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-stock-market-sectors-guide.md": {
+	id: "danish-stock-market-sectors-guide.md";
+  slug: "danish-stock-market-sectors-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-stock-market-sectors.md": {
+	id: "danish-stock-market-sectors.md";
+  slug: "danish-stock-market-sectors";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-student-finance-guide.md": {
+	id: "danish-student-finance-guide.md";
+  slug: "danish-student-finance-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-tax-calculator-guide.md": {
+	id: "danish-tax-calculator-guide.md";
+  slug: "danish-tax-calculator-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-tax-on-foreign-income.md": {
+	id: "danish-tax-on-foreign-income.md";
+  slug: "danish-tax-on-foreign-income";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-tax-optimization-strategies.md": {
+	id: "danish-tax-optimization-strategies.md";
+  slug: "danish-tax-optimization-strategies";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-tax-return-guide.md": {
+	id: "danish-tax-return-guide.md";
+  slug: "danish-tax-return-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"danish-vat-guide.md": {
+	id: "danish-vat-guide.md";
+  slug: "danish-vat-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2165,6 +2760,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"debt-snowball-vs-avalanche.md": {
+	id: "debt-snowball-vs-avalanche.md";
+  slug: "debt-snowball-vs-avalanche";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "debt-solutions-explained.md": {
 	id: "debt-solutions-explained.md";
   slug: "debt-solutions-explained";
@@ -2179,9 +2781,23 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"emergency-fund-deep-dive.md": {
+	id: "emergency-fund-deep-dive.md";
+  slug: "emergency-fund-deep-dive";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "emergency-fund-guide.md": {
 	id: "emergency-fund-guide.md";
   slug: "emergency-fund-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"fire-financial-independence-guide.md": {
+	id: "fire-financial-independence-guide.md";
+  slug: "fire-financial-independence-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2221,9 +2837,23 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"fscs-protection-explained.md": {
+	id: "fscs-protection-explained.md";
+  slug: "fscs-protection-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "gambling-debt-help.md": {
 	id: "gambling-debt-help.md";
   slug: "gambling-debt-help";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"gift-aid-explained.md": {
+	id: "gift-aid-explained.md";
+  slug: "gift-aid-explained";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2235,9 +2865,23 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"gifts-and-inheritance-tax.md": {
+	id: "gifts-and-inheritance-tax.md";
+  slug: "gifts-and-inheritance-tax";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "having-a-baby-costs-guide.md": {
 	id: "having-a-baby-costs-guide.md";
   slug: "having-a-baby-costs-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"help-to-buy-and-shared-ownership.md": {
+	id: "help-to-buy-and-shared-ownership.md";
+  slug: "help-to-buy-and-shared-ownership";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2252,6 +2896,13 @@ declare module 'astro:content' {
 "how-to-appeal-parking-ticket.md": {
 	id: "how-to-appeal-parking-ticket.md";
   slug: "how-to-appeal-parking-ticket";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"how-to-choose-a-broker.md": {
+	id: "how-to-choose-a-broker.md";
+  slug: "how-to-choose-a-broker";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2273,6 +2924,13 @@ declare module 'astro:content' {
 "how-to-haggle-bills.md": {
 	id: "how-to-haggle-bills.md";
   slug: "how-to-haggle-bills";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"how-to-read-a-payslip.md": {
+	id: "how-to-read-a-payslip.md";
+  slug: "how-to-read-a-payslip";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2305,6 +2963,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"index-funds-explained.md": {
+	id: "index-funds-explained.md";
+  slug: "index-funds-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "inheritance-tax-planning.md": {
 	id: "inheritance-tax-planning.md";
   slug: "inheritance-tax-planning";
@@ -2315,6 +2980,27 @@ declare module 'astro:content' {
 "interest-rates-explained.md": {
 	id: "interest-rates-explained.md";
   slug: "interest-rates-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"investing-101-beginners-guide.md": {
+	id: "investing-101-beginners-guide.md";
+  slug: "investing-101-beginners-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"investing-for-children.md": {
+	id: "investing-for-children.md";
+  slug: "investing-for-children";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"isa-vs-lisa-vs-pension.md": {
+	id: "isa-vs-lisa-vs-pension.md";
+  slug: "isa-vs-lisa-vs-pension";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2340,6 +3026,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"lump-sum-investing-vs-dollar-cost-averaging.md": {
+	id: "lump-sum-investing-vs-dollar-cost-averaging.md";
+  slug: "lump-sum-investing-vs-dollar-cost-averaging";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "marriage-allowance-guide.md": {
 	id: "marriage-allowance-guide.md";
   slug: "marriage-allowance-guide";
@@ -2357,6 +3050,13 @@ declare module 'astro:content' {
 "mortgage-overpayment-calculator.md": {
 	id: "mortgage-overpayment-calculator.md";
   slug: "mortgage-overpayment-calculator";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"mortgage-overpayments-vs-investments.md": {
+	id: "mortgage-overpayments-vs-investments.md";
+  slug: "mortgage-overpayments-vs-investments";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2410,6 +3110,41 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"pension-scam-recovery.md": {
+	id: "pension-scam-recovery.md";
+  slug: "pension-scam-recovery";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"pension-scams-guide.md": {
+	id: "pension-scams-guide.md";
+  slug: "pension-scams-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"pension-types-explained.md": {
+	id: "pension-types-explained.md";
+  slug: "pension-types-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"pip-personal-independence-payment-guide.md": {
+	id: "pip-personal-independence-payment-guide.md";
+  slug: "pip-personal-independence-payment-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"power-of-attorney-financial.md": {
+	id: "power-of-attorney-financial.md";
+  slug: "power-of-attorney-financial";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "premium-bonds-guide.md": {
 	id: "premium-bonds-guide.md";
   slug: "premium-bonds-guide";
@@ -2431,6 +3166,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"regular-investing-explained.md": {
+	id: "regular-investing-explained.md";
+  slug: "regular-investing-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "regular-savings-accounts.md": {
 	id: "regular-savings-accounts.md";
   slug: "regular-savings-accounts";
@@ -2445,9 +3187,30 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"rent-a-room-scheme.md": {
+	id: "rent-a-room-scheme.md";
+  slug: "rent-a-room-scheme";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "rent-arrears-what-to-do.md": {
 	id: "rent-arrears-what-to-do.md";
   slug: "rent-arrears-what-to-do";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"rsus-explained.md": {
+	id: "rsus-explained.md";
+  slug: "rsus-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"salary-sacrifice-explained.md": {
+	id: "salary-sacrifice-explained.md";
+  slug: "salary-sacrifice-explained";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2462,6 +3225,13 @@ declare module 'astro:content' {
 "savings-tax-explained.md": {
 	id: "savings-tax-explained.md";
   slug: "savings-tax-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"section75-and-chargeback-claims.md": {
+	id: "section75-and-chargeback-claims.md";
+  slug: "section75-and-chargeback-claims";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2483,6 +3253,13 @@ declare module 'astro:content' {
 "severe-mental-impairment-council-tax.md": {
 	id: "severe-mental-impairment-council-tax.md";
   slug: "severe-mental-impairment-council-tax";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"side-hustles-tax-guide.md": {
+	id: "side-hustles-tax-guide.md";
+  slug: "side-hustles-tax-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
