@@ -2081,6 +2081,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"cheap-petrol-diesel.md": {
+	id: "cheap-petrol-diesel.md";
+  slug: "cheap-petrol-diesel";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "cheap-travel-money.md": {
 	id: "cheap-travel-money.md";
   slug: "cheap-travel-money";
@@ -2193,9 +2200,23 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"gambling-debt-help.md": {
+	id: "gambling-debt-help.md";
+  slug: "gambling-debt-help";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "having-a-baby-costs-guide.md": {
 	id: "having-a-baby-costs-guide.md";
   slug: "having-a-baby-costs-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"home-improvement-disputes.md": {
+	id: "home-improvement-disputes.md";
+  slug: "home-improvement-disputes";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2217,6 +2238,13 @@ declare module 'astro:content' {
 "how-to-complain-financial-ombudsman.md": {
 	id: "how-to-complain-financial-ombudsman.md";
   slug: "how-to-complain-financial-ombudsman";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"how-to-save-on-all-bills.md": {
+	id: "how-to-save-on-all-bills.md";
+  slug: "how-to-save-on-all-bills";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -2368,6 +2396,20 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"savings-goal-calculator.md": {
+	id: "savings-goal-calculator.md";
+  slug: "savings-goal-calculator";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"selling-on-ebay-vinted.md": {
+	id: "selling-on-ebay-vinted.md";
+  slug: "selling-on-ebay-vinted";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "severe-mental-impairment-council-tax.md": {
 	id: "severe-mental-impairment-council-tax.md";
   slug: "severe-mental-impairment-council-tax";
@@ -2378,6 +2420,13 @@ declare module 'astro:content' {
 "state-pension-explained.md": {
 	id: "state-pension-explained.md";
   slug: "state-pension-explained";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"streaming-savings-guide.md": {
+	id: "streaming-savings-guide.md";
+  slug: "streaming-savings-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
