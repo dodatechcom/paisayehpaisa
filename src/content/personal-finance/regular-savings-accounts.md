@@ -1,6 +1,6 @@
 ---
-title: "Regular Savings Accounts: Best Rates in 2026"
-description: "Compare the best regular savings accounts in the UK for 2026. Learn how regular savers work, which banks offer the highest rates, and how to maximise your returns."
+title: "Regular Savings Accounts: Earn Up to 8% on Monthly Savings"
+description: "How regular savings accounts work in the UK, which banks pay the best rates, and the strategy to maximise your returns — all tax-free."
 date: 2026-06-16
 lastUpdated: 2026-06-16
 tags:
@@ -9,24 +9,27 @@ tags:
   - interest rates
   - best accounts
   - banking
+  - personal savings allowance
 categories:
   - personal-finance
 draft: false
 ---
 
+Regular savings accounts pay some of the highest interest rates available to UK savers — in some cases up to 8% AER. The catch? You must commit to fixed monthly deposits for 12 months. Here's how they work, which accounts pay the most, and the strategy to get the best returns.
+
 ## What Is a Regular Savings Account?
 
-A regular savings account (regular saver) rewards you for making fixed monthly deposits over a set period — usually 12 months. Unlike easy-access savings where you can deposit any amount at any time, regular savers require a fixed monthly contribution, typically between £50 and £300.
+A regular savings account rewards you for making fixed monthly deposits over a set period — usually 12 months. Unlike easy-access savings where you can deposit any amount at any time, regular savers require a fixed monthly contribution, typically between £50 and £300.
 
-In return, you get interest rates significantly higher than standard savings accounts — often 5-7% compared to 2-3% in easy-access accounts.
+In return, you get interest rates significantly higher than standard savings accounts — often 5% to 8% compared to 2% to 3% in easy-access accounts.
 
 ## How Regular Savers Work
 
 **The basic rules:**
 
-1. **Fixed monthly deposit** — You commit to saving a set amount each month (e.g., £200)
+1. **Fixed monthly deposit** — You commit to saving a set amount each month (e.g., £250)
 2. **12-month term** — The account runs for a year, then typically converts to an easy-access account
-3. **Missed payments** — Some providers allow missed months; others penalise you
+3. **Missed payments** — Some providers allow missed months; others penalise you or close the account
 4. **Existing customer requirement** — Most regular savers require you to hold a current account with the same provider
 5. **Withdrawal restrictions** — Many limit or penalise withdrawals during the term
 
@@ -36,15 +39,25 @@ Let's compare saving £200 per month for 12 months in different accounts:
 
 | Account Type | Interest Rate | Total Saved | Interest Earned |
 |---|---|---|---|
-| Regular saver (6%) | 6% AER | £2,400 | ~£78 |
+| Regular saver (7%) | 7% AER | £2,400 | ~£91 |
 | Easy-access (2.5%) | 2.5% AER | £2,400 | ~£30 |
 | Instant access (3%) | 3% AER | £2,400 | ~£36 |
 
-**Note:** Interest on regular savers is typically calculated monthly on the balance that month, so you earn less in early months and more as the balance grows. The £78 figure assumes monthly interest calculations at 6%.
+**Note:** Interest on regular savers is typically calculated monthly on the balance that month, so you earn less in early months and more as the balance grows. The £91 figure assumes monthly interest calculations at 7%.
 
-Over three years of continuous regular saving, that's roughly £234 in interest versus £90 — a difference of £144.
+Over three years of continuous regular saving, that's roughly £273 in interest versus £90 — a difference of £183.
 
 ## Best Regular Savings Accounts in 2026
+
+### Nationwide FlexRegular Saver
+
+- **Rate:** 8.0% AER
+- **Monthly deposit:** £50-£250
+- **Term:** 12 months
+- **Requirement:** Must hold a Nationwide FlexAccount or FlexDirect current account
+- **Missed payments:** Allows one missed payment per year without penalty
+- **Withdrawals:** Limited to one withdrawal per year
+- **Best for:** Existing Nationwide customers wanting the highest rate on the market
 
 ### First Direct Regular Saver
 
@@ -54,17 +67,17 @@ Over three years of continuous regular saving, that's roughly £234 in interest 
 - **Requirement:** Must hold a First Direct current account
 - **Missed payments:** You can miss payments without penalty, but the account closes if you miss two consecutive months
 - **Withdrawals:** No withdrawals allowed during the term
-- **Best for:** Highest rate on the market with flexibility on missed payments
+- **Best for:** Highest rate without Nationwide — flexibility on missed payments is a bonus
 
-### Nationwide FlexRegular Saver
+### Lloyds Club Regular Saver
 
-- **Rate:** 6.0% AER
-- **Monthly deposit:** £50-£250
+- **Rate:** 6.25% AER
+- **Monthly deposit:** £25-£250
 - **Term:** 12 months
-- **Requirement:** Must hold a Nationwide FlexDirect current account
-- **Missed payments:** Allows one missed payment per year without penalty
-- **Withdrawals:** Limited to one withdrawal per year
-- **Best for:** Existing Nationwide customers wanting a strong rate
+- **Requirement:** Must hold a Lloyds Club current account
+- **Missed payments:** Account may be closed if you miss payments
+- **Withdrawals:** Restrictions apply
+- **Best for:** Lloyds customers looking for a straightforward option
 
 ### Halifax Regular Saver
 
@@ -74,45 +87,39 @@ Over three years of continuous regular saving, that's roughly £234 in interest 
 - **Requirement:** Must hold a Halifax current account
 - **Missed payments:** Account may be closed if you miss payments
 - **Withdrawals:** Restrictions apply
-- **Best for:** Halifax customers looking for a simple, competitive option
-
-### Tesco Bank Regular Saver
-
-- **Rate:** 5.0% AER
-- **Monthly deposit:** £25-£200
-- **Term:** 12 months
-- **Requirement:** Must hold a Tesco Bank current account
-- **Missed payments:** Allows some flexibility
-- **Withdrawals:** Restrictions during term
-- **Best for:** Tesco Clubcard customers wanting to combine rewards with savings
+- **Best for:** Halifax customers who want a simple, competitive option
 
 ## Comparison Table: Top Regular Savers 2026
 
-| Provider | AER | Min Deposit | Max Deposit | Current Account Needed? | Missed Payment Policy |
+| Provider | AER | Min Deposit | Max Deposit | Access | Requirements |
 |---|---|---|---|---|---|
-| First Direct | 7.0% | £25 | £300 | Yes | Two consecutive = closure |
-| Nationwide | 6.0% | £50 | £250 | Yes | One allowed per year |
-| Halifax | 5.5% | £25 | £250 | Yes | May close account |
-| Tesco Bank | 5.0% | £25 | £200 | Yes | Some flexibility |
+| Nationwide | 8.0% | £50 | £250 | Limited (one withdrawal/year) | FlexAccount or FlexDirect |
+| First Direct | 7.0% | £25 | £300 | No withdrawals during term | First Direct current account |
+| Lloyds Club | 6.25% | £25 | £250 | Restricted | Club current account |
+| Halifax | 5.5% | £25 | £250 | Restricted | Halifax current account |
 
-## How to Maximise Regular Saver Returns
+## Strategy: Regular Saver + Easy Access
 
-**1. Open the highest-rate account you qualify for**
-Start with First Direct at 7% if you can meet the current account requirement.
+The smartest approach uses both account types together:
 
-**2. Set up a standing order**
-Automate your monthly deposit so you never miss a payment. Set it for the day after your salary arrives.
+1. **Open a regular saver** at the highest rate you qualify for and commit your maximum monthly deposit
+2. **Keep excess cash in an easy-access account** — If you can save more than the regular saver allows, put the overflow in a competitive easy-access account earning 3% to 4%
+3. **Chain your regular savers** — After 12 months, your account converts to a lower rate. Open a new regular saver with another provider to keep earning top rates
+4. **Use multiple regular savers** — If you have more than £250 per month to save, open regular savers with different banks to maximise your interest
 
-**3. Don't withdraw during the term**
-Most regular savers penalise withdrawals or close the account. Treat the money as locked away for 12 months.
+This approach gives you the best of both worlds: high rates on a fixed amount, plus flexibility for anything extra.
 
-**4. Chain accounts**
-After 12 months, your regular saver converts to an easy-access account. Open a new regular saver to continue earning high rates.
+## Tax on Savings Interest
 
-**5. Use multiple regular savers**
-If you have more than £300 per month to save, open regular savers with different providers to maximise your interest.
+All savings interest is **tax-free** under the **Personal Savings Allowance (PSA)**:
 
-## Common Rules and Pitfalls
+- **Basic-rate taxpayers** — First £1,000 of savings interest per year is tax-free
+- **Higher-rate taxpayers** — First £500 is tax-free
+- **Additional-rate taxpayers** — No allowance, but most people aren't in this bracket
+
+For most savers, regular saver interest won't exceed the allowance, so you won't pay tax on it. This makes regular savers even more attractive compared to other investments where gains may be taxable.
+
+## Rules and Pitfalls
 
 **Eligibility:**
 - Most require a current account with the same provider
@@ -127,12 +134,12 @@ If you have more than £300 per month to save, open regular savers with differen
 **Withdrawals:**
 - Some accounts close entirely if you make a withdrawal
 - Others allow limited withdrawals with reduced interest
-- Check the terms before opening
+- Always check the terms before opening
 
 **End of term:**
-- Accounts usually convert to standard easy-access rates
-- You'll need to actively open a new regular saver to maintain high rates
-- Some providers notify you; others don't
+- Accounts usually convert to standard easy-access rates (often under 2%)
+- You need to actively open a new regular saver to maintain high rates
+- Set a reminder in your calendar for the 12-month mark
 
 ## Who Should Use a Regular Saver?
 
@@ -151,8 +158,8 @@ If you have more than £300 per month to save, open regular savers with differen
 ## Getting Started
 
 1. Check if you already have a current account with a provider offering a regular saver
-2. Compare rates — First Direct's 7% is currently the market leader
-3. Open the account and set up a standing order
+2. Compare rates — Nationwide at 8% is currently the market leader if you qualify
+3. Open the account and set up a standing order for the day after your salary arrives
 4. Commit to 12 months of consistent saving
 5. After 12 months, reassess and open a new regular saver
 
