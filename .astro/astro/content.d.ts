@@ -148,6 +148,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"best-money-habits-to-start-today.md": {
+	id: "best-money-habits-to-start-today.md";
+  slug: "best-money-habits-to-start-today";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "bitcoin-etf-impact-2026.md": {
 	id: "bitcoin-etf-impact-2026.md";
   slug: "bitcoin-etf-impact-2026";
@@ -165,6 +172,27 @@ declare module 'astro:content' {
 "fed-rate-cuts-2026.md": {
 	id: "fed-rate-cuts-2026.md";
   slug: "fed-rate-cuts-2026";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"how-ai-is-changing-personal-finance-2026.md": {
+	id: "how-ai-is-changing-personal-finance-2026.md";
+  slug: "how-ai-is-changing-personal-finance-2026";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"summer-financial-checklist-2026.md": {
+	id: "summer-financial-checklist-2026.md";
+  slug: "summer-financial-checklist-2026";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"uk-housing-market-outlook-2026.md": {
+	id: "uk-housing-market-outlook-2026.md";
+  slug: "uk-housing-market-outlook-2026";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -1870,6 +1898,34 @@ declare module 'astro:content' {
 "term-vs-whole-life.md": {
 	id: "term-vs-whole-life.md";
   slug: "term-vs-whole-life";
+  body: string;
+  collection: "insurance";
+  data: InferEntrySchema<"insurance">
+} & { render(): Render[".md"] };
+"uk-car-insurance-guide.md": {
+	id: "uk-car-insurance-guide.md";
+  slug: "uk-car-insurance-guide";
+  body: string;
+  collection: "insurance";
+  data: InferEntrySchema<"insurance">
+} & { render(): Render[".md"] };
+"uk-home-insurance-guide.md": {
+	id: "uk-home-insurance-guide.md";
+  slug: "uk-home-insurance-guide";
+  body: string;
+  collection: "insurance";
+  data: InferEntrySchema<"insurance">
+} & { render(): Render[".md"] };
+"uk-life-insurance-guide.md": {
+	id: "uk-life-insurance-guide.md";
+  slug: "uk-life-insurance-guide";
+  body: string;
+  collection: "insurance";
+  data: InferEntrySchema<"insurance">
+} & { render(): Render[".md"] };
+"uk-private-health-insurance-guide.md": {
+	id: "uk-private-health-insurance-guide.md";
+  slug: "uk-private-health-insurance-guide";
   body: string;
   collection: "insurance";
   data: InferEntrySchema<"insurance">
@@ -3607,9 +3663,30 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"uk-benefits-calculator-guide.md": {
+	id: "uk-benefits-calculator-guide.md";
+  slug: "uk-benefits-calculator-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-benefits-for-families-guide.md": {
+	id: "uk-benefits-for-families-guide.md";
+  slug: "uk-benefits-for-families-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "uk-benefits-guide.md": {
 	id: "uk-benefits-guide.md";
   slug: "uk-benefits-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-bereavement-financial-checklist.md": {
+	id: "uk-bereavement-financial-checklist.md";
+  slug: "uk-bereavement-financial-checklist";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -3656,9 +3733,30 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"uk-care-costs-guide.md": {
+	id: "uk-care-costs-guide.md";
+  slug: "uk-care-costs-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-carers-allowance-guide.md": {
+	id: "uk-carers-allowance-guide.md";
+  slug: "uk-carers-allowance-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "uk-child-benefit-guide.md": {
 	id: "uk-child-benefit-guide.md";
   slug: "uk-child-benefit-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-child-trust-fund-guide.md": {
+	id: "uk-child-trust-fund-guide.md";
+  slug: "uk-child-trust-fund-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -3670,9 +3768,44 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"uk-consumer-credit-act-guide.md": {
+	id: "uk-consumer-credit-act-guide.md";
+  slug: "uk-consumer-credit-act-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-contractor-ir35-guide.md": {
+	id: "uk-contractor-ir35-guide.md";
+  slug: "uk-contractor-ir35-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-council-tax-appeals-guide.md": {
+	id: "uk-council-tax-appeals-guide.md";
+  slug: "uk-council-tax-appeals-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "uk-council-tax-guide.md": {
 	id: "uk-council-tax-guide.md";
   slug: "uk-council-tax-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-council-tax-reduction-guide.md": {
+	id: "uk-council-tax-reduction-guide.md";
+  slug: "uk-council-tax-reduction-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-credit-building-guide.md": {
+	id: "uk-credit-building-guide.md";
+  slug: "uk-credit-building-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -3687,6 +3820,20 @@ declare module 'astro:content' {
 "uk-credit-score-guide.md": {
 	id: "uk-credit-score-guide.md";
   slug: "uk-credit-score-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-cryptocurrency-tax-guide.md": {
+	id: "uk-cryptocurrency-tax-guide.md";
+  slug: "uk-cryptocurrency-tax-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-cycle-to-work-scheme-guide.md": {
+	id: "uk-cycle-to-work-scheme-guide.md";
+  slug: "uk-cycle-to-work-scheme-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -3712,9 +3859,44 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"uk-eis-seis-vct-guide.md": {
+	id: "uk-eis-seis-vct-guide.md";
+  slug: "uk-eis-seis-vct-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-electric-car-salary-sacrifice-guide.md": {
+	id: "uk-electric-car-salary-sacrifice-guide.md";
+  slug: "uk-electric-car-salary-sacrifice-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-emergency-fund-deep-dive.md": {
+	id: "uk-emergency-fund-deep-dive.md";
+  slug: "uk-emergency-fund-deep-dive";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "uk-emerging-markets-guide.md": {
 	id: "uk-emerging-markets-guide.md";
   slug: "uk-emerging-markets-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-emigrating-financial-guide.md": {
+	id: "uk-emigrating-financial-guide.md";
+  slug: "uk-emigrating-financial-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-employer-benefits-guide.md": {
+	id: "uk-employer-benefits-guide.md";
+  slug: "uk-employer-benefits-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -3754,9 +3936,44 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"uk-financial-abuse-guide.md": {
+	id: "uk-financial-abuse-guide.md";
+  slug: "uk-financial-abuse-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-financial-calculators-guide.md": {
+	id: "uk-financial-calculators-guide.md";
+  slug: "uk-financial-calculators-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-financial-health-check.md": {
+	id: "uk-financial-health-check.md";
+  slug: "uk-financial-health-check";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-financial-planning-for-women.md": {
+	id: "uk-financial-planning-for-women.md";
+  slug: "uk-financial-planning-for-women";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "uk-financial-planning-guide.md": {
 	id: "uk-financial-planning-guide.md";
   slug: "uk-financial-planning-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-financial-wellbeing-guide.md": {
+	id: "uk-financial-wellbeing-guide.md";
+  slug: "uk-financial-wellbeing-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -3775,9 +3992,30 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"uk-help-to-save-guide.md": {
+	id: "uk-help-to-save-guide.md";
+  slug: "uk-help-to-save-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-hmrc-time-to-pay-guide.md": {
+	id: "uk-hmrc-time-to-pay-guide.md";
+  slug: "uk-hmrc-time-to-pay-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "uk-home-buying-guide.md": {
 	id: "uk-home-buying-guide.md";
   slug: "uk-home-buying-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-identity-theft-protection.md": {
+	id: "uk-identity-theft-protection.md";
+  slug: "uk-identity-theft-protection";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -3810,6 +4048,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"uk-investment-bonds-guide.md": {
+	id: "uk-investment-bonds-guide.md";
+  slug: "uk-investment-bonds-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "uk-investment-platforms-guide.md": {
 	id: "uk-investment-platforms-guide.md";
   slug: "uk-investment-platforms-guide";
@@ -3831,6 +4076,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"uk-joint-mortgage-guide.md": {
+	id: "uk-joint-mortgage-guide.md";
+  slug: "uk-joint-mortgage-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "uk-junior-isa-guide.md": {
 	id: "uk-junior-isa-guide.md";
   slug: "uk-junior-isa-guide";
@@ -3841,6 +4093,48 @@ declare module 'astro:content' {
 "uk-lifetime-isa-guide.md": {
 	id: "uk-lifetime-isa-guide.md";
   slug: "uk-lifetime-isa-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-making-tax-digital-guide.md": {
+	id: "uk-making-tax-digital-guide.md";
+  slug: "uk-making-tax-digital-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-marriage-allowance-guide.md": {
+	id: "uk-marriage-allowance-guide.md";
+  slug: "uk-marriage-allowance-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-money-after-divorce.md": {
+	id: "uk-money-after-divorce.md";
+  slug: "uk-money-after-divorce";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-money-for-couples.md": {
+	id: "uk-money-for-couples.md";
+  slug: "uk-money-for-couples";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-money-for-over-50s-guide.md": {
+	id: "uk-money-for-over-50s-guide.md";
+  slug: "uk-money-for-over-50s-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-money-mindset-guide.md": {
+	id: "uk-money-mindset-guide.md";
+  slug: "uk-money-mindset-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -3859,9 +4153,37 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"uk-packaged-bank-accounts-guide.md": {
+	id: "uk-packaged-bank-accounts-guide.md";
+  slug: "uk-packaged-bank-accounts-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-parental-leave-pay-guide.md": {
+	id: "uk-parental-leave-pay-guide.md";
+  slug: "uk-parental-leave-pay-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-pension-dashboard-guide.md": {
+	id: "uk-pension-dashboard-guide.md";
+  slug: "uk-pension-dashboard-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "uk-pension-drawdown-guide.md": {
 	id: "uk-pension-drawdown-guide.md";
   slug: "uk-pension-drawdown-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-pension-scams-guide.md": {
+	id: "uk-pension-scams-guide.md";
+  slug: "uk-pension-scams-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -3894,6 +4216,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"uk-pre-nuptial-agreements-guide.md": {
+	id: "uk-pre-nuptial-agreements-guide.md";
+  slug: "uk-pre-nuptial-agreements-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "uk-premium-bonds-guide.md": {
 	id: "uk-premium-bonds-guide.md";
   slug: "uk-premium-bonds-guide";
@@ -3922,6 +4251,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"uk-redundancy-rights-guide.md": {
+	id: "uk-redundancy-rights-guide.md";
+  slug: "uk-redundancy-rights-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "uk-reit-guide.md": {
 	id: "uk-reit-guide.md";
   slug: "uk-reit-guide";
@@ -3932,6 +4268,34 @@ declare module 'astro:content' {
 "uk-remortgage-guide.md": {
 	id: "uk-remortgage-guide.md";
   slug: "uk-remortgage-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-rental-income-tax-guide.md": {
+	id: "uk-rental-income-tax-guide.md";
+  slug: "uk-rental-income-tax-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-right-to-buy-guide.md": {
+	id: "uk-right-to-buy-guide.md";
+  slug: "uk-right-to-buy-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-robo-advisors-guide.md": {
+	id: "uk-robo-advisors-guide.md";
+  slug: "uk-robo-advisors-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-salary-negotiation-guide.md": {
+	id: "uk-salary-negotiation-guide.md";
+  slug: "uk-salary-negotiation-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
@@ -3964,6 +4328,20 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"uk-self-employed-deep-dive.md": {
+	id: "uk-self-employed-deep-dive.md";
+  slug: "uk-self-employed-deep-dive";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-self-employed-tax-guide.md": {
+	id: "uk-self-employed-tax-guide.md";
+  slug: "uk-self-employed-tax-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "uk-shared-ownership-guide.md": {
 	id: "uk-shared-ownership-guide.md";
   slug: "uk-shared-ownership-guide";
@@ -3992,6 +4370,27 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"uk-social-fund-crisis-support-guide.md": {
+	id: "uk-social-fund-crisis-support-guide.md";
+  slug: "uk-social-fund-crisis-support-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-state-pension-forecast-guide.md": {
+	id: "uk-state-pension-forecast-guide.md";
+  slug: "uk-state-pension-forecast-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-statutory-sick-pay-guide.md": {
+	id: "uk-statutory-sick-pay-guide.md";
+  slug: "uk-statutory-sick-pay-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "uk-stock-trading-guide.md": {
 	id: "uk-stock-trading-guide.md";
   slug: "uk-stock-trading-guide";
@@ -4009,6 +4408,13 @@ declare module 'astro:content' {
 "uk-tax-codes-guide.md": {
 	id: "uk-tax-codes-guide.md";
   slug: "uk-tax-codes-guide";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"uk-tax-free-childcare-guide.md": {
+	id: "uk-tax-free-childcare-guide.md";
+  slug: "uk-tax-free-childcare-guide";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">

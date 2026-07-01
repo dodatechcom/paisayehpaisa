@@ -1,0 +1,693 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Savings Goal Calculator — Reach Your Target" description="Calculate how long it takes to reach your savings goal. See month-by-month breakdown, total interest earned, and how boosting contributions accelerates your timeline." type="tool" category="personal-finance">
+  <div class="tool-container">
+    <div class="tool-header">
+      <h1>Savings Goal Calculator</h1>
+      <p class="subtitle">Reach your target — see exactly when you'll get there</p>
+    </div>
+
+    <div class="calculator-grid">
+      <div class="input-section">
+        <h2>Your Plan</h2>
+
+        <div class="input-group">
+          <label for="goalAmount">Savings Goal</label>
+          <div class="input-wrapper">
+            <span class="currency">£</span>
+            <input type="number" id="goalAmount" value="10000" min="0" step="500">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="currentSavings">Current Savings</label>
+          <div class="input-wrapper">
+            <span class="currency">£</span>
+            <input type="number" id="currentSavings" value="2000" min="0" step="500">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="monthlyContribution">Monthly Contribution</label>
+          <div class="input-wrapper">
+            <span class="currency">£</span>
+            <input type="number" id="monthlyContribution" value="200" min="0" step="25">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="interestRate">Annual Interest Rate (%)</label>
+          <div class="input-wrapper">
+            <input type="number" id="interestRate" value="5" min="0" max="30" step="0.1">
+            <span class="currency">%</span>
+          </div>
+        </div>
+
+        <button id="calculate" class="btn-primary">Calculate</button>
+      </div>
+
+      <div class="results-section">
+        <h2>Your Results</h2>
+
+        <div class="results-grid">
+          <div class="result-card green">
+            <div class="result-label">Months to Goal</div>
+            <div class="result-value" id="monthsToGoal">38</div>
+            <div class="result-detail" id="monthsDetail">3 years, 2 months</div>
+          </div>
+
+          <div class="result-card blue">
+            <div class="result-label">Total Saved</div>
+            <div class="result-value" id="totalSaved">£10,000</div>
+            <div class="result-detail" id="totalDetail">Goal reached</div>
+          </div>
+
+          <div class="result-card yellow">
+            <div class="result-label">Interest Earned</div>
+            <div class="result-value" id="interestEarned">£912</div>
+            <div class="result-detail" id="interestDetail">Over the savings period</div>
+          </div>
+
+          <div class="result-card purple">
+            <div class="result-label">Total Contributed</div>
+            <div class="result-value" id="totalContributed">£7,600</div>
+            <div class="result-detail" id="contributedDetail">From your pocket</div>
+          </div>
+        </div>
+
+        <div class="progress-section">
+          <h3>Progress to Goal</h3>
+          <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar" style="width: 20%;"></div>
+          </div>
+          <div class="progress-labels">
+            <span id="progressStart">£2,000</span>
+            <span id="progressPct">20%</span>
+            <span id="progressEnd">£10,000</span>
+          </div>
+        </div>
+
+        <div class="comparison-section">
+          <h3>Monthly vs Lump Sum</h3>
+          <div class="comparison-grid">
+            <div class="comparison-card">
+              <div class="comparison-label">Save Monthly</div>
+              <div class="comparison-value" id="compMonthly">38 months</div>
+              <div class="comparison-detail" id="compMonthlyDetail">£200/mo + interest</div>
+            </div>
+            <div class="comparison-card">
+              <div class="comparison-label">Invest Lump Sum Now</div>
+              <div class="comparison-value" id="compLump">Immediately</div>
+              <div class="comparison-detail" id="compLumpDetail">£8,000 needed today</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="boost-section">
+          <h3>Impact of Increasing Contributions</h3>
+          <div class="boost-grid" id="boostGrid">
+            <div class="boost-card">
+              <div class="boost-label">+£25/month</div>
+              <div class="boost-value" id="boost25">32 months</div>
+              <div class="boost-saved">6 months faster</div>
+            </div>
+            <div class="boost-card">
+              <div class="boost-label">+£50/month</div>
+              <div class="boost-value" id="boost50">28 months</div>
+              <div class="boost-saved">10 months faster</div>
+            </div>
+            <div class="boost-card">
+              <div class="boost-label">+£100/month</div>
+              <div class="boost-value" id="boost100">22 months</div>
+              <div class="boost-saved">16 months faster</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="amortization-section" id="amortizationSection">
+      <h2>Month-by-Month Breakdown</h2>
+      <div class="table-wrapper">
+        <table id="amortTable">
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Starting Balance</th>
+              <th>Interest</th>
+              <th>Contribution</th>
+              <th>Ending Balance</th>
+            </tr>
+          </thead>
+          <tbody id="amortBody"></tbody>
+        </table>
+        <div class="table-summary" id="tableSummary"></div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p><strong>Tip:</strong> Even small increases in your monthly contribution can shave months off your timeline. Setting up a direct debit removes the temptation to skip payments and keeps your goal on track.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .tool-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .tool-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+  }
+
+  .calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .calculator-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .input-section, .results-section {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .input-section h2, .results-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #e2e8f0;
+  }
+
+  .input-group {
+    margin-bottom: 1rem;
+  }
+
+  .input-group label {
+    display: block;
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+  }
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    background: #1a1d23;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .currency {
+    padding: 0 0.75rem;
+    color: #22c55e;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+
+  input[type="number"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #e2e8f0;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-family: inherit;
+    width: 100%;
+  }
+
+  input[type="number"]:focus {
+    outline: none;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 0.875rem;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .result-card {
+    background: #1a1d23;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    border-left: 3px solid;
+  }
+
+  .result-card.green { border-color: #22c55e; }
+  .result-card.blue { border-color: #0ea5e9; }
+  .result-card.yellow { border-color: #f59e0b; }
+  .result-card.purple { border-color: #8b5cf6; }
+
+  .result-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .result-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 0.25rem;
+  }
+
+  .result-card.green .result-value { color: #22c55e; }
+  .result-card.blue .result-value { color: #0ea5e9; }
+  .result-card.yellow .result-value { color: #f59e0b; }
+  .result-card.purple .result-value { color: #8b5cf6; }
+
+  .result-detail {
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+
+  .progress-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .progress-section h3 {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    margin-bottom: 0.75rem;
+  }
+
+  .progress-bar-container {
+    background: #1a1d23;
+    border-radius: 8px;
+    height: 24px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+    border-radius: 8px;
+    transition: width 0.5s ease;
+  }
+
+  .progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+
+  .comparison-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .comparison-section h3 {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    margin-bottom: 0.75rem;
+  }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .comparison-card {
+    background: #1a1d23;
+    border-radius: 8px;
+    padding: 0.75rem;
+    text-align: center;
+    border: 1px solid #334155;
+  }
+
+  .comparison-label {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .comparison-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 0.25rem;
+  }
+
+  .comparison-detail {
+    font-size: 0.7rem;
+    color: #94a3b8;
+  }
+
+  .boost-section {
+    margin-bottom: 0.5rem;
+  }
+
+  .boost-section h3 {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    margin-bottom: 0.75rem;
+  }
+
+  .boost-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .boost-card {
+    background: #1a1d23;
+    border-radius: 8px;
+    padding: 0.75rem;
+    text-align: center;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+
+  .boost-label {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .boost-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #22c55e;
+    margin-bottom: 0.25rem;
+  }
+
+  .boost-saved {
+    font-size: 0.7rem;
+    color: #94a3b8;
+  }
+
+  .amortization-section {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .amortization-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #e2e8f0;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  th {
+    background: #1a1d23;
+    color: #94a3b8;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.75rem;
+    text-align: right;
+    position: sticky;
+    top: 0;
+  }
+
+  th:first-child {
+    text-align: left;
+  }
+
+  td {
+    padding: 0.6rem 0.75rem;
+    text-align: right;
+    color: #cbd5e1;
+    border-bottom: 1px solid #334155;
+  }
+
+  td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: #e2e8f0;
+  }
+
+  tr:hover td {
+    background: rgba(34, 197, 94, 0.05);
+  }
+
+  .table-summary {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: #1a1d23;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    text-align: center;
+  }
+
+  .callout {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #1e293b;
+    border-radius: 8px;
+    border-left: 3px solid #22c55e;
+  }
+
+  .callout p {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .results-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .comparison-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .boost-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .result-value {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
+<script>
+  function formatMoney(num: number): string {
+    return '£' + Math.round(num).toLocaleString('en-GB');
+  }
+
+  function calculateMonthsToGoal(goal: number, current: number, monthly: number, annualRate: number): number {
+    if (current >= goal) return 0;
+    if (monthly <= 0) return Infinity;
+
+    const monthlyRate = annualRate / 100 / 12;
+    let balance = current;
+    let months = 0;
+    const maxMonths = 1200;
+
+    while (balance < goal && months < maxMonths) {
+      balance = balance * (1 + monthlyRate) + monthly;
+      months++;
+    }
+
+    return months >= maxMonths ? Infinity : months;
+  }
+
+  function calculateSavings() {
+    const goal = parseFloat((document.getElementById('goalAmount') as HTMLInputElement).value) || 0;
+    const current = parseFloat((document.getElementById('currentSavings') as HTMLInputElement).value) || 0;
+    const monthly = parseFloat((document.getElementById('monthlyContribution') as HTMLInputElement).value) || 0;
+    const annualRate = parseFloat((document.getElementById('interestRate') as HTMLInputElement).value) || 0;
+
+    if (goal <= 0) {
+      return;
+    }
+
+    const months = calculateMonthsToGoal(goal, current, monthly, annualRate);
+    const monthlyRate = annualRate / 100 / 12;
+
+    // Simulate to get total interest and contributions
+    let balance = current;
+    let totalInterest = 0;
+    let totalContributed = current;
+    const monthlyData: { month: number; start: number; interest: number; contribution: number; end: number }[] = [];
+
+    for (let m = 1; m <= months; m++) {
+      const start = balance;
+      const interest = balance * monthlyRate;
+      balance = start + interest + monthly;
+      if (balance > goal) balance = goal;
+      totalInterest += interest;
+      totalContributed += monthly;
+      monthlyData.push({ month: m, start, interest, contribution: monthly, end: balance });
+    }
+
+    const years = Math.floor(months / 12);
+    const remainingMonths = months % 12;
+    const yearsText = years > 0 ? `${years} year${years !== 1 ? 's' : ''}` : '';
+    const monthsText = remainingMonths > 0 ? `${remainingMonths} month${remainingMonths !== 1 ? 's' : ''}` : '';
+    const detailText = [yearsText, monthsText].filter(Boolean).join(', ') || 'Goal reached!';
+
+    document.getElementById('monthsToGoal')!.textContent = months === Infinity ? '∞' : months.toString();
+    document.getElementById('monthsDetail')!.textContent = detailText;
+
+    document.getElementById('totalSaved')!.textContent = formatMoney(goal);
+    document.getElementById('totalDetail')!.textContent = 'Goal reached';
+
+    document.getElementById('interestEarned')!.textContent = formatMoney(totalInterest);
+    document.getElementById('interestDetail')!.textContent = `Over ${months} month${months !== 1 ? 's' : ''}`;
+
+    document.getElementById('totalContributed')!.textContent = formatMoney(totalContributed);
+    document.getElementById('contributedDetail')!.textContent = 'From your pocket';
+
+    // Progress bar
+    const progress = Math.min((current / goal) * 100, 100);
+    document.getElementById('progressBar')!.style.width = progress + '%';
+    document.getElementById('progressStart')!.textContent = formatMoney(current);
+    document.getElementById('progressPct')!.textContent = Math.round(progress) + '%';
+    document.getElementById('progressEnd')!.textContent = formatMoney(goal);
+
+    // Monthly vs Lump Sum
+    const lumpNeeded = goal / Math.pow(1 + monthlyRate, months === Infinity ? 1200 : months);
+    document.getElementById('compMonthly')!.textContent = months === Infinity ? 'Never' : months + ' months';
+    document.getElementById('compMonthlyDetail')!.textContent = `${formatMoney(monthly)}/mo + interest`;
+    document.getElementById('compLump')!.textContent = months <= 0 ? 'Already there' : 'Invest now';
+    document.getElementById('compLumpDetail')!.textContent = `${formatMoney(Math.max(0, goal - current))} needed today`;
+
+    // Boost comparisons
+    const months25 = calculateMonthsToGoal(goal, current, monthly + 25, annualRate);
+    const months50 = calculateMonthsToGoal(goal, current, monthly + 50, annualRate);
+    const months100 = calculateMonthsToGoal(goal, current, monthly + 100, annualRate);
+
+    const fmtMonths = (m: number) => m === Infinity ? '∞' : m + ' mo';
+
+    document.getElementById('boost25')!.textContent = fmtMonths(months25);
+    document.getElementById('boost50')!.textContent = fmtMonths(months50);
+    document.getElementById('boost100')!.textContent = fmtMonths(months100);
+
+    const saved25 = months === Infinity ? '∞' : (months - months25);
+    const saved50 = months === Infinity ? '∞' : (months - months50);
+    const saved100 = months === Infinity ? '∞' : (months - months100);
+
+    document.querySelector('#boost25 + .boost-saved')!.textContent = saved25 > 0 ? `${saved25} months faster` : 'Same timeline';
+    document.querySelector('#boost50 + .boost-saved')!.textContent = saved50 > 0 ? `${saved50} months faster` : 'Same timeline';
+    document.querySelector('#boost100 + .boost-saved')!.textContent = saved100 > 0 ? `${saved100} months faster` : 'Same timeline';
+
+    // Month-by-month table
+    const tbody = document.getElementById('amortBody')!;
+    tbody.innerHTML = '';
+
+    const maxDisplay = Math.min(monthlyData.length, 12);
+
+    for (let i = 0; i < maxDisplay; i++) {
+      const row = monthlyData[i];
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${row.month}</td>
+        <td>${formatMoney(row.start)}</td>
+        <td>${formatMoney(row.interest)}</td>
+        <td>${formatMoney(row.contribution)}</td>
+        <td>${formatMoney(row.end)}</td>
+      `;
+      tbody.appendChild(tr);
+    }
+
+    // Summary row if there are more months
+    const summaryEl = document.getElementById('tableSummary')!;
+    if (monthlyData.length > 12) {
+      const remaining = monthlyData.length - 12;
+      summaryEl.textContent = `Showing first 12 months. ${remaining} more month${remaining !== 1 ? 's' : ''} until goal reached.`;
+    } else if (monthlyData.length > 0) {
+      summaryEl.textContent = `Goal reached in ${monthlyData.length} month${monthlyData.length !== 1 ? 's' : ''}.`;
+    } else {
+      summaryEl.textContent = current >= goal ? 'You have already reached your goal!' : 'Enter your details to see a breakdown.';
+    }
+
+    // Save to localStorage
+    try {
+      localStorage.setItem('savingsGoalCalc', JSON.stringify({ goal, current, monthly, annualRate }));
+    } catch (e) {
+      // localStorage not available
+    }
+  }
+
+  // Load from localStorage
+  function loadFromStorage() {
+    try {
+      const saved = localStorage.getItem('savingsGoalCalc');
+      if (saved) {
+        const data = JSON.parse(saved);
+        if (data.goal !== undefined) (document.getElementById('goalAmount') as HTMLInputElement).value = data.goal;
+        if (data.current !== undefined) (document.getElementById('currentSavings') as HTMLInputElement).value = data.current;
+        if (data.monthly !== undefined) (document.getElementById('monthlyContribution') as HTMLInputElement).value = data.monthly;
+        if (data.annualRate !== undefined) (document.getElementById('interestRate') as HTMLInputElement).value = data.annualRate;
+      }
+    } catch (e) {
+      // localStorage not available
+    }
+  }
+
+  document.getElementById('calculate')!.addEventListener('click', calculateSavings);
+
+  document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', calculateSavings);
+  });
+
+  loadFromStorage();
+  calculateSavings();
+</script>

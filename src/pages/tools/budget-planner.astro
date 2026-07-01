@@ -1,0 +1,753 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Budget Planner — Track Your Income & Expenses" description="Plan your monthly budget by tracking income and expenses. Identify surplus or deficit and export your budget as CSV.">
+  <div class="tool-container">
+    <div class="tool-header">
+      <h1>Budget Planner</h1>
+      <p class="subtitle">Track Your Income &amp; Expenses — know where every pound goes</p>
+    </div>
+
+    <div class="summary-bar">
+      <div class="summary-item">
+        <span class="summary-label">Total Income</span>
+        <span class="summary-value income" id="totalIncome">£0</span>
+      </div>
+      <div class="summary-item">
+        <span class="summary-label">Total Expenses</span>
+        <span class="summary-value expense" id="totalExpenses">£0</span>
+      </div>
+      <div class="summary-item">
+        <span class="summary-label">Surplus / Deficit</span>
+        <span class="summary-value" id="surplus">£0</span>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+      <span class="progress-text" id="progressText">£0 remaining</span>
+    </div>
+
+    <div class="calculator-grid">
+      <div class="input-section">
+        <h2>Income</h2>
+        <div id="incomeItems">
+          <div class="item-row">
+            <div class="input-group">
+              <label>Salary (after tax)</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="income-amount" value="0" min="0" step="50" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="input-group">
+              <label>Side Income</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="income-amount" value="0" min="0" step="50" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="input-group">
+              <label>Other Income</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="income-amount" value="0" min="0" step="50" placeholder="0">
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-add" id="addIncome">+ Add Income</button>
+
+        <h2>Expenses</h2>
+        <div id="expenseItems">
+          <div class="item-row">
+            <div class="input-group">
+              <label>Rent / Mortgage</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="expense-amount" value="0" min="0" step="10" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="input-group">
+              <label>Council Tax</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="expense-amount" value="0" min="0" step="10" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="input-group">
+              <label>Utilities</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="expense-amount" value="0" min="0" step="10" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="input-group">
+              <label>Groceries</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="expense-amount" value="0" min="0" step="10" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="input-group">
+              <label>Transport</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="expense-amount" value="0" min="0" step="10" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="input-group">
+              <label>Insurance</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="expense-amount" value="0" min="0" step="10" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="input-group">
+              <label>Phone / Internet</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="expense-amount" value="0" min="0" step="10" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="input-group">
+              <label>Subscriptions</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="expense-amount" value="0" min="0" step="10" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="input-group">
+              <label>Eating Out</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="expense-amount" value="0" min="0" step="10" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="input-group">
+              <label>Entertainment</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="expense-amount" value="0" min="0" step="10" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="input-group">
+              <label>Clothing</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="expense-amount" value="0" min="0" step="10" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="input-group">
+              <label>Savings</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="expense-amount" value="0" min="0" step="10" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="input-group">
+              <label>Other</label>
+              <div class="input-wrapper">
+                <span class="currency">£</span>
+                <input type="number" class="expense-amount" value="0" min="0" step="10" placeholder="0">
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-add" id="addExpense">+ Add Expense</button>
+      </div>
+
+      <div class="results-section">
+        <h2>Breakdown</h2>
+        <div id="breakdownList" class="breakdown-list"></div>
+
+        <div class="action-buttons">
+          <button class="btn-secondary" id="exportCsv">Export CSV</button>
+          <button class="btn-danger" id="clearAll">Clear All</button>
+        </div>
+
+        <div class="callout">
+          <p>Budget tip: Follow the <strong>50/30/20 rule</strong> — 50% on needs, 30% on wants, 20% on savings &amp; debt repayment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .tool-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .tool-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+  }
+
+  .summary-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .summary-bar {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .summary-item {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    text-align: center;
+  }
+
+  .summary-label {
+    display: block;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .summary-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e2e8f0;
+  }
+
+  .summary-value.income { color: #22c55e; }
+  .summary-value.expense { color: #ef4444; }
+
+  .progress-container {
+    position: relative;
+    background: #1a1d23;
+    border-radius: 8px;
+    height: 28px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+    border-radius: 8px;
+    transition: width 0.4s ease, background 0.3s ease;
+    width: 0%;
+  }
+
+  .progress-bar.deficit {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+  }
+
+  .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    pointer-events: none;
+  }
+
+  .calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .calculator-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .input-section, .results-section {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .input-section h2, .results-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    color: #e2e8f0;
+  }
+
+  .input-section h2:first-child {
+    margin-top: 0;
+  }
+
+  .item-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+  }
+
+  .item-row .input-group {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .item-row label {
+    display: block;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-bottom: 0.35rem;
+  }
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    background: #1a1d23;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .currency {
+    padding: 0 0.75rem;
+    color: #22c55e;
+    font-weight: 600;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+  }
+
+  input[type="number"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #e2e8f0;
+    padding: 0.65rem 0.75rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    width: 100%;
+  }
+
+  input[type="number"]:focus {
+    outline: none;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
+  }
+
+  .btn-add {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    color: #22c55e;
+    border: 1px dashed #22c55e;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin-top: 0.25rem;
+    transition: background 0.2s;
+  }
+
+  .btn-add:hover {
+    background: rgba(34, 197, 94, 0.1);
+  }
+
+  .btn-remove {
+    background: transparent;
+    border: none;
+    color: #ef4444;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    line-height: 1;
+    border-radius: 4px;
+    transition: background 0.2s;
+    flex-shrink: 0;
+    margin-top: 1.25rem;
+  }
+
+  .btn-remove:hover {
+    background: rgba(239, 68, 68, 0.15);
+  }
+
+  .breakdown-list {
+    margin-bottom: 1.5rem;
+  }
+
+  .breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #334155;
+    font-size: 0.9rem;
+  }
+
+  .breakdown-item:last-child {
+    border-bottom: none;
+  }
+
+  .breakdown-item .item-name {
+    color: #cbd5e1;
+  }
+
+  .breakdown-item .item-amount {
+    color: #e2e8f0;
+    font-weight: 600;
+  }
+
+  .breakdown-item.income .item-amount { color: #22c55e; }
+  .breakdown-item.expense .item-amount { color: #ef4444; }
+
+  .action-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-secondary, .btn-danger {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-secondary {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-danger {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+  }
+
+  .btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  }
+
+  .callout {
+    padding: 1rem;
+    background: #1a1d23;
+    border-radius: 8px;
+    border-left: 3px solid #f59e0b;
+  }
+
+  .callout p {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin: 0;
+  }
+
+  .callout strong {
+    color: #f59e0b;
+  }
+
+  .new-item-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #334155;
+    color: #e2e8f0;
+    padding: 0.4rem 0;
+    font-size: 0.8rem;
+    font-family: inherit;
+    width: 100%;
+  }
+
+  .new-item-input:focus {
+    outline: none;
+  }
+</style>
+
+<script>
+  const LS_KEY = 'budgetPlannerData';
+
+  function getAllIncomeRows(): HTMLDivElement[] {
+    return Array.from(document.querySelectorAll('#incomeItems .item-row')) as HTMLDivElement[];
+  }
+
+  function getAllExpenseRows(): HTMLDivElement[] {
+    return Array.from(document.querySelectorAll('#expenseItems .item-row')) as HTMLDivElement[];
+  }
+
+  function getIncomeData(): { name: string; amount: number }[] {
+    const rows = getAllIncomeRows();
+    return rows.map(row => {
+      const label = row.querySelector('label');
+      const input = row.querySelector('.income-amount') as HTMLInputElement;
+      let name = '';
+      if (label) {
+        const nameInput = label.querySelector('.new-item-input') as HTMLInputElement;
+        name = nameInput ? nameInput.value : (label.textContent || '').trim();
+      }
+      return { name, amount: parseFloat(input?.value) || 0 };
+    });
+  }
+
+  function getExpenseData(): { name: string; amount: number }[] {
+    const rows = getAllExpenseRows();
+    return rows.map(row => {
+      const label = row.querySelector('label');
+      const input = row.querySelector('.expense-amount') as HTMLInputElement;
+      let name = '';
+      if (label) {
+        const nameInput = label.querySelector('.new-item-input') as HTMLInputElement;
+        name = nameInput ? nameInput.value : (label.textContent || '').trim();
+      }
+      return { name, amount: parseFloat(input?.value) || 0 };
+    });
+  }
+
+  function calculate() {
+    const incomeData = getIncomeData();
+    const expenseData = getExpenseData();
+
+    const totalIncome = incomeData.reduce((s, i) => s + i.amount, 0);
+    const totalExpenses = expenseData.reduce((s, i) => s + i.amount, 0);
+    const surplus = totalIncome - totalExpenses;
+
+    document.getElementById('totalIncome')!.textContent = '\u00A3' + totalIncome.toLocaleString();
+    document.getElementById('totalExpenses')!.textContent = '\u00A3' + totalExpenses.toLocaleString();
+
+    const surplusEl = document.getElementById('surplus')!;
+    surplusEl.textContent = (surplus >= 0 ? '\u00A3' : '-\u00A3') + Math.abs(surplus).toLocaleString();
+    surplusEl.className = 'summary-value ' + (surplus >= 0 ? 'income' : 'expense');
+
+    const progressBar = document.getElementById('progressBar')!;
+    const progressText = document.getElementById('progressText')!;
+    if (totalIncome > 0) {
+      const pct = Math.min((totalExpenses / totalIncome) * 100, 100);
+      progressBar.style.width = pct + '%';
+      progressBar.className = 'progress-bar' + (surplus < 0 ? ' deficit' : '');
+      if (surplus >= 0) {
+        progressText.textContent = '\u00A3' + surplus.toLocaleString() + ' remaining';
+      } else {
+        progressText.textContent = 'Over budget by \u00A3' + Math.abs(surplus).toLocaleString();
+      }
+    } else {
+      progressBar.style.width = '0%';
+      progressBar.className = 'progress-bar';
+      progressText.textContent = '\u00A30 remaining';
+    }
+
+    const breakdownList = document.getElementById('breakdownList')!;
+    let html = '';
+    incomeData.filter(i => i.amount > 0).forEach(i => {
+      html += '<div class="breakdown-item income"><span class="item-name">' + i.name + '</span><span class="item-amount">\u00A3' + i.amount.toLocaleString() + '</span></div>';
+    });
+    expenseData.filter(e => e.amount > 0).forEach(e => {
+      html += '<div class="breakdown-item expense"><span class="item-name">' + e.name + '</span><span class="item-amount">-\u00A3' + e.amount.toLocaleString() + '</span></div>';
+    });
+    if (html === '') {
+      html = '<div class="breakdown-item"><span class="item-name" style="color:#64748b">Enter amounts to see breakdown</span></div>';
+    }
+    breakdownList.innerHTML = html;
+
+    saveToStorage();
+  }
+
+  function saveToStorage() {
+    const data = {
+      income: getIncomeData(),
+      expenses: getExpenseData()
+    };
+    localStorage.setItem(LS_KEY, JSON.stringify(data));
+  }
+
+  function loadFromStorage() {
+    const raw = localStorage.getItem(LS_KEY);
+    if (!raw) return;
+    try {
+      const data = JSON.parse(raw);
+      if (data.income) {
+        const incomeRows = getAllIncomeRows();
+        data.income.forEach((item: { name: string; amount: number }, i: number) => {
+          if (incomeRows[i]) {
+            const input = incomeRows[i].querySelector('.income-amount') as HTMLInputElement;
+            if (input) input.value = item.amount || 0;
+            if (item.name) {
+              const label = incomeRows[i].querySelector('label');
+              if (label) {
+                const nameInput = label.querySelector('.new-item-input') as HTMLInputElement;
+                if (nameInput) nameInput.value = item.name;
+                else label.textContent = item.name;
+              }
+            }
+          }
+        });
+      }
+      if (data.expenses) {
+        const expenseRows = getAllExpenseRows();
+        data.expenses.forEach((item: { name: string; amount: number }, i: number) => {
+          if (expenseRows[i]) {
+            const input = expenseRows[i].querySelector('.expense-amount') as HTMLInputElement;
+            if (input) input.value = item.amount || 0;
+            if (item.name) {
+              const label = expenseRows[i].querySelector('label');
+              if (label) {
+                const nameInput = label.querySelector('.new-item-input') as HTMLInputElement;
+                if (nameInput) nameInput.value = item.name;
+                else label.textContent = item.name;
+              }
+            }
+          }
+        });
+      }
+    } catch (e) {}
+  }
+
+  function addIncomeRow() {
+    const container = document.getElementById('incomeItems')!;
+    const row = document.createElement('div');
+    row.className = 'item-row';
+    row.innerHTML = `
+      <div class="input-group" style="flex:1">
+        <label><input type="text" class="new-item-input" placeholder="Income name" value="Income"></label>
+        <div class="input-wrapper">
+          <span class="currency">\u00A3</span>
+          <input type="number" class="income-amount" value="0" min="0" step="50" placeholder="0">
+        </div>
+      </div>
+      <button class="btn-remove" title="Remove">&times;</button>
+    `;
+    container.appendChild(row);
+    row.querySelector('.btn-remove')!.addEventListener('click', () => { row.remove(); calculate(); });
+    const nameInput = row.querySelector('.new-item-input') as HTMLInputElement;
+    nameInput.addEventListener('input', calculate);
+    (row.querySelector('.income-amount') as HTMLInputElement).addEventListener('input', calculate);
+    nameInput.focus();
+    nameInput.select();
+  }
+
+  function addExpenseRow() {
+    const container = document.getElementById('expenseItems')!;
+    const row = document.createElement('div');
+    row.className = 'item-row';
+    row.innerHTML = `
+      <div class="input-group" style="flex:1">
+        <label><input type="text" class="new-item-input" placeholder="Expense name" value="Expense"></label>
+        <div class="input-wrapper">
+          <span class="currency">\u00A3</span>
+          <input type="number" class="expense-amount" value="0" min="0" step="10" placeholder="0">
+        </div>
+      </div>
+      <button class="btn-remove" title="Remove">&times;</button>
+    `;
+    container.appendChild(row);
+    row.querySelector('.btn-remove')!.addEventListener('click', () => { row.remove(); calculate(); });
+    const nameInput = row.querySelector('.new-item-input') as HTMLInputElement;
+    nameInput.addEventListener('input', calculate);
+    (row.querySelector('.expense-amount') as HTMLInputElement).addEventListener('input', calculate);
+    nameInput.focus();
+    nameInput.select();
+  }
+
+  function exportCsv() {
+    const incomeData = getIncomeData();
+    const expenseData = getExpenseData();
+    let csv = 'Type,Category,Amount\n';
+    incomeData.forEach(i => { csv += 'Income,"' + i.name.replace(/"/g, '""') + '",' + i.amount + '\n'; });
+    expenseData.forEach(e => { csv += 'Expense,"' + e.name.replace(/"/g, '""') + '",' + e.amount + '\n'; });
+    const totalIncome = incomeData.reduce((s, i) => s + i.amount, 0);
+    const totalExpenses = expenseData.reduce((s, e) => s + e.amount, 0);
+    csv += '\n,,\n';
+    csv += 'Total Income,,' + totalIncome + '\n';
+    csv += 'Total Expenses,,' + totalExpenses + '\n';
+    csv += 'Surplus/Deficit,,' + (totalIncome - totalExpenses) + '\n';
+
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'budget-planner.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function clearAll() {
+    if (!confirm('Clear all budget data?')) return;
+    getAllIncomeRows().forEach(row => {
+      const input = row.querySelector('.income-amount') as HTMLInputElement;
+      if (input) input.value = '0';
+    });
+    getAllExpenseRows().forEach(row => {
+      const input = row.querySelector('.expense-amount') as HTMLInputElement;
+      if (input) input.value = '0';
+    });
+    localStorage.removeItem(LS_KEY);
+    calculate();
+  }
+
+  function init() {
+    loadFromStorage();
+
+    document.getElementById('addIncome')!.addEventListener('click', addIncomeRow);
+    document.getElementById('addExpense')!.addEventListener('click', addExpenseRow);
+    document.getElementById('exportCsv')!.addEventListener('click', exportCsv);
+    document.getElementById('clearAll')!.addEventListener('click', clearAll);
+
+    document.querySelectorAll('.income-amount, .expense-amount').forEach(input => {
+      input.addEventListener('input', calculate);
+    });
+
+    calculate();
+  }
+
+  init();
+</script>
