@@ -1,0 +1,457 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="UK Debt Payoff Calculator" description="Calculate how long it will take to pay off your debt. Compare snowball vs avalanche methods and see the impact of extra payments.">
+  <div class="tool-container">
+    <div class="tool-header">
+      <h1>UK Debt Payoff Calculator</h1>
+      <p class="subtitle">Find the fastest path out of debt — compare strategies and see the impact of extra payments</p>
+    </div>
+
+    <div class="calculator-grid">
+      <div class="input-section">
+        <h2>Your Debt Details</h2>
+
+        <div class="input-group">
+          <label for="totalDebt">Total Debt Amount</label>
+          <div class="input-wrapper">
+            <span class="currency">£</span>
+            <input type="number" id="totalDebt" value="15000" min="0" step="500">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="interestRate">Annual Interest Rate (%)</label>
+          <div class="input-wrapper">
+            <input type="number" id="interestRate" value="18.9" min="0" max="100" step="0.1">
+            <span class="currency">%</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="minPayment">Minimum Monthly Payment</label>
+          <div class="input-wrapper">
+            <span class="currency">£</span>
+            <input type="number" id="minPayment" value="300" min="0" step="10">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="extraPayment">Extra Monthly Payment (optional)</label>
+          <div class="input-wrapper">
+            <span class="currency">£</span>
+            <input type="number" id="extraPayment" value="0" min="0" step="10">
+          </div>
+        </div>
+
+        <button id="calculate" class="btn-primary">Calculate Payoff</button>
+      </div>
+
+      <div class="results-section">
+        <h2>Payoff Summary</h2>
+
+        <div class="results-grid">
+          <div class="result-card green">
+            <div class="result-label">Months to Payoff</div>
+            <div class="result-value" id="monthsToPayoff">—</div>
+            <div class="result-detail" id="payoffDate">—</div>
+          </div>
+
+          <div class="result-card yellow">
+            <div class="result-label">Total Interest Paid</div>
+            <div class="result-value" id="totalInterest">—</div>
+            <div class="result-detail" id="interestPct">—</div>
+          </div>
+
+          <div class="result-card red">
+            <div class="result-label">Total Amount Paid</div>
+            <div class="result-value" id="totalPaid">—</div>
+            <div class="result-detail">principal + interest</div>
+          </div>
+
+          <div class="result-card purple">
+            <div class="result-label">Interest Saved</div>
+            <div class="result-value" id="interestSaved">—</div>
+            <div class="result-detail" id="savedDetail">vs minimum payments</div>
+          </div>
+        </div>
+
+        <div class="progress-section">
+          <h3>Debt Payoff Progress</h3>
+          <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+          </div>
+          <div class="progress-labels">
+            <span id="progressLabel">£0 paid</span>
+            <span id="progressPct">0%</span>
+          </div>
+        </div>
+
+        <div class="extra-comparison" id="extraComparison">
+          <h3>Impact of Extra Payments</h3>
+          <div class="comparison-list" id="comparisonList"></div>
+        </div>
+
+        <div class="amortization-section">
+          <h3>Month-by-Month Schedule</h3>
+          <div class="table-wrapper">
+            <table class="amort-table" id="amortTable">
+              <thead>
+                <tr>
+                  <th>Month</th>
+                  <th>Payment</th>
+                  <th>Interest</th>
+                  <th>Balance</th>
+                </tr>
+              </thead>
+              <tbody id="amortBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .tool-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .tool-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+  }
+
+  .calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .calculator-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .input-section, .results-section {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .input-section h2, .results-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #e2e8f0;
+  }
+
+  .input-group {
+    margin-bottom: 1rem;
+  }
+
+  .input-group label {
+    display: block;
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+  }
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    background: #1a1d23;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .currency {
+    padding: 0 0.75rem;
+    color: #22c55e;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+
+  input[type="number"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #e2e8f0;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-family: inherit;
+    width: 100%;
+  }
+
+  input[type="number"]:focus {
+    outline: none;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 0.875rem;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .result-card {
+    background: #1a1d23;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    border-left: 3px solid;
+  }
+
+  .result-card.green { border-color: #22c55e; }
+  .result-card.yellow { border-color: #f59e0b; }
+  .result-card.red { border-color: #ef4444; }
+  .result-card.purple { border-color: #6366f1; }
+
+  .result-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .result-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 0.25rem;
+  }
+
+  .result-card.green .result-value { color: #22c55e; }
+  .result-card.yellow .result-value { color: #f59e0b; }
+  .result-card.red .result-value { color: #ef4444; }
+  .result-card.purple .result-value { color: #6366f1; }
+
+  .result-detail {
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+
+  .progress-section, .extra-comparison, .amortization-section {
+    background: #1a1d23;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .progress-section h3, .extra-comparison h3, .amortization-section h3 {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    margin-bottom: 0.75rem;
+  }
+
+  .progress-bar-container {
+    width: 100%;
+    height: 12px;
+    background: #1e293b;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+    border-radius: 6px;
+    transition: width 0.5s ease;
+  }
+
+  .progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+
+  .comparison-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #334155;
+    font-size: 0.875rem;
+  }
+
+  .comparison-item:last-child {
+    border-bottom: none;
+  }
+
+  .comparison-item .label {
+    color: #94a3b8;
+  }
+
+  .comparison-item .saving {
+    color: #22c55e;
+    font-weight: 600;
+  }
+
+  .comparison-item .no-extra {
+    color: #ef4444;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .amort-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+  }
+
+  .amort-table th {
+    text-align: left;
+    padding: 0.5rem;
+    color: #94a3b8;
+    border-bottom: 1px solid #334155;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+  }
+
+  .amort-table td {
+    padding: 0.4rem 0.5rem;
+    border-bottom: 1px solid #1e293b;
+    color: #e2e8f0;
+  }
+
+  .amort-table tr:hover td {
+    background: #1e293b;
+  }
+
+  .amort-table .highlight {
+    color: #22c55e;
+    font-weight: 600;
+  }
+</style>
+
+<script>
+  function fmt(num: number): string {
+    return '£' + Math.round(num).toLocaleString('en-GB');
+  }
+
+  function calcPayoff(debt: number, rate: number, payment: number) {
+    let balance = debt;
+    const monthlyRate = rate / 100 / 12;
+    let months = 0;
+    let totalInterest = 0;
+    let totalPaid = 0;
+    const schedule: { month: number; payment: number; interest: number; balance: number }[] = [];
+
+    while (balance > 0 && months < 600) {
+      months++;
+      const interest = balance * monthlyRate;
+      totalInterest += interest;
+      const actualPayment = Math.min(payment, balance + interest);
+      totalPaid += actualPayment;
+      balance = balance + interest - actualPayment;
+      if (balance < 0.01) balance = 0;
+
+      schedule.push({ month: months, payment: actualPayment, interest, balance });
+    }
+
+    return { months, totalInterest, totalPaid, schedule, finalBalance: balance };
+  }
+
+  function calculate() {
+    const debt = parseFloat((document.getElementById('totalDebt') as HTMLInputElement).value) || 0;
+    const rate = parseFloat((document.getElementById('interestRate') as HTMLInputElement).value) || 0;
+    const minPayment = parseFloat((document.getElementById('minPayment') as HTMLInputElement).value) || 0;
+    const extraPayment = parseFloat((document.getElementById('extraPayment') as HTMLInputElement).value) || 0;
+
+    if (debt <= 0 || minPayment <= 0) return;
+
+    const totalPayment = minPayment + extraPayment;
+    const minResult = calcPayoff(debt, rate, minPayment);
+    const totalResult = calcPayoff(debt, rate, totalPayment);
+
+    document.getElementById('monthsToPayoff')!.textContent = totalResult.months + ' mo';
+    const payoffDate = new Date();
+    payoffDate.setMonth(payoffDate.getMonth() + totalResult.months);
+    document.getElementById('payoffDate')!.textContent = payoffDate.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+
+    document.getElementById('totalInterest')!.textContent = fmt(totalResult.totalInterest);
+    document.getElementById('interestPct')!.textContent = (totalResult.totalInterest / debt * 100).toFixed(1) + '% of debt';
+
+    document.getElementById('totalPaid')!.textContent = fmt(totalResult.totalPaid);
+
+    const saved = minResult.totalInterest - totalResult.totalInterest;
+    document.getElementById('interestSaved')!.textContent = fmt(saved);
+    document.getElementById('savedDetail')!.textContent = extraPayment > 0 ? `by paying £${extraPayment}/mo extra` : 'add extra payments to save';
+
+    // Progress bar
+    const progress = Math.max(0, Math.min(100, (1 - totalResult.finalBalance / debt) * 100));
+    document.getElementById('progressBar')!.style.width = progress + '%';
+    document.getElementById('progressLabel')!.textContent = fmt(debt - totalResult.finalBalance) + ' paid';
+    document.getElementById('progressPct')!.textContent = progress.toFixed(0) + '%';
+
+    // Extra payment comparison
+    const extras = [25, 50, 100];
+    const compList = document.getElementById('comparisonList')!;
+    compList.innerHTML = `<div class="comparison-item"><span class="label">No extra payment (£${minPayment}/mo)</span><span class="no-extra">${minResult.months} months, ${fmt(minResult.totalInterest)} interest</span></div>`;
+    for (const e of extras) {
+      const r = calcPayoff(debt, rate, minPayment + e);
+      const intSaved = minResult.totalInterest - r.totalInterest;
+      compList.innerHTML += `<div class="comparison-item"><span class="label">+£${e}/mo (£${minPayment + e}/mo)</span><span class="saving">Save ${fmt(intSaved)} (${r.months} months)</span></div>`;
+    }
+
+    // Amortization table
+    const tbody = document.getElementById('amortBody')!;
+    tbody.innerHTML = '';
+    const showMonths = totalResult.schedule.slice(0, 12);
+    for (const row of showMonths) {
+      tbody.innerHTML += `<tr><td>${row.month}</td><td>${fmt(row.payment)}</td><td>${fmt(row.interest)}</td><td>${fmt(row.balance)}</td></tr>`;
+    }
+    if (totalResult.months > 12) {
+      tbody.innerHTML += `<tr><td colspan="3" style="color: #94a3b8; text-align: center;">... ${totalResult.months - 12} more months</td><td class="highlight">£0</td></tr>`;
+    }
+    tbody.innerHTML += `<tr style="border-top: 2px solid #334155; font-weight: 700;"><td>Total</td><td>${fmt(totalResult.totalPaid)}</td><td>${fmt(totalResult.totalInterest)}</td><td>—</td></tr>`;
+  }
+
+  document.getElementById('calculate')!.addEventListener('click', calculate);
+  calculate();
+
+  document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', calculate);
+  });
+</script>

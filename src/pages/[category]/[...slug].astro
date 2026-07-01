@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
@@ -20,7 +21,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content, headings } = await entry.render();
 const data = entry.data;
 import { getTagStyle } from '../../utils/tagStyles';
 
@@ -60,6 +61,8 @@ const categoryNames: Record<string, string> = {
       return <>{i > 0 && ' '}<span style={`background:${s.bg};color:${s.color};font-size:0.78rem;padding:0.2rem 0.7rem;border-radius:999px;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;`}>{s.icon} {tag}</span></>
     })}
   </div>
+
+  <TableOfContents headings={headings} />
 
   <article>
     <Content />

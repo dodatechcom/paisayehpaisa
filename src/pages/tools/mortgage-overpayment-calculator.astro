@@ -1,0 +1,489 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="UK Mortgage Overpayment Calculator" description="See how much time and interest you can save by overpaying your UK mortgage. Compare different overpayment amounts and see the impact on your payoff date.">
+  <div class="tool-container">
+    <div class="tool-header">
+      <h1>Mortgage Overpayment Calculator</h1>
+      <p class="subtitle">See how much time and interest you can save by overpaying your mortgage each month</p>
+    </div>
+
+    <div class="calculator-grid">
+      <div class="input-section">
+        <h2>Your Mortgage Details</h2>
+
+        <div class="input-group">
+          <label for="balance">Current Mortgage Balance</label>
+          <div class="input-wrapper">
+            <span class="currency">£</span>
+            <input type="number" id="balance" value="250000" min="0" step="5000">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="interestRate">Annual Interest Rate (%)</label>
+          <div class="input-wrapper">
+            <input type="number" id="interestRate" value="4.5" min="0" max="20" step="0.1">
+            <span class="currency">%</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="remainingTerm">Remaining Term (years)</label>
+          <input type="number" id="remainingTerm" value="25" min="1" max="40" step="1">
+        </div>
+
+        <div class="input-group">
+          <label for="overpayment">Monthly Overpayment Amount</label>
+          <div class="input-wrapper">
+            <span class="currency">£</span>
+            <input type="number" id="overpayment" value="200" min="0" step="50">
+          </div>
+        </div>
+
+        <button id="calculate" class="btn-primary">Calculate Savings</button>
+      </div>
+
+      <div class="results-section">
+        <h2>Your Savings</h2>
+
+        <div class="results-grid">
+          <div class="result-card green">
+            <div class="result-label">Time Saved</div>
+            <div class="result-value" id="timeSaved">—</div>
+            <div class="result-detail" id="timeDetail">months shorter</div>
+          </div>
+
+          <div class="result-card yellow">
+            <div class="result-label">Interest Saved</div>
+            <div class="result-value" id="interestSaved">—</div>
+            <div class="result-detail" id="interestDetail">over mortgage term</div>
+          </div>
+
+          <div class="result-card blue">
+            <div class="result-label">New Payoff Date</div>
+            <div class="result-value" id="newPayoff">—</div>
+            <div class="result-detail" id="originalPayoff">vs original</div>
+          </div>
+
+          <div class="result-card purple">
+            <div class="result-label">Total Interest Paid</div>
+            <div class="result-value" id="totalInterest">—</div>
+            <div class="result-detail" id="interestComparison">with overpayment</div>
+          </div>
+        </div>
+
+        <div class="comparison-section">
+          <h3>Without vs With Overpayment</h3>
+          <div class="comparison-bars" id="comparisonBars"></div>
+        </div>
+
+        <div class="impact-section">
+          <h3>Different Overpayment Amounts</h3>
+          <div class="impact-list" id="impactList"></div>
+        </div>
+
+        <div class="timeline-section">
+          <h3>Payment Timeline</h3>
+          <div class="timeline-bars" id="timelineBars"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .tool-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .tool-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+  }
+
+  .calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .calculator-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .input-section, .results-section {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .input-section h2, .results-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #e2e8f0;
+  }
+
+  .input-group {
+    margin-bottom: 1rem;
+  }
+
+  .input-group label {
+    display: block;
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+  }
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    background: #1a1d23;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .currency {
+    padding: 0 0.75rem;
+    color: #22c55e;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+
+  input[type="number"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #e2e8f0;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-family: inherit;
+    width: 100%;
+  }
+
+  input[type="number"]:focus {
+    outline: none;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 0.875rem;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .result-card {
+    background: #1a1d23;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    border-left: 3px solid;
+  }
+
+  .result-card.green { border-color: #22c55e; }
+  .result-card.yellow { border-color: #f59e0b; }
+  .result-card.blue { border-color: #3b82f6; }
+  .result-card.purple { border-color: #6366f1; }
+
+  .result-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .result-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 0.25rem;
+  }
+
+  .result-card.green .result-value { color: #22c55e; }
+  .result-card.yellow .result-value { color: #f59e0b; }
+  .result-card.blue .result-value { color: #3b82f6; }
+  .result-card.purple .result-value { color: #6366f1; }
+
+  .result-detail {
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+
+  .comparison-section, .impact-section, .timeline-section {
+    background: #1a1d23;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .comparison-section h3, .impact-section h3, .timeline-section h3 {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    margin-bottom: 0.75rem;
+  }
+
+  .comparison-bar-group {
+    margin-bottom: 1rem;
+  }
+
+  .comparison-bar-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-bottom: 0.25rem;
+  }
+
+  .bar-track {
+    width: 100%;
+    height: 20px;
+    background: #1e293b;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+  }
+
+  .bar-fill.original {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+  }
+
+  .bar-fill.overpaid {
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+  }
+
+  .bar-fill.blue {
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+  }
+
+  .impact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #334155;
+    font-size: 0.875rem;
+  }
+
+  .impact-item:last-child {
+    border-bottom: none;
+  }
+
+  .impact-item .amount {
+    color: #94a3b8;
+  }
+
+  .impact-item .saving {
+    color: #22c55e;
+    font-weight: 600;
+  }
+
+  .timeline-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-bar .label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    width: 100px;
+  }
+
+  .timeline-bar .bar {
+    flex: 1;
+    height: 16px;
+    background: #1e293b;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .timeline-bar .bar-fill {
+    height: 100%;
+    border-radius: 4px;
+  }
+
+  .timeline-bar .value {
+    font-size: 0.75rem;
+    color: #e2e8f0;
+    width: 60px;
+    text-align: right;
+  }
+</style>
+
+<script>
+  function fmt(num: number): string {
+    return '£' + Math.round(num).toLocaleString('en-GB');
+  }
+
+  function calcMortgage(balance: number, rate: number, years: number) {
+    const monthlyRate = rate / 100 / 12;
+    const months = years * 12;
+    const monthlyPayment = balance * (monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+
+    let remaining = balance;
+    let totalInterest = 0;
+
+    for (let i = 0; i < months; i++) {
+      const interest = remaining * monthlyRate;
+      const principal = monthlyPayment - interest;
+      totalInterest += interest;
+      remaining -= principal;
+      if (remaining <= 0) break;
+    }
+
+    return { monthlyPayment, totalInterest, months };
+  }
+
+  function calcWithOverpayment(balance: number, rate: number, years: number, overpayment: number) {
+    const monthlyRate = rate / 100 / 12;
+    const months = years * 12;
+    const monthlyPayment = balance * (monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+    const totalMonthly = monthlyPayment + overpayment;
+
+    let remaining = balance;
+    let totalInterest = 0;
+    let paidMonths = 0;
+
+    for (let i = 0; i < months; i++) {
+      const interest = remaining * monthlyRate;
+      const principal = Math.min(totalMonthly - interest, remaining);
+      totalInterest += interest;
+      remaining -= principal;
+      paidMonths++;
+      if (remaining <= 0) break;
+    }
+
+    return { monthlyPayment: totalMonthly, totalInterest, months: paidMonths };
+  }
+
+  function calculate() {
+    const balance = parseFloat((document.getElementById('balance') as HTMLInputElement).value) || 0;
+    const rate = parseFloat((document.getElementById('interestRate') as HTMLInputElement).value) || 0;
+    const years = parseInt((document.getElementById('remainingTerm') as HTMLInputElement).value) || 25;
+    const overpayment = parseFloat((document.getElementById('overpayment') as HTMLInputElement).value) || 0;
+
+    if (balance <= 0 || rate <= 0) return;
+
+    const original = calcMortgage(balance, rate, years);
+    const withOverpay = overpayment > 0 ? calcWithOverpayment(balance, rate, years, overpayment) : original;
+
+    const monthsSaved = original.months - withOverpay.months;
+    const yearsSaved = Math.floor(monthsSaved / 12);
+    const remainingMonthsSaved = monthsSaved % 12;
+    const interestSaved = original.totalInterest - withOverpay.totalInterest;
+
+    const now = new Date();
+    const originalPayoff = new Date(now);
+    originalPayoff.setFullYear(originalPayoff.getFullYear() + years);
+    const newPayoff = new Date(now);
+    newPayoff.setMonth(newPayoff.getMonth() + withOverpay.months);
+
+    document.getElementById('timeSaved')!.textContent = monthsSaved + ' mo';
+    document.getElementById('timeDetail')!.textContent = yearsSaved > 0 ? `${yearsSaved}yr ${remainingMonthsSaved}mo shorter` : `${remainingMonthsSaved} months shorter`;
+
+    document.getElementById('interestSaved')!.textContent = fmt(interestSaved);
+    document.getElementById('interestDetail')!.textContent = overpayment > 0 ? `by paying £${overpayment}/mo extra` : 'set an overpayment amount';
+
+    document.getElementById('newPayoff')!.textContent = newPayoff.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+    document.getElementById('originalPayoff')!.textContent = `vs ${originalPayoff.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}`;
+
+    document.getElementById('totalInterest')!.textContent = fmt(withOverpay.totalInterest);
+    document.getElementById('interestComparison')!.textContent = `vs ${fmt(original.totalInterest)} without`;
+
+    // Comparison bars
+    const maxMonths = original.months;
+    const compBars = document.getElementById('comparisonBars')!;
+    compBars.innerHTML = `
+      <div class="comparison-bar-group">
+        <div class="bar-label"><span>Without overpayment</span><span>${original.months} months, ${fmt(original.totalInterest)} interest</span></div>
+        <div class="bar-track"><div class="bar-fill original" style="width: 100%"></div></div>
+      </div>
+      <div class="comparison-bar-group">
+        <div class="bar-label"><span>With £${overpayment}/mo overpayment</span><span>${withOverpay.months} months, ${fmt(withOverpay.totalInterest)} interest</span></div>
+        <div class="bar-track"><div class="bar-fill overpaid" style="width: ${(withOverpay.months / maxMonths) * 100}%"></div></div>
+      </div>
+    `;
+
+    // Impact comparison
+    const impacts = [50, 100, 200];
+    const impactList = document.getElementById('impactList')!;
+    impactList.innerHTML = '';
+    for (const amt of impacts) {
+      const r = calcWithOverpayment(balance, rate, years, amt);
+      const saved = original.totalInterest - r.totalInterest;
+      const moSaved = original.months - r.months;
+      impactList.innerHTML += `<div class="impact-item"><span class="amount">£${amt}/mo overpayment</span><span class="saving">Save ${fmt(saved)} (${moSaved} months)</span></div>`;
+    }
+
+    // Timeline bars
+    const timelineBars = document.getElementById('timelineBars')!;
+    timelineBars.innerHTML = '';
+    const scenarios = [
+      { label: 'No overpayment', months: original.months, color: '#ef4444' },
+      { label: `£${overpayment}/mo`, months: withOverpay.months, color: '#22c55e' }
+    ];
+    for (const s of scenarios) {
+      const pct = (s.months / original.months) * 100;
+      timelineBars.innerHTML += `
+        <div class="timeline-bar">
+          <span class="label">${s.label}</span>
+          <div class="bar"><div class="bar-fill" style="width: ${pct}%; background: ${s.color}"></div></div>
+          <span class="value">${s.months} mo</span>
+        </div>
+      `;
+    }
+  }
+
+  document.getElementById('calculate')!.addEventListener('click', calculate);
+  calculate();
+
+  document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', calculate);
+  });
+</script>

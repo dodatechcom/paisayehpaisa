@@ -155,6 +155,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"best-savings-accounts-uk-2026.md": {
+	id: "best-savings-accounts-uk-2026.md";
+  slug: "best-savings-accounts-uk-2026";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "bitcoin-etf-impact-2026.md": {
 	id: "bitcoin-etf-impact-2026.md";
   slug: "bitcoin-etf-impact-2026";
@@ -183,6 +190,20 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"how-to-build-credit-score-uk-2026.md": {
+	id: "how-to-build-credit-score-uk-2026.md";
+  slug: "how-to-build-credit-score-uk-2026";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"how-to-save-for-a-deposit-uk.md": {
+	id: "how-to-save-for-a-deposit-uk.md";
+  slug: "how-to-save-for-a-deposit-uk";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "summer-financial-checklist-2026.md": {
 	id: "summer-financial-checklist-2026.md";
   slug: "summer-financial-checklist-2026";
@@ -193,6 +214,13 @@ declare module 'astro:content' {
 "uk-housing-market-outlook-2026.md": {
 	id: "uk-housing-market-outlook-2026.md";
   slug: "uk-housing-market-outlook-2026";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"uk-mortgage-rates-explained.md": {
+	id: "uk-mortgage-rates-explained.md";
+  slug: "uk-mortgage-rates-explained";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -3222,6 +3250,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"how-to-get-a-mortgage.md": {
+	id: "how-to-get-a-mortgage.md";
+  slug: "how-to-get-a-mortgage";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "how-to-haggle-bills.md": {
 	id: "how-to-haggle-bills.md";
   slug: "how-to-haggle-bills";
@@ -3236,6 +3271,13 @@ declare module 'astro:content' {
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">
 } & { render(): Render[".md"] };
+"how-to-reduce-your-tax-bill.md": {
+	id: "how-to-reduce-your-tax-bill.md";
+  slug: "how-to-reduce-your-tax-bill";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
 "how-to-save-on-all-bills.md": {
 	id: "how-to-save-on-all-bills.md";
   slug: "how-to-save-on-all-bills";
@@ -3246,6 +3288,27 @@ declare module 'astro:content' {
 "how-to-save-on-energy-bills.md": {
 	id: "how-to-save-on-energy-bills.md";
   slug: "how-to-save-on-energy-bills";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"how-to-switch-bank-account.md": {
+	id: "how-to-switch-bank-account.md";
+  slug: "how-to-switch-bank-account";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"how-to-transfer-a-pension.md": {
+	id: "how-to-transfer-a-pension.md";
+  slug: "how-to-transfer-a-pension";
+  body: string;
+  collection: "personal-finance";
+  data: InferEntrySchema<"personal-finance">
+} & { render(): Render[".md"] };
+"how-to-transfer-an-isa.md": {
+	id: "how-to-transfer-an-isa.md";
+  slug: "how-to-transfer-an-isa";
   body: string;
   collection: "personal-finance";
   data: InferEntrySchema<"personal-finance">

@@ -402,6 +402,33 @@ const relatedMap: Record<string, string[]> = {
   'fed-rate-cuts-2026': ['bitcoin-etf-impact-2026', 'safe-investments-high-returns', 'asset-allocation-by-age'],
   'crypto-market-update-q2-2026': ['bitcoin-etf-impact-2026', 'bull-bear-market-crypto', 'market-crash-strategy'],
   'ai-investing-2026': ['best-etfs-2026', 'etf-vs-mutual-fund', 'how-to-invest-10000'],
+
+  // UK Insurance
+  'uk-life-insurance-guide': ['term-vs-whole-life', 'uk-home-insurance-guide', 'uk-car-insurance-guide'],
+  'uk-home-insurance-guide': ['uk-life-insurance-guide', 'uk-car-insurance-guide', 'renters-vs-homeowners'],
+  'uk-car-insurance-guide': ['uk-home-insurance-guide', 'auto-insurance-full-vs-liability', 'uk-life-insurance-guide'],
+  'uk-private-health-insurance-guide': ['hmo-vs-ppo', 'uk-life-insurance-guide', 'uk-insurance-guide'],
+
+  // Blog (new)
+  'summer-financial-checklist-2026': ['best-savings-accounts-uk-2026', 'uk-mortgage-rates-explained', 'how-to-reduce-your-tax-bill'],
+  'how-ai-is-changing-personal-finance-2026': ['best-etfs-2026', 'investing-101-beginners-guide', 'best-savings-accounts-uk-2026'],
+  'uk-housing-market-outlook-2026': ['uk-mortgage-rates-explained', 'first-time-buyers-guide', 'how-to-save-for-a-deposit-uk'],
+  'best-money-habits-to-start-today': ['budgeting-basics', 'emergency-fund-guide', 'uk-budgeting-guide'],
+  'how-to-build-credit-score-uk-2026': ['uk-credit-score-guide', 'improving-credit-score', 'best-credit-cards-2026'],
+  'best-savings-accounts-uk-2026': ['best-savings-accounts', 'uk-isa-complete-guide', 'uk-savings-accounts-guide'],
+  'how-to-save-for-a-deposit-uk': ['uk-first-time-buyers-guide', 'uk-lifetime-isa-guide', 'uk-mortgage-rates-explained'],
+  'uk-mortgage-rates-explained': ['uk-mortgage-guide', 'fixed-vs-variable-mortgage', 'first-time-buyers-guide'],
+
+  // Personal Finance
+  'uk-council-tax-reduction-guide': ['council-tax-rebanding-guide', 'universal-credit-explained', 'consumer-rights-guide'],
+  'uk-benefits-for-families-guide': ['having-a-baby-costs-guide', 'uk-childcare-costs-guide', 'universal-credit-explained'],
+  'uk-money-for-over-50s-guide': ['pension-drawdown-explained', 'investing-after-60', 'uk-pension-drawdown-guide'],
+  'uk-self-employed-deep-dive': ['self-assessment-tax-return-guide', 'uk-self-assessment-tax-return-guide', 'side-hustles-tax-guide'],
+  'how-to-switch-bank-account': ['best-bank-accounts-2026', 'uk-bank-switching-guide', 'best-savings-accounts'],
+  'how-to-transfer-an-isa': ['uk-isa-complete-guide', 'isas-explained', 'uk-lifetime-isa-guide'],
+  'how-to-transfer-a-pension': ['pension-types-explained', 'uk-sipp-guide', 'uk-pension-drawdown-guide'],
+  'how-to-get-a-mortgage': ['first-time-buyers-guide', 'uk-mortgage-guide', 'uk-credit-score-guide'],
+  'how-to-reduce-your-tax-bill': ['income-tax-basics', 'uk-tax-planning-guide', 'marriage-allowance-guide'],
 };
 
 const relatedSlugs = relatedMap[currentSlug] || [];
@@ -531,6 +558,27 @@ const relatedData: Record<string, { title: string; description: string; category
   'gift-cards-and-vouchers-guide': { title: 'Gift Cards & Vouchers', description: 'How to use them wisely', category: 'personal-finance' },
   'types-of-borrowing-explained': { title: 'Types of Borrowing', description: 'From credit cards to mortgages', category: 'personal-finance' },
   'student-discounts-complete-guide': { title: 'Student Discounts', description: 'Complete savings guide', category: 'personal-finance' },
+  'uk-life-insurance-guide': { title: 'UK Life Insurance Guide', description: 'Protect your family\'s future', category: 'insurance' },
+  'uk-home-insurance-guide': { title: 'UK Home Insurance Guide', description: 'Buildings and contents cover', category: 'insurance' },
+  'uk-car-insurance-guide': { title: 'UK Car Insurance Guide', description: 'Find cheaper car insurance', category: 'insurance' },
+  'uk-private-health-insurance-guide': { title: 'UK Private Health Insurance', description: 'Is private health worth it?', category: 'insurance' },
+  'summer-financial-checklist-2026': { title: 'Summer 2026 Financial Checklist', description: '10 things to do now', category: 'blog' },
+  'how-ai-is-changing-personal-finance-2026': { title: 'How AI Is Changing Finance', description: 'What AI means for your money', category: 'blog' },
+  'uk-housing-market-outlook-2026': { title: 'UK Housing Market Outlook 2026', description: 'What to expect this year', category: 'blog' },
+  'best-money-habits-to-start-today': { title: 'Best Money Habits', description: 'Start these today', category: 'blog' },
+  'how-to-build-credit-score-uk-2026': { title: 'Build Your Credit Score', description: 'UK credit score guide 2026', category: 'blog' },
+  'best-savings-accounts-uk-2026': { title: 'Best Savings Accounts 2026', description: 'Top rates this year', category: 'blog' },
+  'how-to-save-for-a-deposit-uk': { title: 'Save for a Deposit', description: 'How to save for your first home', category: 'blog' },
+  'uk-mortgage-rates-explained': { title: 'UK Mortgage Rates Explained', description: 'How rates work and what to expect', category: 'blog' },
+  'uk-council-tax-reduction-guide': { title: 'Council Tax Reduction', description: 'Get help with your bill', category: 'personal-finance' },
+  'uk-benefits-for-families-guide': { title: 'Benefits for Families', description: 'What you can claim', category: 'personal-finance' },
+  'uk-money-for-over-50s-guide': { title: 'Money for Over 50s', description: 'Financial tips for later life', category: 'personal-finance' },
+  'uk-self-employed-deep-dive': { title: 'Self-Employed Deep Dive', description: 'Tax, NI, and finances', category: 'personal-finance' },
+  'how-to-switch-bank-account': { title: 'Switch Bank Account', description: 'How and why to switch', category: 'personal-finance' },
+  'how-to-transfer-an-isa': { title: 'Transfer an ISA', description: 'Move your ISA without losing tax-free benefits', category: 'personal-finance' },
+  'how-to-transfer-a-pension': { title: 'Transfer a Pension', description: 'Move your pension safely', category: 'personal-finance' },
+  'how-to-get-a-mortgage': { title: 'Get a Mortgage', description: 'Step-by-step mortgage guide', category: 'personal-finance' },
+  'how-to-reduce-your-tax-bill': { title: 'Reduce Your Tax Bill', description: 'Legal ways to pay less tax', category: 'personal-finance' },
 };
 
 const categoryColors: Record<string, string> = {

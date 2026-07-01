@@ -1,0 +1,190 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allCollections = await Promise.all([
+  getCollection('crypto-basics'),
+  getCollection('safe-crypto'),
+  getCollection('crypto-scam'),
+  getCollection('crypto-answers'),
+  getCollection('crypto-tax'),
+  getCollection('crypto-tools'),
+  getCollection('trading'),
+  getCollection('investing'),
+  getCollection('personal-finance'),
+  getCollection('insurance'),
+]);
+
+const all = allCollections.flat()
+  .filter(a => !a.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const ukKeywords = ['uk', 'british', 'hmrc', 'isa', 'pension', 'mortgage', 'benefits', 'stamp duty'];
+const ukArticles = all.filter(a =>
+  ukKeywords.some(kw =>
+    a.data.title.toLowerCase().includes(kw) ||
+    a.data.description?.toLowerCase().includes(kw) ||
+    a.data.tags?.some(t => t.toLowerCase().includes(kw))
+  )
+).slice(0, 6);
+
+const featured = ukArticles.length > 0 ? ukArticles : all.slice(0, 6);
+
+const categories = [
+  { name: 'Investing', desc: 'ISAs, SIPPs, funds, stocks & shares', href: '/investing/', color: '#10b981' },
+  { name: 'Tax', desc: 'Income tax, capital gains, self assessment', href: '/personal-finance/', color: '#d97706' },
+  { name: 'Pensions', desc: 'State pension, workplace, auto-enrolment', href: '/personal-finance/', color: '#7c3aed' },
+  { name: 'Mortgages', desc: 'Rates, affordability, first-time buyers', href: '/personal-finance/', color: '#2563eb' },
+  { name: 'Benefits', desc: 'Universal Credit, PIP, child benefit', href: '/personal-finance/', color: '#059669' },
+  { name: 'Savings', desc: 'Cash ISAs, easy access, fixed rates', href: '/personal-finance/', color: '#0891b2' },
+];
+
+const categoryColors: Record<string, { bg: string; light: string; border: string }> = {
+  'crypto-basics': { bg: '#2563eb', light: '#eff6ff', border: '#bfdbfe' },
+  'safe-crypto': { bg: '#059669', light: '#f0fdf4', border: '#a7f3d0' },
+  'crypto-scam': { bg: '#dc2626', light: '#fef2f2', border: '#fecaca' },
+  'crypto-answers': { bg: '#7c3aed', light: '#f5f3ff', border: '#ddd6fe' },
+  'crypto-tax': { bg: '#d97706', light: '#fffbeb', border: '#fde68a' },
+  'crypto-tools': { bg: '#0891b2', light: '#ecfeff', border: '#a5f3fc' },
+  'trading': { bg: '#f97316', light: '#fff7ed', border: '#fed7aa' },
+  'investing': { bg: '#10b981', light: '#f0fdf4', border: '#a7f3d0' },
+  'personal-finance': { bg: '#0ea5e9', light: '#f0f9ff', border: '#bae6fd' },
+  'insurance': { bg: '#6366f1', light: '#eef2ff', border: '#c7d2fe' },
+};
+---
+
+<BaseLayout title="UK Personal Finance Guides" description="Comprehensive guides for UK residents. Tax, pensions, benefits, mortgages, and more.">
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <p class="hero-label">United Kingdom</p>
+    <h1>UK Personal Finance<br />Guides</h1>
+    <p class="hero-sub">Comprehensive guides for UK residents. Tax, pensions, benefits, mortgages, and more.</p>
+    <div class="hero-actions">
+      <a href="#categories" class="btn btn-primary">Browse Topics</a>
+      <a href="/" class="btn btn-secondary">← Back to Main Site</a>
+    </div>
+  </div>
+
+  <div class="section" id="categories">
+    <h2 class="section-title">Explore by Topic</h2>
+    <p class="section-desc">Financial guides tailored for UK residents.</p>
+    <div class="cat-grid">
+      {categories.map(cat => (
+        <a href={cat.href} class="cat-card" style={`--cat-color: ${cat.color};`}>
+          <h3>{cat.name}</h3>
+          <p>{cat.desc}</p>
+          <span class="cat-link">Learn more →</span>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Featured UK Articles</h2>
+    <p class="section-desc">Most relevant guides for UK residents.</p>
+    <div class="featured-grid">
+      {featured.map(a => {
+        const cat = a.data.categories?.[0] || 'personal-finance';
+        const colors = categoryColors[cat] || categoryColors['personal-finance'];
+        return (
+          <a href={`/${cat}/${a.slug}/`} class="featured-card" style={`--cat-color: ${colors.bg}; --cat-light: ${colors.light};`}>
+            <h3>{a.data.title}</h3>
+            <p>{a.data.description}</p>
+            <div class="featured-meta">
+              <span>{a.data.date.toLocaleDateString('en-GB', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+
+  <div class="section cta-section">
+    <h2 class="section-title">Browse All UK Guides</h2>
+    <p class="section-desc">Explore our full library of UK personal finance content.</p>
+    <div class="cta-actions">
+      <a href="/investing/" class="btn btn-primary">Investing Guides →</a>
+      <a href="/personal-finance/" class="btn btn-secondary">Personal Finance →</a>
+      <a href="/insurance/" class="btn btn-secondary">Insurance Guides →</a>
+    </div>
+  </div>
+
+  <style>
+    .hero {
+      position: relative; text-align: center; padding: 5rem 0 4rem; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 600px 400px at 50% 0%, color-mix(in srgb, #1e3a5f 12%, transparent), transparent),
+        radial-gradient(ellipse 300px 300px at 20% 100%, color-mix(in srgb, #1e3a5f 6%, transparent), transparent);
+      pointer-events: none;
+    }
+    .hero-label {
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #1e3a5f; margin-bottom: 1rem; position: relative;
+    }
+    .hero h1 {
+      font-size: 3rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.04em;
+      margin-bottom: 1.25rem; position: relative;
+    }
+    .hero-sub {
+      font-size: 1.1rem; color: var(--muted); max-width: 520px; margin: 0 auto 2rem; position: relative;
+    }
+    .hero-actions { display: flex; gap: 0.75rem; justify-content: center; position: relative; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem;
+      text-decoration: none; transition: all 0.2s; cursor: pointer;
+    }
+    .btn-primary { background: #1e3a5f; color: white !important; }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-secondary {
+      background: var(--surface); color: var(--text) !important; border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { border-color: #1e3a5f; transform: translateY(-1px); }
+
+    .section { margin-bottom: 4rem; }
+    .section-title {
+      font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em;
+      margin-bottom: 0.5rem; border: none; padding: 0;
+    }
+    .section-desc { color: var(--muted); margin-bottom: 1.5rem; }
+
+    .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .cat-card {
+      display: flex; flex-direction: column;
+      padding: 1.5rem; background: var(--surface);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      text-decoration: none; color: var(--text); overflow: hidden;
+      transition: all 0.25s;
+    }
+    .cat-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); border-color: var(--cat-color); }
+    .cat-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .cat-card p { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.75rem; flex: 1; }
+    .cat-link { font-size: 0.82rem; font-weight: 600; color: var(--cat-color); }
+
+    .featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .featured-card {
+      display: flex; flex-direction: column;
+      padding: 1.5rem; background: var(--surface);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      text-decoration: none; color: var(--text);
+      transition: all 0.25s;
+    }
+    .featured-card:hover { border-color: var(--cat-color); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+    .featured-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.35; }
+    .featured-card p { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; flex: 1; }
+    .featured-meta { font-size: 0.8rem; color: var(--muted); }
+
+    .cta-section { text-align: center; }
+    .cta-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .cat-grid { grid-template-columns: 1fr; }
+      .featured-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</BaseLayout>

@@ -1,0 +1,407 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="UK Stamp Duty Calculator" description="Calculate UK Stamp Duty Land Tax (SDLT), Land Transaction Tax (LTT), or Land and Buildings Transaction Tax (LBTT) based on property price, buyer type, and region.">
+  <div class="tool-container">
+    <div class="tool-header">
+      <h1>UK Stamp Duty Calculator</h1>
+      <p class="subtitle">Calculate SDLT (England), LBTT (Scotland), or LTT (Wales) for your property purchase</p>
+    </div>
+
+    <div class="calculator-grid">
+      <div class="input-section">
+        <h2>Your Purchase Details</h2>
+
+        <div class="input-group">
+          <label for="price">Property Price</label>
+          <div class="input-wrapper">
+            <span class="currency">£</span>
+            <input type="number" id="price" value="350000" min="0" step="10000">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="buyerType">Buyer Type</label>
+          <select id="buyerType">
+            <option value="first-time">First-Time Buyer</option>
+            <option value="home-mover">Home Mover</option>
+            <option value="second-home">Second Home / Buy-to-Let</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="region">Region</label>
+          <select id="region">
+            <option value="england">England / Northern Ireland (SDLT)</option>
+            <option value="scotland">Scotland (LBTT)</option>
+            <option value="wales">Wales (LTT)</option>
+          </select>
+        </div>
+
+        <button id="calculate" class="btn-primary">Calculate Stamp Duty</button>
+      </div>
+
+      <div class="results-section">
+        <h2>Your Stamp Duty</h2>
+
+        <div class="results-grid">
+          <div class="result-card green">
+            <div class="result-label">Stamp Duty Due</div>
+            <div class="result-value" id="dutyAmount">£0</div>
+            <div class="result-detail" id="dutyName">SDLT</div>
+          </div>
+
+          <div class="result-card yellow">
+            <div class="result-label">Effective Rate</div>
+            <div class="result-value" id="effectiveRate">0%</div>
+            <div class="result-detail" id="rateDetail">of property price</div>
+          </div>
+
+          <div class="result-card blue">
+            <div class="result-label">First-Time Savings</div>
+            <div class="result-value" id="savingsAmount">£0</div>
+            <div class="result-detail" id="savingsDetail">vs standard rate</div>
+          </div>
+
+          <div class="result-card purple">
+            <div class="result-label">Monthly Cost</div>
+            <div class="result-value" id="monthlyCost">£0</div>
+            <div class="result-detail">if added to mortgage</div>
+          </div>
+        </div>
+
+        <div class="band-breakdown" id="bandBreakdown">
+          <h3>Tax Band Breakdown</h3>
+          <div class="band-list" id="bandList"></div>
+        </div>
+
+        <div class="rate-tables">
+          <div class="rate-table">
+            <h3 id="tableTitle">SDLT Rates (England)</h3>
+            <div class="rate-list" id="rateList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .tool-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .tool-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+  }
+
+  .calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .calculator-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .input-section, .results-section {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .input-section h2, .results-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #e2e8f0;
+  }
+
+  .input-group {
+    margin-bottom: 1rem;
+  }
+
+  .input-group label {
+    display: block;
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+  }
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    background: #1a1d23;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .currency {
+    padding: 0 0.75rem;
+    color: #22c55e;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+
+  input[type="number"], select {
+    flex: 1;
+    background: #1a1d23;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #e2e8f0;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-family: inherit;
+    width: 100%;
+  }
+
+  select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2rem;
+  }
+
+  input[type="number"]:focus, select:focus {
+    outline: none;
+    border-color: #22c55e;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 0.875rem;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .result-card {
+    background: #1a1d23;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    border-left: 3px solid;
+  }
+
+  .result-card.green { border-color: #22c55e; }
+  .result-card.yellow { border-color: #f59e0b; }
+  .result-card.blue { border-color: #3b82f6; }
+  .result-card.purple { border-color: #6366f1; }
+
+  .result-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .result-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 0.25rem;
+  }
+
+  .result-card.green .result-value { color: #22c55e; }
+  .result-card.yellow .result-value { color: #f59e0b; }
+  .result-card.blue .result-value { color: #3b82f6; }
+  .result-card.purple .result-value { color: #6366f1; }
+
+  .result-detail {
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+
+  .band-breakdown, .rate-tables {
+    background: #1a1d23;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .band-breakdown h3, .rate-tables h3 {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    margin-bottom: 0.75rem;
+  }
+
+  .band-item, .rate-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #334155;
+    font-size: 0.875rem;
+  }
+
+  .band-item:last-child, .rate-item:last-child {
+    border-bottom: none;
+  }
+
+  .band-item .band-range, .rate-item .rate-range {
+    color: #94a3b8;
+  }
+
+  .band-item .band-amount, .rate-item .rate-pct {
+    color: #22c55e;
+    font-weight: 600;
+  }
+
+  .band-total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    border-top: 2px solid #334155;
+    margin-top: 0.25rem;
+    font-weight: 700;
+    color: #e2e8f0;
+  }
+</style>
+
+<script>
+  const bands = {
+    england: [
+      { from: 0, to: 250000, rate: 0, ftbRate: 0 },
+      { from: 250000, to: 925000, rate: 5, ftbRate: 5 },
+      { from: 925000, to: 1500000, rate: 10, ftbRate: 10 },
+      { from: 1500000, to: Infinity, rate: 12, ftbRate: 12 }
+    ],
+    scotland: [
+      { from: 0, to: 250000, rate: 0, ftbRate: 0 },
+      { from: 250000, to: 325000, rate: 5, ftbRate: 5 },
+      { from: 325000, to: 750000, rate: 10, ftbRate: 10 },
+      { from: 750000, to: 1250000, rate: 12, ftbRate: 12 },
+      { from: 1250000, to: Infinity, rate: 16, ftbRate: 16 }
+    ],
+    wales: [
+      { from: 0, to: 225000, rate: 0, ftbRate: 0 },
+      { from: 225000, to: 400000, rate: 6, ftbRate: 6 },
+      { from: 400000, to: 750000, rate: 10, ftbRate: 10 },
+      { from: 750000, to: 1500000, rate: 12, ftbRate: 12 },
+      { from: 1500000, to: Infinity, rate: 14, ftbRate: 14 }
+    ]
+  };
+
+  const secondHomeSurcharge = 5;
+
+  function fmt(num: number): string {
+    return '£' + num.toLocaleString('en-GB');
+  }
+
+  function calcDuty(price: number, region: string, buyerType: string) {
+    const regionBands = bands[region as keyof typeof bands];
+    let total = 0;
+    const breakdown: { range: string; amount: number; rate: number }[] = [];
+
+    for (const band of regionBands) {
+      if (price <= band.from) break;
+      const upper = Math.min(price, band.to);
+      const taxable = upper - band.from;
+      let rate = buyerType === 'first-time' ? band.ftbRate : band.rate;
+      if (buyerType === 'second-home' && band.from < 40000) {
+        rate += secondHomeSurcharge;
+      } else if (buyerType === 'second-home') {
+        rate += secondHomeSurcharge;
+      }
+      const tax = Math.max(0, Math.round(taxable * rate / 100));
+      total += tax;
+      breakdown.push({ range: `${fmt(band.from)} - ${band.to === Infinity ? 'above' : fmt(band.to)}`, amount: tax, rate });
+    }
+
+    return { total, breakdown };
+  }
+
+  function updateTable(region: string, buyerType: string) {
+    const regionBands = bands[region as keyof typeof bands];
+    const names = { england: 'SDLT', scotland: 'LBTT', wales: 'LTT' };
+    const regionNames = { england: 'England', scotland: 'Scotland', wales: 'Wales' };
+    const title = `${names[region as keyof typeof names]} Rates (${regionNames[region as keyof typeof regionNames]})`;
+    document.getElementById('tableTitle')!.textContent = title;
+
+    const list = document.getElementById('rateList')!;
+    list.innerHTML = '';
+    for (const band of regionBands) {
+      if (band.to === Infinity) {
+        list.innerHTML += `<div class="rate-item"><span class="rate-range">Over ${fmt(band.from)}</span><span class="rate-pct">${buyerType === 'first-time' ? band.ftbRate : band.rate}% + surcharge</span></div>`;
+      } else {
+        list.innerHTML += `<div class="rate-item"><span class="rate-range">${fmt(band.from)} - ${fmt(band.to)}</span><span class="rate-pct">${buyerType === 'first-time' ? band.ftbRate : band.rate}%</span></div>`;
+      }
+    }
+    if (buyerType === 'second-home') {
+      list.innerHTML += `<div class="rate-item" style="border-top: 1px solid #f59e0b; margin-top: 0.5rem; padding-top: 0.5rem;"><span class="rate-range" style="color: #f59e0b;">Additional surcharge</span><span class="rate-pct" style="color: #f59e0b;">+5%</span></div>`;
+    }
+  }
+
+  function calculate() {
+    const price = parseFloat((document.getElementById('price') as HTMLInputElement).value) || 0;
+    const buyerType = (document.getElementById('buyerType') as HTMLSelectElement).value;
+    const region = (document.getElementById('region') as HTMLSelectElement).value;
+
+    if (price <= 0) return;
+
+    const { total, breakdown } = calcDuty(price, region, buyerType);
+    const standard = calcDuty(price, region, buyerType === 'first-time' ? 'home-mover' : buyerType);
+    const saving = standard.total - total;
+    const effectiveRate = price > 0 ? (total / price * 100).toFixed(2) : '0';
+
+    document.getElementById('dutyAmount')!.textContent = fmt(total);
+    document.getElementById('dutyName')!.textContent = region === 'scotland' ? 'LBTT' : region === 'wales' ? 'LTT' : 'SDLT';
+    document.getElementById('effectiveRate')!.textContent = effectiveRate + '%';
+    document.getElementById('savingsAmount')!.textContent = fmt(saving);
+    document.getElementById('savingsDetail')!.textContent = buyerType === 'first-time' ? 'vs home mover rate' : 'no savings available';
+    document.getElementById('monthlyCost')!.textContent = fmt(Math.round(total / 25 * 100) / 100);
+
+    const bandList = document.getElementById('bandList')!;
+    bandList.innerHTML = '';
+    for (const item of breakdown) {
+      bandList.innerHTML += `<div class="band-item"><span class="band-range">${item.range} @ ${item.rate}%</span><span class="band-amount">${fmt(item.amount)}</span></div>`;
+    }
+    bandList.innerHTML += `<div class="band-total"><span>Total</span><span>${fmt(total)}</span></div>`;
+
+    updateTable(region, buyerType);
+  }
+
+  document.getElementById('calculate')!.addEventListener('click', calculate);
+  calculate();
+
+  document.querySelectorAll('input, select').forEach(el => {
+    el.addEventListener('input', calculate);
+  });
+</script>

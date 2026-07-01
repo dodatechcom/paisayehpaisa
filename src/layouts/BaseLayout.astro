@@ -43,7 +43,46 @@ const accent = category ? (categoryColors[category] || '#2563eb') : '#2563eb';
 const baseUrl = 'https://paisayehpaisa.com';
 const pageUrl = Astro.url.href;
 
-const schema = type === 'tool' ? {
+const estimatedWordCount = description.length > 200 ? Math.round(description.length / 5 * 8) : 1500;
+const estimatedMinutes = Math.max(3, Math.round(estimatedWordCount / 250));
+const timeRequired = `PT${estimatedMinutes}M`;
+
+const isHomepage = pageUrl === baseUrl || pageUrl === `${baseUrl}/` || pageUrl === `${baseUrl}/index.html`;
+const isTool = type === 'tool';
+const isFaqCategory = category === 'crypto-answers';
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PaisayehPaisa",
+  "url": baseUrl,
+  "logo": { "@type": "ImageObject", "url": `${baseUrl}/favicon.svg` },
+  "description": "Crypto and personal finance education in plain language",
+  "sameAs": []
+};
+
+const breadcrumbs = {
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": baseUrl },
+    ...(category && category !== 'blog' ? [{ "@type": "ListItem", "position": 2, "name": categoryNames[category] || category, "item": `${baseUrl}/${category}/` }] : []),
+    { "@type": "ListItem", "position": category && category !== 'blog' ? 3 : 2, "name": title, "item": pageUrl }
+  ]
+};
+
+const schema = isHomepage ? {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PaisayehPaisa",
+  "url": baseUrl,
+  "description": "Crypto and personal finance education in plain language",
+  "publisher": organizationSchema,
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": `${baseUrl}/search?q={search_term_string}`,
+    "query-input": "required name=search_term_string"
+  }
+} : isTool ? {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": title,
@@ -52,15 +91,18 @@ const schema = type === 'tool' ? {
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "Web",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "author": { "@type": "Organization", "name": "PaisayehPaisa", "url": baseUrl }
-} : category === 'crypto-answers' ? {
+  "author": organizationSchema,
+  "breadcrumb": breadcrumbs
+} : isFaqCategory ? {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [{
     "@type": "Question",
     "name": title,
     "acceptedAnswer": { "@type": "Answer", "text": description }
-  }]
+  }],
+  "author": organizationSchema,
+  "breadcrumb": breadcrumbs
 } : {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -69,7 +111,7 @@ const schema = type === 'tool' ? {
   "url": pageUrl,
   "datePublished": date?.toISOString(),
   "dateModified": lastUpdated?.toISOString() || date?.toISOString(),
-  "author": { "@type": "Organization", "name": "PaisayehPaisa", "url": baseUrl },
+  "author": organizationSchema,
   "publisher": {
     "@type": "Organization",
     "name": "PaisayehPaisa",
@@ -77,14 +119,9 @@ const schema = type === 'tool' ? {
     "logo": { "@type": "ImageObject", "url": `${baseUrl}/favicon.svg` }
   },
   "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": baseUrl },
-      ...(category ? [{ "@type": "ListItem", "position": 2, "name": categoryNames[category] || category, "item": `${baseUrl}/${category}/` }] : []),
-      { "@type": "ListItem", "position": category ? 3 : 2, "name": title, "item": pageUrl }
-    ]
-  }
+  "wordCount": estimatedWordCount,
+  "timeRequired": timeRequired,
+  "breadcrumb": breadcrumbs
 };
 ---
 
@@ -108,12 +145,15 @@ const schema = type === 'tool' ? {
     <meta property="og:type" content={type === 'article' || type === 'blog' ? 'article' : 'website'} />
     <meta property="og:url" content={pageUrl} />
     <meta property="og:site_name" content="PaisayehPaisa" />
-    <meta property="og:image" content={`${baseUrl}/favicon.svg`} />
+    <meta property="og:image" content={`${baseUrl}/api/og.svg?title=${encodeURIComponent(title)}&category=${category || 'personal-finance'}`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${baseUrl}/api/og.svg?title=${encodeURIComponent(title)}&category=${category || 'personal-finance'}`} />
 
     <title>{title} — PaisayehPaisa</title>
     <meta name="description" content={description} />
@@ -127,9 +167,16 @@ const schema = type === 'tool' ? {
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       :root {
-        --bg: #f8fafc; --surface: #ffffff; --text: #0f172a; --muted: #64748b;
+        --bg: #f8fafc; --surface: #ffffff; --text: #0f172a; --muted: #475569;
         --border: #e2e8f0; --radius: 12px; --shadow: 0 1px 3px rgba(0,0,0,0.08);
       }
+      .skip-link {
+        position: absolute; top: -100%; left: 0; background: var(--accent); color: white;
+        padding: 0.5rem 1rem; z-index: 100; font-weight: 600; text-decoration: none;
+        border-radius: 0 0 var(--radius) 0;
+      }
+      .skip-link:focus { top: 0; }
+      *:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         color: var(--text); background: var(--bg); line-height: 1.7;
@@ -248,10 +295,11 @@ const schema = type === 'tool' ? {
     </style>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <header>
       <div class="container-wide">
         <a href="/" class="logo">paisayeh<span>paisa</span></a>
-        <nav>
+        <nav aria-label="Main navigation">
           <a href="/crypto-basics/">Basics</a>
           <a href="/safe-crypto/">Safe</a>
           <a href="/crypto-scam/">Scam</a>
@@ -271,7 +319,7 @@ const schema = type === 'tool' ? {
       </div>
     </header>
 
-    <main class="container">
+    <main id="main-content" class="container">
       <slot />
     </main>
 
@@ -314,5 +362,12 @@ const schema = type === 'tool' ? {
         </div>
       </div>
     </footer>
+    <script>
+      // Focus management for skip link
+      document.querySelector('.skip-link')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('main-content')?.focus();
+      });
+    </script>
   </body>
 </html>
