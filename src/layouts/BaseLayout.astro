@@ -121,10 +121,6 @@ const schema = type === 'tool' ? {
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="alternate" hreflang="en" href={Astro.url.href} />
     <link rel="alternate" hreflang="x-default" href={Astro.url.href} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="article" />
-    <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
